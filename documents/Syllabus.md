@@ -14,28 +14,28 @@ Requirements
 Day 1
 -----
 * 9:00-10:30 Programming basics (Lars, Panle)
-  * Choosing an editor
-  * How to structure programs, texts, etc.
-  * A clean sequence of programs
-  * SSH, Linux, request an account on cluster
-  * Basic scripting
+	* Choosing an editor
+  	* How to structure programs, texts, etc.
+	* A clean sequence of programs
+	* SSH, Linux, request an account on cluster
+	* Basic scripting
 
 * 10:30-11:30 putting it all together
 
 * 11:30-12:30 Basics of version control (Lars)
-  * File-system based version control 
-  * More formal version control
-    - Subversion
-    - Git
-  * Working with servers
-  * Setting up infrastructure at Cornell
+	* File-system based version control 
+  	* More formal version control
+		- Subversion
+		- Git
+	* Working with servers
+	* Setting up infrastructure at Cornell
 
 * 13:30-14:30 Putting it all together
 
 * 14:30-16:00 Basics of R (TBD)
-  * Basic I/O
-  * Basic analysis
-  * Basic function programming
+	* Basic I/O
+	* Basic analysis
+	* Basic function programming
 
 * 16:00-17:0 Putting it all together
 
