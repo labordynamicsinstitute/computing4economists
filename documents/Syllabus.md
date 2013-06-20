@@ -1,7 +1,7 @@
 Computer programming for Econ Students
 ======================================
 
-Authors: Panle Jia and Lars Vilhuber
+Authors: Panle Jia Barwick and Lars Vilhuber
 
 Day 0
 -----
