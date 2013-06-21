@@ -3,6 +3,14 @@ Computer programming for Econ Students
 
 Authors: Panle Jia Barwick and Lars Vilhuber
 
+Goal
+----
+The goal of this class is to showcase high-performance techniques and tools for economics students. The goal is NOT to teach a full 
+course on SAS, Stata, etc. - there are other classes for that. We will teach just enough of each programming language to
+be able to highlight additional techniques. This course is designed to open your eyes to the possibilities, scratching
+the surface, but not diving into any particular depths. Follow-on short courses may solve those needs. For
+specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu). 
+
 Day 0
 -----
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0005)
