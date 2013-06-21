@@ -97,21 +97,34 @@ Day 3
 Day 4
 -----
 * 9:00-10:30 Debugging
-	* SAS, Stata, R, Matlab
+     * SAS, Stata, R, Matlab
 
 * 10:30-11:00 Trying it out
 
-* 11:00-12:00 Putting it ALL together (Lars, others)
-	* Scripting, routines, parallel processing
+* 11:00-12:00 Code verification
+                * Formal methods for code verification
+                * How to really test your program
 
 * 13:00-16:00 Some additional thoughts (TBD)
-	* Some integrated document+analysis tools
-		- Sweave
-		- Writing tables directly to LaTeX
-		- Integrating SAS into MS Office
-	* Interacting different tools
-		- SAS -> Stata -> R -> Matlab
-	* Q&A
+                * Some integrated document+analysis tools
+                                - Sweave
+                                - Writing tables directly to LaTeX
+                                - Integrating SAS into MS Office
+                * Interacting different tools
+                                - SAS -> Stata -> R -> Matlab
+                * Q&A
 
+Day 5
+-----
+* 9:00-10:30 Introduction to parallel processing
+                * Threads
+                * SAS
+                * Matlab
+                * Directly programmed (C, MPI)
 
+* 10:30-12:00 Trying it out
+
+* 13:00-16:00 Putting it ALL together (Lars, others)
+                * Scripting, routines, parallel processing
+                * Q&A
 
