@@ -49,7 +49,7 @@ Day 1
 
 Day 2
 -----
-* 9:00-10:30 Basics of SAS (Kevin)
+* 9:00-10:30 Basics of SAS (Kevin McKinney)
 	* Basic I/O
 	* Basic analysis
 	* Different procs
@@ -64,7 +64,7 @@ Day 2
 
 * 13:30-14:30 putting it all together
 
-* 14:30-16:00 Basics of Stata
+* 14:30-16:00 Basics of Stata (TBD)
 	* Basic I/O
 	* Basic analysis
 	* Different analysis commands
@@ -86,7 +86,7 @@ Day 3
 	* Why do it? Examples
 	* Basic types of HP computing (multi-threaded, data I/O)
 
-* 13:30-15:00 HP resources at Cornell, elsewhere
+* 13:30-15:00 HP resources at Cornell, elsewhere (Lars, maybe CAC)
 	* Basic tools (qsub, VirtualRDC)
 	* Resources available
 		* scaling from workstation to HPC cluster
@@ -101,10 +101,10 @@ Day 4
 
 * 10:30-11:00 Trying it out
 
-* 11:00-12:00 Putting it ALL together
+* 11:00-12:00 Putting it ALL together (Lars, others)
 	* Scripting, routines, parallel processing
 
-* 13:00-16:00 Some additional thoughts
+* 13:00-16:00 Some additional thoughts (TBD)
 	* Some integrated document+analysis tools
 		- Sweave
 		- Writing tables directly to LaTeX
