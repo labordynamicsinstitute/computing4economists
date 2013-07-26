@@ -1,7 +1,14 @@
 Computer programming for Econ Students
 ======================================
 
-Authors: Panle Jia Barwick and Lars Vilhuber
+Location
+--------
+Ives 109, 2013/8/19-2013/8/23 8:30 - 5:00 p.m.
+
+
+Authors
+-------
+John M. Abowd, Panle Jia Barwick and Lars Vilhuber
 
 Goal
 ----
@@ -45,7 +52,7 @@ Day 1
 	* Basic analysis
 	* Basic function programming
 
-* 16:00-17:0 Putting it all together
+* 16:00-17:00 Putting it all together
 
 Day 2
 -----
@@ -70,7 +77,7 @@ Day 2
 	* Different analysis commands
 	* Subroutines in Stata: programs
 
-* 16:00-17:0 Putting it all together
+* 16:00-17:00 Putting it all together
 
 Day 3
 -----
