@@ -57,7 +57,7 @@ Day 2
 
 * 10:30-11:30 Putting it all together
 
-* 11:30-12:30 Considerations for data management
+* 11:30-12:30 Considerations for data management (JohnA, Lars)
 	* Simple data management
 	* Excursion: source and documenting sources
 	* Complicated data management
@@ -96,16 +96,16 @@ Day 3
 
 Day 4
 -----
-* 9:00-10:30 Debugging
+* 9:00-10:30 Debugging (JohnA, Lars)
      * SAS, Stata, R, Matlab
 
 * 10:30-11:00 Trying it out
 
-* 11:00-12:00 Code verification
+* 11:00-12:00 Code verification (JohnA)
 	* Formal methods for code verification
 	* How to really test your program
 
-* 13:00-16:00 Some additional thoughts (TBD)
+* 13:00-16:00 Some additional thoughts (Lars, others TBD)
 	* Some integrated document+analysis tools
 		- Sweave
 		- Writing tables directly to LaTeX
@@ -116,7 +116,7 @@ Day 4
 
 Day 5
 -----
-* 9:00-10:30 Introduction to parallel processing
+* 9:00-10:30 Introduction to parallel processing (Lars, others)
 	* Threads
 	* SAS
 	* Matlab
