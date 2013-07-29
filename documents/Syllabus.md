@@ -18,13 +18,18 @@ be able to highlight additional techniques. This course is designed to open your
 the surface, but not diving into any particular depths. Follow-on short courses may solve those needs. For
 specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu). 
 
-Day 0
------
-* Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0005)
+Target group
+------------
+Second year Ph.D. in Economics or other social sciences.
 
 Requirements
 ------------
+* Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss)
 * Bring your laptop
+
+Day 0
+-----
+* Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0005)
 
 Day 1
 -----
