@@ -1,5 +1,5 @@
-Computer programming for Econ Students
-======================================
+High-performance computing for Economists
+=========================================
 
 Location
 --------
@@ -97,5 +97,7 @@ Day 3
 
 * 14:00-15:00 Wrap up
 
-Additional resources:
-* Computing for Data Analysis (Coursera course)[https://www.coursera.org/course/compdata] starts Sept 23, 2013.
+Additional resources
+--------------------
+* Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) starts Sept 23, 2013.
+
