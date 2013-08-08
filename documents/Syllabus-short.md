@@ -3,7 +3,7 @@ Computer programming for Econ Students
 
 Location
 --------
-Ives 109, 2013/8/19-2013/8/23 8:30 - 5:00 p.m.
+Ives 109, 2013/8/20-2013/8/22 8:30 - 5:00 p.m. (last day ends at 3:00 p.m.)
 
 
 Authors
@@ -24,8 +24,8 @@ Second year Ph.D. in Economics or other social sciences.
 
 Requirements
 ------------
-* Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss)
-* Bring your laptop
+* Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss) - the specific languange is not important.
+* Bring your laptop to class.
 
 Day 0
 -----
@@ -33,11 +33,11 @@ Day 0
 
 Day 1
 -----
-* 9:00-10:30 Programming basics (Lars, Panle)
+* 9:00-10:30 Programming basics (Lars)
 	* Choosing an editor
 	* How to structure programs, texts, etc.
 	* A clean sequence of programs
-	* SSH, Linux, request an account on cluster
+	* NX, SSH, Linux, request an account on cluster
 	* Basic scripting
 
 * 10:30-11:30 putting it into practice
@@ -66,17 +66,14 @@ Day 2
 
 * 10:30-11:30 Putting it into practice
 
-* 11:30-12:30 Extending the principle to other languages
+* 11:30-12:30 Extending the principle to other languages (Kevin McKinney?)
 	* Subroutines in SAS: macros
 	* Subroutines in Stata: programs
-	* Subroutines in Matlab: ??
+	* Subroutines in Matlab: function
 
 * 13:30-14:30 Putting it into practice
 
-* 14:30-16:00 Debugging and Code verification (JohnA)
-	* Formal methods for code verification
-	* How to really test your program
-        * SAS, Stata, R, Matlab
+* 14:30-16:00 A practical example: Matlab programming basics (Rick)
 
 * 16:00-17:00 Putting it into practice
 
@@ -86,20 +83,19 @@ Day 3
 	* Why do it? Examples
 	* Basic types of HP computing (multi-threaded, data I/O, big memory)
 
-* 10:15-11:45 Introduction to parallel processing (Lars, others)
+* 10:15-12:00 Introduction to parallel processing (Kevin McKinney)
 	* Threads
 	* SAS, Stata, Matlab
 	* Directly programmed (C, MPI)
+	* Considerations: Debugging and Code verification
 
-* 13:00-15:00 HP resources at Cornell, elsewhere (Lars, maybe CAC)
+* 13:00-14:00 HP resources at Cornell, elsewhere (Lars, maybe CAC)
 	* Basic tools (qsub, VirtualRDC)
 	* Resources available
 		* scaling from workstation to HPC cluster
 	* XSEDE and getting there
 
-* 15:00-16:00 Trying it out
+* 14:00-15:00 Wrap up
 
-* 16:00-17:00 Putting it ALL together (Lars, others)
-	* Scripting, routines, parallel processing
-	* Q&A
-
+Additional resources:
+* Computing for Data Analysis (Coursera course)[https://www.coursera.org/course/compdata] starts Sept 23, 2013.
