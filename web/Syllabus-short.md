@@ -108,7 +108,7 @@ Acknowledgements
 
 Source
 ------
-* Git: via [https](https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists) 
+* Git: via [https](https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists) (login required)
 * Web: [http://www.vrdc.cornell.edu/computing-for-economists/](http://www.vrdc.cornell.edu/computing-for-economists/)
 
 
