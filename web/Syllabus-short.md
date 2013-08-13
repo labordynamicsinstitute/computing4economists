@@ -7,7 +7,7 @@ Ives 109, 2013/8/20-2013/8/22 8:30 - 5:00 p.m. (last day ends at 3:00 p.m.)
 
 Authors
 -------
-John M. Abowd, Panle Jia Barwick and Lars Vilhuber
+John M. Abowd, Rick Mansfield, Kevin McKinney and Lars Vilhuber
 
 Goal
 ----
@@ -32,7 +32,9 @@ Day 0
 
 Day 1
 -----
-* 9:00-10:30 Programming basics (Lars)
+* 9:00-9:30 Introduction (Lars)
+
+* 9:30-10:30 Programming basics (Lars)
 	* Choosing an editor
 	* How to structure programs, texts, etc.
 	* A clean sequence of programs
@@ -98,6 +100,7 @@ Day 3
 
 Additional resources
 --------------------
+* Basics courses for SAS, Stata, R, Matlab at [CISER](http://www.ciser.cornell.edu) at [http://ciser.cornell.edu/beta/workshops/](http://ciser.cornell.edu/beta/workshops/) (new times will be posted soon)
 * Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) starts Sept 23, 2013.
 
 Acknowledgements
