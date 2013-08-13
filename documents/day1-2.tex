@@ -1,0 +1,49 @@
+\documentclass[10pt,letterpaper]{beamer}
+\usepackage[latin1]{inputenc}
+\begin{document}
+
+
+\begin{frame}[fragile]{Subversion vs. Git}
+\small
+\begin{block}{Checking out a subdirectory}
+\begin{columns}
+\begin{column}{.48\textwidth}
+\color{red}\rule{\linewidth}{4pt}
+
+SVN
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\color{blue}\rule{\linewidth}{4pt}
+
+GIT
+\end{column}%
+\end{columns}
+\begin{columns}
+\begin{column}{.48\textwidth}
+\color{red}
+\begin{verbatim}
+svn co ${URL}/sub/directory (name)
+\end{verbatim}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\color{blue}\tiny
+\begin{verbatim}
+mkdir <repo> && cd <repo>
+git init
+git remote add -f <name> <url>
+git config core.sparsecheckout \
+ true
+echo some/dir/ >> .git/info/sparse-checkout
+echo another/sub/tree >> \
+ .git/info/sparse-checkout
+git pull <remote> <branch>
+\end{verbatim}
+{\tiny Source: \href{http://jasonkarns.com/blog/subdirectory-checkouts-with-git-sparse-checkout/}{here}}
+\end{column}%
+
+\end{columns}
+\end{block}
+\end{frame}
+\end{document}
