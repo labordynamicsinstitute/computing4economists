@@ -5,7 +5,6 @@ Location
 --------
 Ives 109, 2013/8/20-2013/8/22 8:30 - 5:00 p.m. (last day ends at 3:00 p.m.)
 
-
 Authors
 -------
 John M. Abowd, Panle Jia Barwick and Lars Vilhuber
@@ -100,4 +99,13 @@ Day 3
 Additional resources
 --------------------
 * Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) starts Sept 23, 2013.
+
+Acknowledgements
+---------------
+
+Source
+------
+* Git: via [https](https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists.git) or [SSH](git@bitbucket.org:computing4economists/computing-for-economists.git)
+* Web: [http://www.vrdc.cornell.edu/computing-for-economists/](http://www.vrdc.cornell.edu/computing-for-economists/)
+
 
