@@ -53,24 +53,25 @@ Day 1
 
 * 13:30-14:30 Putting it into practice
 
-* 14:30-16:00 Considerations for data management (JohnA, Lars)
-	* Simple data management
-	* Excursion: source and documenting sources
-	* Complicated data management
+* 14:30-16:00 Subroutines: the example of function programming in R (Lars)
+	* Basic function programming
 
 * 16:00-17:00 Putting it into practice
 
 Day 2
 -----
-* 9:00-10:30 Subroutines: the example of function programming in R (Lars)
-	* Basic function programming
-
-* 10:30-11:30 Putting it into practice
-
-* 11:30-12:30 Extending the principle to other languages (Kevin McKinney?)
+* 9:00-10:00 Extending the principle to other languages (Kevin McKinney)
 	* Subroutines in SAS: macros
 	* Subroutines in Stata: programs
 	* Subroutines in Matlab: function
+
+* 10:00-11:00 Putting it into practice
+
+* 11:00-12:30 Introduction to parallel processing (Kevin McKinney)
+	* Threads
+	* SAS, Stata, Matlab
+	* Directly programmed (C, MPI)
+	* Considerations: Debugging and Code verification
 
 * 13:30-14:30 Putting it into practice
 
@@ -84,11 +85,12 @@ Day 3
 	* Why do it? Examples
 	* Basic types of HP computing (multi-threaded, data I/O, big memory)
 
-* 10:15-12:00 Introduction to parallel processing (Kevin McKinney)
-	* Threads
-	* SAS, Stata, Matlab
-	* Directly programmed (C, MPI)
-	* Considerations: Debugging and Code verification
+* 10:00-10:30 Break
+
+* 10:30-12:00 Considerations for data management (JohnA, Lars)
+	* Simple data management
+	* Excursion: source and documenting sources
+	* Complicated data management
 
 * 13:00-14:00 HP resources at Cornell, elsewhere (Lars, maybe CAC)
 	* Basic tools (qsub, VirtualRDC)
