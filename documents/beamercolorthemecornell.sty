@@ -1,0 +1,37 @@
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/color/beamercolorthemecornell.sty,v 1.3 2004/10/07 22:21:16 tantau Exp $
+
+% Based on colorthemewhale by Till Tantau <tantau@users.sourceforge.net>
+% Copyright 2006 by Lars Vilhuber <lars.vilhuber@cornell.edu>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\mode<presentation>
+\definecolor{cornellred}{rgb}{.70,.11,.11}
+\definecolor{cornellbeige}{rgb}{0.94,0.93,0.89}
+\definecolor{cornellgrey}{rgb}{0.60,0.60,0.60}
+\definecolor{cornellblack}{rgb}{0.13,0.13,0.13}
+
+\setbeamercolor*{structure}{fg=cornellred!90!black,bg=cornellbeige}
+%\setbeamercolor*{background canvas}{use=structure,bg=cornellbeige}
+ \setbeamertemplate{background canvas}[vertical shading][bottom=cornellbeige!50,top=cornellbeige!80]
+% need to play around with the headtemplate (cornellgrey) and the footer (cornellgrey)
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=cornellred}
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=cornellgrey}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=cornellgrey!50!black}
+\setbeamercolor*{palette quaternary}{fg=white,bg=cornellred!50!black}
+
+\setbeamercolor*{sidebar}{use=structure,bg=structure.fg}
+  
+\setbeamercolor*{palette sidebar primary}{use=structure,fg=structure.fg!10,bg=cornellgrey}
+\setbeamercolor*{palette sidebar secondary}{fg=white,bg=cornellgrey}
+\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=structure.fg!50}
+\setbeamercolor*{palette sidebar quaternary}{fg=white}
+
+\setbeamercolor*{titlelike}{parent=palette primary}
+
+\setbeamercolor*{separation line}{fg=cornellbeige}
+\setbeamercolor*{fine separation line}{}
+
+\mode
+<all>

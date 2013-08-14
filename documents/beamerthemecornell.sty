@@ -1,0 +1,116 @@
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/theme/beamerthemecornell.sty,v 1.9 2004/10/11 16:10:12 tantau Exp $
+
+%\useoutertheme{bottomframes}
+
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\DeclareOptionBeamer{compress}{\beamer@compresstrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+%
+%============================================================
+%
+%based on \usecolortheme{whale}
+\definecolor{cornellred}{rgb}{.70,.11,.11}
+\definecolor{cornellbeige}{rgb}{0.94,0.93,0.89}
+\definecolor{cornellgrey}{rgb}{0.60,0.60,0.60}
+\definecolor{cornellblack}{rgb}{0.13,0.13,0.13}
+\definecolor{beamer@censusblue}{rgb}{0.2,0.2,0.8} %
+
+\setbeamercolor*{structure}{fg=cornellred}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor*{titlelike}{parent=palette primary}
+
+\setbeamercolor{section in head/foot}{use=structure,bg=structure.fg!25!bg}
+
+%
+%============================================================
+%
+%based on beamerouterthememiniframes.sty,v 1.7 2004/10/14 09:48:48 tantau Exp $
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\setbeamercolor{section in head/foot}{parent=palette tertiary}
+\setbeamercolor{subsection in head/foot}{parent=palette secondary}
+\setbeamercolor{author in head/foot}{parent=subsection in head/foot}
+\setbeamercolor{title in head/foot}{parent=section in head/foot}
+
+\newif\ifbeamer@theme@subsection
+\beamer@theme@subsectiontrue
+
+\DeclareOptionBeamer{subsection}[false]{\csname beamer@theme@subsection#1\endcsname}
+\ProcessOptionsBeamer
+
+
+\mode<presentation>
+
+                                % Head
+\defbeamertemplate*{footline}{bottomframes theme}
+{%
+%  \leavevmode%
+%  \hbox{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}%
+%  \ifbeamer@theme@subsection%
+%    \begin{beamercolorbox}[colsep=1.5pt]{middle separation line head}
+%    \end{beamercolorbox}
+%    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+%      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+%      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+%    \end{beamercolorbox}%
+%  \fi%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+%}%
+%  \vskip0pt%
+}
+
+%
+%============================================================
+% based on Singapore
+
+\setbeamertemplate{frametitle}[default][center]
+
+\AtBeginDocument{%
+  {
+    \usebeamercolor{section in head/foot}
+  }
+
+  \pgfdeclareverticalshading{beamer@headfade}{\paperwidth}
+  {%
+    color(0cm)=(bg);
+    color(1.25cm)=(section in head/foot.bg)%
+  }
+  \pgfdeclareverticalshading{beamer@footfade}{\paperwidth}
+  {%
+    color(0cm)=(section in head/foot.bg);
+    color(1.25cm)=(bg)%
+  }
+
+  \setbeamercolor{section in head/foot}{bg=}
+}
+
+%uncomment to add logo to header%
+%\addtoheadtemplate{%\pgfuseshading{beamer@headfade}\vskip-1.25cm%
+%\includegraphics[height=16pt]{cu_logo_unstyled}}{}
+
+%uncomment to add logo to footer
+%\addtofoottemplate{\includegraphics[height=20pt]{cu_logo_unstyled}\newline%
+%\pgfuseshading{beamer@footfade}\vskip-1.25cm}{}
+
+%\beamertemplatedotitem
+
+\mode
+<all>
+
+\setbeamertemplate{navigation symbols}{} %//removes the navigation symbols
+\setbeamertemplate{frametitle continuation}[from second][\insertcontinuationcountroman]  %//to eliminate Roman numerals on 'first' slide when using allowframebreaks

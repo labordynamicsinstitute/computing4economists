@@ -1,7 +1,158 @@
-\documentclass[10pt,letterpaper]{beamer}
-\usepackage[latin1]{inputenc}
-\begin{document}
+% Time-stamp: <09/10/02 01:57:13 vilhuber>
+% $Id: Presentation-PSD.tex 3219 2012-09-27 07:47:11Z vilhu001 $
 
+% normal line:
+\documentclass[xcolor=table,compress]{beamer}
+% to create notes:
+%\documentclass[handout,notes=only]{beamer}
+% to create handouts
+%\documentclass[xcolor=table,handout,compress]{beamer}
+% to create a different kind of handouts
+%\documentclass{article}
+%\usepackage[envcountsect]{beamerarticle}
+
+%\setbeameroption{handout}
+%\setbeameroption{show notes}
+
+
+%
+% Packages
+%
+\mode<article> % only for the article version
+{
+  \usepackage{fullpage}
+  \usepackage{hyperref}
+}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage{embedfile}
+\embedfile{\jobname.tex}
+\fi
+
+\usepackage{graphicx}
+%\usepackage{pstricks}
+\usepackage{xcolor}
+\usepackage{pifont}
+%\usepackage{../chicago}
+\usepackage{pgf}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[latin1]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{pdfpages}
+% usage:
+%   \includepdf[pages={1}]{myfile.pdf}
+%   \includepdf[pages={1,3,5}]{myfile.pdf} would include pages 1, 3, and 5 of the file. 
+%   To include the entire file, you specify pages={-}, where {-}
+%\usepackage{landscape}
+
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+
+\usepackage{times}
+%\usepackage{colortbl}
+
+%============================================================
+% Beamer specific styles and configs
+%============================================================
+
+\mode<presentation>
+{
+% alternative, could always use
+%\usetheme{Census}
+\usetheme{cornell}
+\useoutertheme{cornell}
+}
+
+
+%\setbeamercovered{dynamic}
+
+
+
+%============================================================
+% Title
+%============================================================
+
+\title[Computing for Economists]{Workshop: High-performance computing for economists}
+\author[Vilhuber, Abowd, Mansfield, McKinney]{%
+  Lars~Vilhuber\inst{1} \and
+  John M. Abowd\inst{1} \and
+  Richard~Mansfield\inst{1} \and
+  Kevin~L.~McKinney %\inst{2}%
+}
+
+\institute[Cornell]{
+  \inst{1}%
+   Cornell University, Economics Department,
+%\and \inst{2} U.S. Census Bureau
+}%
+\date[August 20-22, 2013]{August 20-22, 2013: Day 1}
+\subject{HPC}
+
+
+% % % % % % % % % % % % % % % % % Main document
+\begin{document}
+\frame{\titlepage}
+
+\section[Intro]{Introduction}
+\begin{frame}
+\begin{block}{What do you learn in a Ph.D. program?}
+\pause
+ How to learn...
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Goal of this class}
+\pause
+To open new doors, to be able to conceive of problems that you didn't think had a feasible solution.\newline
+\pause
+To broaden your knowledge about what you do NOT know
+\end{block}
+\end{frame}
+
+\subsection{Overview}
+\begin{frame}{Overview}
+\begin{block}{Day 1}
+\begin{itemize}[<+->]
+\item Programming basics (Lars)
+\begin{itemize}
+\item Choosing an editor
+\item How to structure programs, texts, etc.
+\item A clean sequence of programs
+\item NX, SSH, Linux, request an account on cluster
+\item Basic scripting
+\end{itemize}
+\item  Basics of version control (Lars)
+\begin{itemize}
+\item File-system based version control
+\item More formal version control (Subversion, Git)
+\item Working with servers
+\item Setting up infrastructure at Cornell
+\end{itemize}
+\item Subroutines: the example of function programming in R (Lars)
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Overview}
+\begin{block}{Day 2}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{Overview}
+\begin{block}{Day 3}
+
+\end{block}
+\end{frame}
+
+\subsection{Structure}
+
+% % % % % % % % % % % % % % % End overview
+\section[Basics]{Programming basics}
+\subsection[Editors]{Choosing editors}
 \begin{frame}{Choosing an editor}
 \begin{block}{... or system}
 \begin{columns}[t]
@@ -40,8 +191,32 @@ Integrating programs and text/results
 \end{frame}
 
 
+\subsection{Basic scripting}
+\begin{frame}[fragile]{Basic scripting in Linux}
+\begin{block}{A basic loop on the command line}
+\begin{verbatim}
+content...
+\end{verbatim}
+
+\end{block}
+\end{frame}
 
 
+\begin{frame}
+\tiny{Source: \href{http://www.cyberciti.biz/faq/bash-for-loop/}{[1]}}
+\end{frame}
+\begin{frame}
+Now let's try it out
+\end{frame}
 
+\section[VCS]{Version control systems}
+\begin{frame}
+\href{day1-2.pdf}{Next section}
+\end{frame}
+
+\section{Subroutines}
+\begin{frame}
+\href{day1-3.pdf}{Next section}
+\end{frame}
 
 \end{document}

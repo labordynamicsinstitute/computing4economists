@@ -1,7 +1,99 @@
-\documentclass[10pt,letterpaper]{beamer}
-\usepackage[latin1]{inputenc}
-\begin{document}
+% Time-stamp: <09/10/02 01:57:13 vilhuber>
+% $Id: Presentation-PSD.tex 3219 2012-09-27 07:47:11Z vilhu001 $
 
+% normal line:
+\documentclass[xcolor=table,compress]{beamer}
+% to create notes:
+%\documentclass[handout,notes=only]{beamer}
+% to create handouts
+%\documentclass[xcolor=table,handout,compress]{beamer}
+% to create a different kind of handouts
+%\documentclass{article}
+%\usepackage[envcountsect]{beamerarticle}
+
+%\setbeameroption{handout}
+%\setbeameroption{show notes}
+
+
+%
+% Packages
+%
+\mode<article> % only for the article version
+{
+  \usepackage{fullpage}
+  \usepackage{hyperref}
+}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage{embedfile}
+\embedfile{\jobname.tex}
+\fi
+
+\usepackage{graphicx}
+%\usepackage{pstricks}
+\usepackage{xcolor}
+\usepackage{pifont}
+%\usepackage{../chicago}
+\usepackage{pgf}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[latin1]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{pdfpages}
+% usage:
+%   \includepdf[pages={1}]{myfile.pdf}
+%   \includepdf[pages={1,3,5}]{myfile.pdf} would include pages 1, 3, and 5 of the file. 
+%   To include the entire file, you specify pages={-}, where {-}
+%\usepackage{landscape}
+
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+
+\usepackage{times}
+%\usepackage{colortbl}
+
+%============================================================
+% Beamer specific styles and configs
+%============================================================
+
+\mode<presentation>
+{
+% alternative, could always use
+%\usetheme{Census}
+\usetheme{cornell}
+\useoutertheme{cornell}
+}
+
+
+%\setbeamercovered{dynamic}
+
+
+
+%============================================================
+% Title
+%============================================================
+
+\title[Computing for Economists]{Workshop: High-performance computing for economists}
+\author[Vilhuber, Abowd, Mansfield, McKinney]{%
+  Lars~Vilhuber\inst{1} \and
+  John M. Abowd\inst{1} \and
+  Richard~Mansfield\inst{1} \and
+  Kevin~L.~McKinney %\inst{2}%
+}
+
+\institute[Cornell]{
+  \inst{1}%
+   Cornell University, Economics Department,
+%\and \inst{2} U.S. Census Bureau
+}%
+\date[August 20-22, 2013]{August 20-22, 2013: Day 2}
+\subject{HPC}
+
+
+% % % % % % % % % % % % % % % % % Main document
+\begin{document}
+\frame{\titlepage}
 
 \begin{frame}[fragile]{Subversion vs. Git}
 \small
