@@ -195,7 +195,14 @@ Integrating programs and text/results
 \begin{frame}[fragile]{Basic scripting in Linux}
 \begin{block}{A basic loop on the command line}
 \begin{verbatim}
-content...
+for (( i; i<10; i++ ))
+do 
+ echo $i
+done
+for i in 1 3 7 99
+do
+ echo $i
+done
 \end{verbatim}
 
 \end{block}
