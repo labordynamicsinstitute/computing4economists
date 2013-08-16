@@ -46,6 +46,8 @@
 %   \includepdf[pages={1,3,5}]{myfile.pdf} would include pages 1, 3, and 5 of the file. 
 %   To include the entire file, you specify pages={-}, where {-}
 %\usepackage{landscape}
+\usepackage{listings}
+\lstloadlanguages{R,bash}
 
 %\usepackage{lmodern}
 %\usepackage[T1]{fontenc}
@@ -97,6 +99,8 @@
 
 \begin{frame}[fragile]{Subversion vs. Git}
 \small
+\lstset{numbers=left, stepnumber=1,  language=bash, basicstyle=\tiny}
+
 \begin{block}{Checking out a subdirectory}
 \begin{columns}
 \begin{column}{.48\textwidth}
@@ -114,24 +118,22 @@ GIT
 \begin{columns}
 \begin{column}{.48\textwidth}
 \color{red}
-\begin{verbatim}
+\begin{lstlisting}
 svn co ${URL}/sub/directory (name)
-\end{verbatim}
+\end{lstlisting}
 \end{column}%
 \hfill%
 \begin{column}{.48\textwidth}
 \color{blue}\tiny
-\begin{verbatim}
+\begin{lstlisting}
 mkdir <repo> && cd <repo>
 git init
 git remote add -f <name> <url>
-git config core.sparsecheckout \
- true
+git config core.sparsecheckout  true
 echo some/dir/ >> .git/info/sparse-checkout
-echo another/sub/tree >> \
- .git/info/sparse-checkout
+echo another/sub/tree >>  .git/info/sparse-checkout
 git pull <remote> <branch>
-\end{verbatim}
+\end{lstlisting}
 {\tiny Source: \href{http://jasonkarns.com/blog/subdirectory-checkouts-with-git-sparse-checkout/}{here}}
 \end{column}%
 

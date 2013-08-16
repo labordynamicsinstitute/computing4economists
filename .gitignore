@@ -1,0 +1,11 @@
+documents/.Rhistory
+documents/*.aux
+documents/*.log
+documents/*.nav
+documents/*.out
+documents/*.snm
+documents/*.synctex.gz
+documents/*.toc
+documents/*.vrb
+*/*~
+*/*/*~

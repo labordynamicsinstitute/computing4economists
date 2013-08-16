@@ -4,6 +4,7 @@ High-performance computing for Economists
 Location
 --------
 Ives 109, 2013/8/20-2013/8/22 8:30 - 5:00 p.m. (last day ends at 3:00 p.m.)
+Capacity: 32 (THE COURSE IS NOW FULL, WAITLIST only).
 
 Authors
 -------

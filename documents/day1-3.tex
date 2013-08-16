@@ -46,6 +46,9 @@
 %   \includepdf[pages={1,3,5}]{myfile.pdf} would include pages 1, 3, and 5 of the file. 
 %   To include the entire file, you specify pages={-}, where {-}
 %\usepackage{landscape}
+\usepackage{listings}
+\lstloadlanguages{R,bash,SAS}
+\lstset{numbers=left, stepnumber=1, basicstyle=\tiny}
 
 %\usepackage{lmodern}
 %\usepackage[T1]{fontenc}
@@ -137,7 +140,8 @@
 \begin{column}[t]{.48\textwidth}
 \pause
 \begin{block}{... in R}
-\begin{verbatim}
+\lstset{language=R}
+\begin{lstlisting}
 if(<condition>) {
 ## do something
 } else {
@@ -150,13 +154,14 @@ if(<condition1>) {
 } else {
 ## do something different
 }
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{column}
 \hfill\pause
 \begin{column}[t]{.48\textwidth}
 \begin{block}{... in SAS}
-\begin{verbatim}
+\lstset{language=SAS}
+\begin{lstlisting}
 if (<condition>) then do;
 ## do something
 end; else do;
@@ -169,7 +174,7 @@ else if (<condition2>) then do;
 end; else do;
 ## do something different
 end;
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{column}
 \end{columns}
@@ -186,21 +191,23 @@ Run through a fixed sequence of numbers (or in R, a sequence of vectors)
 \begin{column}[t]{.48\textwidth}
 \pause
 \begin{block}{simple loop in R}
-\begin{verbatim}
+\lstset{language=R}
+\begin{lstlisting}
 for(i in 1:10) {
 print(i)
 }
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{column}
 \hfill\pause
 \begin{column}[t]{.48\textwidth}
 \begin{block}{... in SAS}
-\begin{verbatim}
+\lstset{language=SAS}
+\begin{lstlisting}
 do i = 1 to 10;
 put i;
 end;
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{column}
 
@@ -214,7 +221,8 @@ Across programming languages, some flexibility:
 \begin{column}[t]{.48\textwidth}
 \pause
 \begin{block}{Equivalent loops in R}
-\begin{verbatim}
+\lstset{language=R}
+\begin{lstlisting}
 x <- c("a", "b", "c", "d")
 for(i in 1:4) {
 print(x[i])
@@ -223,17 +231,18 @@ for(i in x) {
 print(i)
 }
 for(i in 1:4) print(x[i])
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{column}
 \hfill
 \begin{column}[t]{.48\textwidth}
 \begin{block}{... in SAS}
-\begin{verbatim}
+\lstset{language=SAS}
+\begin{lstlisting}
 do i = 1 to 10;
 put i;
 end;
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{column}
 
