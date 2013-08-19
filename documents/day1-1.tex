@@ -47,7 +47,7 @@
 %   To include the entire file, you specify pages={-}, where {-}
 %\usepackage{landscape}
 \usepackage{listings}
-\lstloadlanguages{R,bash}
+\lstloadlanguages{R,bash,SAS}
 
 %\usepackage{lmodern}
 %\usepackage[T1]{fontenc}
@@ -152,9 +152,34 @@ To broaden your knowledge about what you do NOT know
 
 \subsection{Structure}
 
+\begin{frame}{Structure of the class}
+\begin{block}{Teaching...}
+We'll take you on a 4,000 m flight through topics...
+\end{block}
+\pause
+\begin{block}{... and practice}
+... and then swoop in on some examples, leaving ample time to practice it.
+\end{block}
+\end{frame}
+
 % % % % % % % % % % % % % % % End overview
 \section[Basics]{Programming basics}
 \subsection[Editors]{Choosing editors}
+
+\begin{frame}{Choosing editors}
+\begin{block}{Why does choosing editors matter?}
+The (applied) research process iterates through writing papers and doing estimation. You want to use the appropriate tools for each task.
+\end{block}
+\begin{block}{Integrated or separate}
+\begin{itemize}
+\item You can use native tools that come with each word processing facility/programming language/etc. 
+\item Not all of them will have one. 
+\item Not all of them will work on all platforms.
+\item You will likely use multiple tools
+\end{itemize}
+\end{block}
+\end{frame}
+
 \begin{frame}{Choosing an editor}
 \begin{block}{... or system}
 \begin{columns}[t]
@@ -162,22 +187,47 @@ To broaden your knowledge about what you do NOT know
 \color{red}
 Separate editors and systems 
 \begin{itemize}
-\item MS Word and math editor
-\item \href{http://www.libreoffice.org}{LibreOffice}
-\item \LaTeX (TeXstudio, TeXMaker, Scientific Workplace, \href{http://www.tug.org/texworks/}{TeXWorks}+\href{http://miktex.org/}{Miktex}, etc.)
+\item MS Word and math editor (Windows/OSX but compatibility issues)
+\item \href{http://www.libreoffice.org}{LibreOffice} (Windows/OSX/Linux but not as good)
 \item NotePad++ (Windows)
-\item Gedit, (X)Emacs (Linux)
+\item Gedit, (X)Emacs, Kate (Linux)
+\item ?? (OSX)
 \end{itemize}
 \end{column}
 \hfill
+\begin{column}{.48\textwidth}
+{\color{red}
+\LaTeX}: all platforms, but some GUIs are not cross-platform, ease of use varies:
+\begin{itemize}
+\item TeXstudio (all platforms)
+\item TeXMaker (all platforms)
+\item Scientific Workplace (Windows, mythical Linux) 
+\item \href{http://www.tug.org/texworks/}{TeXWorks}+\href{http://miktex.org/}{Miktex}
+\item \href{http://www.texniccenter.org/}{TEXnicCenter}
+\item and  (\href{http://alternativeto.net/software/texmaker/}{many more})
+\end{itemize}
+\end{column}
+\end{columns}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Choosing an editor}
+\begin{block}{... or system}
+\begin{columns}[t]
 \begin{column}{.48\textwidth}
 \color{blue}
 Integrating programming and running
 \begin{itemize}
 \item \href{http://en.wikipedia.org/wiki/Integrated_development_environment}{IDE} ( \href{http://en.wikipedia.org/wiki/Eclipse_(software)}{Eclipse}, \href{http://en.wikipedia.org/wiki/ActiveState_Komodo}{ActiveState Komodo}, etc.)
 \item Native programming GUIs (SAS, Matlab, Stata)
-\item Gedit, (X)Emacs 
+\item Gedit, (X)Emacs (with add-on functionality)
 \end{itemize}
+\end{column}
+\hfill
+\begin{column}{.48\textwidth}
+\color{blue}
 Integrating programs and text/results
 \begin{itemize}
 \item SWeave (integrates \LaTeX \ and R)
@@ -186,27 +236,335 @@ Integrating programs and text/results
 \end{itemize}
 \end{column}
 \end{columns}
-
-
 \end{block}
+\end{frame}
 
+%=======================================================================
+\subsection[Structure]{Structuring programs and texts}
+
+\begin{frame}[fragile]{Structuring programs}
+\begin{block}{Easy...}
+\lstset{numbers=left, stepnumber=1,  language=SAS, basicstyle=\tiny,
+caption=mystuff.sas}
+\begin{lstlisting}
+data "C:\Users\Me\CensusChina.sas7bdat";
+     set "C:\Users\Me\CensusChina.sas7bdat";
+     earn=log(earn);
+run;
+proc reg data="C:\Users\Me\CensusChina.sas7bdat";
+model earn = sex education experience;
+run;
+\end{lstlisting}
+What can possibly be wrong about that?
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Structuring programs 2}
+\begin{block}{Easier...}
+\lstset{numbers=left, stepnumber=1,  language=SAS, basicstyle=\tiny,
+caption=mystuff.do}
+\begin{lstlisting}
+use "C:\Users\Me\CensusChina.dta"
+replace  earn=log(earn)
+regress  earn  sex education experience
+save, replace
+\end{lstlisting}
+What can possibly be wrong about that?
+\end{block}
 \end{frame}
 
 
+
+\begin{frame}{Structuring programs 3}
+\begin{block}{Actually...}
+{\Large Everything!}
+\begin{itemize}
+\item Name of program: uninformative
+\item Destruction of original data: program cannot be re-run for same results
+\item No portability: cannot be run anywhere else
+\item No explanation: why are we doing this?
+\end{itemize}
+\end{block}
+But of course, nobody does that, right?
+\end{frame}
+
+
+\begin{frame}[fragile]{Structuring programs 4}
+\begin{block}{Better...?}
+
+\lstset{numbers=left, stepnumber=1,  language=SAS, basicstyle=\tiny,
+caption=china-regression.sas}
+\begin{lstlisting}
+data logCensusChina;
+     set "C:\Users\Me\CensusChina.sas7bdat";
+     earn=log(earn);
+run;
+proc reg data=logCensusChina;
+model earn = sex education experience;
+run;
+\end{lstlisting}
+\pause
+Somewhat...
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Structuring programs 5}
+\begin{block}{Addressing these issues}
+\begin{itemize}
+\item Naming of programs: here
+\item Commenting: here
+\item Versioning: \href{day1-2.pdf}{up next}
+\item Portability and Data management: tomorrow
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Key notions about naming}
+\begin{block}{Think of yourself as highly amnesiac...}
+\begin{itemize}[<+->]
+\item The research paper you are writing now will be submitted, rejected, worked on, questioned... 
+\item ... by others and yourself
+\item ... in intervals of weeks, months, years...
+\item Your future research assistant and the future YOU will need to understand how to go through it.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Naming}
+\begin{block}{The really bad}
+\begin{lstlisting}[language=bash,numbers=none]
+mystuff.R
+read.R
+version2.R
+ols.sas
+\end{lstlisting}
+\end{block}
+\pause
+\begin{block}{The bad}
+\begin{lstlisting}[language=bash,numbers=none]
+readCensus.R
+readBLS.R
+prepareCensus.R
+runOLS.sas
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Naming}
+\begin{block}{Better}
+\begin{lstlisting}[language=bash,numbers=none]
+01_readBLS.R
+02_readCensus.R
+03_prepareCensus.R
+04_create_analysis_data.R
+05_runOLS.sas
+\end{lstlisting}
+\end{block}
+\pause
+\begin{block}{Even better}
+\begin{lstlisting}[language=bash,numbers=none]
+01_01_readBLS.R
+02_01_readCensus.R
+02_02_prepareCensus.R
+03_01_create_analysis_data.R
+04_01_runOLS.sas
+README.txt
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Naming}
+\begin{block}{Going overboard?}
+\begin{lstlisting}[language=bash,numbers=none,basicstyle=\tiny]
+icf/ctrlprogs/control_icf.sas
+icf/ctrlprogs/parameters_icf.sas
+icf/library/macros/icf_cleanup.sas
+icf/library/macros/icf_impute_county_res.sas
+icf/library/macros/licf_findnum.sas
+icf/library/macros/licf_proxy.sas
+icf/library/macros/licf_stars1.sas
+icf/library/macros/licf_tgrlatlongs.sas
+icf/library/sasprogs/01_icfqa.sas
+icf/library/sasprogs/01_icf.sas
+icf/library/sasprogs/02_icfqa.sas
+icf/library/sasprogs/02_icf.sas
+icf/library/sasprogs/03_icfqa.sas
+icf/library/sasprogs/03_icf.sas
+[snip]
+icf/library/sasprogs/19_icf.sas
+\end{lstlisting}
+\pause
+\begin{lstlisting}[language=bash,numbers=none,basicstyle=\tiny]
+ehf/ctrlprogs/control_ehf.sas
+ehf/library/macros/read_bls.sas
+ehf/library/sasprogs/01_ehf.sas
+[snip]
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Naming}
+\begin{block}{With minor modification}
+\begin{lstlisting}[language=bash,numbers=none,basicstyle=\tiny]
+icf/ctrlprogs/control_icf.sas
+icf/ctrlprogs/parameters_icf.sas
+icf/library/macros/icf_cleanup.sas
+icf/library/macros/icf_impute_county_res.sas
+icf/library/macros/licf_findnum.sas
+icf/library/macros/licf_proxy.sas
+icf/library/macros/licf_stars1.sas
+icf/library/macros/licf_tgrlatlongs.sas
+icf/library/sasprogs/01_icf.sas
+icf/library/sasprogs/02_icf.sas
+icf/library/sasprogs/03_icf.sas
+[snip]
+icf/library/sasprogs/19_icf.sas
+icf/library/sasprogs/01_icfqa.sas
+icf/library/sasprogs/02_icfqa.sas
+icf/library/sasprogs/03_icfqa.sas
+\end{lstlisting}
+Can you figure out in what sequence to run them?
+\end{block}
+\end{frame}
+
+
+
+
+
+
 \subsection{Basic scripting}
+
+\begin{frame}
+Basic Linux, basic scripting
+\end{frame}
+
+\begin{frame}
+\begin{block}{Linux}
+\begin{itemize}
+\item used on most compute clusters
+\item used on very few desktop computers
+\item but...
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{Bash}
+\begin{itemize}
+\item bash is a ``shell'' - a text interface command interpreter
+\item bash or ksh (Korn shell) or csh (C-shell) are the most common
+\item bash is available on Linux and \pause OSX
+\item you can also download Cygwin, getting bash for Windows
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Why worry?}
+\begin{block}{You will end up doing something on the command line}
+\begin{itemize}[<+->]
+\item Launch a program from a compute-cluster job
+\item Launch a job submission
+\item Basic scripting
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[frame]{Linux in 2 minutes}
+\begin{itemize}
+\item ls - will list the contents of a directory
+\item cd - will ``change directory''
+\item cd .. (note the spaces) will go up a directory
+\item cd (name) will go into the directory (name)
+\item rm (name) will delete
+\item mkdir (name) will create a directory called (name)
+\item vi (name) will open a venerable command line editor for file (name) \pause (CAUTION: to exit, hit ESC, then :q!)
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}[fragile]{Basic scripting in Linux}
 \begin{block}{A basic loop on the command line}
 \lstset{numbers=left, stepnumber=1, frame=single, language=bash}
 \lstinputlisting{../programs/day1/1-1-basic-loop.bash}
+\end{block}
+\tiny{Source: \href{http://www.cyberciti.biz/faq/bash-for-loop/}{[1]}}
+\end{frame}
 
-
+\begin{frame}[fragile]{Capturing output}
+\begin{block}{You can capture the output from a command}
+\begin{lstlisting}
+> seq 1 3
+1
+2
+3
+\end{lstlisting}
+Now let's use that:
+\begin{lstlisting}
+for i in $(seq 1 3)
+do
+  echo $i
+done
+\end{lstlisting}
 \end{block}
 \end{frame}
 
 
-\begin{frame}
-\tiny{Source: \href{http://www.cyberciti.biz/faq/bash-for-loop/}{[1]}}
+\begin{frame}[fragile]{Basic scripting in Linux}
+\begin{block}{Use for practical things}
+Remember that ICF program sequence? How would we go about starting 19 programs in sequence?
+\begin{lstlisting}
+for program in $(ls *_icf.sas)
+do
+  sas $program
+done
+\end{lstlisting}
+\end{block}
 \end{frame}
+
+
+\begin{frame}{Advanced linux in 2 minutes}
+\begin{block}{The gateway to everything}
+{man}
+\end{block}
+or try \href{http://www.linuxmanpages.com}{http://www.linuxmanpages.com} or \href{http://linux.die.net/man/}{http://linux.die.net/man/}
+\begin{block}{The toolkit}
+\begin{itemize}
+\item sed
+\item grep
+\item awk
+\item regex (regular expressions)
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Advanced scripting in Linux}
+\begin{block}{Use for practical things}
+What if I'm running 100s of programs, and trying to figure out
+if any of them have errors?
+\begin{lstlisting}
+for logfiles in $(ls *_icf.log)
+do
+  grep ERROR $logfiles
+done
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+
+
+
 \begin{frame}
 Now let's try it out
 \end{frame}

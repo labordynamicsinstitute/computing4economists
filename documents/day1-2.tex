@@ -48,6 +48,7 @@
 %\usepackage{landscape}
 \usepackage{listings}
 \lstloadlanguages{R,bash}
+\lstset{numbers=left, stepnumber=1,  language=bash, basicstyle=\tiny}
 
 %\usepackage{lmodern}
 %\usepackage[T1]{fontenc}
@@ -96,10 +97,53 @@
 % % % % % % % % % % % % % % % % % Main document
 \begin{document}
 \frame{\titlepage}
+\section{Intro}
+\section{Basics}
+\section[VCS]{Version control systems}
 
+\subsection{Tracking history}
+\begin{frame}{Tracking history}
+\begin{block}{What happened? And who did what?}
+One of the key advantages of using version control systems is ... to control versions.
+\begin{itemize}
+\item Straightforward to view multiple versions of a file (assuming proper usage)
+\item Possibility to view who changed what (``blame'' or ``annotate'')
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Tracking using web interfaces: SVN}
+\includegraphics[width=.9\textwidth]{trac-svn-view1.png}
+\end{frame}
+
+\begin{frame}{Tracking using web interfaces: SVN}
+\includegraphics[width=.9\textwidth]{trac-svn-view2.png}
+\end{frame}
+
+\begin{frame}{Tracking using web interfaces: SVN}
+\includegraphics[width=.9\textwidth]{trac-svn-view3.png}
+\end{frame}
+
+\begin{frame}{Tracking using web interfaces: SVN}
+\includegraphics[width=.9\textwidth]{trac-svn-view4.png}
+\end{frame}
+
+\begin{frame}{Tracking using web interfaces: git}
+\includegraphics[width=.9\textwidth]{git-view1.png}
+\end{frame}
+
+\begin{frame}{Tracking using web interfaces: git}
+\includegraphics[width=.9\textwidth]{git-view2.png}
+\end{frame}
+
+\begin{frame}{Tracking using web interfaces: git}
+\includegraphics[width=.9\textwidth]{git-view3.png}
+\end{frame}
+
+
+\subsection{Comparing systems}
 \begin{frame}[fragile]{Subversion vs. Git}
 \small
-\lstset{numbers=left, stepnumber=1,  language=bash, basicstyle=\tiny}
 
 \begin{block}{Checking out a subdirectory}
 \begin{columns}
@@ -140,4 +184,10 @@ git pull <remote> <branch>
 \end{columns}
 \end{block}
 \end{frame}
+
+\section{Subroutines}
+\begin{frame}
+\href{day1-3.pdf}{Next section}
+\end{frame}
+
 \end{document}
