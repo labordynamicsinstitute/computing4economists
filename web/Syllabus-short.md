@@ -36,7 +36,7 @@ Day 1
 -----
 * 9:00-9:30 Introduction (Lars)
 
-* 9:30-10:30 [Programming basics](../documents/coming-soon.html) (Lars)
+* 9:30-10:30 [Programming basics](../web/coming-soon.html) (Lars)
 	* Choosing an editor
 	* How to structure programs, texts, etc.
 	* A clean sequence of programs
@@ -45,7 +45,7 @@ Day 1
 
 * 10:30-11:30 putting it into practice
 
-* 11:30-12:30 [Basics of version control](../documents/coming-soon.html) (Lars)
+* 11:30-12:30 [Basics of version control](../web/coming-soon.html) (Lars)
 	* File-system based version control 
 	* More formal version control
 		- Subversion ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
@@ -55,7 +55,7 @@ Day 1
 
 * 13:30-14:30 Putting it into practice
 
-* 14:30-16:00 [Subroutines: the example of function programming in R](../documents/coming-soon.html) (Lars)
+* 14:30-16:00 [Subroutines: the example of function programming in R](../web/coming-soon.html) (Lars)
 	* Basic function programming
 
 * 16:00-17:00 Putting it into practice
