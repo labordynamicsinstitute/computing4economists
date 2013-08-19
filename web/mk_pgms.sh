@@ -11,7 +11,7 @@ cat >> $outfile << EOF
 Day $1
 -----
 EOF
-for file in $(find ../programs/day$1 -name \*sh -o -name \*R -o -name \*sas| sort)
+for file in $(find ../programs/day$1 -name \*sh -o -name \*R -o -name \*sas -o -name \*.m | sort)
 do
   echo "* [${file##*/}]($file)" >> $outfile
 done
