@@ -4,6 +4,7 @@ High-performance computing for Economists
 Location
 --------
 Ives 109, 2013/8/20-2013/8/22 8:30 - 5:00 p.m. (last day ends at 3:00 p.m.)
+
 Capacity: 32 (THE COURSE IS NOW FULL, WAITLIST only).
 
 Authors
@@ -47,7 +48,7 @@ Day 1
 * 11:30-12:30 Basics of version control (Lars)
 	* File-system based version control 
 	* More formal version control
-		- Subversion
+		- Subversion ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
 		- Git
 	* Working with servers
 	* Setting up infrastructure at Cornell

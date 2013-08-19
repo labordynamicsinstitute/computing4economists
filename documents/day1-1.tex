@@ -440,14 +440,7 @@ Can you figure out in what sequence to run them?
 
 
 
-
-
-
-\subsection{Basic scripting}
-
-\begin{frame}
-Basic Linux, basic scripting
-\end{frame}
+\subsection{Getting access to a compute cluster}
 
 \begin{frame}
 \begin{block}{Linux}
@@ -466,6 +459,113 @@ Basic Linux, basic scripting
 \item you can also download Cygwin, getting bash for Windows
 \end{itemize}
 \end{block}
+\end{frame}
+
+\begin{frame}{Access to your local compute cluster}
+\begin{block}{Several on-campus compute resources}
+\begin{itemize}[<+->]
+\item Cornell Center for Advanced Computing (\href{http://www.cac.cornell.edu}{CAC})\newline \uncover<3->{\alert{$\rightarrow$ Thursday}}
+\item Cornell Institute for Social and Economic Research (\href{http://www.ciser.cornell.edu}{CISER})\uncover<3->{\alert{$\rightarrow$ Thursday}}
+\pause
+\item Economics Compute Cluster Organization (ECCO), aka Social Science Gateway (SSG)
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Getting access to ECCO}
+\begin{block}{You already have...}
+\begin{itemize}
+\item You have an account by virtue of participating in this class
+\item Moving forward, you will be eligible to faculty-sponsored accounts
+\item Currently soft-monitoring of resource usage
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{... but do you have \textbf{access}?}
+Have you logged in via SSH to reset your password? \newline \uncover<3->{\alert{$\rightarrow$ \href{http://www2.vrdc.cornell.edu/news/ecco/step-2-first-login/}{Instructions}}}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Quick walkthrough, using Chrome SSH}
+\includegraphics[width=.9\textwidth]{chrome-ssh-screen1.png}
+\end{frame}
+
+
+\begin{frame}{Quick walkthrough, using Chrome SSH}
+\includegraphics[width=.9\textwidth]{chrome-ssh-screen2.png}
+\end{frame}
+
+
+\begin{frame}{Quick walkthrough, using Chrome SSH}
+\includegraphics[width=.9\textwidth]{chrome-ssh-screen3.png}
+\end{frame}
+
+
+\begin{frame}{Why SSH?}
+\begin{block}{Most compute clusters have ONLY SSH access}
+It is thus worthwhile to learn enough about it here, in order to be functional there: CAC ``Red Cloud'', Amazon Cloud, XSEDE. 
+\end{block}
+\begin{block}{Linux rules... the HPC world}
+All 10 of the top 10 \href{http://www.top500.org/list/2013/06/}{TOP500} computers run Linux (as the compiler front-end, if not compute OS)
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Graphical access}
+\begin{block}{Two types of graphical access}
+\begin{itemize}[<+->]
+\item with an ``X server'' (native in Linux, optional in Windows and OSX) \uncover<2->{\alert{$\rightarrow$ standard way on most clusters}}
+\item<3-> using NX client software for improved experience
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Access via NX}
+\begin{block}{What is NX?}
+NX is software similar to Windows Remote Desktop, allowing for a graphical interface to be made available remotely.
+\end{block}
+\begin{itemize}
+\item Client is free (provided by Nomachine)
+\item We use a free server (not provided by Nomachine, but fully functional)
+\item Clients can be launched by installing dedicated client (all OS)  or by launching the webclient (currently not working for some Linux)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Important note}
+\begin{block}{NX on ECCO security}
+You MUST download the custom-configured session from the VRDC website; the default session configuration from the NX client install will not work.
+\end{block}
+\tiny Details: we use a custom SSH key for the NX client, for some minimal additional security.
+\end{frame}
+
+
+\begin{frame}{Important note}
+\includegraphics[height=.7\textheight]{nx-ecco-key.png}
+\end{frame}
+
+
+\begin{frame}{Logging on}
+\centering
+\includegraphics[height=.7\textheight]{nx-login-box.png}
+\end{frame}
+
+
+\begin{frame}{Successful connection}
+\centering
+\includegraphics[width=1\textheight]{nx-logged-on.png}
+\end{frame}
+
+
+\subsection{Basic scripting}
+
+\begin{frame}
+Basic Linux, basic scripting
 \end{frame}
 
 
