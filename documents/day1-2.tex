@@ -156,6 +156,58 @@ Detailed mechanism to manage different versions (historical, parallel) of docume
 \end{columns}
 \end{frame}
 
+
+
+\begin{frame}[fragile]{File-system based versioning}
+The most common method... Also used in email versioning...
+\begin{block}{Remember this?}
+\footnotesize \ttfamily
+\begin{itemize}
+\item[\ ] 01\_01\_readBLS.R
+\item[\ ] {02\_01\_readCensus.R}
+\item[\ ] 02\_02\_prepareCensus.R
+\item[\ ] 03\_01\_create\_analysis\_data.R
+\item[\ ] 04\_01\_runOLS.sas
+\item[\ ] README.txt
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{File-system based versioning}
+The most common method... Also used in email versioning...
+\begin{block}{\onslide<1->{What if I make changes?}
+}
+\footnotesize \ttfamily
+\begin{itemize}
+\item[\ ] 01\_01\_readBLS.R
+\item[\ ] \onslide<1->{02\_01\_readCensus.R}
+\item[\ ] 02\_02\_prepareCensus.R
+\item[\ ] 03\_01\_create\_analysis\_data.R
+\item[\ ] 04\_01\_runOLS.sas
+\item[\ ] README.txt
+\onslide<2->{\item[\ ] 02\_01\_readCensus.R.bak}
+\onslide<3->{\item[\ ] 02\_01\_readCensus\_V2.R}
+\onslide<4->{\item[\ ] 02\_01\_readCensus\_V3.R}
+\onslide<5->{\item[\ ] 02\_01\_readCensus\_V3-jma.R}
+\onslide<6->{\item[\ ] 02\_01\_readCensus\_V3-jma-rm.R}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Better way}
+Is there a better way?
+\end{frame}
+
+
+\begin{frame}{History}
+\includegraphics[width=.9\textwidth]{trac-svn-view2.png}
+\end{frame}
+
+
+\subsubsection[Types]{Types of VCS}
 \begin{frame}{Two major types of version-management}
 \begin{block}{Centralized model}
 Server-client approach, editors check out a copy, modify it, and check it back in. Multiple editors:
@@ -187,7 +239,7 @@ We will focus on one system primarily, and mention a second one:
 
 \subsubsection{Quickstart on subversion}
 \begin{frame}[fragile]{Quickstart on SSG/ECCO}
-The following really quick tutorial can be run on SSG or on your own computer, if you already have the software installed.
+The following really quick tutorial can be run on SSG or on your own computer, if you already have the software installed.\color{blue}
 \begin{lstlisting}[language=bash,numbers=none]
 ssh NETID@ssg.vrdc.cornell.edu
 Last login: Mon Aug 19 15:43:33 2013 from lv39-ws.ilr.cornell.edu
@@ -216,13 +268,13 @@ Available subcommands:
 
 \lstset{language=bash,numbers=none}
 \begin{frame}[fragile]{Quickstart Step 1}
-Let's create a place to work
+Let's create a place to work\color{blue}
 \begin{lstlisting}
 mkdir Workspace
 cd Workspace
 \end{lstlisting}
-\pause
-Check out a version of the code:
+\pause\color{black}
+Check out a version of the code:\color{blue}
 \begin{lstlisting}
 > svn co http://repository.vrdc.cornell.edu/public/test
 A    test/test.3
@@ -235,7 +287,7 @@ A    test/test.1
 Checked out revision 23.
 > 
 \end{lstlisting}
-\small
+\small\color{black}
 \begin{description}
 \item[Checkout] 
 To \textit{check out} (or \textit{co}) is to create a local working copy from the repository. A user may specify a specific revision or obtain the latest. The term 'checkout' can also be used as a noun to describe the working copy. 
@@ -245,24 +297,24 @@ To \textit{check out} (or \textit{co}) is to create a local working copy from th
 
 \begin{frame}[fragile]{Quickstart 2}
 Using your favorite editor, modify a file:
-\begin{lstlisting}
+\color{blue}\begin{lstlisting}
 > cd test
 > vi test.1
 \end{lstlisting}
 \pause
-Verify the state of the repsository
+\color{black}Verify the state of the repsository\color{blue}
 \begin{lstlisting}
 > svn status
 M       test.1
 \end{lstlisting}
-\pause Let's also add a file:
-\begin{lstlisting}
+\pause\color{black} Let's also add a file:
+\color{blue}\begin{lstlisting}
 > vi test.today
 > svn status
 ?       test.today
 M       test.1
 \end{lstlisting}
-The question mark indicates that the file is not (yet) versioned.
+\color{black}The question mark indicates that the file is not (yet) versioned.
 \end{frame}
 
 
