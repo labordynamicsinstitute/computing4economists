@@ -1,0 +1,2 @@
+* generalize the debugging part of Kevin's presentation into a general debugging section (R, SAS, Matlab)
+* 

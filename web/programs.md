@@ -9,6 +9,10 @@ Day 1
 Day 2
 -----
 * [1-1-link.sas](../programs/day2/1-1-link.sas)
+* [School_choice_example_small.m](../programs/day2/School_choice_example_small.m)
 
 Day 3
 -----
+Other
+-----
+* [mk_pgms.sh](../programs/mk_pgms.sh)

@@ -73,12 +73,11 @@ Day 2
 * 11:00-12:30 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Kevin McKinney)
 	* Threads
 	* SAS, Stata, Matlab
-	* Directly programmed (C, MPI)
-	* Considerations: Debugging and Code verification
+
 
 * 13:30-14:30 Putting it into practice
 
-* 14:30-16:00 [A practical example: Matlab programming basics](../web/coming-soon.html) (Rick)
+* 14:30-16:00 [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf) (Rick)
 
 * 16:00-17:00 Putting it into practice
 
@@ -105,11 +104,12 @@ Day 3
 
 Additional resources
 --------------------
+* [Some programs referenced in the class](programs.html)
 * Basics courses for SAS, Stata, R, Matlab at [CISER](http://www.ciser.cornell.edu) at [http://ciser.cornell.edu/beta/workshops/](http://ciser.cornell.edu/beta/workshops/) (new times will be posted soon)
 * Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) starts Sept 23, 2013.
 
 Acknowledgements
----------------
+----------------
 
 Source
 ------

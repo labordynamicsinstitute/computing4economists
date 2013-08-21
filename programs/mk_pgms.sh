@@ -1,5 +1,6 @@
 #!/bin/bash
 outfile=programs.md
+cd ../web
 cat > $outfile << EOF
 High-performance computing for Economists - Programs
 ====================================================
@@ -20,6 +21,10 @@ done
 add_day 1
 add_day 2
 add_day 3
+# add self
+echo "Other
+-----" >> $outfile
+  echo "* [$(basename $0)](../programs/$(basename $0))" >> $outfile
 
 multimarkdown $outfile > $(basename $outfile .md).html 
 git add $outfile $(basename $outfile .md).html 
