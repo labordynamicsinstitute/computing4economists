@@ -63,14 +63,14 @@ Day 1
 
 Day 2
 -----
-* 9:00-10:00 [Extending the principle to other languages](../web/coming-soon.html) (Kevin McKinney)
+* 9:00-10:00 [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Kevin McKinney)
 	* Subroutines in SAS: macros
 	* Subroutines in Stata: programs
 	* Subroutines in Matlab: function
 
 * 10:00-11:00 Putting it into practice
 
-* 11:00-12:30 [Introduction to parallel processing](../web/coming-soon.html) (Kevin McKinney)
+* 11:00-12:30 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Kevin McKinney)
 	* Threads
 	* SAS, Stata, Matlab
 	* Directly programmed (C, MPI)
