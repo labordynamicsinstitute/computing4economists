@@ -1,2 +1,3 @@
 * generalize the debugging part of Kevin's presentation into a general debugging section (R, SAS, Matlab)
-* 
+* Move Matrix programming to HPC considerations
+* Move qsub /pmon example to Day 3

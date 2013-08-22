@@ -78,14 +78,18 @@ Day 2
 * 13:30-14:30 Putting it into practice
 
 * 14:30-16:00 [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf) (Rick)
+         * Some additional links
+                  * [Matlab memory considerations](http://www.mathworks.com/help/matlab/matlab_prog/strategies-for-efficient-use-of-memory.html)
 
 * 16:00-17:00 Putting it into practice
 
 Day 3
 -----
-* 9:00-10:00 [Basics of High-performance computing](../web/coming-soon.html) (Lars)
-	* Why do it? Examples
+* 9:00-10:00 [HP resources at Cornell, elsewhere](../documents/day3-1.pdf) (Lars)
 	* Basic types of HP computing (multi-threaded, data I/O, big memory)
+	* Resources available
+		* scaling from workstation to HPC cluster
+	* XSEDE and getting there
 
 * 10:00-10:30 Break
 
@@ -94,11 +98,9 @@ Day 3
 	* Excursion: source and documenting sources
 	* Complicated data management
 
-* 13:00-14:00 [HP resources at Cornell, elsewhere](../web/coming-soon.html) (Lars)
+* 13:00-14:00 [Basics of High-performance computing](../documents/day3-3.pdf) (Lars)
+	* Why do it? Examples
 	* Basic tools (qsub, VirtualRDC)
-	* Resources available
-		* scaling from workstation to HPC cluster
-	* XSEDE and getting there
 
 * 14:00-15:00 Wrap up
 
