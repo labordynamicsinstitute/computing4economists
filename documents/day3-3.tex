@@ -1,0 +1,252 @@
+% Time-stamp: <09/10/02 01:57:13 vilhuber>
+% $Id: Presentation-PSD.tex 3219 2012-09-27 07:47:11Z vilhu001 $
+
+% normal line:
+\documentclass[xcolor=table,compress]{beamer}
+% to create notes:
+%\documentclass[handout,notes=only]{beamer}
+% to create handouts
+%\documentclass[xcolor=table,handout,compress]{beamer}
+% to create a different kind of handouts
+%\documentclass{article}
+%\usepackage[envcountsect]{beamerarticle}
+
+%\setbeameroption{handout}
+%\setbeameroption{show notes}
+
+
+%
+% Packages
+%
+\mode<article> % only for the article version
+{
+  \usepackage{fullpage}
+  \usepackage{hyperref}
+}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage{embedfile}
+\embedfile{\jobname.tex}
+\fi
+
+\usepackage{graphicx}
+%\usepackage{pstricks}
+\usepackage{xcolor}
+\usepackage{pifont}
+%\usepackage{../chicago}
+\usepackage{pgf}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[latin1]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{pdfpages}
+% usage:
+%   \includepdf[pages={1}]{myfile.pdf}
+%   \includepdf[pages={1,3,5}]{myfile.pdf} would include pages 1, 3, and 5 of the file. 
+%   To include the entire file, you specify pages={-}, where {-}
+%\usepackage{landscape}
+\usepackage{listings}
+\lstloadlanguages{R,bash}
+\lstset{numbers=left, stepnumber=1,  language=bash, basicstyle=\tiny}
+
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+
+\usepackage{times}
+%\usepackage{colortbl}
+
+%============================================================
+% Beamer specific styles and configs
+%============================================================
+
+\mode<presentation>
+{
+% alternative, could always use
+%\usetheme{Census}
+\usetheme{cornell}
+\useoutertheme{cornell}
+}
+
+
+%\setbeamercovered{dynamic}
+
+
+
+%============================================================
+% Title
+%============================================================
+
+\title[Computing for Economists]{Workshop: High-performance computing for economists}
+\author[Vilhuber, Abowd, Mansfield, McKinney]{%
+  Lars~Vilhuber\inst{1} \and
+  John M. Abowd\inst{1} \and
+  Richard~Mansfield\inst{1} \and
+  Kevin~L.~McKinney %\inst{2}%
+}
+
+\institute[Cornell]{
+  \inst{1}%
+   Cornell University, Economics Department,
+%\and \inst{2} U.S. Census Bureau
+}%
+\date[August 20-22, 2013]{August 20-22, 2013: Day 3}
+\subject{HPC}
+
+
+% % % % % % % % % % % % % % % % % Main document
+\begin{document}
+\frame{\titlepage}
+
+\section[HP resources]{HP resources at Cornell and elsewhere}
+\begin{frame}
+\href{day3-1.pdf}{HP resources}
+\end{frame}
+\section[Data mgmt]{Considerations for data management}
+\begin{frame}
+\href{day3-2.pdf}{Data management}
+\end{frame}
+
+
+\section[Basics]{Basics of High-performance computing}
+\begin{frame}
+\begin{block}{The gist of it all: QSUB}
+\begin{itemize}
+\item Basic submission
+\item Understanding queue parameters
+\item Customizing
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{What to watch out for}
+\begin{itemize}
+\item Too many jobs 
+\item Within-job scheduling
+\item Threading of your software (SAS, Stata, Matlab)
+\item Storage
+\begin{itemize}
+\item Size
+\item Speed
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Wihin-job scheduling}
+\begin{itemize}
+\item Simple
+\item \href{http://repository.vrdc.cornell.edu/VRDC/tools/trunk/pmon/}{Pmon} 
+[locked]
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Simple within-job scheduler}
+\begin{lstlisting}[language=bash,numbers=none]
+01_01_readBLS.R
+02_01_readCensus.R
+02_02_prepareCensus.R
+03_01_create_analysis_data.R
+04_01_runOLS.R
+README.txt
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Simple within-job scheduler}
+\begin{lstlisting}[language=bash]
+#!/bin/bash
+#PBS -l ncpus=2
+cd /to/mydir
+set -- $(ls 0*R)
+while [[ ! -z $1 ]] 
+do
+   R --vanilla < $1 &
+   shift
+   R --vanilla < $1 
+   shift
+   wait
+done
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Threading}
+\begin{block}{SAS}
+\begin{itemize}
+\item Default on ECCO set to 1 thread.
+\item Override with "sas -cpucount 2"
+\item ON ECCO, override with "qsas prog.sas [chunks]"
+\end{itemize}\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{qsas}
+\begin{lstlisting}
+> qsas
+    /usr/local/bin/qsas prog[.sas] chunks
+
+    will launch SAS under PBS-like systems, requesting [chunks] chunks
+    and adjusting SAS memsize, sortsize, and sumsize appropriately.
+
+    If not specifying [chunks], uses 1 CPU and 8GB of RAM.
+    Chunks are defined in units of 2CPUS:16GB of RAM
+
+    If these limits are insufficient, you may need to run a 
+    custom qsub job with '#PBS -l mem=XXXXmb' as one of the PBS options.
+
+    (expert usage)
+    To add additional PBS options, set a environment variable PBSEXTRA
+    with the full set of options. It will be appended to the qsub
+    command line 
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Example job}
+See QWI Macro examples
+\begin{itemize}
+\item 
+\href{http://repository.vrdc.cornell.edu/private/jma7/qwi-macro.production/programs/}{code}
+\item \href{http://www2.vrdc.cornell.edu/news/data/qwi-national-data/}{data}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Storage speed differences}
+\begin{lstlisting}[language=SAS]
+> iqsub 2
+-sh-3.1$ echo "libname here '.'; 
+               data here.one;
+                 do i = 1 to 100000000;
+                   output;
+                 end;
+               run; 
+               proc datasets library=here; 
+                 delete one;
+               quit;
+               " | sas -stdio 2>&1 | grep "real time" | tail -1
+
+      real time           6.30 seconds
+
+-sh-3.1$ cd /dev/shm
+-sh-3.1$ echo "libname here '.'; data here.one;do i = 1 to 
+100000000;output;end;run; proc datasets library=here; delete one;quit;" | sas 
+-stdio 2>&1 | grep "real time" | tail -1
+
+      real time           3.38 seconds
+
+-sh-3.1$ cd /temporary/
+-sh-3.1$ echo "libname here '.'; data here.one;do i = 1 to 
+100000000;output;end;run; proc datasets library=here; delete one;quit;" | sas 
+-stdio 2>&1 | grep "real time" | tail -1
+
+      real time           4.27 seconds
+\end{lstlisting}
+\end{frame}
+
+\section{Wrap up}
+
+\begin{frame}
+\href{day3-4.pdf}{Wrap-up}
+\end{frame}
+
+\end{document}
