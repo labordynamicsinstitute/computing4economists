@@ -106,9 +106,10 @@ Day 3
 
 Additional resources
 --------------------
-* [Some programs referenced in the class](programs.html)
-* Basics courses for SAS, Stata, R, Matlab at [CISER](http://www.ciser.cornell.edu) at [http://ciser.cornell.edu/beta/workshops/](http://ciser.cornell.edu/beta/workshops/) (new times will be posted soon)
-* Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) starts Sept 23, 2013.
+ * [Some programs referenced in the class](programs.html)
+ * Basics courses for SAS, Stata, R, Matlab at [CISER](http://www.ciser.cornell.edu) at [http://ciser.cornell.edu/beta/workshops/](http://ciser.cornell.edu/beta/workshops/) (new times will be posted soon)
+ * Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) starts Sept 23, 2013.
+ * [Code and Data](http://faculty.chicagobooth.edu/jesse.shapiro/research/CodeAndData.pdf)
 
 Acknowledgements
 ----------------
