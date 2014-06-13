@@ -9,7 +9,7 @@ Capacity: 32
 
 Authors
 -------
-John M. Abowd, Rick Mansfield, Kevin McKinney and Lars Vilhuber
+John M. Abowd, Rick Mansfield, and Lars Vilhuber
 
 Goal
 ----
@@ -71,7 +71,7 @@ Day 2
 -----
 * 9:00-10:30 Subroutines
     * [Example of function programming in R](../documents/day1-3.pdf) (Lars)
-    * [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Kevin McKinney)
+    * [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Lars?)
 		* Subroutines in SAS: macros
 		* Subroutines in Stata: programs
 		* Subroutines in Matlab: function
@@ -84,7 +84,7 @@ Day 2
 
 * 13:30-14:30 Putting it into practice
 
-* 14:30-16:00 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Kevin McKinney)
+* 14:30-16:00 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Lars)
 	* Threads
 	* Embarassingly parallel problems
 	* Basic tools (bash, qsub, ECCO)
