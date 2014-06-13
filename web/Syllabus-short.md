@@ -5,7 +5,7 @@ Location
 --------
 *Ives 115*, 2013/8/20-2013/8/22 9:00 - 5:00 p.m. (last day ends at 3:00 p.m.)
 
-Capacity: 32 (THE COURSE IS NOW FULL, WAITLIST only).
+Capacity: 32 
 
 Authors
 -------
@@ -15,8 +15,9 @@ Goal
 ----
 The goal of this class is to showcase high-performance techniques and tools for economics students. The goal is NOT to teach a full 
 course on SAS, Stata, etc. - there are other classes for that. We will teach just enough of each programming language to
-be able to highlight additional techniques. This course is designed to open your eyes to the possibilities, scratching
-the surface, but not diving into any particular depths. Follow-on short courses may solve those needs. For
+be able to highlight additional techniques (for SAS and Matlab, we will teach specialized workshops on each in more depth)
+ This course is designed to open your eyes to the possibilities, scratching
+the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
 specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu). 
 
 Target group
@@ -30,7 +31,7 @@ Requirements
 
 Day 0
 -----
-* Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0005)
+* Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
 * Fill out the online survey (sent out by email) ( [results for 2013](SurveyResults2013.pdf) )
 
 Day 1
@@ -51,58 +52,59 @@ Day 1
 	* More formal version control
 		- Subversion ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
 		- Git
+    * Debugging your code
 	* Working with servers
 	* Setting up infrastructure at Cornell
 
 * 13:30-14:30 Putting it into practice
 
-* 14:30-16:00 [Subroutines: the example of function programming in R](../documents/day1-3.pdf) (Lars)
-	* Basic function programming
+* 14:30-16:00 [HP resources at Cornell, elsewhere](../documents/day3-1.pdf) (Lars)
+	* Basic types of HP computing (multi-threaded, data I/O, big memory)
+	* Resources available
+		* scaling from workstation to HPC cluster
+	* XSEDE and getting there
+	* Amazon EC2 and getting there (?)
 
 * 16:00-17:00 Putting it into practice
 
 Day 2
 -----
-* 9:00-10:00 [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Kevin McKinney)
-	* Subroutines in SAS: macros
-	* Subroutines in Stata: programs
-	* Subroutines in Matlab: function
+* 9:00-10:30 Subroutines
+    * [Example of function programming in R](../documents/day1-3.pdf) (Lars)
+    * [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Kevin McKinney)
+		* Subroutines in SAS: macros
+		* Subroutines in Stata: programs
+		* Subroutines in Matlab: function
 
-* 10:00-11:00 Putting it into practice
+* 10:30-11:00 Break
 
-* 11:00-12:30 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Kevin McKinney)
-	* Threads
-	* SAS, Stata, Matlab
-
+* 11:00-12:30 [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf) (Rick)
+         * Some additional links
+                  * [Matlab memory considerations](http://www.mathworks.com/help/matlab/matlab_prog/strategies-for-efficient-use-of-memory.html)
 
 * 13:30-14:30 Putting it into practice
 
-* 14:30-16:00 [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf) (Rick)
-         * Some additional links
-                  * [Matlab memory considerations](http://www.mathworks.com/help/matlab/matlab_prog/strategies-for-efficient-use-of-memory.html)
+* 14:30-16:00 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Kevin McKinney)
+	* Threads
+	* Embarassingly parallel problems
+	* Basic tools (bash, qsub, ECCO)
+	* SAS, Stata, Matlab
 
 * 16:00-17:00 Putting it into practice
 
 Day 3
 -----
-* 9:00-10:00 [HP resources at Cornell, elsewhere](../documents/day3-1.pdf) (Lars)
-	* Basic types of HP computing (multi-threaded, data I/O, big memory)
-	* Resources available
-		* scaling from workstation to HPC cluster
-	* XSEDE and getting there
+* 9:00-12:00 Parallel working groups (with breaks)
+	* Leveraging parallel programming techniques in SAS [Lars]
+	* Leveraging parallel programming techniques in Matlab [Panle/Sida]
 
-* 10:00-10:30 Break
-
-* 10:30-12:00 [Considerations for data management](../web/coming-soon.html) (JohnA, Lars)
+* 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (JohnA, Lars)
 	* Simple data management
 	* Excursion: source and documenting sources
 	* Complicated data management
 
-* 13:00-14:00 [Basics of High-performance computing](../documents/day3-3.pdf) (Lars)
-	* Why do it? Examples
-	* Basic tools (qsub, VirtualRDC)
 
-* 14:00-15:00 Wrap up
+* 14:30-15:00 Wrap up
 
 Additional resources
 --------------------
