@@ -45,25 +45,24 @@ Day 1
 	* NX, SSH, Linux, request an account on cluster
 	* Basic scripting
 
-* 10:30-11:30 putting it into practice
+* 10:30-10:45 Break
 
-* 11:30-12:30 [Basics of version control](../documents/day1-2.pdf) (Lars)
+* 10:45-12:30 [Basics of version control](../documents/day1-2.pdf) (Lars)
 	* File-system based version control 
 	* More formal version control
-		- Subversion ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
-		- Git
-    * Debugging your code
-	* Working with servers
-	* Setting up infrastructure at Cornell
+		- Subversion ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) (Flavio)
+		- Git (Hautahi)
 
 * 13:30-14:30 Putting it into practice
 
 * 14:30-16:00 [HP resources at Cornell, elsewhere](../documents/day3-1.pdf) (Lars)
 	* Basic types of HP computing (multi-threaded, data I/O, big memory)
+	* Working with servers
 	* Resources available
 		* scaling from workstation to HPC cluster
 	* XSEDE and getting there
 	* Amazon EC2 and getting there (?)
+	* Setting up infrastructure at Cornell
 
 * 16:00-17:00 Putting it into practice
 
@@ -75,6 +74,7 @@ Day 2
 		* Subroutines in SAS: macros
 		* Subroutines in Stata: programs
 		* Subroutines in Matlab: function
+    * Debugging your code
 
 * 10:30-11:00 Break
 
@@ -96,7 +96,7 @@ Day 3
 -----
 * 9:00-12:00 Parallel working groups (with breaks)
 	* Leveraging parallel programming techniques in SAS [Lars]
-	* Leveraging parallel programming techniques in Matlab [Panle/Sida]
+	* Leveraging parallel programming techniques in Matlab [Sida]
 
 * 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (JohnA, Lars)
 	* Simple data management
