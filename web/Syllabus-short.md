@@ -3,7 +3,7 @@ High-performance computing for Economists
 
 Location
 --------
-*Ives 115*, 2013/8/20-2013/8/22 9:00 - 5:00 p.m. (last day ends at 3:00 p.m.)
+*Ives 109*, 2014/8/18-2014/8/20 9:00 - 5:00 p.m. (we will typically end earlier)
 
 Capacity: 32 
 
