@@ -7,9 +7,9 @@ Location
 
 Capacity: 32 
 
-Authors
--------
-John M. Abowd, Rick Mansfield, and Lars Vilhuber
+Contributors:
+------------
+John M. Abowd, Rick Mansfield, Flavio Stanchi, Hautahi Kingi, Sida Peng, Lars Vilhuber
 
 Goal
 ----
@@ -32,7 +32,7 @@ Requirements
 Day 0
 -----
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
-* Fill out the online survey (sent out by email) ( [results for 2013](SurveyResults2013.pdf) )
+* Fill out the online survey (sent out by email) ( results for [2013](SurveyResults2013.pdf) and [2014](Computing_in_Economics_2014_results.pdf) )
 
 Day 1
 -----
@@ -42,16 +42,17 @@ Day 1
 	* Choosing an editor
 	* How to structure programs, texts, etc.
 	* A clean sequence of programs
-	* NX, SSH, Linux, request an account on cluster
-	* Basic scripting
+	* NX, SSH, Linux, request an account on cluster (see also [CAC: Introduction to Linux](https://www.cac.cornell.edu/VW/Linux/default.aspx?id=xup_guest)
+	* The command line (Hautahi Kingi) [lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)
+  * Basic scripting
 
 * 10:30-10:45 Break
 
 * 10:45-12:30 [Basics of version control](../documents/day1-2.pdf) (Lars)
 	* File-system based version control 
 	* More formal version control
-		- Subversion ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) (Flavio)
-		- Git (Hautahi)
+		- Subversion (Flavio Stanchi):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
+		- Git (Hautahi) [lecture notes](../Git_CL_Slides/Git_Notes.pdf)
 
 * 13:30-14:30 Putting it into practice
 
