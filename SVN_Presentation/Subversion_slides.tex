@@ -36,6 +36,18 @@
   \end{itemize}
 }
 
+\frame
+{
+  \frametitle{A bit of history}
+
+  \begin{itemize}
+  \item<1-> The SVN open-source project was founded in 2000 by CollabNet 
+  \item<2-> Version 1.0 was released in February 2004
+  \item<3-> In 2009 it was accepted into Apache Incubator
+  \item<4-> Git development started in 2005 to substitute BitKeeper (Linus Torvalds is one of the founders)
+  \end{itemize}
+}
+
 \subsection{How to get Subversion?}
 
 \frame
@@ -105,7 +117,7 @@
   \item<1-> Server-client approach
   	\begin{itemize}
 	\item<1-> The repository is located in the server
-	\item<2-> No version control over local copies
+	\item<2-> No version control over local copies: \textit{commit} is also used for sharing (no need to \textit{push})
 	\end{itemize}
   \item<3-> Version merging:
   	\begin{itemize}
@@ -184,6 +196,7 @@
 	\end{itemize}
   \item<3-> Every command must be preceded by \textit{svn}
   \includegraphics[height=0.8cm]{svn_example.png}
+  \item<4-> svn $<$subcommand$>$ [options] [args]
   \end{itemize}
 	
 }
@@ -224,6 +237,22 @@
 
 }
 
+\frame
+{
+  \frametitle{Shallow checkouts}
+  
+  \begin{itemize}
+  \item<1-> When using the \textit{checkout} command, the option \textit{-{}-depth} allows us to selectively checkout parts of the content of a directory
+  	\begin{itemize}
+	\item<2-> \textit{-{}-depth empty} to include only the immediate target (no children)
+	\item<3-> \textit{-{}-depth files} to also include its files (but no directory children)
+	\item<4-> \textit{-{}-depth immediates} to include all of its immediate file or directory children
+	\item<5-> \textit{-{}-depth infinity} to have full recursion (default)
+	\end{itemize}
+  \end{itemize}
+  
+}
+
 \subsection{Common tasks}
 
 \frame
@@ -235,8 +264,13 @@
   	\begin{itemize}
 	\item<1-> Commands: \textit{copy}, \textit{export}, with option \textit{-r}
 	\end{itemize}
-  \item<2-> Identifying changes
-  \item<3-> Merging a branch back into the trunk
+  \item<2-> Each revision has an associated number
+  	\begin{itemize}
+	\item<2-> HEAD revision is the latest
+	\item<2-> Using the option \textit{-r 23} will refer to revision 23
+	\end{itemize}
+  \item<3-> Identifying changes
+  \item<4-> Merging a branch back into the trunk
   \end{itemize}
   
 }  
@@ -256,5 +290,11 @@
   \end{itemize}
 
 }
+
+\bgroup
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[plain]{}
+\end{frame}
+\egroup
 
 \end{document}
