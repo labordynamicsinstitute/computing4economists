@@ -32,7 +32,7 @@ Requirements
 Day 0
 -----
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
-* Fill out the online survey (sent out by email) ( [results for 2013](SurveyResults2013.pdf) )
+* Fill out the online survey (sent out by email) ( results for [2013](SurveyResults2013.pdf) and [2014](Computing_in_Economics_2014_results.pdf) )
 
 Day 1
 -----
