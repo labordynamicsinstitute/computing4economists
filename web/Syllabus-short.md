@@ -97,9 +97,9 @@ Day 3
 -----
 * 9:00-12:00 Parallel working groups (with breaks)
 	* Leveraging parallel programming techniques in SAS [Lars]
-	* Leveraging parallel programming techniques in Matlab [Sida]
+	* Leveraging parallel programming techniques in Matlab [Sida] [lecture notes](../Matlab/peng-matlabparallel.pdf)
 
-* 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (JohnA, Lars)
+* 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (Lars)
 	* Simple data management
 	* Excursion: source and documenting sources
 	* Complicated data management
