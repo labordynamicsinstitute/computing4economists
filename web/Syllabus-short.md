@@ -80,8 +80,8 @@ Day 2
 * 10:30-11:00 Break
 
 * 11:00-12:30 [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf) (Rick)
-         * Some additional links
-                  * [Matlab memory considerations](http://www.mathworks.com/help/matlab/matlab_prog/strategies-for-efficient-use-of-memory.html)
+    * Some additional links
+        * [Matlab memory considerations](http://www.mathworks.com/help/matlab/matlab_prog/strategies-for-efficient-use-of-memory.html)
 
 * 13:30-14:30 Putting it into practice
 
