@@ -5,7 +5,7 @@
 %%Setting parameters of the simulation
 
 %Total number of students
-N = 1000;
+N = 10000;
 %Number of schools/neighborhoods to choose from
 S = 10;
 %Number of observable student characteristics
@@ -19,6 +19,8 @@ K = 3;
 %choice.
 P = 1;
 
+%L = 500;
+%M = 500;
 Schoolsize = repmat(N/S,S,1);
 
 %% Creating distributions from which student characteristics and school amenities will be drawn
@@ -96,9 +98,9 @@ end
 toc
 
 %To see efficiency gains from vectorization, compare the times for the
-%above loops when L = 1000, M = 1000.  Gains from vectorization tend to
+%above loops when L = 500, M = 500.  Gains from vectorization tend to
 %appear when the loops they replace are long.
-%{
+
 
 
 tic
