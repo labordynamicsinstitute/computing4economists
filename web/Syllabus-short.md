@@ -111,8 +111,9 @@ Additional resources
 --------------------
  * [Some programs referenced in the class](programs.html)
  * Basics courses for SAS, Stata, R, Matlab at [CISER](http://www.ciser.cornell.edu) at [http://ciser.cornell.edu/beta/workshops/](http://ciser.cornell.edu/beta/workshops/) (new times will be posted soon)
- * Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) starts Sept 23, 2013.
+ * Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) and the [classes on YouTube](https://www.youtube.com/results?search_query=roger+peng+computing+for+data+analysis)
  * [Code and Data](http://faculty.chicagobooth.edu/jesse.shapiro/research/CodeAndData.pdf)
+ * Test repository for Subversion: [https://repository.vrdc.cornell.edu/public/test](https://repository.vrdc.cornell.edu/public/test)
 
 Acknowledgements
 ----------------
