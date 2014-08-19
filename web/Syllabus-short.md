@@ -70,8 +70,8 @@ Day 1
 Day 2
 -----
 * 9:00-10:30 Subroutines
-    * [Example of function programming in R](../documents/day1-3.pdf) (Lars)
-    * [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Lars?)
+    * [Example of function programming in R](../documents/day2-1.pdf) (Lars)
+    * [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Lars)
 		* Subroutines in SAS: macros
 		* Subroutines in Stata: programs
 		* Subroutines in Matlab: function
@@ -96,8 +96,8 @@ Day 2
 Day 3
 -----
 * 9:00-12:00 Parallel working groups (with breaks)
-	* Leveraging parallel programming techniques in SAS [Lars]
-	* Leveraging parallel programming techniques in Matlab [Sida] [lecture notes](../Matlab/peng-matlabparallel.pdf)
+	* Leveraging parallel programming techniques in SAS (Lars)
+	* Leveraging parallel programming techniques in Matlab (Sida) [lecture notes](../Matlab/peng-matlabparallel.pdf)
 
 * 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (Lars)
 	* Simple data management
