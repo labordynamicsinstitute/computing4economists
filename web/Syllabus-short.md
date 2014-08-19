@@ -116,7 +116,8 @@ Additional resources
  * Computing for Data Analysis [Coursera course](https://www.coursera.org/course/compdata) and the [classes on YouTube](https://www.youtube.com/results?search_query=roger+peng+computing+for+data+analysis)
  * [Code and Data](http://faculty.chicagobooth.edu/jesse.shapiro/research/CodeAndData.pdf)
  * Test repository for Subversion: [https://repository.vrdc.cornell.edu/public/test](https://repository.vrdc.cornell.edu/public/test)
- * Assessing time and memory usage in R: [a nice brief tutorial](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/)
+ * Assessing time and memory usage in R: [a nice brief tutorial](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/) (but with the conclusion to use Matlab...)
+ * Learning how to use doParallel in R: [doParallel vignette](http://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
 
 Acknowledgements
 ----------------
