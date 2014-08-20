@@ -61,9 +61,10 @@ Day 1
 	* Working with servers
 	* Resources available
 		* scaling from workstation to HPC cluster
-	* XSEDE and getting there
-	* Amazon EC2 and getting there (?)
-	* Setting up infrastructure at Cornell
+		* XSEDE and getting there
+		* Amazon EC2 and getting there (?)
+		* Setting up infrastructure at Cornell
+		* See also [this page at the VRDC](http://www2.vrdc.cornell.edu/news/ecco/what-computing-resources-are-available-at-the-economics-department/)
 
 * 16:00-17:00 Putting it into practice
 
@@ -72,7 +73,7 @@ Day 2
 * 9:00-10:30 Subroutines
     * [Example of function programming in R](../documents/day2-1.pdf) (Lars)
     * [Extending the principle to other languages](../documents/HPC_Class_SubRoutines.pdf) (Lars)
-		* Subroutines in SAS: macros
+		* Subroutines in SAS: macros ([also see these code fragments](http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&path=%2Ftrunk%2Fsas%2Fmacro-loop%2F&#a69a93842236cac1c14d7015b46e06eb0))
 		* Subroutines in Stata: programs
 		* Subroutines in Matlab: function
     * Debugging your code
@@ -90,17 +91,20 @@ Day 2
 * 14:30-16:00 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Lars)
 	* Threads
 	* Embarassingly parallel problems
-	* Basic tools (bash, qsub, ECCO)
 	* SAS, Stata, Matlab
+	* Basic tools (bash, qsub, ECCO)
+		* [Advanced qsub](http://www2.vrdc.cornell.edu/news/ecco/step-4-using-ecco/advanced-qsub/)
+		* [Module command](http://www2.vrdc.cornell.edu/news/ecco/step-4-using-ecco/the-module-command/)
 
 * 16:00-17:00 Putting it into practice
 
 Day 3
 -----
 * 9:00-12:00 Parallel working groups (with breaks)
-	* Leveraging parallel programming techniques in SAS (Lars)
 	* Leveraging parallel programming techniques in Matlab (Sida) [lecture notes](../Matlab/peng-matlabparallel.pdf)
-
+	* Leveraging parallel programming techniques in SAS (Lars)
+		* [Example MP Connect code](http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&path=%2Ftrunk%2Fsas%2Fmpconnect%2F&#a35a136da6e860bff713e16f3fe2c4bfa)
+		* 
 * 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (Lars)
 	* Simple data management
 	* Excursion: source and documenting sources
