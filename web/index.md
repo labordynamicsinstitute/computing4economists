@@ -65,7 +65,7 @@ Tentative Agenda - Day 2
 
 * 16:00-17:00 Putting it into practice
 
-Tentative Agenda - Day 2
+Tentative Agenda - Day 3
 ========================================================
 * 9:00-12:00 Parallel working groups (with breaks)
   * Leveraging parallel programming techniques in Matlab (Sida) [lecture notes](../Matlab/peng-matlabparallel.pdf)
