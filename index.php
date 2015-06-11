@@ -1,3 +1,3 @@
 <?php
-                                header ( 'Location: web/Syllabus-short.html' );
+                                header ( 'Location: web/' );
 ?>
