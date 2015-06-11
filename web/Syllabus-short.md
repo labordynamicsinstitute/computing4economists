@@ -3,9 +3,9 @@ High-performance computing for Economists
 
 Location
 --------
-*Ives 109*, 2014/8/18-2014/8/20 9:00 - 5:00 p.m. (we will typically end earlier)
+*Ives 109*, 2015/8/17-2015/8/19 9:00 - 5:00 p.m. (we will typically end earlier)
 
-Capacity: 32 
+Capacity: 32
 
 Contributors:
 ------------
@@ -13,12 +13,12 @@ John M. Abowd, Rick Mansfield, Flavio Stanchi, Hautahi Kingi, Sida Peng, Lars Vi
 
 Goal
 ----
-The goal of this class is to showcase high-performance techniques and tools for economics students. The goal is NOT to teach a full 
+The goal of this class is to showcase high-performance techniques and tools for economics students. The goal is NOT to teach a full
 course on SAS, Stata, etc. - there are other classes for that. We will teach just enough of each programming language to
 be able to highlight additional techniques (for SAS and Matlab, we will teach specialized workshops on each in more depth)
  This course is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
-specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu). 
+specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu).
 
 Target group
 ------------
@@ -49,7 +49,7 @@ Day 1
 * 10:30-10:45 Break
 
 * 10:45-12:30 [Basics of version control](../documents/day1-2.pdf) (Lars)
-	* File-system based version control 
+	* File-system based version control
 	* More formal version control
 		- Subversion (Flavio Stanchi):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
 		- Git (Hautahi) [lecture notes](../Git_CL_Slides/Git_Notes.pdf)
@@ -104,7 +104,7 @@ Day 3
 	* Leveraging parallel programming techniques in Matlab (Sida) [lecture notes](../Matlab/peng-matlabparallel.pdf)
 	* Leveraging parallel programming techniques in SAS (Lars)
 		* [Example MP Connect code](http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&path=%2Ftrunk%2Fsas%2Fmpconnect%2F&#a35a136da6e860bff713e16f3fe2c4bfa)
-		* 
+		*
 * 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (Lars)
 	* Simple data management
 	* Excursion: source and documenting sources
@@ -130,5 +130,3 @@ Source
 ------
 * Git: via [https](https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists) (login required)
 * Web: [http://www.vrdc.cornell.edu/computing-for-economists/](http://www.vrdc.cornell.edu/computing-for-economists/)
-
-

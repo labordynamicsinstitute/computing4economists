@@ -1,172 +1,632 @@
-<h1 id="high-performancecomputingforeconomists">High-performance computing for Economists</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Syllabus-short</title>
+      <style>.markdown-preview { font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 14px; line-height: 1.6; overflow: scroll; box-sizing: border-box; padding: 20px; background-color: rgb(255, 255, 255); }
+.markdown-preview code { color: rgb(51, 51, 51); }
+.markdown-preview pre, .markdown-preview code, .markdown-preview tt, .markdown-preview pre.editor-colors { font-size: 12px; font-family: Consolas, 'Liberation Mono', Courier, monospace; }
+.markdown-preview a, .markdown-preview a code { color: rgb(65, 131, 196); }
+.markdown-preview ol > li { list-style-type: decimal; }
+.markdown-preview ul > li { list-style-type: disc; }
+.markdown-preview li > pre.editor-colors { display: inline-block; vertical-align: top; width: 100%; }
+.markdown-preview li:last-child > pre.editor-colors { margin-bottom: 0px; }
+.markdown-preview > :first-child { margin-top: 0px !important; }
+.markdown-preview > :last-child { margin-bottom: 0px !important; }
+.markdown-preview a.absent { color: rgb(204, 0, 0); }
+.markdown-preview a.anchor { display: block; padding-left: 30px; margin-left: -30px; cursor: pointer; position: absolute; top: 0px; left: 0px; bottom: 0px; }
+.markdown-preview h1, .markdown-preview h2, .markdown-preview h3, .markdown-preview h4, .markdown-preview h5, .markdown-preview h6 { font-family: 'Helvetica Neue', Helvetica, sans-serif; margin: 20px 0px 10px; padding: 0px 0px 10px; font-weight: bold; -webkit-font-smoothing: antialiased; cursor: text; position: relative; }
+.markdown-preview h1 .octicon-link, .markdown-preview h2 .octicon-link, .markdown-preview h3 .octicon-link, .markdown-preview h4 .octicon-link, .markdown-preview h5 .octicon-link, .markdown-preview h6 .octicon-link { display: none; color: rgb(0, 0, 0); }
+.markdown-preview h1:hover a.anchor, .markdown-preview h2:hover a.anchor, .markdown-preview h3:hover a.anchor, .markdown-preview h4:hover a.anchor, .markdown-preview h5:hover a.anchor, .markdown-preview h6:hover a.anchor { text-decoration: none; line-height: 1; padding-left: 0px; margin-left: -22px; top: 15%; }
+.markdown-preview h1:hover a.anchor .octicon-link, .markdown-preview h2:hover a.anchor .octicon-link, .markdown-preview h3:hover a.anchor .octicon-link, .markdown-preview h4:hover a.anchor .octicon-link, .markdown-preview h5:hover a.anchor .octicon-link, .markdown-preview h6:hover a.anchor .octicon-link { display: inline-block; }
+.markdown-preview h1 tt, .markdown-preview h2 tt, .markdown-preview h3 tt, .markdown-preview h4 tt, .markdown-preview h5 tt, .markdown-preview h6 tt, .markdown-preview h1 code, .markdown-preview h2 code, .markdown-preview h3 code, .markdown-preview h4 code, .markdown-preview h5 code, .markdown-preview h6 code { font-size: inherit; }
+.markdown-preview h1 { font-size: 28px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); color: rgb(0, 0, 0); }
+.markdown-preview h2 { font-size: 24px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); color: rgb(0, 0, 0); }
+.markdown-preview h3 { font-size: 18px; }
+.markdown-preview h4 { font-size: 16px; }
+.markdown-preview h5 { font-size: 14px; }
+.markdown-preview h6 { color: rgb(119, 119, 119); font-size: 14px; }
+.markdown-preview p, .markdown-preview blockquote, .markdown-preview ul, .markdown-preview ol, .markdown-preview dl, .markdown-preview table, .markdown-preview pre, .markdown-preview pre.editor-colors { margin: 15px 0px; }
+.markdown-preview hr { border: 0px none; color: rgb(204, 204, 204); height: 4px; padding: 0px; margin: 15px 0px; background: url('data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC') 0px 0px repeat-x transparent; }
+.markdown-preview > h2:first-child, .markdown-preview > h1:first-child, .markdown-preview > h1:first-child + h2, .markdown-preview > h3:first-child, .markdown-preview > h4:first-child, .markdown-preview > h5:first-child, .markdown-preview > h6:first-child { margin-top: 0px; padding-top: 0px; }
+.markdown-preview a:first-child h1, .markdown-preview a:first-child h2, .markdown-preview a:first-child h3, .markdown-preview a:first-child h4, .markdown-preview a:first-child h5, .markdown-preview a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+.markdown-preview h1 + p, .markdown-preview h2 + p, .markdown-preview h3 + p, .markdown-preview h4 + p, .markdown-preview h5 + p, .markdown-preview h6 + p { margin-top: 0px; }
+.markdown-preview li p.first { display: inline-block; }
+.markdown-preview ul, .markdown-preview ol { padding-left: 30px; }
+.markdown-preview ul.no-list, .markdown-preview ol.no-list { list-style-type: none; padding: 0px; }
+.markdown-preview ul li > :first-child, .markdown-preview ol li > :first-child, .markdown-preview ul li ul:first-of-type, .markdown-preview ol li ul:first-of-type { margin-top: 0px; }
+.markdown-preview ul ul, .markdown-preview ul ol, .markdown-preview ol ol, .markdown-preview ol ul { margin-bottom: 0px; }
+.markdown-preview dl { padding: 0px; }
+.markdown-preview dl dt { font-size: 14px; font-weight: bold; font-style: italic; padding: 0px; margin: 15px 0px 5px; }
+.markdown-preview dl dt:first-child { padding: 0px; }
+.markdown-preview dl dt > :first-child { margin-top: 0px; }
+.markdown-preview dl dt > :last-child { margin-bottom: 0px; }
+.markdown-preview dl dd { margin: 0px 0px 15px; padding: 0px 15px; }
+.markdown-preview dl dd > :first-child { margin-top: 0px; }
+.markdown-preview dl dd > :last-child { margin-bottom: 0px; }
+.markdown-preview blockquote { border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+.markdown-preview blockquote > :first-child { margin-top: 0px; }
+.markdown-preview blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview blockquote p { font-size: 16px; line-height: 1.5; }
+.markdown-preview table th { font-weight: bold; }
+.markdown-preview table th, .markdown-preview table td { border: 1px solid rgb(204, 204, 204); padding: 6px 13px; }
+.markdown-preview table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview img { max-width: 100%; }
+.markdown-preview span.frame { display: block; overflow: hidden; }
+.markdown-preview span.frame > span { border: 1px solid rgb(221, 221, 221); display: block; float: left; overflow: hidden; margin: 13px 0px 0px; padding: 7px; width: auto; }
+.markdown-preview span.frame span img { display: block; float: left; }
+.markdown-preview span.frame span span { clear: both; color: rgb(51, 51, 51); display: block; padding: 5px 0px 0px; }
+.markdown-preview span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-center > span { display: block; overflow: hidden; margin: 13px auto 0px; text-align: center; }
+.markdown-preview span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-right > span { display: block; overflow: hidden; margin: 13px 0px 0px; text-align: right; }
+.markdown-preview span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview span.float-left { display: block; margin-right: 13px; overflow: hidden; float: left; }
+.markdown-preview span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview span.float-right { display: block; margin-left: 13px; overflow: hidden; float: right; }
+.markdown-preview span.float-right > span { display: block; overflow: hidden; margin: 13px auto 0px; text-align: right; }
+.markdown-preview code, .markdown-preview tt { margin: 0px 2px; padding: 0px 5px; border: 1px solid rgb(234, 234, 234); border-radius: 3px; text-shadow: none; background-color: rgb(248, 248, 248); }
+.markdown-preview code { white-space: nowrap; }
+.markdown-preview pre, .markdown-preview pre.editor-colors { font-size: 13px; line-height: 19px; overflow: auto; padding: 6px 10px; border-radius: 3px; border: 1px solid rgb(8, 8, 8); background: rgb(33, 33, 33); }
+.markdown-preview pre > code { margin: 0px; padding: 0px; white-space: pre; border: none; word-wrap: normal; background: transparent; }
+.markdown-preview pre code, .markdown-preview pre tt { margin: 0px; padding: 0px; border: none; background-color: transparent; }
+.markdown-preview kbd { border-radius: 2px; border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(204, 204, 204) rgb(204, 204, 204) rgb(221, 221, 221); padding: 1px 4px; line-height: 10px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-image: linear-gradient(rgb(241, 241, 241), rgb(221, 221, 221)); background-color: rgb(221, 221, 221); background-repeat: repeat-x; }
+.markdown-preview .emoji { height: 20px; width: 20px; }
+.markdown-preview, .markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; line-height: 1.6; word-wrap: break-word; overflow: scroll; box-sizing: border-box; padding: 20px; background-color: rgb(255, 255, 255); }
+.markdown-preview > :first-child, .markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview > :last-child, .markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview a:not([href]), .markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview .absent, .markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview .anchor, .markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview .anchor:focus, .markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview h1 .octicon-link, .markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview h2 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview h3 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview h4 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview h5 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview h6 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview h1:hover .anchor, .markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview h2:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview h3:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview h4:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview h5:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview h6:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview h6:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview h1 tt, .markdown-preview[data-use-github-style] h1 tt, .markdown-preview h2 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview h3 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview h4 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview h5 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview h6 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview h1 code, .markdown-preview[data-use-github-style] h1 code, .markdown-preview h2 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview h3 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview h4 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview h5 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview h6 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h1 .anchor, .markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview h2, .markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h2 .anchor, .markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview h3, .markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview h3 .anchor, .markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview h4, .markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview h4 .anchor, .markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview h5, .markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview h5 .anchor, .markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview h6, .markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview h6 .anchor, .markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview p, .markdown-preview[data-use-github-style] p, .markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote, .markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol, .markdown-preview dl, .markdown-preview[data-use-github-style] dl, .markdown-preview table, .markdown-preview[data-use-github-style] table, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview hr, .markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview ul.no-list, .markdown-preview[data-use-github-style] ul.no-list, .markdown-preview ol.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview ul ul, .markdown-preview[data-use-github-style] ul ul, .markdown-preview ul ol, .markdown-preview[data-use-github-style] ul ol, .markdown-preview ol ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview ol ul, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview li > p, .markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview dl, .markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview dl dt, .markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview dl dd, .markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview blockquote > :first-child, .markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview blockquote > :last-child, .markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview table, .markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: normal; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th, .markdown-preview table td, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview table tr, .markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview table tr:nth-child(2n), .markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview img, .markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview span.frame, .markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview span.frame > span, .markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview span.frame span img, .markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview span.frame span span, .markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview span.align-center, .markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-center > span, .markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview span.align-center span img, .markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview span.align-right, .markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-right > span, .markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview span.align-right span img, .markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview span.float-left, .markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview span.float-left span, .markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview span.float-right, .markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview span.float-right > span, .markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview code::before, .markdown-preview[data-use-github-style] code::before, .markdown-preview tt::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview code::after, .markdown-preview[data-use-github-style] code::after, .markdown-preview tt::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: ' '; }
+.markdown-preview code br, .markdown-preview[data-use-github-style] code br, .markdown-preview tt br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview del code, .markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview pre > code, .markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview .highlight, .markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview pre, .markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview pre code, .markdown-preview[data-use-github-style] pre code, .markdown-preview pre tt, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview pre code::before, .markdown-preview[data-use-github-style] pre code::before, .markdown-preview pre tt::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview pre code::after, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview pre tt::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview kbd, .markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview, .markdown-preview[data-use-github-style], .markdown-preview code, .markdown-preview[data-use-github-style] code { color: rgb(51, 51, 51); }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { -webkit-font-smoothing: antialiased; cursor: text; }
+.markdown-preview > h1:first-child, .markdown-preview[data-use-github-style] > h1:first-child, .markdown-preview > h1:first-child + h2, .markdown-preview[data-use-github-style] > h1:first-child + h2, .markdown-preview > h2:first-child, .markdown-preview[data-use-github-style] > h2:first-child, .markdown-preview > h3:first-child, .markdown-preview[data-use-github-style] > h3:first-child, .markdown-preview > h4:first-child, .markdown-preview[data-use-github-style] > h4:first-child, .markdown-preview > h5:first-child, .markdown-preview[data-use-github-style] > h5:first-child, .markdown-preview > h6:first-child, .markdown-preview[data-use-github-style] > h6:first-child { margin-top: 0px; padding-top: 0px; }
+.markdown-preview a, .markdown-preview[data-use-github-style] a, .markdown-preview a code, .markdown-preview[data-use-github-style] a code { color: rgb(65, 131, 196); }
+.markdown-preview a:first-child h1, .markdown-preview[data-use-github-style] a:first-child h1, .markdown-preview a:first-child h2, .markdown-preview[data-use-github-style] a:first-child h2, .markdown-preview a:first-child h3, .markdown-preview[data-use-github-style] a:first-child h3, .markdown-preview a:first-child h4, .markdown-preview[data-use-github-style] a:first-child h4, .markdown-preview a:first-child h5, .markdown-preview[data-use-github-style] a:first-child h5, .markdown-preview a:first-child h6, .markdown-preview[data-use-github-style] a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+.markdown-preview h1 + p, .markdown-preview[data-use-github-style] h1 + p, .markdown-preview h2 + p, .markdown-preview[data-use-github-style] h2 + p, .markdown-preview h3 + p, .markdown-preview[data-use-github-style] h3 + p, .markdown-preview h4 + p, .markdown-preview[data-use-github-style] h4 + p, .markdown-preview h5 + p, .markdown-preview[data-use-github-style] h5 + p, .markdown-preview h6 + p, .markdown-preview[data-use-github-style] h6 + p { margin-top: 0px; }
+.markdown-preview li p.first, .markdown-preview[data-use-github-style] li p.first { display: inline-block; }
+.markdown-preview ul li > :first-child, .markdown-preview[data-use-github-style] ul li > :first-child, .markdown-preview ol li > :first-child, .markdown-preview[data-use-github-style] ol li > :first-child, .markdown-preview ul li ul:first-of-type, .markdown-preview[data-use-github-style] ul li ul:first-of-type, .markdown-preview ol li ul:first-of-type, .markdown-preview[data-use-github-style] ol li ul:first-of-type { margin-top: 0px; }
+.markdown-preview ol > li, .markdown-preview[data-use-github-style] ol > li { list-style-type: decimal; }
+.markdown-preview ul > li, .markdown-preview[data-use-github-style] ul > li { list-style-type: disc; }
+.markdown-preview dl dt:first-child, .markdown-preview[data-use-github-style] dl dt:first-child { padding: 0px; }
+.markdown-preview dl dt > :first-child, .markdown-preview[data-use-github-style] dl dt > :first-child { margin-top: 0px; }
+.markdown-preview dl dt > :last-child, .markdown-preview[data-use-github-style] dl dt > :last-child { margin-bottom: 0px; }
+.markdown-preview dl dd > :first-child, .markdown-preview[data-use-github-style] dl dd > :first-child { margin-top: 0px; }
+.markdown-preview dl dd > :last-child, .markdown-preview[data-use-github-style] dl dd > :last-child { margin-bottom: 0px; }
+.markdown-preview blockquote p, .markdown-preview[data-use-github-style] blockquote p { font-size: 16px; line-height: 1.5; }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(33, 33, 33); }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
+.markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
+.host(.host) .gutter .line-number.gutter-green {
+  color: #fff;
+  background-color: #8bc34a;
+}
+.host(.host) .gutter .line-number.gutter-blue {
+  color: #fff;
+  background-color: #64b5f6;
+}
+.host(.host) .gutter .line-number.gutter-red {
+  color: #fff;
+  background-color: #ef5350;
+}
+.line.line-green {
+  background-color: #8bc34a;
+}
+.line.line-blue {
+  background-color: #64b5f6;
+}
+.line.line-red {
+  background-color: #ef5350;
+}
+.highlight-green .region {
+  background-color: #8bc34a;
+}
+.highlight-blue .region {
+  background-color: #64b5f6;
+}
+.highlight-red .region {
+  background-color: #ef5350;
+}
 
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 1px dashed rgba(250, 128, 114, 0.5);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #212121;
+  color: #e0e0e0;
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: #424242;
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: #424242;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: #424242;
+}
+pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  background-color: #084e86;
+  color: #e0e0e0;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  color: #e0e0e0;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #eeeeee;
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #e0e0e0;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  color: #ffffff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #484848;
+}
+.line.cursor-line {
+  background: #303030 !important;
+}
+pre.editor-colors .search-results .marker .region,
+.host .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid #eeeeee;
+}
+pre.editor-colors .search-results .marker.current-result .region,
+.host .search-results .marker.current-result .region {
+  border: 1px solid #ffffff;
+}
+.comment {
+  color: #78909c;
+}
+.entity.name.type {
+  color: #ffffff;
+  font-weight: bold;
+}
+.entity.other.inherited-class {
+  color: #ffffff;
+}
+.keyword {
+  color: #b388ff;
+}
+.keyword.control {
+  color: #8bc34a;
+}
+.keyword.operator {
+  color: #8bc34a;
+}
+.keyword.other.special-method {
+  color: #64b5f6;
+}
+.keyword.other.unit {
+  color: #fff176;
+}
+.storage {
+  color: #64b5f6;
+}
+.storage.todo,
+.storage.fixme,
+.storage.changed,
+.storage.idea,
+.storage.xxx,
+.storage.hack {
+  color: #ec407a;
+}
+.storage.modifier {
+  color: #64b5f6;
+}
+.constant {
+  color: #fff176;
+}
+.constant.character.escape {
+  color: #80cbc4;
+}
+.constant.numeric {
+  color: #e0e0e0;
+}
+.constant.other.color {
+  color: #80cbc4;
+}
+.constant.other.symbol {
+  color: #8bc34a;
+}
+.variable {
+  color: #ef5350;
+}
+.variable.interpolation {
+  color: #eb2521;
+}
+.variable.parameter.function {
+  color: #e0e0e0;
+}
+.invalid.illegal {
+  background-color: #ef5350;
+  color: #212121;
+}
+.string {
+  color: #fff176;
+}
+.string.regexp {
+  color: #80cbc4;
+}
+.string.regexp .source.ruby.embedded {
+  color: #fff176;
+}
+.string.other.link {
+  color: #ef5350;
+}
+.punctuation.definition.comment {
+  color: #78909c;
+}
+.punctuation.definition.string,
+.punctuation.definition.variable,
+.punctuation.definition.parameters,
+.punctuation.definition.array {
+  color: #fff176;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #64b5f6;
+}
+.punctuation.definition.bold {
+  color: #ff8a65;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #b388ff;
+  font-style: italic;
+}
+.punctuation.definition.method-parameters.begin.java {
+  color: #8bc34a;
+}
+.punctuation.definition.method-parameters.end.java {
+  color: #8bc34a;
+}
+.punctuation.section.embedded {
+  color: #eb2521;
+}
+.support.class {
+  color: #ff8a65;
+}
+.support.function {
+  color: #80cbc4;
+}
+.support.function.any-method {
+  color: #64b5f6;
+}
+.entity.name.function {
+  color: #ffffff;
+  font-weight: bold;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #ffffff;
+  font-weight: bold;
+}
+.entity.name.section {
+  color: #64b5f6;
+}
+.entity.name.tag {
+  color: #ef5350;
+  text-decoration: underline;
+}
+.entity.other.attribute-name {
+  color: #fff176;
+}
+.entity.other.attribute-name.id {
+  color: #64b5f6;
+}
+.meta.class {
+  color: #e0e0e0;
+}
+.meta.link {
+  color: #fff176;
+}
+.meta.require {
+  color: #64b5f6;
+}
+.meta.brace.curly {
+  color: #80cbc4;
+}
+.meta.brace.round {
+  color: #80cbc4;
+}
+.meta.selector {
+  color: #b388ff;
+}
+.meta.separator {
+  background-color: #424242;
+  color: #e0e0e0;
+}
+.none {
+  color: #e0e0e0;
+}
+.markup.bold {
+  color: #fff176;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #b388ff;
+}
+.markup.deleted {
+  color: #ef5350;
+}
+.markup.italic {
+  color: #b388ff;
+  font-style: italic;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #64b5f6;
+}
+.markup.inserted {
+  color: #8bc34a;
+}
+.markup.list {
+  color: #ef5350;
+}
+.markup.quote {
+  color: #fff176;
+}
+.markup.raw.inline {
+  color: #8bc34a;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .markup.heading {
+  color: #8bc34a;
+}
+pre.editor-colors[mini] .scroll-view,
+.host([mini]) .scroll-view {
+  padding-left: 1px;
+}
+.bracket-matcher.region {
+  background: rgba(100, 181, 246, 0.55);
+  border-radius: 0rem;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h1 id="high-performance-computing-for-economists">High-performance computing for Economists</h1>
 <h2 id="location">Location</h2>
-
-<p><em>Ives 109</em>, 2014/8/18&#8211;2014/8/20 9:00 - 5:00 p.m. (we will typically end earlier)</p>
-
-<p>Capacity: 32 </p>
-
-<h2 id="contributors:">Contributors:</h2>
-
+<p><em>Ives 109</em>, 2015/8/17-2015/8/19 9:00 - 5:00 p.m. (we will typically end earlier)</p>
+<p>Capacity: 32</p>
+<h2 id="contributors-">Contributors:</h2>
 <p>John M. Abowd, Rick Mansfield, Flavio Stanchi, Hautahi Kingi, Sida Peng, Lars Vilhuber</p>
-
 <h2 id="goal">Goal</h2>
-
 <p>The goal of this class is to showcase high-performance techniques and tools for economics students. The goal is NOT to teach a full
 course on SAS, Stata, etc. - there are other classes for that. We will teach just enough of each programming language to
 be able to highlight additional techniques (for SAS and Matlab, we will teach specialized workshops on each in more depth)
  This course is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
-specific programming languages, we point to offerings elsewhere on campus, for instance at <a href="http://www.ciser.cornell.edu">CISER</a>. </p>
-
-<h2 id="targetgroup">Target group</h2>
-
+specific programming languages, we point to offerings elsewhere on campus, for instance at <a href="http://www.ciser.cornell.edu">CISER</a>.</p>
+<h2 id="target-group">Target group</h2>
 <p>Second year Ph.D. in Economics or other social sciences.</p>
-
 <h2 id="requirements">Requirements</h2>
-
 <ul>
 <li>Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss) - the specific languange is not important.</li>
 <li>Bring your laptop to class.</li>
 </ul>
-
-<h2 id="day0">Day 0</h2>
-
+<h2 id="day-0">Day 0</h2>
 <ul>
 <li>Request an account on Econ Cluster on the <a href="https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004">account request page</a></li>
 <li>Fill out the online survey (sent out by email) ( results for <a href="SurveyResults2013.pdf">2013</a> and <a href="Computing_in_Economics_2014_results.pdf">2014</a> )</li>
 </ul>
-
-<h2 id="day1">Day 1</h2>
-
+<h2 id="day-1">Day 1</h2>
 <ul>
-<li><p>9:00&#8211;9:30 Introduction (Lars)</p></li>
-<li>9:30&#8211;10:30 <a href="../documents/day1-1.pdf">Programming basics</a> (Lars)
-
+<li><p>9:00-9:30 Introduction (Lars)</p>
+</li>
+<li><p>9:30-10:30 <a href="../documents/day1-1.pdf">Programming basics</a> (Lars)</p>
 <ul>
 <li>Choosing an editor</li>
 <li>How to structure programs, texts, etc.</li>
 <li>A clean sequence of programs</li>
 <li>NX, SSH, Linux, request an account on cluster (see also <a href="https://www.cac.cornell.edu/VW/Linux/default.aspx?id=xup_guest">CAC: Introduction to Linux</a></li>
-<li>The command line (Hautahi Kingi) <a href="../Git_CL_Slides/Slides_CommandLine.pdf">lecture notes</a></li>
-</ul></li>
-<li><p>Basic scripting</p></li>
-<li><p>10:30&#8211;10:45 Break</p></li>
-<li>10:45&#8211;12:30 <a href="../documents/day1-2.pdf">Basics of version control</a> (Lars)
-
+<li>The command line (Hautahi Kingi) <a href="../Git_CL_Slides/Slides_CommandLine.pdf">lecture notes</a><ul>
+<li>Basic scripting</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>10:30-10:45 Break</p>
+</li>
+<li><p>10:45-12:30 <a href="../documents/day1-2.pdf">Basics of version control</a> (Lars)</p>
 <ul>
 <li>File-system based version control</li>
-<li>More formal version control
-
-<ul>
-<li>Subversion (Flavio Stanchi): <a href="../SVN_Presentation/Subversion_slides.pdf">lecture notes</a> ( <a href="COMPUTER_Subversion_LongTutorial.pdf">Long tutorial referenced in class</a> )</li>
+<li>More formal version control<ul>
+<li>Subversion (Flavio Stanchi):  <a href="../SVN_Presentation/Subversion_slides.pdf">lecture notes</a> ( <a href="COMPUTER_Subversion_LongTutorial.pdf">Long tutorial referenced in class</a> )</li>
 <li>Git (Hautahi) <a href="../Git_CL_Slides/Git_Notes.pdf">lecture notes</a></li>
-</ul></li>
-</ul></li>
-<li><p>13:30&#8211;14:30 Putting it into practice</p></li>
-<li>14:30&#8211;16:00 <a href="../documents/day3-1.pdf">HP resources at Cornell, elsewhere</a> (Lars)
-
+</ul>
+</li>
+</ul>
+</li>
+<li><p>13:30-14:30 Putting it into practice</p>
+</li>
+<li><p>14:30-16:00 <a href="../documents/day3-1.pdf">HP resources at Cornell, elsewhere</a> (Lars)</p>
 <ul>
 <li>Basic types of HP computing (multi-threaded, data I/O, big memory)</li>
 <li>Working with servers</li>
-<li>Resources available
-
-<ul>
+<li>Resources available<ul>
 <li>scaling from workstation to HPC cluster</li>
 <li>XSEDE and getting there</li>
 <li>Amazon EC2 and getting there (?)</li>
 <li>Setting up infrastructure at Cornell</li>
 <li>See also <a href="http://www2.vrdc.cornell.edu/news/ecco/what-computing-resources-are-available-at-the-economics-department/">this page at the VRDC</a></li>
-</ul></li>
-</ul></li>
-<li><p>16:00&#8211;17:00 Putting it into practice</p></li>
 </ul>
-
-<h2 id="day2">Day 2</h2>
-
+</li>
+</ul>
+</li>
+<li><p>16:00-17:00 Putting it into practice</p>
+</li>
+</ul>
+<h2 id="day-2">Day 2</h2>
 <ul>
-<li>9:00&#8211;10:30 Subroutines
-
+<li><p>9:00-10:30 Subroutines</p>
 <ul>
 <li><a href="../documents/day2-1.pdf">Example of function programming in R</a> (Lars)</li>
-<li><a href="../documents/HPC_Class_SubRoutines.pdf">Extending the principle to other languages</a> (Lars)
-
-<ul>
+<li><a href="../documents/HPC_Class_SubRoutines.pdf">Extending the principle to other languages</a> (Lars)<ul>
 <li>Subroutines in SAS: macros (<a href="http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&amp;path=%2Ftrunk%2Fsas%2Fmacro-loop%2F&amp;#a69a93842236cac1c14d7015b46e06eb0">also see these code fragments</a>)</li>
 <li>Subroutines in Stata: programs</li>
 <li>Subroutines in Matlab: function</li>
-</ul></li>
+</ul>
+</li>
 <li>Debugging your code</li>
-</ul></li>
-<li><p>10:30&#8211;11:00 Break</p></li>
-<li>11:00&#8211;12:30 <a href="../documents/Matlab%20Big%20Data%20Techniques.pdf">A practical example: Matlab programming</a> (Rick)
-
+</ul>
+</li>
+<li><p>10:30-11:00 Break</p>
+</li>
+<li><p>11:00-12:30 <a href="../documents/Matlab%20Big%20Data%20Techniques.pdf">A practical example: Matlab programming</a> (Rick)</p>
 <ul>
-<li>Some additional links
-
-<ul>
+<li>Some additional links<ul>
 <li><a href="http://www.mathworks.com/help/matlab/matlab_prog/strategies-for-efficient-use-of-memory.html">Matlab memory considerations</a></li>
 <li><a href="../programs/day2/School_choice_example_small.m">School_choice_example_small.m</a></li>
-</ul></li>
-</ul></li>
-<li><p>13:30&#8211;14:30 Putting it into practice</p></li>
-<li>14:30&#8211;16:00 <a href="../documents/HPC_Class_Parallel.pdf">Introduction to parallel processing</a> (Lars)
-
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>13:30-14:30 Putting it into practice</p>
+</li>
+<li><p>14:30-16:00 <a href="../documents/HPC_Class_Parallel.pdf">Introduction to parallel processing</a> (Lars)</p>
 <ul>
 <li>Threads</li>
 <li>Embarassingly parallel problems</li>
 <li>SAS, Stata, Matlab</li>
-<li>Basic tools (bash, qsub, ECCO)
-
-<ul>
+<li>Basic tools (bash, qsub, ECCO)<ul>
 <li><a href="http://www2.vrdc.cornell.edu/news/ecco/step-4-using-ecco/advanced-qsub/">Advanced qsub</a></li>
 <li><a href="http://www2.vrdc.cornell.edu/news/ecco/step-4-using-ecco/the-module-command/">Module command</a></li>
-</ul></li>
-</ul></li>
-<li><p>16:00&#8211;17:00 Putting it into practice</p></li>
 </ul>
-
-<h2 id="day3">Day 3</h2>
-
+</li>
+</ul>
+</li>
+<li><p>16:00-17:00 Putting it into practice</p>
+</li>
+</ul>
+<h2 id="day-3">Day 3</h2>
 <ul>
-<li>9:00&#8211;12:00 Parallel working groups (with breaks)
-
-<ul>
+<li>9:00-12:00 Parallel working groups (with breaks)<ul>
 <li>Leveraging parallel programming techniques in Matlab (Sida) <a href="../Matlab/peng-matlabparallel.pdf">lecture notes</a></li>
-<li>Leveraging parallel programming techniques in SAS (Lars)
-
-<ul>
-<li><p><a href="http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&amp;path=%2Ftrunk%2Fsas%2Fmpconnect%2F&amp;#a35a136da6e860bff713e16f3fe2c4bfa">Example MP Connect code</a></p></li>
-</ul>
+<li>Leveraging parallel programming techniques in SAS (Lars)<ul>
+<li><a href="http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&amp;path=%2Ftrunk%2Fsas%2Fmpconnect%2F&amp;#a35a136da6e860bff713e16f3fe2c4bfa">Example MP Connect code</a>
 *</li>
-</ul></li>
-<li>13:30&#8211;14:30 <a href="../web/coming-soon.html">Considerations for data management</a> (Lars)
-
-<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li>13:30-14:30 <a href="../web/coming-soon.html">Considerations for data management</a> (Lars)<ul>
 <li>Simple data management</li>
 <li>Excursion: source and documenting sources</li>
 <li>Complicated data management</li>
-</ul></li>
-<li><p>14:30&#8211;15:00 Wrap up</p></li>
 </ul>
-
-<h2 id="additionalresources">Additional resources</h2>
-
+</li>
+</ul>
+<ul>
+<li>14:30-15:00 Wrap up</li>
+</ul>
+<h2 id="additional-resources">Additional resources</h2>
 <ul>
 <li><a href="programs.html">Some programs referenced in the class</a></li>
 <li>Basics courses for SAS, Stata, R, Matlab at <a href="http://www.ciser.cornell.edu">CISER</a> at <a href="http://ciser.cornell.edu/beta/workshops/">http://ciser.cornell.edu/beta/workshops/</a> (new times will be posted soon)</li>
 <li>Computing for Data Analysis <a href="https://www.coursera.org/course/compdata">Coursera course</a> and the <a href="https://www.youtube.com/results?search_query=roger+peng+computing+for+data+analysis">classes on YouTube</a></li>
 <li><a href="http://faculty.chicagobooth.edu/jesse.shapiro/research/CodeAndData.pdf">Code and Data</a></li>
 <li>Test repository for Subversion: <a href="https://repository.vrdc.cornell.edu/public/test">https://repository.vrdc.cornell.edu/public/test</a></li>
-<li>Assessing time and memory usage in R: <a href="http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/">a nice brief tutorial</a> (but with the conclusion to use Matlab&#8230;)</li>
+<li>Assessing time and memory usage in R: <a href="http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/">a nice brief tutorial</a> (but with the conclusion to use Matlab...)</li>
 <li>Learning how to use doParallel in R: <a href="http://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf">doParallel vignette</a></li>
 </ul>
-
 <h2 id="acknowledgements">Acknowledgements</h2>
-
 <h2 id="source">Source</h2>
-
 <ul>
 <li>Git: via <a href="https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists">https</a> (login required)</li>
 <li>Web: <a href="http://www.vrdc.cornell.edu/computing-for-economists/">http://www.vrdc.cornell.edu/computing-for-economists/</a></li>
-</ul>
+</ul></body>
+</html>
