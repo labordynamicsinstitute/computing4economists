@@ -1,6 +1,57 @@
 \documentclass{beamer}
 
-\usepackage{beamerthemesplit}
+% Set up the template
+\setbeamertemplate{frametitle}
+  {\begin{centering}\smallskip
+   \insertframetitle\par
+   \smallskip\end{centering}}
+\setbeamertemplate{itemize item}{$\bullet$}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{footline}[text line]{%
+    \hfill\strut{%
+        \scriptsize\sf\color{black!60}%
+        \quad\insertframenumber
+    }%
+    \hfill
+}
+
+% Set up table of contents
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% Upper content bar
+\useoutertheme[subsection=false]{smoothbars}
+%\insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1fill}{\hskip0pt plus1fill}
+
+% Define some colors:
+\definecolor{DarkFern}{HTML}{407428}
+\definecolor{DarkCharcoal}{HTML}{4D4944}
+\colorlet{Fern}{DarkFern!85!white}
+\colorlet{Charcoal}{DarkCharcoal!90!white}
+\colorlet{LightCharcoal}{Charcoal!50!white}
+\colorlet{AlertColor}{orange!80!black}
+\colorlet{DarkRed}{red!70!black}
+\colorlet{DarkBlue}{blue!70!black}
+\colorlet{DarkGreen}{green!70!black}
+
+
+% Use the colors:
+\setbeamercolor{title}{fg=DarkRed}
+\setbeamercolor{frametitle}{fg=Fern}
+\setbeamercolor{normal text}{fg=Charcoal}
+\setbeamercolor{block title}{fg=black,bg=Fern!25!white}
+\setbeamercolor{block body}{fg=black,bg=Fern!25!white}
+\setbeamercolor{alerted text}{fg=AlertColor}
+\setbeamercolor{itemize item}{fg=Charcoal}
+
+
+
 \usepackage{hyperref}
 \usepackage{graphics}
 
@@ -15,7 +66,6 @@
 \frame{\titlepage}
 
 \section{Introduction}
-\frame{\tableofcontents[currentsection]}
 
 \subsection{What is Subversion?}
 
@@ -24,27 +74,15 @@
   \frametitle{Features of Subversion}
 
   \begin{itemize}
-  \item<1-> It's a version control system
-  \item<2-> Uses a centralized model:
+  \item It's a version control system
+  \item Uses a centralized model:
   	\begin{itemize}
-  	\item<2-> Server-client approach
-  	\item<3-> Version merging
-	\item<4-> With wireless connections everywhere, it's rarely a limitation
+  	\item Server-client approach
+  	\item Version merging
+	\item With wireless connections everywhere, it's rarely a limitation
   	\end{itemize}
-  \item<5-> Easy to learn (but slower than Git)
-  \item<6-> It's free
-  \end{itemize}
-}
-
-\frame
-{
-  \frametitle{A bit of history}
-
-  \begin{itemize}
-  \item<1-> The SVN open-source project was founded in 2000 by CollabNet 
-  \item<2-> Version 1.0 was released in February 2004
-  \item<3-> In 2009 it was accepted into Apache Incubator
-  \item<4-> Git development started in 2005 to substitute BitKeeper (Linus Torvalds is one of the founders)
+  \item Easy to learn (but slower than Git)
+  \item It's free
   \end{itemize}
 }
 
@@ -76,7 +114,7 @@
   \frametitle{Subversion on Cornell servers}
   
   \begin{itemize}
-  \item<1-> CISER on RSCH106
+  \item<1-> CISER on RSCH101 and RSCH106 (tested)
   \item<2-> ECCO
   \item<3-> Quick reference guide at \url{http://www2.vrdc.cornell.edu/news/documentation/subversion/}
   \end{itemize}
@@ -85,7 +123,7 @@
 
 \subsection{Create a repository}
 
-\frame
+\frame<beamer:0>
 {
   \frametitle{Where to create a repository?}
   
@@ -104,7 +142,6 @@
 
 
 \section{Concepts}
-\frame{\tableofcontents[currentsection]}
 
 \subsection{Centralized version control}
 
@@ -117,7 +154,7 @@
   \item<1-> Server-client approach
   	\begin{itemize}
 	\item<1-> The repository is located in the server
-	\item<2-> No version control over local copies: \textit{commit} is also used for sharing (no need to \textit{push})
+	\item<2-> No version control over local copies
 	\end{itemize}
   \item<3-> Version merging:
   	\begin{itemize}
@@ -178,8 +215,51 @@
 
 }
 
+\subsection{Branches}
+
+\frame
+{
+	\frametitle{Branches}
+	A branch is a line of development that exists independently of another line, yet still shares a common history if you look far enough back in time.\\
+	\medskip
+	It begins life as a copy of something, and moves on from there, generating its own history.
+	
+		\begin{figure}[H]
+	\centering
+	\includegraphics[height=3cm]{branches1.png}
+	\end{figure}
+
+
+}
+
+
+\frame
+{
+	\frametitle{Creating a branch}
+	Make a copy of (a part of) your project tree in the repository using the \alert{svn copy} command. \\
+	\medskip
+	The copy may live wherever you wish. Usually, in a folder named \textbf{branches}.\\
+	\medskip
+	\textbf{Note:} you can do a \alert{remote copy} --- a copy that immediately results in a newly committed repository revision --- no working copy is required! 	Just copy one URL to another.\\
+	\medskip
+	\alert{Cheap copies:} when you copy a directory, you don't need to worry about duplicating the size, since SVN doesn't actually duplicate any data. Instead, it creates a new directory entry that points to an existing tree.
+
+
+
+}
+
+\frame
+{
+	\begin{figure}[H]
+	\centering
+	\includegraphics[height=8cm]{branches2.png}
+	\end{figure}
+
+
+}
+
 \section{Workflow}
-\frame{\tableofcontents[currentsection]}
+
 
 \subsection{The terminal}
 
@@ -196,9 +276,24 @@
 	\end{itemize}
   \item<3-> Every command must be preceded by \textit{svn}
   \includegraphics[height=0.8cm]{svn_example.png}
-  \item<4-> svn $<$subcommand$>$ [options] [args]
   \end{itemize}
 	
+}
+
+\subsection{Help}
+
+\frame
+{
+  \frametitle{Your best friend}
+  
+  \begin{itemize}
+  \item<1-> The most important command is \dots
+  		  \uncover<2->{\textit{help}}
+  \item<3-> Calling \textit{svn help} alone will print a summary of the commands and their usage
+  \item<4-> Calling \textit{svn help} followed by the name of a command will print a short description of the command and its options
+  \item<5-> Options are often useful (and sometimes necessary), but it's hard to remember them all: use \textit{help}!
+  \end{itemize}
+
 }
 
 \subsection{Basic workflow}
@@ -210,7 +305,7 @@
   \begin{enumerate}
   \item<1-> Update your working copy or check out a new one
   	\begin{itemize}
-  	\item<1-> Commands: \textit{co} (check out), \textit{update}
+  	\item<1-> Commands: \textit{co} (\textit{check out}), \textit{update}
   	\end{itemize}
   \item<2-> Make changes
   	\begin{itemize}
@@ -219,7 +314,7 @@
 	\end{itemize}
   \item<3-> Review the changes
   	\begin{itemize}
-	\item<3-> Commands: \textit{status}, \textit{diff}
+	\item<3-> Commands: \textit{status}, \textit{diff}, \textit{log}
 	\end{itemize}
   \item<4-> Fix any mistake
   	\begin{itemize}
@@ -237,25 +332,9 @@
 
 }
 
-\frame
-{
-  \frametitle{Shallow checkouts}
-  
-  \begin{itemize}
-  \item<1-> When using the \textit{checkout} command, the option \textit{-{}-depth} allows us to selectively checkout parts of the content of a directory
-  	\begin{itemize}
-	\item<2-> \textit{-{}-depth empty} to include only the immediate target (no children)
-	\item<3-> \textit{-{}-depth files} to also include its files (but no directory children)
-	\item<4-> \textit{-{}-depth immediates} to include all of its immediate file or directory children
-	\item<5-> \textit{-{}-depth infinity} to have full recursion (default)
-	\end{itemize}
-  \end{itemize}
-  
-}
-
 \subsection{Common tasks}
 
-\frame
+\frame<beamer:0>
 {
   \frametitle{Common tasks}
   
@@ -264,37 +343,11 @@
   	\begin{itemize}
 	\item<1-> Commands: \textit{copy}, \textit{export}, with option \textit{-r}
 	\end{itemize}
-  \item<2-> Each revision has an associated number
-  	\begin{itemize}
-	\item<2-> HEAD revision is the latest
-	\item<2-> Using the option \textit{-r 23} will refer to revision 23
-	\end{itemize}
-  \item<3-> Identifying changes
-  \item<4-> Merging a branch back into the trunk
+  \item<2-> Identifying changes
+  \item<3-> Merging a branch back into the trunk
   \end{itemize}
   
 }  
 
-\subsection{Help}
-
-\frame
-{
-  \frametitle{Your best friend}
-  
-  \begin{itemize}
-  \item<1-> The most important command is \dots
-  		  \uncover<2->{\textit{help}}
-  \item<3-> Calling \textit{help} alone will print a summary of the commands and their usage
-  \item<4-> Calling \textit{help} followed by the name of a command will print a short description of the command and its options
-  \item<5-> Options are often useful (and sometimes necessary), but it's hard to remember them all: use \textit{help}!
-  \end{itemize}
-
-}
-
-\bgroup
-\setbeamercolor{background canvas}{bg=black}
-\begin{frame}[plain]{}
-\end{frame}
-\egroup
 
 \end{document}

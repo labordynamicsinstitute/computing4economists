@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  16 AUG 2014 17:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  22 MAY 2015 10:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -690,38 +690,26 @@ Package: beamerinnerthemedefault 2012/05/01  (rcs-revision 67c48b3b652d)
 emedefault.sty
 Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 )))
-(/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/themes/theme/compatibility
-/beamerthemesplit.sty
-Package: beamerthemesplit 2010/06/17  (rcs-revision d02a7cf4d8ae)
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
-emewhale.sty
-Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
-)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
-emesplit.sty
-Package: beamerouterthemesplit 2012/10/16  (rcs-revision 51a8c72084af)
-)
-(/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/themes/font/beamerfontthem
-estructurebold.sty
-Package: beamerfontthemestructurebold 2010/06/17  (rcs-revision d02a7cf4d8ae)
-)) (./Subversion_slides.aux)
+emesmoothbars.sty
+Package: beamerouterthemesmoothbars 2010/06/17  (rcs-revision d02a7cf4d8ae)
+) (./Subversion_slides.aux)
 \openout1 = `Subversion_slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -787,7 +775,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 64.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -797,56 +785,56 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (./Subversion_slides.out) (./Subversion_slides.out)
 \@outlinefile=\write5
 \openout5 = `Subversion_slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 13.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 64.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 64.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 13.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 13.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 13.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 13.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 13.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 13.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 13.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 13.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 64.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 13.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 13.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 13.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 13.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 13.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 13.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 13.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 64.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
@@ -872,16 +860,12 @@ Dictionary: translator-numbers-dictionary, Language: English
 r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 13.
+LaTeX Info: Redefining \includegraphics on input line 64.
 
 (./Subversion_slides.nav)
 
-LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <4> not available
-(Font)              size <5> substituted on input line 15.
-
-
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 15.
+(Font)              size <5> substituted on input line 66.
 
 [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -889,12 +873,12 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (./Subversion_slides.toc) [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -919,26 +903,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [12
 
-] [13
+] (./Subversion_slides.toc) [13
 
 ] [14
 
 ] [15
 
-] [16
+]
+[16
 
-] [17
+] <repo_structure.png, id=506, 263.98625pt x 213.79875pt>
+File: repo_structure.png Graphic file (type png)
 
-] [18
+<use repo_structure.png>
+Package pdftex.def Info: repo_structure.png used on input line 181.
+(pdftex.def)             Requested size: 175.6574pt x 142.26378pt.
+ [17
+
+ <./repo_structure.png>] [18
 
 ] [19
 
 ] [20
 
-]
-[21
+] [21
 
-] [22
+]
+[22
 
 ] [23
 
@@ -946,33 +937,68 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [25
 
-] (./Subversion_slides.toc) [26
+] <branches1.png, id=696, 322.20375pt x 135.50626pt>
+File: branches1.png Graphic file (type png)
 
-] [27
+<use branches1.png>
+Package pdftex.def Info: branches1.png used on input line 233.
+(pdftex.def)             Requested size: 202.96976pt x 85.35826pt.
+ [26
 
-] [28
-
-] [29
+ <./branches1.png>] [27
 
 ]
-<repo_structure.png, id=1101, 263.98625pt x 213.79875pt>
-File: repo_structure.png Graphic file (type png)
+<branches2.png, id=740, 228.855pt x 339.2675pt>
+File: branches2.png Graphic file (type png)
+ <use branches2.png>
+Package pdftex.def Info: branches2.png used on input line 259.
+(pdftex.def)             Requested size: 153.54156pt x 227.62204pt.
+ [28
 
-<use repo_structure.png>
-Package pdftex.def Info: repo_structure.png used on input line 144.
-(pdftex.def)             Requested size: 175.6574pt x 142.26378pt.
- [30
+ <./branches2.png>] (./Subversion_slides.toc) [29
 
- <./repo_structure.png>] [31
+]
+<svn_example.png, id=795, 637.38126pt x 50.1875pt>
+File: svn_example.png Graphic file (type png)
+ <use svn_example.png>
+Package pdftex.def Info: svn_example.png used on input line 281.
+(pdftex.def)             Requested size: 289.08499pt x 22.76228pt.
 
-] [32
+Overfull \hbox (3.69518pt too wide) in paragraph at lines 281--281
+[][][][][][]  
+ []
+
+[30
+
+ <./svn_example.png>]
+File: svn_example.png Graphic file (type png)
+ <use svn_example.png>
+Package pdftex.def Info: svn_example.png used on input line 281.
+(pdftex.def)             Requested size: 289.08499pt x 22.76228pt.
+
+Overfull \hbox (3.69518pt too wide) in paragraph at lines 281--281
+[][][][][][]  
+ []
+
+[31
+
+]
+File: svn_example.png Graphic file (type png)
+ <use svn_example.png>
+Package pdftex.def Info: svn_example.png used on input line 281.
+(pdftex.def)             Requested size: 289.08499pt x 22.76228pt.
+
+Overfull \hbox (3.69518pt too wide) in paragraph at lines 281--281
+[][][][][][][]  
+ []
+
+[32
 
 ] [33
 
 ] [34
 
-]
-[35
+] [35
 
 ] [36
 
@@ -980,99 +1006,15 @@ Package pdftex.def Info: repo_structure.png used on input line 144.
 
 ] [38
 
-] (./Subversion_slides.toc) [39
+] [39
 
-]
-<svn_example.png, id=1437, 637.38126pt x 50.1875pt>
-File: svn_example.png Graphic file (type png)
- <use svn_example.png>
-Package pdftex.def Info: svn_example.png used on input line 202.
-(pdftex.def)             Requested size: 289.08499pt x 22.76228pt.
+] [40
 
-Overfull \hbox (3.69518pt too wide) in paragraph at lines 202--202
-[]  
- []
+] [41
 
-[40
+] [42
 
- <./svn_example.png>]
-File: svn_example.png Graphic file (type png)
- <use svn_example.png>
-Package pdftex.def Info: svn_example.png used on input line 202.
-(pdftex.def)             Requested size: 289.08499pt x 22.76228pt.
-
-Overfull \hbox (3.69518pt too wide) in paragraph at lines 202--202
-[]  
- []
-
-[41
-
-]
-File: svn_example.png Graphic file (type png)
- <use svn_example.png>
-Package pdftex.def Info: svn_example.png used on input line 202.
-(pdftex.def)             Requested size: 289.08499pt x 22.76228pt.
-
-Overfull \hbox (3.69518pt too wide) in paragraph at lines 202--202
-[]  
- []
-
-[42
-
-]
-File: svn_example.png Graphic file (type png)
- <use svn_example.png>
-Package pdftex.def Info: svn_example.png used on input line 202.
-(pdftex.def)             Requested size: 289.08499pt x 22.76228pt.
-
-Overfull \hbox (3.69518pt too wide) in paragraph at lines 202--202
-[]  
- []
-
-[43
-
-] [44
-
-] [45
-
-] [46
-
-] [47
-
-] [48
-
-] [49
-
-] [50
-
-] [51
-
-] [52
-
-] [53
-
-] [54
-
-] [55
-
-] [56
-
-] [57
-
-]
-[58
-
-] [59
-
-] [60
-
-] [61
-
-] [62
-
-] [63
-
-] [64
+] [43
 
 ]
 \tf@nav=\write6
@@ -1084,41 +1026,42 @@ Overfull \hbox (3.69518pt too wide) in paragraph at lines 202--202
 \tf@snm=\write8
 \openout8 = `Subversion_slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
- (./Subversion_slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+
+(./Subversion_slides.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
 Package rerunfilecheck Info: File `Subversion_slides.out' has not changed.
-(rerunfilecheck)             Checksum: F042828C09DBD457BADDAFAA91DE6DA7;795.
+(rerunfilecheck)             Checksum: 979D7660DDFB5255E939021E542F9FC5;790.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
  ) 
 Here is how much of TeX's memory you used:
- 15904 strings out of 493315
- 298678 string characters out of 6137904
- 373699 words of memory out of 5000000
- 18829 multiletter control sequences out of 15000+600000
- 14544 words of font info for 55 fonts, out of 8000000 for 9000
+ 15848 strings out of 493315
+ 296855 string characters out of 6137904
+ 378936 words of memory out of 5000000
+ 18822 multiletter control sequences out of 15000+600000
+ 14250 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,19n,53p,406b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
-fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
-7.pfb>
-Output written on Subversion_slides.pdf (64 pages, 291150 bytes).
+ 49i,20n,53p,406b,737s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+
+Output written on Subversion_slides.pdf (43 pages, 219705 bytes).
 PDF statistics:
- 2323 PDF objects out of 2487 (max. 8388607)
- 2214 compressed objects within 23 object streams
- 141 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1147 PDF objects out of 1200 (max. 8388607)
+ 1048 compressed objects within 11 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 
