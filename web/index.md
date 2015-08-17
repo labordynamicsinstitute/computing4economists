@@ -28,40 +28,46 @@ Requirements
 
 ***
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
-* Fill out the online survey (sent out by email) ( results for [2013](SurveyResults2013.pdf) and [2014](Computing_in_Economics_2014_results.pdf) )
+* Fill out the online survey (sent out by email) ( results for [2013](SurveyResults2013.pdf),  [2014](Computing_in_Economics_2014_results.pdf) and [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf))
 
 
 Tentative Agenda - Day 1
 ========================================================
-* 9:00-9:30 Introduction (Lars)
+* 9:00-9:30 Introduction (Lars) with reference to [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf) survey results.
 
-* 9:30-10:30 [Programming basics](../documents/day1-1.pdf) (Lars) with some command line [lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)
+* 9:30-10:30 [Basics](../documents/day1-1.pdf) (Lars)
 
 * 10:30-10:45 Break
 
-* 10:45-12:30 [Basics of version control](../documents/day1-2.pdf) (Lars) including Subversion (Flavio Stanchi):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) and  Git (Hautahi) [lecture notes](../Git_CL_Slides/Git_Notes.pdf)
+* 10:45-11:45 The command line [lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf) (Hautahi Kingi)
+
+* 11:45-12:30 [Getting access to ECCO (SSH and NX)](../documents/day1-3.pdf)
 
 ***
 
-* 13:30-14:30 Putting it into practice
+* 13:30-14:30 (with break) [Basics of version control](../documents/day1-2.pdf) (Lars)
+  * Subversion (Flavio Stanchi):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
+  * Setting up your repositories
 
-* 14:30-16:00 [HP resources at Cornell, elsewhere](../documents/day3-1.pdf) (Lars)
+* 14:30-14:45 Break
 
-* 16:00-17:00 Putting it into practice
+* 14:45-16:00 Git (Hautahi) [lecture notes](../Git_CL_Slides/Git_Notes.pdf)
+
+* 16:00-17:00 Putting it into practice (on your own)
 
 Tentative Agenda - Day 2
 ========================================================
-* 9:00-10:30 Subroutines and Debugging
+
+* 9:00-10:30 [HP resources at Cornell, elsewhere](../documents/day2-1.pdf) (Lars)
 
 * 10:30-11:00 Break
 
 * 11:00-12:30 [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf) (Rick)
 
-* 13:30-14:30 Putting it into practice
-
+* 13:30-14:30 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Lars)
 ***
 
-* 14:30-16:00 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Lars)
+* 14:30-16:00
 
 * 16:00-17:00 Putting it into practice
 
