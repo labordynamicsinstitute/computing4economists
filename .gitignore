@@ -10,3 +10,4 @@ documents/*.vrb
 */*~
 *~
 *bak
+.Rhistory

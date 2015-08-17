@@ -92,7 +92,7 @@
    Cornell University, Economics Department,
 %\and \inst{2} U.S. Census Bureau
 }%
-\date[August 18-21, 2014]{August 18-21, 2014: Day 1}
+\date[Day 1]{August 17-19, 2015}
 \subject{HPC}
 
 
@@ -192,34 +192,21 @@ To broaden your knowledge about what you do NOT know
 \end{block}
 \end{frame}
 
-\subsection{Overview}
-\begin{frame}{Overview}
-\begin{block}{Day 1}
-\begin{itemize}[<+->]
-\item Programming basics (Lars)
-\begin{itemize}
-\item Choosing an editor
-\item How to structure programs, texts, etc.
-\item A clean sequence of programs
-\item NX, SSH, Linux, request an account on cluster
-\item Basic scripting
-\end{itemize}
-\item  Basics of version control (Lars)
-\begin{itemize}
-\item File-system based version control
-\item More formal version control (Subversion, Git)
-\item Working with servers
-\item Setting up infrastructure at Cornell
-\end{itemize}
-\item Subroutines: the example of function programming in R (Lars)
-\end{itemize}
-\end{block}
+\begin{frame}{So in order to do that...}
+\pause
+\begin{center}
+\includegraphics[width=0.45\textwidth]{./stampede}
+\pause
+\includegraphics[width=0.45\textwidth]{./keyboard}
+\end{center}
 \end{frame}
 
-\begin{frame}{Overview}
-\begin{block}{Day 2}
 
-\end{block}
+\subsection{Overview}
+\include{overview-day1}
+
+\begin{frame}{Overview}
+\include{overview-day2}
 \end{frame}
 
 \begin{frame}{Overview}
@@ -269,7 +256,9 @@ Separate editors and systems
 \item \href{http://www.libreoffice.org}{LibreOffice} (Windows/OSX/Linux but not as good)
 \item NotePad++ (Windows)
 \item Gedit, (X)Emacs, Kate (Linux)
-\item ?? (OSX)
+\item \href{http://www.sublimetext.com/3}{Sublime Text} (OSX)
+\item \href{http://atom.io}{Atom} (all, see also \href{https://code.visualstudio.com/}{MS Visual 
+Studio Code})
 \end{itemize}
 \end{column}
 \hfill
@@ -308,8 +297,9 @@ Integrating programming and running
 \color{blue}
 Integrating programs and text/results
 \begin{itemize}
-\item SWeave (integrates \LaTeX \ and R)
-\item RStudio (GUI to R and SWeave)
+\item SWeave/knitr (integrates \LaTeX \ and R)
+\item RStudio (GUI to R and SWeave/knitr)
+\item Shiny (web interface to R with dynamic results)
 \item StatRep (Integrated SAS and \LaTeX, \href{http://support.sas.com/resources/papers/proceedings12/324-2012.pdf}{Source 1}, \href{http://support.sas.com/StatRepPackage}{Source 2})
 \end{itemize}
 \end{column}
@@ -319,6 +309,10 @@ Integrating programs and text/results
 
 %=======================================================================
 \subsection[Structure]{Structuring programs and texts}
+
+\begin{frame}
+Structuring programs
+\end{frame}
 
 \begin{frame}[fragile]{Structuring programs}
 \begin{block}{Easy...}
@@ -518,67 +512,6 @@ Can you figure out in what sequence to run them?
 
 
 
-\subsection{Getting access to a compute cluster}
-
-\begin{frame}
-\begin{block}{Linux}
-\begin{itemize}
-\item used on most compute clusters
-\item used on very few desktop computers
-\item but...
-\end{itemize}
-\end{block}
-\pause
-\begin{block}{Bash}
-\begin{itemize}
-\item bash is a ``shell'' - a text interface command interpreter
-\item bash or ksh (Korn shell) or csh (C-shell) are the most common
-\item bash is available on Linux and \pause OSX
-\item you can also download Cygwin, getting bash for Windows
-\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}{Access to your local compute cluster}
-\begin{block}{Several on-campus compute resources}
-\begin{itemize}[<+->]
-\item Cornell Center for Advanced Computing (\href{http://www.cac.cornell.edu}{CAC})\newline \uncover<3->{\alert{$\rightarrow$ Thursday}}
-\item Cornell Institute for Social and Economic Research (\href{http://www.ciser.cornell.edu}{CISER})\uncover<3->{\alert{$\rightarrow$ Thursday}}
-\pause
-\item Economics Compute Cluster Organization (ECCO), aka Social Science Gateway (SSG)
-\end{itemize}
-\end{block}
-\end{frame}
-
-
-\begin{frame}{Getting access to ECCO}
-\begin{block}{You already have...}
-\begin{itemize}
-\item You have an account by virtue of participating in this class
-\item Moving forward, you will be eligible to faculty-sponsored accounts
-\item Currently soft-monitoring of resource usage
-\end{itemize}
-\end{block}
-\pause
-\begin{block}{... but do you have \textbf{access}?}
-Have you logged in via SSH to reset your password? \newline \uncover<3->{\alert{$\rightarrow$ \href{http://www2.vrdc.cornell.edu/news/ecco/step-2-first-login/}{Instructions}}}
-\end{block}
-\end{frame}
-
-
-\begin{frame}{Quick walkthrough, using Chrome SSH}
-\includegraphics[width=.9\textwidth]{chrome-ssh-screen1.png}
-\end{frame}
-
-
-\begin{frame}{Quick walkthrough, using Chrome SSH}
-\includegraphics[width=.9\textwidth]{chrome-ssh-screen2.png}
-\end{frame}
-
-
-\begin{frame}{Quick walkthrough, using Chrome SSH}
-\includegraphics[width=.9\textwidth]{chrome-ssh-screen3.png}
-\end{frame}
 
 
 \begin{frame}{Why SSH?}
@@ -603,43 +536,6 @@ All 10 of the top 10 \href{http://www.top500.org/list/2013/06/}{TOP500} computer
 
 
 
-\begin{frame}{Access via NX}
-\begin{block}{What is NX?}
-NX is software similar to Windows Remote Desktop, allowing for a graphical interface to be made available remotely.
-\end{block}
-\begin{itemize}
-\item Client is free (provided by Nomachine)
-\item We use a free server (not provided by Nomachine, but fully functional)
-\item Clients can be launched by installing dedicated client (all OS)  or by launching the webclient (currently not working for some Linux)
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Important note}
-\begin{block}{NX on ECCO security}
-You MUST download the custom-configured session from the VRDC website; the default session configuration from the NX client install will not work.
-\end{block}
-\tiny Details: we use a custom SSH key for the NX client, for some minimal additional security.
-\end{frame}
-
-
-\begin{frame}{Important note}
-\includegraphics[height=.7\textheight]{nx-ecco-key.png}
-\end{frame}
-
-
-\begin{frame}{Logging on}
-\centering
-\includegraphics[height=.7\textheight]{nx-login-box.png}
-\end{frame}
-
-
-\begin{frame}{Successful connection}
-\centering
-\includegraphics[width=1\textheight]{nx-logged-on.png}
-\end{frame}
-
-
 \subsection{Basic scripting}
 
 \begin{frame}
@@ -657,7 +553,7 @@ Basic Linux, basic scripting
 \end{block}
 \end{frame}
 
-\begin{frame}[frame]{Linux in 2 minutes}
+\begin{frame}{Linux in 2 minutes}
 \begin{itemize}
 \item ls - will list the contents of a directory
 \item cd - will ``change directory''
@@ -752,7 +648,7 @@ Now let's try it out
 \href{day1-2.pdf}{Next section}
 \end{frame}
 
-\section{Subroutines}
+\section{HPC resources}
 \begin{frame}
 \href{day1-3.pdf}{Next section}
 \end{frame}
