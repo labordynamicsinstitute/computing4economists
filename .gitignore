@@ -8,4 +8,5 @@ documents/*.synctex.gz
 documents/*.toc
 documents/*.vrb
 */*~
-*/*/*~
+*~
+*bak
