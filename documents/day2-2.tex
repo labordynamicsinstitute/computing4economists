@@ -1,0 +1,843 @@
+% Time-stamp: <09/10/02 01:57:13 vilhuber>
+% $Id: Presentation-PSD.tex 3219 2012-09-27 07:47:11Z vilhu001 $
+
+% normal line:
+\documentclass[xcolor=table,compress]{beamer}
+% to create notes:
+%\documentclass[handout,notes=only]{beamer}
+% to create handouts
+%\documentclass[xcolor=table,handout,compress]{beamer}
+% to create a different kind of handouts
+%\documentclass{article}
+%\usepackage[envcountsect]{beamerarticle}
+
+%\setbeameroption{handout}
+%\setbeameroption{show notes}
+
+
+%
+% Packages
+%
+\mode<article> % only for the article version
+{
+  \usepackage{fullpage}
+  \usepackage{hyperref}
+}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage{embedfile}
+\embedfile{\jobname.tex}
+\fi
+
+\usepackage{graphicx}
+%\usepackage{pstricks}
+\usepackage{xcolor}
+\usepackage{pifont}
+%\usepackage{../chicago}
+\usepackage{pgf}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[latin1]{inputenc}
+\usepackage{colortbl}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{pdfpages}
+% usage:
+%   \includepdf[pages={1}]{myfile.pdf}
+%   \includepdf[pages={1,3,5}]{myfile.pdf} would include pages 1, 3, and 5 of the file. 
+%   To include the entire file, you specify pages={-}, where {-}
+%\usepackage{landscape}
+\usepackage{listings}
+\lstloadlanguages{R,bash,SAS}
+\lstset{numbers=left, stepnumber=1, basicstyle=\tiny}
+
+%\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+
+\usepackage{times}
+%\usepackage{colortbl}
+
+%============================================================
+% Beamer specific styles and configs
+%============================================================
+
+\mode<presentation>
+{
+% alternative, could always use
+%\usetheme{Census}
+\usetheme{cornell}
+\useoutertheme{cornell}
+}
+
+
+%\setbeamercovered{dynamic}
+
+
+
+%============================================================
+% Title
+%============================================================
+
+\title[Computing for Economists]{Workshop: High-performance computing for economists}
+\author[Vilhuber, Abowd, Mansfield, McKinney]{%
+  Lars~Vilhuber\inst{1} \and
+  John M. Abowd\inst{1} \and
+  Richard~Mansfield\inst{1} \and
+  Hautahi~Kingi\inst{1} \and
+  Flavio~Stanchi\inst{1} \and
+  Sida~Peng\inst{1} \and
+  Kevin~L.~McKinney %\inst{2}%
+}
+
+\institute[Cornell]{
+  \inst{1}%
+   Cornell University, Economics Department,
+%\and \inst{2} U.S. Census Bureau
+}%
+\date[August 18-21, 2014]{August 18-21, 2014: Day 2}
+\subject{HPC}
+
+
+% % % % % % % % % % % % % % % % % Main document
+\begin{document}
+\frame{\titlepage}
+\section{Intro}
+\section{Basics}
+\section[VCS]{Version control systems}
+\section{Subroutines}
+
+\subsection{Goals}
+\begin{frame}{Basic subroutine programming}
+\begin{block}{Goal}
+\begin{itemize}
+\item Show the basics of proper subroutine programming
+\item Advantages, pitfalls
+\item Examples in R
+\item Later: generalization and differences in other programming languages
+\end{itemize}
+\end{block}
+\end{frame}
+\subsection[Control]{Control structures}
+\begin{frame}{Control structures in programming languages}
+\small
+\begin{block}{Mostly generic}
+\begin{itemize}
+\item \texttt{if, else}: testing a condition [R, SAS] 
+\item \texttt{for}: execute a loop a fixed number of times [R, in SAS: \texttt{do}]
+\item \texttt{while}: execute a loop while a condition is true [R,SAS]
+\item \texttt{until}: execute a loop until a condition is true [SAS]
+\item \texttt{repeat}: execute an infinite loop [R]
+\item \texttt{break}: break the execution of a loop [R, SAS]
+\item \texttt{next}: skip an interation of a loop [R]
+\item \texttt{return}: exit a function [R]
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+
+\subsubsection{if}
+\begin{frame}[fragile]{Control structures: if}
+\begin{columns}
+\begin{column}[t]{.48\textwidth}
+\pause
+\begin{block}{... in R}
+\lstset{language=R}
+\begin{lstlisting}
+if(<condition>) {
+## do something
+} else {
+## do something else
+}
+if(<condition1>) {
+## do something
+} else if(<condition2>) {
+## do something different
+} else {
+## do something different
+}
+\end{lstlisting}
+\end{block}
+\end{column}
+\hfill\pause
+\begin{column}[t]{.48\textwidth}
+\begin{block}{... in SAS}
+\lstset{language=SAS}
+\begin{lstlisting}
+if (<condition>) then do;
+## do something
+end; else do;
+## do something else
+end;
+if (<condition1>) then do;
+## do something
+else if (<condition2>) then do;
+## do something different
+end; else do;
+## do something different
+end;
+\end{lstlisting}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+
+\subsubsection{for}
+
+\begin{frame}[fragile]{Control structures: for}
+Run through a fixed sequence of numbers (or in R, a sequence of vectors)
+\begin{columns}
+\begin{column}[t]{.48\textwidth}
+\pause
+\begin{block}{simple loop in R}
+\lstset{language=R}
+\begin{lstlisting}
+for(i in 1:10) {
+print(i)
+}
+\end{lstlisting}
+\end{block}
+\end{column}
+\hfill\pause
+\begin{column}[t]{.48\textwidth}
+\begin{block}{... in SAS}
+\lstset{language=SAS}
+\begin{lstlisting}
+do i = 1 to 10;
+put i;
+end;
+\end{lstlisting}
+\end{block}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]{Control structures: for}
+Across programming languages, some flexibility:
+\begin{columns}
+\begin{column}[t]{.48\textwidth}
+\pause
+\begin{block}{Equivalent loops in R}
+\lstset{language=R}
+\begin{lstlisting}
+x <- c("a", "b", "c", "d")
+for(i in 1:4) {
+print(x[i])
+}
+for(i in x) {
+print(i)
+}
+for(i in 1:4) print(x[i])
+\end{lstlisting}
+\end{block}
+\end{column}
+\hfill
+\begin{column}[t]{.48\textwidth}
+\begin{block}{... in SAS}
+\lstset{language=SAS}
+\begin{lstlisting}
+do i = 1 to 10;
+put i;
+end;
+\end{lstlisting}
+\end{block}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+\subsubsection{Breaking out}
+\begin{frame}{Interrupting loops}
+\begin{block}{How a loop ends}
+\begin{itemize}
+\item at the end
+\item by resetting the counter to the end value, or by setting the looping condition to its exit value explicitly
+\item when it encounters a \texttt{break} (for \texttt{repeat} loops in R)
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{What do we loop over?}
+\begin{block}{Within the loop, something is done}
+\lstset{language=R, basicstyle=\footnotesize}
+\begin{lstlisting}
+for (i in 1:100000) {
+	## do something here 
+	# stuff (1 line)
+	# stuff (2nd line)
+	# done
+	}
+\end{lstlisting}
+\end{block}
+\pause
+\begin{block}{What if that is really complicated?}
+\lstset{language=R, basicstyle=\footnotesize}
+\begin{lstlisting}
+for (i in 1:100000) {
+	## do something really complicated here (398 lines)
+	}
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+\subsection{Subroutines}
+\begin{frame}[fragile]{Subroutines}
+\begin{block}{Breaking into discrete chunks}
+\begin{columns}
+\begin{column}{.48\textwidth}
+\lstset{language=R, basicstyle=\tiny}
+\begin{lstlisting}
+for (i in 1:100000) {
+	## do something really complicated here
+	## (398 lines)
+	}
+\end{lstlisting}
+
+\end{column}\hfill
+\pause
+\begin{column}{.48\textwidth}
+In the previous example, this was unwieldy (which loop are you closing on line 400?)
+\end{column}
+\end{columns}
+\pause
+\begin{columns}[b]
+\begin{column}{.48\textwidth}
+We can start by breaking out the complicated stuff into a well-defined subroutine.
+\end{column}
+\pause
+\hfill
+\begin{column}{.48\textwidth}
+\lstset{language=R, basicstyle=\tiny}
+\begin{lstlisting}
+for (i in 1:100000) {
+	## new subroutine
+	do_something_complicated(args=something)
+	##
+	}
+\end{lstlisting}
+\end{column}
+\end{columns}
+\end{block}
+\end{frame}
+
+
+\subsubsection{Definition}
+\begin{frame}{Subroutines, procedures, etc.}
+\begin{block}{What do you call a subroutine?}
+``The same things in different [programming] languages can have different names. Programs, Procedures, Functions, \textbf{Subroutines}, Subprograms, Subqueries ... these words all have very similar meanings. [...]
+We can call an object, it executes and performs a complex process. Whether that object is called any one of the above list depends on what programming language it is written in, whether a human being can call it, or whether it has to be called by another program or one of the other names on the list.''
+\end{block}
+{\tiny \href{http://en.wikibooks.org/wiki/Computer_Programming/Procedures_and_functions}{Source}}
+\end{frame}
+
+\begin{frame}{An practical overview of subroutine programming}
+\begin{block}{We will use R...}
+... but expand to cover what this might look like in SAS (macros), Stata (programs, ado files), Matlab (functions) tomorrow.
+
+... use this as a building block to scale to HPC.
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+\begin{block}{You already use them!}
+Much functionality in SAS, Stata, Matlab, R is implemented as a subroutine:
+\begin{itemize}
+\item \texttt{proc import} in SAS (compare call to log file)
+\item Most statistical functions in Stata (\texttt{regress} used earlier is actually in \texttt{../ado/base/r/regress.ado})
+\end{itemize}
+\end{block}
+You can create them too!
+\end{frame}
+
+
+\begin{frame}[fragile]{Functions in R}
+\begin{block}{R objects of class "function"}
+\lstset{language=R}
+\begin{lstlisting}
+f <- function(<arguments>) {
+	## do something here
+	}
+\end{lstlisting}
+\begin{itemize}
+\item Functions can be arguments to other functions
+\item Functions can be nested (even recursive)
+\item Functions can have named arguments with default values, or missing values
+\end{itemize}
+\end{block}
+\vfill
+\tiny We draw on Peng's "Computing for Data Analysis, Week 2" for this section.
+\end{frame}
+
+\lstset{language=R}
+\subsubsection[Examples]{Basic examples}
+\begin{frame}[fragile]{Basic examples}
+\begin{block}{Let's start with a simple example}
+%\lstset{caption=\lstname}
+\lstinputlisting{../programs/day1/3-1-simple-function.R}
+\end{block}
+\pause
+The function is defined, has two arguments with default values, and a really short name.
+\pause
+\begin{block}{Results}
+\begin{lstlisting}
+> source("3-1-simple-function.R")
+> f
+function(a=1,b=0) {
+       rnorm(a,mean = b)
+}
+> f()
+[1] 0.1709822
+> set.seed(10)
+> f(a=10,b=5)
+ [1] 5.018746 4.815747 3.628669 4.400832 5.294545 5.389794 3.791924 4.636324
+ [9] 3.373327 4.743522
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\subsubsection[Creatin]{Creating functions}
+\begin{frame}{Defining function arguments}
+Functions have \textit{named} arguments which potentially have \textit{default} values.
+\begin{itemize}
+\item The formal arguments are the arguments included in the function definition
+\item Not every function call in R makes use of all the formal arguments
+\item Function arguments can be missing, or can have default values
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Function arguments at invocation}
+Function arguments can be passed by position (\textit{positional}) or by explicit name (in which case, position doesn't matter).
+\begin{lstlisting}[caption=Equivalent calls,basestyle=\normalsize]
+> set.seed(10)
+> mean(f(b=5,a=10))
+[1] 4.509343
+> set.seed(10)
+> mean(f(a=10,b=5))
+[1] 4.509343
+> set.seed(10)
+> mean(f(10,5))
+[1] 4.509343
+\end{lstlisting}
+However, it is \textbf{good practice} to use \textit{named} arguments, as they make use of the function (especially when more complex) easier and more transparent.
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Lazy evaluation}
+\begin{block}{Arguments can remain unused:}
+
+\begin{lstlisting}[numbers=none]
+f <- function(a, b) {
+a^2
+}
+> f(2)
+[1] 4
+\end{lstlisting}
+\texttt{b} was never used.
+\end{block}
+\begin{block}{Arguments can be faulty, but don't lead to problems until used }
+\begin{lstlisting}[numbers=none]
+f <- function(a, b) {
+print(a)
+print(b)
+}
+> f(45)   # note no value provided for b
+[1] 45
+Error in print(b) : argument "b" is missing, with no default
+>
+\end{lstlisting}
+The absence of a value for \texttt{b} only led to an error at the time it was called.
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Scoping}
+\begin{block}{Scope of functions}
+
+\begin{lstlisting}[numbers=none]
+f <- function(a,b) {
+   print(a)
+   print(c)
+   c <- paste(a,b)
+   print (c)
+}
+\end{lstlisting}
+\lstset{numbers=left}
+Try it out:\pause
+\begin{lstlisting}
+> f(c('a'),c('b'))
+[1] "a"
+function (..., recursive = FALSE)  .Primitive("c") <== ERROR!
+[1] "a b"
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Scoping}
+\begin{block}{What happened?}
+\texttt{c} was not defined, leading to the error on line 4. Line 5 reports what happens to \texttt{c} once it is defined.
+\end{block}
+\begin{block}{Understanding the scope}
+\begin{lstlisting}[firstnumber=last]
+> c <- c('Nothing')
+> f(c('a'),c('b'))
+[1] "a"
+[1] "Nothing"
+[1] "a b"
+\end{lstlisting}
+So what value does \texttt{c} now have?\pause
+\begin{lstlisting}[firstnumber=last]
+> print(c)
+[1] "Nothing"
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Scoping}
+\begin{block}{Understanding the scope of variables}
+\begin{itemize}[<+->]
+\item In the example, \texttt{c} was defined both inside the function and outside. 
+\item R took the ``global'' value of \texttt{c} ...
+\item until the function defined it, at which point it took a new value internal to the function
+\item ... which was only used until the function ended. The ``global'' value had not changed.
+\end{itemize}
+\end{block}
+\begin{block}{Other programming languages}
+Each programming language has a different way of handling these. Take care to read up on it.
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Searching for variables (and functions)}
+\begin{itemize}
+\item The global environment or the user?s workspace is always the first element of the search list and the \textbf{base} package is always the last.
+\item The order of the packages on the search list matters!
+\item User?s can configure the order of packages as they get loaded on startup ...
+\item When a user loads a package with library the namespace of that package gets put in position 2 of the search list (by default) and everything else gets shifted down the list.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scoping (name resolution) rules}
+\begin{block}{Lexical scoping}
+\textbf{Lexical} (or \textbf{static}) resolution can be determined at compile time, and is also known as \textbf{early binding}
+\end{block}
+\begin{block}{Dynamic scoping}
+\textbf{Dynamic} resolution can in general only be determined at run time, and thus is known as \textbf{late binding}. 
+\end{block}
+Most modern languages use lexical scoping for variables and functions, though de facto dynamic scoping is common in macro languages, which do not directly do name resolution. \href{http://en.wikipedia.org/wiki/Scope_(computer_science)}{[1]}
+\end{frame}
+
+
+\begin{frame}[fragile]{Scoping rules}
+\begin{block}{Back to R}
+\begin{lstlisting}[numbers=none]
+f <- function(a,b) {
+   print(paste(a,b))
+   print(c)
+}
+\end{lstlisting}
+\begin{itemize}
+\item Named (formal) arguments (\texttt{a,b}) are always local 
+\item Free variables (not defined in the call) (\texttt{c}) are subject to scoping rules
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Lexical scoping in R}
+Lexical scoping in R means that 
+\begin{quote}
+the values of free variables are searched for in the environment in which the
+function was defined.
+\end{quote}
+What is an environment?
+\begin{quote}
+\begin{itemize}
+\item An environment is a collection of (symbol, value) pairs, i.e. x is a symbol and
+3.14 might be its value.
+\item Every environment has a parent environment; it is possible for an environment to
+have multiple ?children?
+\item A function + an environment = a closure or function closure.
+\end{itemize}
+\end{quote}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Safe use of scoping}
+\begin{block}{Define all variables as arguments}
+To avoid confusion about where variables are defined, unless you have a good reason to deviate from this
+\begin{itemize}
+\item Define all variables as arguments to the function
+\item In other languages, explicitly define the scope of a variable
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Scoping in SAS}
+\begin{block}{Scope of macro variables in SAS}
+Define a similar program in SAS
+\begin{lstlisting}[language=SAS,numbers=none]
+%macro myprogram(a=,b=);
+%let c=&a.&b.;
+%put &c.;
+%mend;
+\end{lstlisting}
+\pause Call it and assess where \texttt{c} comes from:
+\begin{lstlisting}[language=SAS,numbers=none]
+%myprogram(a=a,b=b);
+%put &c.;
+%let c=Nothing;%put &c.;
+%myprogram(a=a,b=b);
+%put &c.;
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Scoping in SAS}
+with results
+\begin{lstlisting}[language=SAS,numbers=none]
+1    %macro myprogram(a=,b=);
+2    %let c=&a.&b.;
+3    %put &c.;
+4    %mend;
+6    %myprogram(a=a,b=b);
+ab
+WARNING: Apparent symbolic reference C not resolved.
+7    %put &c.;
+&c.
+8    %let c=Nothing;%put &c.;
+Nothing
+9    %myprogram(a=a,b=b);
+ab
+10   %put &c.;
+ab
+\end{lstlisting}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Scoping in SAS}
+Better:
+\begin{lstlisting}[language=SAS,numbers=none]
+1    %macro myprogram(a=,b=);
+2    %local c;
+3    %let c=&a.&b.;
+4    %put &c.;
+5    %mend;
+6    %let c=Nothing;
+7    %myprogram(a=a,b=b);
+ab
+8    %put &c.;
+Nothing
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Efficient use of scoping}
+\begin{block}{Differences that need to be taken into account}
+\begin{itemize}
+\item Scoping rules can be leveraged to improve optimization (see Peng's Coursera course and others)
+\item The use of scoping differs across languages (what is feasible in R cannot be simply translated into Java or SAS or Stata)
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Naming rules}
+\begin{block}{Naming is important}
+\begin{itemize}
+\item Naming is important - both of functions and of arguments: Compare the following two functions:
+\begin{lstlisting}
+f <- function(a,b,c) {
+   x <- sample(y,c)
+   lm(a ~ b , data=x )
+}
+\end{lstlisting}
+and
+\begin{lstlisting}
+sample_reg <- function(lhs,rhs,samplesize=10,data=) {
+   subset <- sample(data,samplesize)
+   lm(lhs ~ rhs , data=subset )
+}
+\end{lstlisting}
+\item Give functions and variables meaningful names
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Naming rules}
+\begin{block}{Robustness is important}
+\begin{itemize}[<+->]
+\item Think about backward compatibility (and your program library). Say you first used this:
+\begin{lstlisting}
+sample_reg <- function(lhs,rhs,samplesize=10,data=) {
+   subset <- sample(data,samplesize)
+   lm(lhs ~ rhs , data=subset )
+}
+sample_reg(earnings,education,5,data=cps)
+\end{lstlisting}
+\item Now you extend your model
+\color{red}
+\begin{lstlisting}
+sample_reg <- function(lhs,rhs,samplesize=10,data=) {
+   subset <- sample(data,samplesize)
+   lm(log(lhs) ~ rhs , data=subset )
+}
+sample_reg(earnings,education,5,data=cps)
+\end{lstlisting}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Naming rules}
+\begin{block}{Robustness is important}
+\begin{itemize}
+\item You should either give your function a different name, or make the call robust to both the ``old'' way and the ``new'' way:\color{blue}
+\begin{lstlisting}
+sample_reg <- function(lhs,rhs,samplesize=10,data=,logs = false ) {
+   subset <- sample(data,samplesize)
+   if ( logs ) {
+   	_lhs <- log(lhs)
+   	}
+   	else {
+   	_lhs <- lhs
+   	}
+   lm(_lhs ~ rhs , data=subset )
+}
+\end{lstlisting}\color{black}
+which will work for both calls... 
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+
+\subsubsection[Power]{The power of functions}
+\begin{frame}
+\vfill
+The power of functions
+\vfill
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}[fragile]{The power of functions}
+\begin{block}{Why bother with functions?}
+\begin{itemize}
+\item Initial example: putting 398 command lines into separate file (ease of use)
+\item Expansion on that: re-using the function across multiple projects (function library)
+\item Your function is a complete specification. You know want to vary or perturb all 25 parameters slightly, for robustness checks.
+\begin{lstlisting}
+for (i in 1:1000) {
+  for (j in 1:1000) {
+  	my_regression(model=base,xi=i,xj=j)
+  }
+}
+\end{lstlisting}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{The power of functions}
+\begin{block}{Why bother with functions?}
+\begin{itemize}
+\item You want to database the results:
+\begin{lstlisting}
+for (i in 1:1000) {
+  for (j in 1:1000) {
+  	results_db[i,j]=my_regression(model=base,xi=i,xj=j)
+  }
+}
+\end{lstlisting}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{The power of functions}
+\begin{block}{The ultimate power of functions: scaling}
+\begin{itemize}
+\item You want to speed the whole thing up by parallelizing:
+\begin{lstlisting}
+library(doMC)
+registerDoMC()
+foreach (i = 1:1000, .combine=cbind) %dopar% {
+  for (j in 1:1000) {
+  	results_db[i,j]=my_regression(model=base,xi=i,xj=j)
+  }
+}
+\end{lstlisting}
+which will run 1000 parallel threads, on as many cores as you can.
+(see \href{http://cran.r-project.org/web/packages/doMC/vignettes/gettingstartedMC.pdf}{doMC vignette} or the help in your Rstudio installation)
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\subsubsection{Conclusion}
+
+\begin{frame}{Take-away}
+\begin{block}{Major points}
+\begin{itemize}
+\item Subroutines are a powerful tool to write clean, understandable code
+\item Subroutines (functions, macros, programs) are present in some form in all statistical programming languages
+\item Use consistent, clear naming
+\item Use robust subroutines, expanding them into a library that you can use and share across projects
+\item Clean subroutines are a critical component to scaling your analysis (parallelization)
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Take-away}
+\begin{block}{Additional items}
+\begin{itemize}
+\item learn how to debug (different in each language, also critical to scaling)
+\item subroutines don't magically make your code efficient - they allow you to figure out which portions are not
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\end{document}
