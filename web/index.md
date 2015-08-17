@@ -2,7 +2,7 @@ High-performance computing for Economists
 ========================================================
 transition: fade
 author: Lars Vilhuber, with John M. Abowd, Rick Mansfield, Flavio Stanchi, Hautahi Kingi, Sida Peng
-date: 2015/8/17-2015/8/19 
+date: 2015/8/17-2015/8/19
 
 **Time**: *9:00 - 5:00 p.m.* (we will typically end earlier)
 
@@ -35,11 +35,11 @@ Tentative Agenda - Day 1
 ========================================================
 * 9:00-9:30 Introduction (Lars)
 
-* 9:30-10:30 [Programming basics](../documents/day1-1.pdf) (Lars)
+* 9:30-10:30 [Programming basics](../documents/day1-1.pdf) (Lars) with some command line [lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)
 
 * 10:30-10:45 Break
 
-* 10:45-12:30 [Basics of version control](../documents/day1-2.pdf) (Lars)
+* 10:45-12:30 [Basics of version control](../documents/day1-2.pdf) (Lars) including Subversion (Flavio Stanchi):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) and  Git (Hautahi) [lecture notes](../Git_CL_Slides/Git_Notes.pdf)
 
 ***
 
