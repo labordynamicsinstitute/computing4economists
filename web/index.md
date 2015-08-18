@@ -53,7 +53,6 @@ Tentative Agenda - Day 1
 
 * 14:45-16:00 Git (Hautahi) [lecture notes](../Git_CL_Slides/Git_Notes.pdf)
 
-* 16:00-17:00 Putting it into practice (on your own)
 
 Tentative Agenda - Day 2
 ========================================================
