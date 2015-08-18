@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -N dopar
+#PBS -l nodes=compute-0-4
+#PBS -l ncpus=32
+#PBS -j oe
+cd /home/lv39/workshop/ 
+source /etc/profile.d/modules.sh
+hostname
+module load R/MKL/MP/3.0.2
+
+R --vanilla < 0-loadlibs.R > 0-loadlibs.Rout

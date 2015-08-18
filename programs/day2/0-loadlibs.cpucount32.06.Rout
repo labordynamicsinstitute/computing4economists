@@ -1,0 +1,35 @@
+
+R version 3.0.1 (2013-05-16) -- "Good Sport"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # load necessary libraries
+> library("doMC")
+> registerDoMC(cores=32)
+> source("2-dopar.R", echo=TRUE)
+
+> x <- iris[which(iris[, 5] != "setosa"), c(1, 5)]
+
+> trials <- 10000
+
+> ptime <- system.time({
++     r <- foreach(icount(trials), .combine = cbind) %dopar% {
++         ind <- sample(100, 100, replace = TRUE)
++         re .... [TRUNCATED] 
+
+> ptime
+elapsed 
+  5.256 
+> 

@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -t 1-5%2
+#PBS -N testLV
+#PBS -l nodes=compute-0-6
+#PBS -l ncpus=1
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -m ae
+cd /home/lv39/workshop/ 
+source /etc/profile.d/modules.sh
+hostname
+module load sas
+echo arrayid=$PBS_ARRAYID
+sas -noterminal -cpucount 1 test.sas -log test-$PBS_ARRAYID.log -print test-$PBS_ARRAYID.lst
+
+
