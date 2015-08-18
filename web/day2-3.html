@@ -1058,6 +1058,46 @@ JOB_ID_3=$(qsub -W depend=afterok:$JOB_ID_2 03_script.sh)
 </div>
 
 </section>
+<section data-transition="fade" data-transition-speed="default">
+<h3>Live demo</h3>
+<div class="slideContent" >
+<p>For instance, try</p>
+
+<ul>
+<li><a href="../programs/day2/2-dopar.R">2-dopar.R</a></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="fade" data-transition-speed="default">
+<h3>Parallel processing</h3>
+<div class="slideContent" >
+<p>Computing with four cores on laptop</p>
+
+<pre><code class="r">library(doParallel)
+registerDoParallel(cores=4)
+source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R&quot;, echo=TRUE)
+</code></pre>
+
+<pre><code>
+&gt; x &lt;- iris[which(iris[, 5] != &quot;setosa&quot;), c(1, 5)]
+
+&gt; trials &lt;- 10000
+
+&gt; ptime &lt;- system.time({
++     r &lt;- foreach(icount(trials), .combine = cbind) %dopar% {
++         ind &lt;- sample(100, 100, replace = TRUE)
++         re .... [TRUNCATED] 
+
+&gt; ptime
+elapsed 
+  12.81 
+</code></pre>
+
+</div>
+
+</section>
 
 
   </div>

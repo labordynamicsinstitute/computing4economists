@@ -127,3 +127,34 @@ JOB_ID_1=$(qsub 01_script.sh)
 JOB_ID_2=$(qsub -W depend=afterok:$JOB_ID_1 02_script.sh)
 JOB_ID_3=$(qsub -W depend=afterok:$JOB_ID_2 03_script.sh)
 ```
+
+Live demo
+=========
+For instance, try
+* [2-dopar.R](../programs/day2/2-dopar.R)
+
+Parallel processing
+===================
+Computing with four cores on laptop
+
+```r
+library(doParallel)
+registerDoParallel(cores=4)
+source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
+```
+
+```
+
+> x <- iris[which(iris[, 5] != "setosa"), c(1, 5)]
+
+> trials <- 10000
+
+> ptime <- system.time({
++     r <- foreach(icount(trials), .combine = cbind) %dopar% {
++         ind <- sample(100, 100, replace = TRUE)
++         re .... [TRUNCATED] 
+
+> ptime
+elapsed 
+  12.81 
+```
