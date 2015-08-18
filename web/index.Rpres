@@ -58,14 +58,17 @@ Tentative Agenda - Day 1
 Tentative Agenda - Day 2
 ========================================================
 
-* 9:00-10:30 [HP resources at Cornell, elsewhere](../documents/day2-1.pdf) (Lars)
+* 9:00-9:45 [HP resources at Cornell, elsewhere](../documents/day2-1.pdf) (Lars)
 
-* 10:30-11:00 Break
+* 9:45-10:00 Break
 
-* 11:00-12:30 [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf) (Rick)
+* 10:00-12:00 [Subroutines and scalable programming](../documents/day2-2.pdf) (Lars)
 
-* 13:30-14:30 [Introduction to parallel processing](../documents/HPC_Class_Parallel.pdf) (Lars)
+
+* 11:00-12:30 Cancelled/On your own: [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf)
+
 ***
+* 13:30-14:30 [Introduction to parallel processing](../web/day2-3.html) (Lars)
 
 * 14:30-16:00
 

@@ -93,7 +93,7 @@
    Cornell University, Economics Department,
 %\and \inst{2} U.S. Census Bureau
 }%
-\date[August 18-21, 2014]{August 18-21, 2014: Day 2}
+\include{date}
 \subject{HPC}
 
 
@@ -383,7 +383,7 @@ f <- function(<arguments>) {
 \begin{frame}[fragile]{Basic examples}
 \begin{block}{Let's start with a simple example}
 %\lstset{caption=\lstname}
-\lstinputlisting{../programs/day1/3-1-simple-function.R}
+\lstinputlisting{../programs/day2/3-1-simple-function.R}
 \end{block}
 \pause
 The function is defined, has two arguments with default values, and a really short name.
@@ -419,7 +419,7 @@ Functions have \textit{named} arguments which potentially have \textit{default} 
 
 \begin{frame}[fragile]{Function arguments at invocation}
 Function arguments can be passed by position (\textit{positional}) or by explicit name (in which case, position doesn't matter).
-\begin{lstlisting}[caption=Equivalent calls,basestyle=\normalsize]
+\begin{lstlisting}[caption=Equivalent calls,basicstyle=\normalsize]
 > set.seed(10)
 > mean(f(b=5,a=10))
 [1] 4.509343
@@ -447,6 +447,7 @@ a^2
 \end{lstlisting}
 \texttt{b} was never used.
 \end{block}
+\pause
 \begin{block}{Arguments can be faulty, but don't lead to problems until used }
 \begin{lstlisting}[numbers=none]
 f <- function(a, b) {
@@ -514,6 +515,7 @@ So what value does \texttt{c} now have?\pause
 \item ... which was only used until the function ended. The ``global'' value had not changed.
 \end{itemize}
 \end{block}
+\pause
 \begin{block}{Other programming languages}
 Each programming language has a different way of handling these. Take care to read up on it.
 \end{block}
@@ -688,6 +690,33 @@ sample_reg <- function(lhs,rhs,samplesize=10,data=) {
 \end{frame}
 
 
+\begin{frame}[fragile]{Documentation}
+\begin{block}{Provide some source-code level documentation}
+\begin{lstlisting}
+# Author: Lars Vilhuber 
+# This program defines a regression on a sample.
+#
+# Usage: sample_reg(lhs,(list of rhs),samplesize=10,data=data frame)
+#
+# Samplesize defaults to 10 observations, and will sample without replacement
+# Regression is simple linear regression with no options
+# Function returns an object of type lm
+
+sample_reg <- function(lhs,rhs,samplesize=10,data=) {
+   subset <- sample(data,samplesize)
+   lm(lhs ~ rhs , data=subset )
+}
+
+\end{lstlisting}
+\begin{itemize}
+\item More sophisticated documentation: see \href{http://r-pkgs.had.co.nz/man.html}{package 
+documentation}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
 \begin{frame}[fragile]{Naming rules}
 \begin{block}{Robustness is important}
 \begin{itemize}[<+->]
@@ -834,7 +863,28 @@ which will run 1000 parallel threads, on as many cores as you can.
 \begin{block}{Additional items}
 \begin{itemize}
 \item learn how to debug (different in each language, also critical to scaling)
-\item subroutines don't magically make your code efficient - they allow you to figure out which portions are not
+\item subroutines don't magically make your code efficient - they allow you to figure out which 
+portions are not
+
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Take-away}
+\begin{block}{Additional items}
+\begin{itemize}
+\item consider publishing your routines 
+\begin{itemize}
+\item R packages \url{http://r-pkgs.had.co.nz/} with publication in 
+\href{http://journal.r-project.org/}{R Journal}
+\item Stata packages (user-contributed commands, ado files) from the 
+\href{https://ideas.repec.org/s/boc/bocode.html}{Boston College Statistical Software 
+Components (SSC) archive} with publication in \href{http://www.stata-journal.com/}{Stata 
+Journal}
+\item \href{http://www.jstatsoft.org/}{Journal of Statistical Software}
+\item Github... (\href{https://github.com/coderigo/stata-git}{Stata}, 
+\href{https://github.com/hadley/devtools}{R devtools} )
+\end{itemize}
 \end{itemize}
 \end{block}
 \end{frame}
