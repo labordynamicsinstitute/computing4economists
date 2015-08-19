@@ -1073,27 +1073,44 @@ JOB_ID_3=$(qsub -W depend=afterok:$JOB_ID_2 03_script.sh)
 <section data-transition="fade" data-transition-speed="default">
 <h3>Parallel processing</h3>
 <div class="slideContent" >
-<p>Computing with four cores on laptop</p>
+<p>Computing with four cores on laptop (and R 3.2)</p>
 
 <pre><code class="r">library(doParallel)
 registerDoParallel(cores=4)
-source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R&quot;, echo=TRUE)
+source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R&quot;, echo=FALSE)
 </code></pre>
 
-<pre><code>
-&gt; x &lt;- iris[which(iris[, 5] != &quot;setosa&quot;), c(1, 5)]
+<p>For version 3.0 or earlier you need to modify something:</p>
 
-&gt; trials &lt;- 10000
-
-&gt; ptime &lt;- system.time({
-+     r &lt;- foreach(icount(trials), .combine = cbind) %dopar% {
-+         ind &lt;- sample(100, 100, replace = TRUE)
-+         re .... [TRUNCATED] 
-
-&gt; ptime
-elapsed 
-  12.81 
+<pre><code class="r">library(doMC)
+registerDoMC(cores=4)
+source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R&quot;, echo=FALSE)
 </code></pre>
+
+</div>
+
+</section>
+<section data-transition="fade" data-transition-speed="default">
+<h3>Parallel processing: results</h3>
+<div class="slideContent" >
+<ul>
+<li>Computing with four cores on laptop (and R 3.2): 15.285 seconds</li>
+<li>Computing with 1 core on ECCO (compute-0-4, R 3.0): 38.955 seconds (<a href="../programs/day2/0-loadlibs.cpucount1.Rout">source</a>)</li>
+<li>Computing with 32 cores on ECCO (compute-0-4, R 3.0): 5.089  seconds <a href="../programs/day2/0-loadlibs.cpucount32.04.Rout">(source</a>)</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="fade" data-transition-speed="default">
+<h3>Sources for live demonstration</h3>
+<div class="slideContent" >
+<ul>
+<li><a href="../programs/day2/0-loadlibs.R">0-loadlibs.R</a>: program submitted on ECCO</li>
+<li><a href="../programs/day2/dopar.qsub">dopar.qsub</a>: qsub program submitted on ECCO calling the R program above</li>
+<li><a href="../programs/day2/test2.sas">test2.sas</a>: SAS program to illustrate some points (submitted using qsas)</li>
+<li><a href="../programs/day2/test.sas">test.sas</a> and <a href="../programs/day2/test.qsub">test.qsub</a>: programs to demonstrate use of PBS_ARRAY_ID functionality</li>
+</ul>
 
 </div>
 

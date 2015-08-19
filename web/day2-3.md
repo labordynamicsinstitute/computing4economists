@@ -132,29 +132,33 @@ Live demo
 =========
 For instance, try
 * [2-dopar.R](../programs/day2/2-dopar.R)
-
 Parallel processing
 ===================
-Computing with four cores on laptop
+Computing with four cores on laptop (and R 3.2)
 
 ```r
 library(doParallel)
 registerDoParallel(cores=4)
-source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
+source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=FALSE)
+```
+For version 3.0 or earlier you need to modify something:
+
+```r
+library(doMC)
+registerDoMC(cores=4)
+source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=FALSE)
 ```
 
-```
+Parallel processing: results
+===================
 
-> x <- iris[which(iris[, 5] != "setosa"), c(1, 5)]
+* Computing with four cores on laptop (and R 3.2): 15.285 seconds
+* Computing with 1 core on ECCO (compute-0-4, R 3.0): 38.955 seconds ([source](../programs/day2/0-loadlibs.cpucount1.Rout))
+* Computing with 32 cores on ECCO (compute-0-4, R 3.0): 5.089  seconds [(source](../programs/day2/0-loadlibs.cpucount32.04.Rout))
 
-> trials <- 10000
-
-> ptime <- system.time({
-+     r <- foreach(icount(trials), .combine = cbind) %dopar% {
-+         ind <- sample(100, 100, replace = TRUE)
-+         re .... [TRUNCATED] 
-
-> ptime
-elapsed 
-  12.81 
-```
+Sources for live demonstration
+=================================
+* [0-loadlibs.R](../programs/day2/0-loadlibs.R): program submitted on ECCO
+* [dopar.qsub](../programs/day2/dopar.qsub): qsub program submitted on ECCO calling the R program above
+* [test2.sas](../programs/day2/test2.sas): SAS program to illustrate some points (submitted using qsas)
+* [test.sas](../programs/day2/test.sas) and [test.qsub](../programs/day2/test.qsub): programs to demonstrate use of PBS_ARRAY_ID functionality

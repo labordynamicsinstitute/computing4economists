@@ -75,16 +75,16 @@ Tentative Agenda - Day 2
 
 Tentative Agenda - Day 3
 ========================================================
-* 9:00-12:00 Parallel working groups (with breaks)
-  * Leveraging parallel programming techniques in Matlab (Sida) [lecture notes](../Matlab/peng-matlabparallel.pdf)
-	* Leveraging parallel programming techniques in SAS (Lars)
+* 9:00-10:30 Leveraging parallel programming techniques in Matlab (Sida) [lecture notes](../Matlab/peng-matlabparallel.pdf)
+* 10:30-10:45 Break
+* 10:45-12:00 Leveraging parallel programming techniques in SAS (Lars)
 		* [Example MP Connect code](http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&path=%2Ftrunk%2Fsas%2Fmpconnect%2F&#a35a136da6e860bff713e16f3fe2c4bfa)
 
 ***
 
 * 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (Lars)
 
-* 14:30-15:00 Wrap up
+* 14:30-16:00 Setting up a cluster (experimental, optional)
 
 Additional resources
 ===============================
