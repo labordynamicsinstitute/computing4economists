@@ -2,17 +2,17 @@ High-performance computing for Economists
 ========================================================
 transition: fade
 author: Lars Vilhuber, with John M. Abowd, Rick Mansfield, Flavio Stanchi, Hautahi Kingi, Sida Peng
-date: 2015/8/17-2015/8/19
+date: 2016/8/15-2016/8/17
 
 **Time**: *9:00 - 5:00 p.m.* (we will typically end earlier)
 
-**Location**: *Ives 109*
+**Location**: *Ives 105*
 
 Goal
 ========================================================
 The goal of this class is to showcase high-performance techniques and tools for economics students. The goal is NOT to teach a full
-course on SAS, Stata, etc. - there are other classes for that. We will teach just enough of each programming language to
-be able to highlight additional techniques (for SAS and Matlab, we will teach specialized workshops on each in more depth)
+course on SAS, Stata, Matlab, R, etc. - there are other classes for that. We will teach just enough of each programming language to
+be able to highlight additional techniques (for SAS and Matlab, we will teach specialized workshops on each in a bit more depth)
  This course is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
 specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu).
@@ -24,7 +24,7 @@ Second year Ph.D. in Economics or other social sciences.
 Requirements
 ========================================================
 * Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss) - the specific languange is not important.
-* Bring your laptop to class.
+* Bring your laptop to class!
 
 ***
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
@@ -33,58 +33,55 @@ Requirements
 
 Tentative Agenda - Day 1
 ========================================================
-* 9:00-9:30 Introduction (Lars) with reference to [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf) survey results.
+* 9:00-9:30 Introduction (Lars) with reference to [earlier](Computing_in_Economics_Workshop_Knowledge_2015.pdf) survey results.
 
-* 9:30-10:30 [Basics](../documents/day1-1.pdf) (Lars)
+* 9:30-10:15 [HP resources at Cornell, elsewhere](../documents/day2-1.pdf) (Lars)
 
-* 10:30-10:45 Break
+* <>
 
-* 10:45-11:45 The command line [lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf) (Hautahi Kingi)
+* 10:30-12:00 [Basics](../documents/day1-1.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf))
 
-* 11:45-12:30 [Getting access to ECCO (SSH and NX)](../documents/day1-3.pdf)
+* 12:00-12:30 [Getting access to ECCO (SSH and NX)](../documents/day1-3.pdf)
 
 ***
 
-* 13:30-14:30 (with break) [Basics of version control](../documents/day1-2.pdf) (Lars)
-  * Subversion (Flavio Stanchi):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
-  * Setting up your repositories
+* 13:30-15:00 Learning to qsub - Hello World example on ECCO (live in class)
 
-* 14:30-14:45 Break
+* <>
 
-* 14:45-16:00 Git (Hautahi) [lecture notes](../Git_CL_Slides/Git_Notes.pdf)
+* 15:15-16:45  [Basics of version control](../documents/day1-2.pdf) (Lars),  Subversion (TBD):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
 
 
 Tentative Agenda - Day 2
 ========================================================
 
-* 9:00-9:45 [HP resources at Cornell, elsewhere](../documents/day2-1.pdf) (Lars)
+* 9:00-9:45 Git  [lecture notes](../Git_CL_Slides/Git_Notes.pdf), Setting up your repositories
 
-* 9:45-10:00 Break
+* <>
 
-* 10:00-12:00 [Subroutines and scalable programming](../documents/day2-2.pdf) (Lars)
+* 10:00-11:00 Subroutines and scalable programming (Lars)
 
+* 11:00-12:00 [Introduction to parallel processing](../web/day2-3.html) (Lars)
 
-* 11:00-12:30 Cancelled/On your own: [A practical example: Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf)
 
 ***
-* 13:30-14:30 [Introduction to parallel processing](../web/day2-3.html) (Lars)
 
-* 14:30-16:00
+* 13:00-14:45 Putting it into practice: Trying out parallel processing
 
-* 16:00-17:00 Putting it into practice
+
+* 15:00-16:30 CHOICES:
+  * [A practical example: Big Data Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf)
+  * [Leveraging parallel programming techniques in Matlab](../Matlab/peng-matlabparallel.pdf)
+  * Explicit parallel programming in SAS (Lars) [Example ](https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect)
+
 
 Tentative Agenda - Day 3
 ========================================================
-* 9:00-10:30 Leveraging parallel programming techniques in Matlab (Sida) [lecture notes](../Matlab/peng-matlabparallel.pdf)
-* 10:30-10:45 Break
-* 10:45-12:00 Leveraging parallel programming techniques in SAS (Lars)
-		* [Example MP Connect code](http://repository.vrdc.cornell.edu/websvn/listing.php?repname=public.code-fragments&path=%2Ftrunk%2Fsas%2Fmpconnect%2F&#a35a136da6e860bff713e16f3fe2c4bfa)
-
-***
-
-* 13:30-14:30 [Considerations for data management](../web/coming-soon.html) (Lars)
-
-* 14:30-16:00 Setting up a cluster (experimental, optional)
+* 9:00-11:00 Going beyond statistical programming languages: compilers, libraries, and virtual machines - setting up an Amazon EC2 server (live)
+* 11:00-12:00  CHOICES (tentative)
+  *  [Considerations for data management](../web/coming-soon.html) (Lars)
+  *  Setting up a cluster (experimental, optional)
+* 12:00 Workshop ends
 
 Additional resources
 ===============================
@@ -97,5 +94,5 @@ Additional resources
 
 Source
 ==========
-* Git: [on Bitbucket](https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists) (login required)
+* Git: [on Bitbucket](https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists)
 * Web: [http://www.vrdc.cornell.edu/computing-for-economists/](http://www.vrdc.cornell.edu/computing-for-economists/)
