@@ -1,7 +1,7 @@
 High-performance computing for Economists
 ========================================================
 transition: fade
-author: Lars Vilhuber, with John M. Abowd, Rick Mansfield, Flavio Stanchi, Hautahi Kingi, Sida Peng
+author: Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert
 date: 2016/8/15-2016/8/17
 
 **Time**: *9:00 - 5:00 p.m.* (we will typically end earlier)
@@ -35,13 +35,13 @@ Tentative Agenda - Day 1
 ========================================================
 * 9:00-9:30 Introduction (Lars) with reference to [earlier](Computing_in_Economics_Workshop_Knowledge_2015.pdf) survey results.
 
-* 9:30-10:15 [HP resources at Cornell, elsewhere](../documents/day2-1.pdf) (Lars)
+* 9:30-10:15 [HP resources at Cornell, elsewhere](../documents/hp-resources-at-cornell.pdf) (Lars)
 
 * <>
 
-* 10:30-12:00 [Basics](../documents/day1-1.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf))
+* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf))
 
-* 12:00-12:30 [Getting access to ECCO (SSH and NX)](../documents/day1-3.pdf)
+* 12:00-12:30 [Getting access to ECCO (SSH and NX)](../documents/access-to-ecco.pdf)
 
 ***
 
@@ -49,19 +49,18 @@ Tentative Agenda - Day 1
 
 * <>
 
-* 15:15-16:45  [Basics of version control](../documents/day1-2.pdf) (Lars),  Subversion (TBD):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) )
+* 15:15-16:45 [Introduction to parallel processing](../web/day2-3.html) (Lars)
 
 
 Tentative Agenda - Day 2
 ========================================================
 
-* 9:00-9:45 Git  [lecture notes](../Git_CL_Slides/Git_Notes.pdf), Setting up your repositories
+* 9:00-10:30 Git   [Basics of version control](../documents/day1-2.pdf) (Lars), Subversion (Sylverie):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) Git (Flavio) [lecture notes](../Git_CL_Slides/Git_Notes.pdf), Setting up your repositories
 
 * <>
 
-* 10:00-11:00 Subroutines and scalable programming (Lars)
 
-* 11:00-12:00 [Introduction to parallel processing](../web/day2-3.html) (Lars)
+* 11:00-12:00 Subroutines and scalable programming (Lars)
 
 
 ***
