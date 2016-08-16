@@ -23,7 +23,7 @@
 \begin{document}
 
 \title{A Brief Introduction to Git}
-\author{Hautahi Kingi}
+\author{Flavio Stanchi \\ (based on slides by Hautahi Kingi)}
 \date{}
 
 
@@ -55,19 +55,19 @@ $ git help
 \end{lstlisting}
 On our first time with Git on a new machine, we need to do a few things.
 \begin{lstlisting}
-$ git config --global user.name "Hautahi Kingi"
-$ git config --global user.email "hrk55@cornell.edu"
+$ git config --global user.name "Flavio Stanchi"
+$ git config --global user.email "fs379@cornell.edu"
 $ git config --global color.ui "auto"
 $ git config --global core.editor "nano"
 \end{lstlisting}
 Navigate to the my\_thesis folder that we created earlier (see command line slides).
 \begin{lstlisting}
-$ cd my_thesis
+$ cd Workspace/my_thesis
 \end{lstlisting}
 and tell git to make it a \emph{repository}. A repository is a storage area where a version control system stores old revisions of files and information about who changed what, when.
 \begin{lstlisting}
 $ git init
-Initialized empty Git repository in /Users/hautahikingi/my_thesis/.git/
+Initialized empty Git repository in /Users/flaviostanchi/Workspace/my_thesis/.git/
 \end{lstlisting}
 
 \end{frame}
@@ -228,8 +228,8 @@ Now let's edit our introduction.txt file and check the status again.
 \begin{lstlisting}
 $ nano introduction.txt
 $ cat intoduction.txt
-We were wanderers from the beginning.
-We knew every stand of tree for a hundred miles.
+Once upon a time, in a galaxy far far away...
+EPISODE IV
 $ git status
 On branch master
 Changes not staged for commit:
@@ -300,6 +300,68 @@ Commit the changes using \emph{git commit} which permanently saves the current v
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Undoing a ``bad'' commit}
+
+Suppose we have made some unwanted changes to a file, and we have committed that file. For example, we want to retrieve the file introduction.txt from the ``First draft introduction and code'' commit.
+
+\begin{lstlisting}
+$ git log --oneline
+d796846	New latex file and added line to introduction.txt
+1ec0eef	First draft introduction and code
+
+$ git checkout 1ec0eef introduction.txt
+$ cat introduction.txt
+Once upon a time, in a galaxy far far away...
+\end{lstlisting}
+
+Note that this will produce changes in our working directory. Then, we can commit these changes to our repository.
+
+\begin{lstlisting}
+$ git commit -m "Retrieved file introduction.txt from previous commit"
+[master 8b8c6a3] Retrieved file introduction.txt from previous commit
+ 1 file changed, 1 insertion(+)
+\end{lstlisting}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Hard delete unpublished commits}
+
+Now suppose that we really want to eliminate all traces of a series of particularly bad commits. For example, suppose we have committed the following:
+
+\begin{lstlisting}
+$ nano introduction.txt
+$ cat introduction.txt
+Once upon a time, in a galaxy far far away...
+Star Trek is better than Star Wars
+$ git add introduction.txt
+$ git commit -m "Added a stupid line to introduction.txt"
+[master 337d55e] Added a stupid line to introduction.txt
+ 1 file changed, 1 insertion(+)
+\end{lstlisting}
+
+We want to go back to our previous commit, changing the history of the commits.
+
+\begin{lstlisting}
+$ git log --oneline
+337d55e	Added a stupid line to introduction.txt
+8b8c6a3	Retrieved file introduction.txt from previous commit
+d796846	New latex file and added line to introduction.txt
+1ec0eef	First draft introduction and code
+$ git reset --hard 8b8c6a3
+HEAD is now at 8b8c6a3 Retrieved file introduction.txt from previous commit
+\end{lstlisting}
+
+
+\end{frame}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{GitHub: Taking Version Control Online}
 
@@ -333,15 +395,15 @@ The home page of the GitHub repository includes instructions on how to link our 
 
 Making sure we are in the my\_thesis directory locally...
 \begin{lstlisting}
-$ git remote add origin https://github.com/hautahikingi/my_thesis.git
+$ git remote add origin https://github.com/fs379/my_thesis.git
 \end{lstlisting}
-This command tells git to add a remote named \emph{origin} at the url \emph{https://github.com/hautahikingi/my\_thesis.git}.\\~\\
+This command tells git to add a remote named \emph{origin} at the url \emph{https://github.com/fs379/my\_thesis.git}.\\~\\
 
 We can check that the command worked by typing
 \begin{lstlisting}[frame=single]
 $ git remote -v
-origin	https://github.com/hautahikingi/my_thesis.git (fetch)
-origin	https://github.com/hautahikingi/my_thesis.git (push)
+origin	https://github.com/fs379/my_thesis.git (fetch)
+origin	https://github.com/fs379/my_thesis.git (push)
 \end{lstlisting}
 which lists all remote repositories. The -v flag is short for verbose which tells git to show the remote url as well as the nickname.\\
 
@@ -352,12 +414,12 @@ which lists all remote repositories. The -v flag is short for verbose which tell
 
 So far all we have done is set up a remote repository and linked it to our local repository. But if we take a look at our remote repository, it is still empty. We fix this by pushing the changes from our local repository to the GitHub repository
 \begin{lstlisting}
-$ git push origin master
+$ git push -u origin master
 \end{lstlisting}
 It will sometimes ask for your username and password
 \begin{lstlisting}[frame=single]
-Username for 'https://github.com': hautahikingi
-Password for 'https://hautahikingi@github.com':
+Username for 'https://github.com': fs379
+Password for 'https://fs379@github.com':
 \end{lstlisting}
 When you are typing in your password the cursor won't move. Don't panic just type it out and press enter.
 \begin{lstlisting}[frame=single]
@@ -366,12 +428,15 @@ Delta compression using up to 4 threads.
 Compressing objects: 100\% (8/8), done.
 Writing objects: 100\% (10/10), 42.65 KiB | 0 bytes/s, done.
 Total 10 (delta 1), reused 0 (delta 0)
-To https://github.com/hautahikingi/my_thesis.git
+To https://github.com/fs379/my_thesis.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 \end{lstlisting}
 
 \end{frame}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -392,16 +457,41 @@ Selecting \emph{Networks} from the \emph{Graphs} tab on the right...
 
 \end{frame}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Undo published commits with new commits}
+
+Note: you should never use \textit{git reset} after the commits you want to undo have been pushed to a public repository. Instead, it is possible to use \textit{git revert} to undo one or more target commits.
+
+\begin{lstlisting}
+$ git log --oneline
+8b8c6a3	Retrieved file introduction.txt from previous commit
+d796846	New latex file and added line to introduction.txt
+1ec0eef	First draft introduction and code
+$ git revert 8b8c6a3
+[master f05a49c] Revert "Retrieved file introduction.txt from previous commit"
+ 1 file changed, 1 deletion(-)
+\end{lstlisting}
+
+This doesn't change the history of the commits and is therefore preferable.\\
+\medskip
+Note: you can revert multiple commits at the same time; this will in turn create multiple new commits.
+
+
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Centralized vs Distributed Version Control Systems}
 
-Version control systems are often divided into two groups: ÒcentralizedÓ and ÒdistributedÓ.\\~\\
+Version control systems are often divided into two groups: centralized and distributed.\\~\\
 
-Centralized version control systems, such as subversion, are based on the idea that there is a single ÒcentralÓ copy of your project on a server, and programmers \emph{commit} their changes to this central copy.\\~\\
+Centralized version control systems, such as subversion, are based on the idea that there is a single central copy of your project on a server, and programmers \emph{commit} their changes to this central copy.\\~\\
 
 The basic workflow is to pull down any changes other people have made from the central server. Then make your changes and commit these to the central server.\\~\\
 
-Git is a Distributed VCS. These do not necessarily rely on a central server to store all versions of a projectÕs files. Instead, every developer \textbf{clones} a copy of a repository and has the full history of the project on their own hard drive. This copy has all of the metadata of the original.\\~\\
+Git is a Distributed VCS. These do not necessarily rely on a central server to store all versions of a project's files. Instead, every developer \textbf{clones} a copy of a repository and has the full history of the project on their own hard drive. This copy has all of the metadata of the original.\\~\\
 
 So instead of a central repository being required, it is now optional and purely a matter of preference.\\~\\
 
@@ -421,7 +511,7 @@ Once we pushed our local copy to the remote repository, GitHub still registered 
 
 Being able to commit locally is advantageous for a number of reasons. First, performing actions is extremely fast because Git only needs to access the hard drive, not a remote server (except for pushing and pulling of course).\\~\\
 
-Everything but pushing and pulling can be done without an internet connection. So you can work on a plane, and you wonÕt be forced to commit several bugfixes as one big changeset.\\~\\
+Everything but pushing and pulling can be done without an internet connection. So you can work on a plane, and you won't be forced to commit several bugfixes as one big changeset.\\~\\
 
 
 \end{frame}
@@ -434,7 +524,7 @@ We can pull changes from the remote repository to the local one as well:
 
 \begin{lstlisting}
 $ git pull origin master
-From https://github.com/hautahikingi/my_thesis
+From https://github.com/fs379/my_thesis
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 \end{lstlisting}
@@ -446,8 +536,8 @@ Pulling has no effect in this case because the two repositories are already sync
 \begin{frame}[fragile]{Cloning}
 We can simulate working with a collaborator using another copy of the repository on our local machine. To do this, \emph{cd} to another directory on your computer. Instead of creating a new repository here with \emph{git init}, we will \textbf{clone} the existing repository from GitHub.
 \begin{lstlisting}
-$ cd /Users/hautahikingi/Dropbox/temporary
-$ git clone https://github.com/hautahikingi/my_thesis.git
+$ cd /Users/flaviostanchi/Dropbox/temporary
+$ git clone https://github.com/fs379/my_thesis.git
 Cloning into 'my_thesis'...
 remote: Counting objects: 10, done.
 remote: Compressing objects: 100\% (7/7), done.
@@ -466,9 +556,9 @@ Let's make a change to the copy in \emph{/temporary/my\_thesis}:
 $ cd my_thesis
 $ nano introduction.txt
 $ cat introduction.txt
-We were wanderers from the beginning.
-We knew every stand of tree for a hundred miles.
-The frontier was everywhere.
+Once upon a time, in a galaxy far far away...
+EPISODE IV
+A new hope
 \end{lstlisting}
 and now let's add and commit
 \begin{lstlisting}
@@ -502,7 +592,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100\% (3/3), done.
 Writing objects: 100\% (3/3), 345 bytes | 0 bytes/s, done.
 Total 3 (delta 1), reused 0 (delta 0)
-To https://github.com/hautahikingi/my_thesis.git
+To https://github.com/fs379/my_thesis.git
    170ae6f..3cafe3a  master -> master
 \end{lstlisting}
 Checking the status...
@@ -519,20 +609,20 @@ This tells us that we have committed all changes, and that this is also reflecte
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Working with a collaborator}
+\begin{frame}[fragile]{Working with a collaborator}[label=coll]
 The network map also confirms this...
 \begin{center}
 \includegraphics[width=5cm]{./auxfiles/Network_update.jpg}
 \end{center}
 We can now download changes into the original repository on our machine:
 \begin{lstlisting}
-$ cd /Users/hautahikingi/Dropbox/my_thesis
+$ cd /Users/flaviostanchi/Dropbox/my_thesis
 $ git pull origin master
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100\% (1/1), done.
 remote: Total 3 (delta 2), reused 3 (delta 2)
 Unpacking objects: 100\% (3/3), done.
-From https://github.com/hautahikingi/my_thesis
+From https://github.com/fs379/my_thesis
  * branch            master     -> FETCH_HEAD
    d796846..2b1b130  master     -> origin/master
 Updating d796846..2b1b130
@@ -543,8 +633,22 @@ Fast-forward
 Both our local repositories are now in sync with the remote repository. In practice, we would never have two copies of the same remote repository on our laptop at once.
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{An ECCO Example}
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[plain]{}
+
+
+
+\end{frame}
+\setbeamercolor{background canvas}{bg=white}
+
+%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{An ECCO Example}[label=ECCO]
 Pushing and pulling changes gives us a reliable way to share work between different people and machines.\\~\\
 
 Login to ECCO and clone the remote repository from the terminal.
@@ -565,13 +669,11 @@ Now create some changes, add and commit.
 $ cd my_thesis
 $ nano conclusion.txt
 $ cat conclusion.txt
-Herman Melville, in Moby Dick, spoke for wanderers in all epochs and meridians:
-"I am tormented with an everlasting itch for things remote. I love to sail
-forbidden seas..." 
+The franchise began in 1977 with the release of the film Star Wars
 $ git add conclusion.txt
 $ git commit -m "Began conclusion.txt"
 [master ac717a9] Began conclusion.txt
- Committer: hrk55 <hrk55@ecco.vrdc.cornell.edu>
+ Committer: fs379 <fs379@ecco.vrdc.cornell.edu>
 Your name and email address were configured automatically based
 on your username and hostname. Please check that they are accurate.
 You can suppress this message by setting them explicitly:
@@ -583,7 +685,7 @@ After doing this, you may fix the identity used for this commit with:
 
     git commit --amend --reset-author
 
- 1 file changed, 3 insertions(+)
+ 1 file changed, 1 insertion(+)
  create mode 100644 conclusion.txt
 \end{lstlisting}
 Because I have not configured my Git settings on the ECCO server, Git has assigned me a different username.
@@ -609,7 +711,7 @@ remote: Counting objects: 3, done.
 remote: Compressing objects: 100\% (2/2), done.
 remote: Total 3 (delta 1), reused 3 (delta 1)
 Unpacking objects: 100\% (3/3), done.
-From https://github.com/hautahikingi/my_thesis
+From https://github.com/fs379/my_thesis
  * branch            master     -> FETCH_HEAD
    2b1b130..ac717a9  master     -> origin/master
 Updating 2b1b130..ac717a9
@@ -620,7 +722,8 @@ Fast-forward
 \end{lstlisting}
 
 
-Used in this way, Git acts like a more robust Dropbox.
+Used in this way, Git acts like a more robust Dropbox. \\
+
 
 \end{frame}
 
