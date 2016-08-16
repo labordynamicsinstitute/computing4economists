@@ -1019,7 +1019,7 @@ Before implementing a parallel solution, spend time assessing the expected benef
 
 </section>
 <section data-transition="fade" data-transition-speed="default">
-<h3>Explicit processes</h3>
+<h3>Explicit processes: PBS-like</h3>
 <div class="slideContent" >
 <p>PBS-like systems allow you spawn jobs automatically</p>
 
@@ -1039,8 +1039,20 @@ data one;
 </code></pre>
 
 <ul>
-<li>Similar in R, Matlab, potentially in Stata</li>
+<li>Similar in R, Matlab, Stata</li>
 </ul>
+
+</div>
+
+</section>
+<section data-transition="fade" data-transition-speed="default">
+<h3>Explicit processes: PBS-like, Stata</h3>
+<div class="slideContent" >
+<pre><code>local arrayid : env PBS_ARRAYID
+use if sample == `arrayid&#39; using ${LIBRARY}/bigdata
+</code></pre>
+
+<p>would read in only the records for which the (previously created) variable <code>sample</code> is equal to the PBS_ARRAYID.</p>
 
 </div>
 
@@ -1105,11 +1117,11 @@ source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2
 
 &gt; ptime
 elapsed 
-  8.783 
+  9.477 
 </code></pre>
 
 <ul>
-<li>Computing with four cores on laptop (and R 3.3): 8.783 seconds</li>
+<li>Computing with four cores on laptop (and R 3.3): 9.477 seconds</li>
 </ul>
 
 </div>

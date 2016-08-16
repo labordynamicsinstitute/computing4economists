@@ -104,7 +104,7 @@ Taking control of implicit threads
 * Matlab
   * `-singleCompThread` (may not be exact)
 
-Explicit processes
+Explicit processes: PBS-like
 ==================
 PBS-like systems allow you spawn jobs automatically
 * `qsub -t 1-100%5 script.qsub` runs 5 jobs at a time, from 1-100
@@ -117,7 +117,15 @@ data one;
   set LIBRARY.bigdata(where=(mod(_n_,100)=&sample.));
   run;
 ```
-  * Similar in R, Matlab, potentially in Stata
+  * Similar in R, Matlab, Stata
+
+Explicit processes: PBS-like, Stata
+==================
+```
+local arrayid : env PBS_ARRAYID
+use if sample == `arrayid' using ${LIBRARY}/bigdata
+```
+would read in only the records for which the (previously created) variable `sample` is equal to the PBS_ARRAYID.
 
 Explicit processes
 ==================
@@ -165,9 +173,9 @@ Parallel processing: results
 
 > ptime
 elapsed 
-  8.783 
+  9.477 
 ```
-* Computing with four cores on laptop (and R 3.3): 8.783 seconds
+* Computing with four cores on laptop (and R 3.3): 9.477 seconds
 
 Parallel processing on ECCO: results
 ===================
