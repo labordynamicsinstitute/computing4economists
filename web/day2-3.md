@@ -165,10 +165,17 @@ Parallel processing: results
 
 > ptime
 elapsed 
-  8.778 
+  8.783 
 ```
-* Computing with four cores on laptop (and R 3.3): 8.778 seconds
+* Computing with four cores on laptop (and R 3.3): 8.783 seconds
+
+Parallel processing on ECCO: results
+===================
+
 * Computing with 1 core on ECCO (compute-0-4, R 3.0): 38.955 seconds ([source](../programs/day2/0-loadlibs.cpucount1.Rout))
+* Computing with 4 cores on ECCO (compute-0-4, R 3.2): 13.859 seconds
+* Computing with 8 cores on ECCO (compute-0-4, R 3.2): 8.319 seconds
+* Computing with 16 cores on ECCO (compute-0-4, R 3.2): 6.111 seconds
 * Computing with 32 cores on ECCO (compute-0-4, R 3.0): 5.089  seconds [(source](../programs/day2/0-loadlibs.cpucount32.04.Rout))
 
 Sources for live demonstration
