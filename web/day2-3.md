@@ -139,21 +139,43 @@ Computing with four cores on laptop (and R 3.2)
 ```r
 library(doParallel)
 registerDoParallel(cores=4)
-source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=FALSE)
+source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
 ```
 For version 3.0 or earlier you need to modify something:
 
 ```r
 library(doMC)
 registerDoMC(cores=4)
-source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=FALSE)
+source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
 ```
 
 Parallel processing: results
 ===================
 
-* Computing with four cores on laptop (and R 3.2): 15.285 seconds
+```
+
+> x <- iris[which(iris[, 5] != "setosa"), c(1, 5)]
+
+> trials <- 10000
+
+> ptime <- system.time({
++     r <- foreach(icount(trials), .combine = cbind) %dopar% {
++         ind <- sample(100, 100, replace = TRUE)
++         re .... [TRUNCATED] 
+
+> ptime
+elapsed 
+  8.783 
+```
+* Computing with four cores on laptop (and R 3.3): 8.783 seconds
+
+Parallel processing on ECCO: results
+===================
+
 * Computing with 1 core on ECCO (compute-0-4, R 3.0): 38.955 seconds ([source](../programs/day2/0-loadlibs.cpucount1.Rout))
+* Computing with 4 cores on ECCO (compute-0-4, R 3.2): 13.859 seconds
+* Computing with 8 cores on ECCO (compute-0-4, R 3.2): 8.319 seconds
+* Computing with 16 cores on ECCO (compute-0-4, R 3.2): 6.111 seconds
 * Computing with 32 cores on ECCO (compute-0-4, R 3.0): 5.089  seconds [(source](../programs/day2/0-loadlibs.cpucount32.04.Rout))
 
 Sources for live demonstration
