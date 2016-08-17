@@ -76,7 +76,7 @@ Tentative Agenda - Day 2
 
 Tentative Agenda - Day 3
 ========================================================
-* 9:00-11:00 Going beyond statistical programming languages: compilers, libraries, and virtual machines - setting up an Amazon EC2 server (live)
+* 9:00-11:00 Going beyond statistical programming languages: compilers, libraries, and virtual machines - setting up an Amazon EC2 server (live) ([more in-depth tutorial](https://blogs.aws.amazon.com/bigdata/post/Tx3IJSB6BMHWZE5/Running-R-on-AWS))
 * 11:00-12:00  CHOICES (tentative)
   *  [Considerations for data management](../web/coming-soon.html) (Lars)
   *  Setting up a cluster (experimental, optional)
