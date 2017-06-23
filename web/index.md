@@ -1,25 +1,27 @@
 High-performance computing for Economists
 ========================================================
 transition: fade
-author: Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert
-date: 2016/8/15-2016/8/17
+author: Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert, Jean-Francois Houde
+date: 2017/8/14-2017/8/16
 
-**Time**: *9:00 - 5:00 p.m.* (we will typically end earlier)
+**Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
 
-**Location**: *Ives 105*
+**Location**: *Ives 111*
 
 Goal
 ========================================================
-The goal of this class is to showcase high-performance techniques and tools for economics students. The goal is NOT to teach a full
-course on SAS, Stata, Matlab, R, etc. - there are other classes for that. We will teach just enough of each programming language to
-be able to highlight additional techniques (for SAS and Matlab, we will teach specialized workshops on each in a bit more depth)
- This course is designed to open your eyes to the possibilities, scratching
+The goal of this workshop is to showcase computer-oriented techniques and tools for economics students, from basic command line tools to optimization techniques for high-performance computing. The goal is NOT to teach a full
+course on SAS, Stata, Matlab, R, Python, MPI, Fortran, etc. - there are other classes for that. We will teach just enough of each programming language to
+be able to highlight additional techniques (for SAS, Python, and Matlab, we will have specialized workshops on each in a bit more depth, if requested).
+ This workshop is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
 specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu).
 
+We highlight that this is a workshop - we will work on problems as a group, drawing on expertise in the room as needed. If you have a specific question, and want to work on it, we may do so. If you want to primarily listen, that's fine too.
+
 Target group
 ------------
-Second year Ph.D. in Economics or other social sciences.
+Second year Ph.D. in Economics and higher, or other social sciences. If you haven't taken the course in the past, or want a refresher, you should participate
 
 Requirements
 ========================================================
@@ -35,7 +37,7 @@ Tentative Agenda - Day 1
 ========================================================
 * 9:00-9:30 Introduction (Lars) with reference to [earlier](Computing_in_Economics_Workshop_Knowledge_2015.pdf) survey results.
 
-* 9:30-10:15 [HP resources at Cornell, elsewhere](../documents/hp-resources-at-cornell.pdf) (Lars)
+* 9:30-10:15 Motivation: [HP resources at Cornell, elsewhere](../documents/hp-resources-at-cornell.pdf) (Lars)
 
 * <>
 
@@ -72,14 +74,17 @@ Tentative Agenda - Day 2
   * [A practical example: Big Data Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf)
   * [Leveraging parallel programming techniques in Matlab](../Matlab/peng-matlabparallel.pdf)
   * Explicit parallel programming in SAS (Lars) [Example ](https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect)
+  * Parallel programming in Python (Jean-Francois)
 
 
-Tentative Agenda - Day 3
+Tentative Agenda - Day 3 (optional)
 ========================================================
+
+(note: Day 3 is optional - it overlaps with TA training, and the latter takes precedence)
 * 9:00-11:00 Going beyond statistical programming languages: compilers, libraries, and virtual machines - setting up an Amazon EC2 server (live) ([more in-depth tutorial](https://blogs.aws.amazon.com/bigdata/post/Tx3IJSB6BMHWZE5/Running-R-on-AWS))
 * 11:00-12:00  CHOICES (tentative)
   *  [Considerations for data management](../web/coming-soon.html) (Lars)
-  *  Setting up a cluster (experimental, optional)
+  *  Setting up a cluster (experimental)
 * 12:00 Workshop ends
 
 Additional resources
