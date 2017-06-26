@@ -1,4 +1,4 @@
-High-performance computing for Economists
+Computing for Economists Workshop
 ========================================================
 transition: fade
 author: Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert, Jean-Francois Houde
@@ -7,6 +7,8 @@ date: 2017/8/14-2017/8/16
 **Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
 
 **Location**: *Ives 111*
+
+**Registration**: [click here](https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl)
 
 Goal
 ========================================================
