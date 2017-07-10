@@ -4,20 +4,24 @@ transition: fade
 author: Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert, Jean-Francois Houde
 date: 2017/8/14-2017/8/16
 
+**Location**: *Ives 111* _|_
 **Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
 
-**Location**: *Ives 111*
 
-**Registration**: [click here](https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl)
+**[Registration](https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl)**
+_|_
+[Goals](#/1)  _|_ **[Requirements](#/2)**
 
 Goal
 ========================================================
-The goal of this workshop is to showcase computer-oriented techniques and tools for economics students, from basic command line tools to optimization techniques for high-performance computing. The goal is NOT to teach a full
+The goal of this workshop is to showcase computer-oriented techniques and tools for economics students, from basic command line tools on Linux and Mac to version control to optimization and parallelization techniques for high-performance computing. The goal is NOT to teach a full
 course on SAS, Stata, Matlab, R, Python, MPI, Fortran, etc. - there are other classes for that. We will teach just enough of each programming language to
 be able to highlight additional techniques (for SAS, Python, and Matlab, we will have specialized workshops on each in a bit more depth, if requested).
  This workshop is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
-specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu).
+specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu). [more](#/2)
+
+===
 
 We highlight that this is a workshop - we will work on problems as a group, drawing on expertise in the room as needed. If you have a specific question, and want to work on it, we may do so. If you want to primarily listen, that's fine too.
 
@@ -26,11 +30,13 @@ Target group
 Second year Ph.D. in Economics and higher, or other social sciences. If you haven't taken the course in the past, or want a refresher, you should participate
 
 Requirements
-========================================================
+-------------
 * Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss) - the specific languange is not important.
 * Bring your laptop to class!
 
-***
+Setup
+========================================================
+* [Register](https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl)
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
 * Fill out the online survey (sent out by email) ( results for [2013](SurveyResults2013.pdf),  [2014](Computing_in_Economics_2014_results.pdf) and [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf))
 
