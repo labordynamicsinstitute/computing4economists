@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -N array
+#PBS -M lars@vilhuber.com
+#PBS -m e
+#PBS -l ncpus=1
+#PBS -l mem=1000mb
+#PBS -j oe
+source /etc/profile.d/modules.sh
+module load sas
+cd $PBS_O_WORKDIR 
+sas -memsize 1000m -cpucount 1 03_sas_array.sas -log 03_sas_array.${PBS_ARRAYID}.log -print 03_sas_array.${PBS_ARRAYID}.lst
+
