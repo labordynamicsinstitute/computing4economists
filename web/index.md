@@ -2,7 +2,9 @@ Computing for Economists Workshop
 ========================================================
 transition: fade
 author: Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert, Jean-Francois Houde
-date: 2017/8/14-2017/8/16
+date: 2017/8/14-2017/8/15
+
+(the third day 2017/8/16 is **optional**, participate only if you are **NOT** doing TA training)
 
 **Location**: *Ives 111* _|_
 **Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
@@ -106,5 +108,5 @@ Additional resources
 
 Source
 ==========
-* Git: [on Bitbucket](https://vilhuberl@bitbucket.org/computing4economists/computing-for-economists)
+* Git: [on Bitbucket](https://bitbucket.org/computing4economists/computing-for-economists)
 * Web: [http://www.vrdc.cornell.edu/computing-for-economists/](http://www.vrdc.cornell.edu/computing-for-economists/)
