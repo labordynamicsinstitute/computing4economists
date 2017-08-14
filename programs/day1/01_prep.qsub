@@ -1,0 +1,13 @@
+#!/bin/bash -l
+#PBS -l mem=4000mb
+#PBS -l ncpus=2
+#PBS -l walltime=12:00:00
+#PBS -N hello-world
+#PBS -j oe
+#PBS -M lars@vilhuber.com
+#PBS -m be
+source /etc/profile.d/modules.sh
+module load stata
+cd $PBS_O_WORKDIR 
+stata -b 01_prep.do
+sleep 60

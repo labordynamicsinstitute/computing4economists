@@ -23,7 +23,7 @@
 \begin{document}
 
 \title{A Brief Introduction to Git}
-\author{Flavio Stanchi \\ (based on slides by Hautahi Kingi)}
+\author{Sylverie Herbert \\ (based on slides by Hautahi Kingi)}
 \date{}
 
 
@@ -55,19 +55,19 @@ $ git help
 \end{lstlisting}
 On our first time with Git on a new machine, we need to do a few things.
 \begin{lstlisting}
-$ git config --global user.name "Flavio Stanchi"
-$ git config --global user.email "fs379@cornell.edu"
+$ git config --global user.name "Sylverie Herbert"
+$ git config --global user.email "sh2258@cornell.edu"
 $ git config --global color.ui "auto"
 $ git config --global core.editor "nano"
 \end{lstlisting}
 Navigate to the my\_thesis folder that we created earlier (see command line slides).
 \begin{lstlisting}
-$ cd Workspace/my_thesis
+$ cd Desktop/my_thesis
 \end{lstlisting}
 and tell git to make it a \emph{repository}. A repository is a storage area where a version control system stores old revisions of files and information about who changed what, when.
 \begin{lstlisting}
 $ git init
-Initialized empty Git repository in /Users/flaviostanchi/Workspace/my_thesis/.git/
+Initialized empty Git repository in /Users/sylverieherbert/desktop/my_thesis/.git/
 \end{lstlisting}
 
 \end{frame}
@@ -395,15 +395,15 @@ The home page of the GitHub repository includes instructions on how to link our 
 
 Making sure we are in the my\_thesis directory locally...
 \begin{lstlisting}
-$ git remote add origin https://github.com/fs379/my_thesis.git
+$ git remote add origin https://github.com/sh2258/my_thesis.git
 \end{lstlisting}
-This command tells git to add a remote named \emph{origin} at the url \emph{https://github.com/fs379/my\_thesis.git}.\\~\\
+This command tells git to add a remote named \emph{origin} at the url \emph{https://github.com/sh2258/my\_thesis.git}.\\~\\
 
 We can check that the command worked by typing
 \begin{lstlisting}[frame=single]
 $ git remote -v
-origin	https://github.com/fs379/my_thesis.git (fetch)
-origin	https://github.com/fs379/my_thesis.git (push)
+origin	https://github.com/sh2258/my_thesis.git (fetch)
+origin	https://github.com/sh2258/my_thesis.git (push)
 \end{lstlisting}
 which lists all remote repositories. The -v flag is short for verbose which tells git to show the remote url as well as the nickname.\\
 
@@ -418,8 +418,8 @@ $ git push -u origin master
 \end{lstlisting}
 It will sometimes ask for your username and password
 \begin{lstlisting}[frame=single]
-Username for 'https://github.com': fs379
-Password for 'https://fs379@github.com':
+Username for 'https://github.com': sh2258
+Password for 'https://sh2258@github.com':
 \end{lstlisting}
 When you are typing in your password the cursor won't move. Don't panic just type it out and press enter.
 \begin{lstlisting}[frame=single]
@@ -524,7 +524,7 @@ We can pull changes from the remote repository to the local one as well:
 
 \begin{lstlisting}
 $ git pull origin master
-From https://github.com/fs379/my_thesis
+From https://github.com/sh2258/my_thesis
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 \end{lstlisting}
@@ -536,8 +536,8 @@ Pulling has no effect in this case because the two repositories are already sync
 \begin{frame}[fragile]{Cloning}
 We can simulate working with a collaborator using another copy of the repository on our local machine. To do this, \emph{cd} to another directory on your computer. Instead of creating a new repository here with \emph{git init}, we will \textbf{clone} the existing repository from GitHub.
 \begin{lstlisting}
-$ cd /Users/flaviostanchi/Dropbox/temporary
-$ git clone https://github.com/fs379/my_thesis.git
+$ cd /Users/sylverieherbert/Dropbox/temporary
+$ git clone https://github.com/sh2258/my_thesis.git
 Cloning into 'my_thesis'...
 remote: Counting objects: 10, done.
 remote: Compressing objects: 100\% (7/7), done.
@@ -592,7 +592,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100\% (3/3), done.
 Writing objects: 100\% (3/3), 345 bytes | 0 bytes/s, done.
 Total 3 (delta 1), reused 0 (delta 0)
-To https://github.com/fs379/my_thesis.git
+To https://github.com/sh2258/my_thesis.git
    170ae6f..3cafe3a  master -> master
 \end{lstlisting}
 Checking the status...
@@ -609,20 +609,20 @@ This tells us that we have committed all changes, and that this is also reflecte
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Working with a collaborator}[label=coll]
+\begin{frame}[fragile]{Working with a collaborator}
 The network map also confirms this...
 \begin{center}
 \includegraphics[width=5cm]{./auxfiles/Network_update.jpg}
 \end{center}
 We can now download changes into the original repository on our machine:
 \begin{lstlisting}
-$ cd /Users/flaviostanchi/Dropbox/my_thesis
+$ cd /Users/sylverieherbert/Desktop/my_thesis
 $ git pull origin master
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100\% (1/1), done.
 remote: Total 3 (delta 2), reused 3 (delta 2)
 Unpacking objects: 100\% (3/3), done.
-From https://github.com/fs379/my_thesis
+From https://github.com/sh2258/my_thesis
  * branch            master     -> FETCH_HEAD
    d796846..2b1b130  master     -> origin/master
 Updating d796846..2b1b130
@@ -648,7 +648,7 @@ Both our local repositories are now in sync with the remote repository. In pract
 \appendix
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{An ECCO Example}[label=ECCO]
+\begin{frame}[fragile]{An ECCO Example}
 Pushing and pulling changes gives us a reliable way to share work between different people and machines.\\~\\
 
 Login to ECCO and clone the remote repository from the terminal.
@@ -673,7 +673,7 @@ The franchise began in 1977 with the release of the film Star Wars
 $ git add conclusion.txt
 $ git commit -m "Began conclusion.txt"
 [master ac717a9] Began conclusion.txt
- Committer: fs379 <fs379@ecco.vrdc.cornell.edu>
+ Committer: sh2258 <sh2258@ecco.vrdc.cornell.edu>
 Your name and email address were configured automatically based
 on your username and hostname. Please check that they are accurate.
 You can suppress this message by setting them explicitly:
@@ -711,7 +711,7 @@ remote: Counting objects: 3, done.
 remote: Compressing objects: 100\% (2/2), done.
 remote: Total 3 (delta 1), reused 3 (delta 1)
 Unpacking objects: 100\% (3/3), done.
-From https://github.com/fs379/my_thesis
+From https://github.com/sh2258/my_thesis
  * branch            master     -> FETCH_HEAD
    2b1b130..ac717a9  master     -> origin/master
 Updating 2b1b130..ac717a9
