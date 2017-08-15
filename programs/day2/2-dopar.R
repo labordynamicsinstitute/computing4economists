@@ -1,3 +1,10 @@
+# Set up the cluster
+
+library(doParallel)
+cl <- makeCluster(2)
+registerDoParallel(cl)
+
+
 # Read the Iris data (subset of)
 x <- iris[which(iris[,5] != "setosa"), c(1,5)]
 # How many runs
