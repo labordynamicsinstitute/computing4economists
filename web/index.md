@@ -67,12 +67,12 @@ Tentative Agenda - Day 1
 Tentative Agenda - Day 2
 ========================================================
 
-* 9:00-10:30 Git   [Basics of version control](../documents/day1-2.pdf) (Lars), Subversion (Sylverie):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) Git (Flavio) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf), Setting up your repositories
+* 9:00-10:30 Git   [Basics of version control](../documents/day1-2.pdf) (Lars), Subversion (Flavio):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) Git (Sylverie) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf), Setting up your repositories
 
 * <>
 
 
-* 11:00-12:00 Subroutines and scalable programming (Lars)
+* 11:00-12:00 Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf),
 
 
 ***
