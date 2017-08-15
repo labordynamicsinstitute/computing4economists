@@ -1,10 +1,10 @@
-\beamer@endinputifotherversion {3.26pt}
+\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\slideentry {1}{0}{2}{2/2}{}{0}}
+\headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\beamer@subsectionentry {0}{1}{1}{3}{What is Subversion?}}\headcommand {\beamer@subsectionpages {2}{2}}
 \headcommand {\slideentry {1}{1}{1}{3/3}{What is Subversion?}{0}}
@@ -12,36 +12,38 @@
 \headcommand {\beamer@subsectionentry {0}{1}{2}{4}{How to get Subversion?}}\headcommand {\beamer@subsectionpages {3}{3}}
 \headcommand {\slideentry {1}{2}{1}{4/9}{How to get Subversion?}{0}}
 \headcommand {\beamer@framepages {4}{9}}
-\headcommand {\slideentry {1}{2}{2}{10/12}{How to get Subversion?}{0}}
-\headcommand {\beamer@framepages {10}{12}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{13}{Create a repository}}\headcommand {\beamer@subsectionpages {4}{12}}
-\headcommand {\sectionentry {2}{Concepts}{13}{Concepts}{0}}
-\headcommand {\beamer@sectionpages {2}{12}}
-\headcommand {\beamer@subsectionpages {13}{12}}
-\headcommand {\slideentry {2}{0}{1}{13/13}{}{0}}
-\headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{14}{Centralized version control}}\headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\slideentry {2}{1}{1}{14/16}{Centralized version control}{0}}
-\headcommand {\beamer@framepages {14}{16}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{17}{Repository structure}}\headcommand {\beamer@subsectionpages {14}{16}}
-\headcommand {\slideentry {2}{2}{1}{17/17}{Repository structure}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{18}{Local copy}}\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\slideentry {2}{3}{1}{18/22}{Local copy}{0}}
-\headcommand {\beamer@framepages {18}{22}}
-\headcommand {\slideentry {2}{3}{2}{23/25}{Local copy}{0}}
-\headcommand {\beamer@framepages {23}{25}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{26}{Branches}}\headcommand {\beamer@subsectionpages {18}{25}}
-\headcommand {\slideentry {2}{4}{1}{26/26}{Branches}{0}}
+\headcommand {\slideentry {1}{2}{2}{10/10}{How to get Subversion?}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\sectionentry {2}{Concepts}{11}{Concepts}{0}}
+\headcommand {\beamer@sectionpages {2}{10}}
+\headcommand {\beamer@subsectionpages {4}{10}}
+\headcommand {\slideentry {2}{0}{1}{11/11}{}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Centralized version control}}\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\slideentry {2}{1}{1}{12/14}{Centralized version control}{0}}
+\headcommand {\beamer@framepages {12}{14}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{15}{Repository structure}}\headcommand {\beamer@subsectionpages {12}{14}}
+\headcommand {\slideentry {2}{2}{1}{15/15}{Repository structure}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{16}{Create a repository}}\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\slideentry {2}{3}{1}{16/18}{Create a repository}{0}}
+\headcommand {\beamer@framepages {16}{18}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{19}{Local copy}}\headcommand {\beamer@subsectionpages {16}{18}}
+\headcommand {\slideentry {2}{4}{1}{19/23}{Local copy}{0}}
+\headcommand {\beamer@framepages {19}{23}}
+\headcommand {\slideentry {2}{4}{2}{24/25}{Local copy}{0}}
+\headcommand {\beamer@framepages {24}{25}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{26}{Branches}}\headcommand {\beamer@subsectionpages {19}{25}}
+\headcommand {\slideentry {2}{5}{1}{26/26}{Branches}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {2}{4}{2}{27/27}{Branches}{0}}
+\headcommand {\slideentry {2}{5}{2}{27/27}{Branches}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\slideentry {2}{4}{3}{28/28}{Branches}{0}}
+\headcommand {\slideentry {2}{5}{3}{28/28}{Branches}{0}}
 \headcommand {\beamer@framepages {28}{28}}
 \headcommand {\sectionentry {3}{Workflow}{29}{Workflow}{0}}
-\headcommand {\beamer@sectionpages {13}{28}}
+\headcommand {\beamer@sectionpages {11}{28}}
 \headcommand {\beamer@subsectionpages {26}{28}}
-\headcommand {\slideentry {3}{0}{4}{29/29}{}{0}}
+\headcommand {\slideentry {3}{0}{1}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
 \headcommand {\beamer@subsectionentry {0}{3}{1}{30}{The terminal}}\headcommand {\beamer@subsectionpages {29}{29}}
 \headcommand {\slideentry {3}{1}{1}{30/32}{The terminal}{0}}
@@ -52,8 +54,11 @@
 \headcommand {\beamer@subsectionentry {0}{3}{3}{38}{Basic workflow}}\headcommand {\beamer@subsectionpages {33}{37}}
 \headcommand {\slideentry {3}{3}{1}{38/43}{Basic workflow}{0}}
 \headcommand {\beamer@framepages {38}{43}}
-\headcommand {\beamer@partpages {1}{43}}
-\headcommand {\beamer@subsectionpages {44}{43}}
-\headcommand {\beamer@sectionpages {29}{43}}
-\headcommand {\beamer@documentpages {43}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{44}{Common tasks}}\headcommand {\beamer@subsectionpages {38}{43}}
+\headcommand {\slideentry {3}{4}{1}{44/47}{Common tasks}{0}}
+\headcommand {\beamer@framepages {44}{47}}
+\headcommand {\beamer@partpages {1}{47}}
+\headcommand {\beamer@subsectionpages {44}{47}}
+\headcommand {\beamer@sectionpages {29}{47}}
+\headcommand {\beamer@documentpages {47}}
 \headcommand {\def \inserttotalframenumber {19}}

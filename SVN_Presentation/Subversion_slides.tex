@@ -58,7 +58,7 @@
 
 
 \title{An Introduction to Subversion}
-\author{Sylverie Herbert \\ Based on slides by Flavio Stanchi}
+\author{Flavio Stanchi}
 \date{\today}
 
 \begin{document}
@@ -94,7 +94,7 @@
   
   \begin{itemize}
   \item<1-> Subversion can be found at \url{https://subversion.apache.org}
-  \item<2-> Version 1.9.4 is the last release at this time
+  \item<2-> Version 1.9.7 is the last release at this time
   \item<3-> Client for Windows:
   	\begin{itemize}
 	\item<3-> TortoiseSVN (free): \url{http://tortoisesvn.net/}
@@ -114,9 +114,9 @@
   \frametitle{Subversion on Cornell servers}
   
   \begin{itemize}
-  \item<1-> CISER on RSCH101 and RSCH106 (tested)
-  \item<2-> ECCO
-  \item<3-> Quick reference guide at \url{http://www2.vrdc.cornell.edu/news/documentation/subversion/}
+  \item CISER
+  \item ECCO
+  \item Quick reference guide at \url{http://www2.vrdc.cornell.edu/news/documentation/subversion/}
   \end{itemize}
 
 }
@@ -134,12 +134,12 @@
   \item<1-> Server-client approach
   	\begin{itemize}
 	\item<1-> The repository is located in the server
-	\item<2-> No version control over local copies
+	\item<1-> No version control over local copies
 	\end{itemize}
   \item<3-> Version merging:
   	\begin{itemize}
-  	\item<3-> Multiple editors can check out any given file
-	\item<3-> Discrepancies are handled upon checkin
+  	\item<2-> Multiple editors can check out any given file
+	\item<2-> Discrepancies are handled upon commit
 	\end{itemize}
   \end{itemize}
   
@@ -173,7 +173,6 @@
 	\end{itemize}
   \item<2-> GitHub at \url{https://github.com/}
   \item<3-> Use \textit{svnserve} as a lightweight custom server
-  \item<4-> Test repository at \url{https://ldi.svn.cloudforge.com/training}
   \end{itemize}
 
 }
@@ -191,7 +190,7 @@
   \item<3->  Instead, check out a local copy of the repository (or of its subelements)
   \item<4-> Make changes to the local copy
   	\begin{itemize}
-	\item<4-> Important: use Subversion commands to do this, so that every change is registered
+	\item<4-> Important: use Subversion commands to move and rename files, so that every change is registered
 	\end{itemize}
   \item<5-> Commit the changes back into the repository
   	\begin{itemize}
@@ -209,7 +208,7 @@
   \begin{itemize}
   \item<1-> Note: direct changes to the repository are immediately applied \dots
   		  \uncover<2->{while changes to the local copy are applied to the repository upon commit}
-  \item<3-> Hence, commit frequently!
+  \item<2-> Hence, commit frequently!
   \end{itemize}
 
 }
@@ -268,10 +267,10 @@
   
   \begin{itemize}
   \item<1-> On Linux and on OSX, use the terminal
-  \item<2-> Advantages:
+  \item<1-> Advantages:
   	\begin{itemize}
 	\item<1-> Flexibility
-	\item<2-> It's not so complicated
+	\item<1-> It's not so complicated
 	\end{itemize}
   \item<3-> Every command must be preceded by \textit{svn}
   \includegraphics[height=0.8cm]{svn_example.png}
@@ -318,7 +317,7 @@
   \item<4-> Fix any mistake
   	\begin{itemize}
 	\item<4-> Command: \textit{revert} (non committed) 
-	 \item<4->  Undoing commits:  \textit{svn rm file; svn cp URL/file@REV; svn commit}
+	 \item<4->  Undoing commits:  \textit{svn merge -r REVnew:REVold file; svn commit}
 	\end{itemize}
   \item<5-> Resolve conflicts
   	\begin{itemize}
@@ -345,39 +344,11 @@
 	\end{itemize}
   \item<2-> Identifying changes
   \item<3-> Merging a branch back into the trunk
+  \item<4-> Fixing mistakes
   \end{itemize}
   
 }  
 
-\subsection{Example of working cycle}
 
-\frame
-{ 
-  \frametitle{Example of working cycle}
-\begin{itemize}
-\begin{small}
-\item set up a base url BURL= https://ldi.svn.cloudforge.com/training
-\item Check out: svn co $\$$BURL
-\item  Add the folder mythesis you previously created with the command line: svn add mythesis
- \item You can check if it worked: svn status 
-\item Commit: svn ci -m " message"
-\item Create a copy: svn copy $\$$BURL/mythesis $\$$BURL/newdraft -m" "
-\item Rename: svn move mythesis thesisproposal
-\end{itemize}
-\end{small}
-}
-
-\frame
-{ 
-  \frametitle{Fixing mistakes}
-\begin{itemize}
-\item Assume you made a mistake in introduction.txt and did not commit, then use : revert thesisproposal/mythesis
-\item using -- infinity will revert the entire directory
-\item Now, assume you did commit the mistake: svn remove newdraft/introduction.txt;
-\item svn copy -r 6 \small{https://ldi.svn.cloudforge.com/training/newdraft/introduction.txt@6 newdraft/introduction.txt}
-\item svn commit -m "fixed mistake"
-\end{itemize}
-
-}
 
 \end{document}
