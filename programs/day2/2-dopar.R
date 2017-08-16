@@ -1,7 +1,13 @@
 # Set up the cluster
 
+ncpus <- Sys.getenv("PBS_NUM_PPN")
+ncpus <- as.numeric(ncpus)-1
+
+ncpus
+
+ncpus <- 64
 library(doParallel)
-cl <- makeCluster(2)
+cl <- makeCluster(ncpus)
 registerDoParallel(cl)
 
 
