@@ -51,7 +51,8 @@ Tentative Agenda - Day 1
 
 * <>
 
-* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf))
+* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)).
+A good overview over the basics is https://arxiv.org/pdf/1609.00037.pdf
 
 * 12:00-12:30 [Getting access to ECCO (SSH and NX)](../documents/access-to-ecco.pdf)
 
