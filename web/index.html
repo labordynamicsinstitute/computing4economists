@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Computing for Economists Workshop</title>
+  <title>Computational Tools for Social Scientists Workshop</title>
     
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -784,12 +784,10 @@ hljs.initHighlightingOnLoad();
   <div class="slides">
 
 <section data-state="section" data-transition="fade" data-transition-speed="default">
-<h1>Computing for Economists Workshop</h1><p>Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert, Jean-Francois Houde<br/>2017&#x2F;8&#x2F;14-2017&#x2F;8&#x2F;15</p>
+<h1>Computational Tools for Social Scientists Workshop</h1><p>Lars Vilhuber, with  Vítor Costa and many others<br/>2018&#x2F;8&#x2F;20-2018&#x2F;8&#x2F;22</p>
 
 <div class="slideContent" >
-<p>(the third day 2017/8/16 is <strong>optional</strong>, participate only if you are <strong>NOT</strong> doing TA training)</p>
-
-<p><strong>Location</strong>: <em>Ives 111</em> <em>|</em>
+<p><strong>Location</strong>: <em>Ives TBD</em> <em>|</em>
 <strong>Time</strong>: <em>9:00 - 4:00 p.m.</em> (we will typically end earlier)</p>
 
 <p><strong><a href="https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl">Registration</a></strong>
@@ -802,9 +800,9 @@ hljs.initHighlightingOnLoad();
 <section data-transition="fade" data-transition-speed="default">
 <h3>Goal</h3>
 <div class="slideContent" >
-<p>The goal of this workshop is to showcase computer-oriented techniques and tools for economics students, from basic command line tools on Linux and Mac to version control to optimization and parallelization techniques for high-performance computing. The goal is NOT to teach a full
+<p>The goal of this workshop is to showcase computer-oriented techniques and tools for social science students, from basic command line tools on Linux and Mac to version control to optimization and parallelization techniques for high-performance computing, with reproducible methods training thrown in for good measure. The goal is NOT to teach a full
 course on SAS, Stata, Matlab, R, Python, MPI, Fortran, etc. - there are other classes for that. We will teach just enough of each programming language to
-be able to highlight additional techniques (for SAS, Python, and Matlab, we will have specialized workshops on each in a bit more depth, if requested).
+be able to highlight additional techniques. There will be hands-on training on a few systems, such as CodeOcean and the new Econ cluster (for economics students). 
  This workshop is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
 specific programming languages, we point to offerings elsewhere on campus, for instance at <a href="http://www.ciser.cornell.edu">CISER</a>. <a href="#/2">more</a></p>
@@ -819,7 +817,7 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 
 <h2>Target group</h2>
 
-<p>Second year Ph.D. in Economics and higher, or other social sciences. If you haven&#39;t taken the course in the past, or want a refresher, you should participate</p>
+<p>Second year Ph.D. and higher, and faculty, in Economics or other social sciences. If you haven&#39;t taken the course in the past, or want a refresher, you should participate</p>
 
 <h2>Requirements</h2>
 
@@ -837,7 +835,7 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 <ul>
 <li><a href="https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl">Register</a></li>
 <li>Request an account on Econ Cluster on the <a href="https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004">account request page</a></li>
-<li>Fill out the online survey (sent out by email) ( results for <a href="SurveyResults2013.pdf">2013</a>,  <a href="Computing_in_Economics_2014_results.pdf">2014</a> and <a href="Computing_in_Economics_Workshop_Knowledge_2015.pdf">2015</a>)</li>
+<li>Fill out the online survey (SOON) ( results for <a href="SurveyResults2013.pdf">2013</a>,  <a href="Computing_in_Economics_2014_results.pdf">2014</a>  <a href="Computing_in_Economics_Workshop_Knowledge_2015.pdf">2015</a>)</li>
 </ul>
 
 </div>
@@ -848,10 +846,9 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 <div class="column column1 slideContent" >
 <ul>
 <li><p>9:00-9:30 Introduction (Lars) with reference to <a href="Computing_in_Economics_Workshop_Knowledge_2015.pdf">earlier</a> survey results.</p></li>
-<li><p>9:30-10:15 Motivation: <a href="../documents/hp-resources-at-cornell.pdf">HP resources at Cornell, elsewhere</a> (Lars)</p></li>
-<li><p>&lt;&gt;</p></li>
-<li><p>10:30-12:00 <a href="../documents/hp-basics.pdf">Basics</a> (Lars),   The command line (<a href="../Git_CL_Slides/Slides_CommandLine.pdf">lecture notes</a>)</p></li>
-<li><p>12:00-12:30 <a href="../documents/access-to-ecco.pdf">Getting access to ECCO (SSH and NX)</a></p></li>
+<li><p>9:30-10:15 Motivation: Thinking beyond the laptop in front of you, Reproducibility (Lars)</p></li>
+<li><p>10:30-12:00 <a href="../documents/hp-basics.pdf">Basics</a> (Lars),   The command line (<a href="../Git_CL_Slides/Slides_CommandLine.pdf">lecture notes</a>), <a href="../documents/basics_of_version_control.pdf">Basics of version control</a> (Lars), Git (Vítor) <a href="../Git_CL_Slides/Slides_Git.pdf">slides</a>,  <a href="../Git_CL_Slides/Git_Notes.pdf">notes</a>.
+A good overview over the basics is <a href="https://arxiv.org/pdf/1609.00037.pdf">arxiv:1609.00037</a></p></li>
 </ul>
 
 
@@ -861,9 +858,8 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 
 
 <ul>
-<li><p>13:30-15:00 Learning to qsub - Hello World example on ECCO (live in class)</p></li>
-<li><p>&lt;&gt;</p></li>
-<li><p>15:15-16:45 <a href="../web/day2-3.html">Introduction to parallel processing</a> (Lars)</p></li>
+<li><p>12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.</p></li>
+<li><p>13:00-16:00: <a href="https://codeocean.com">CodeOcean</a> demonstration and hands-on (April Clyburne-Sherin, CodeOcean)</p></li>
 </ul>
 
 </div>
@@ -873,9 +869,9 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 <h3>Tentative Agenda - Day 2</h3>
 <div class="column column1 slideContent" >
 <ul>
-<li><p>9:00-10:30 Git   <a href="../documents/basics_of_version_control.pdf">Basics of version control</a> (Lars), Subversion (Flavio):  <a href="../SVN_Presentation/Subversion_slides.pdf">lecture notes</a> ( <a href="COMPUTER_Subversion_LongTutorial.pdf">Long tutorial referenced in class</a> ) Git (Sylverie) <a href="../Git_CL_Slides/Slides_Git.pdf">slides</a>,  <a href="../Git_CL_Slides/Git_Notes.pdf">notes</a>, Setting up your repositories</p></li>
-<li><p>&lt;&gt;</p></li>
-<li><p>11:00-12:00 Subroutines and scalable programming (Lars) <a href="../documents/HPC_Class_SubRoutines.pdf">slides</a>,</p></li>
+<li><p>9:00 - 9:30 <a href="../documents/access-to-ecco.pdf">Getting access to ECCO (SSH and NX)</a></p></li>
+<li><p>9:30 - 10:30 Learning to qsub - Hello World example on ECCO (live in class)</p></li>
+<li><p>10:45-12:00 <a href="../web/day2-3.html">Introduction to parallel processing</a> (Lars)</p></li>
 </ul>
 
 
@@ -886,14 +882,7 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 
 <ul>
 <li><p>13:00-14:45 Putting it into practice: Trying out parallel processing</p></li>
-<li><p>15:00-16:30 CHOICES:</p>
-
-<ul>
-<li><a href="../documents/Matlab%20Big%20Data%20Techniques.pdf">A practical example: Big Data Matlab programming</a></li>
-<li><a href="../Matlab/peng-matlabparallel.pdf">Leveraging parallel programming techniques in Matlab</a></li>
-<li>Explicit parallel programming in SAS (Lars) <a href="https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect">Example </a></li>
-<li>Parallel programming in Python (Jean-Francois)</li>
-</ul></li>
+<li><p>15:00-16:00 Subroutines and scalable programming (Lars) <a href="../documents/HPC_Class_SubRoutines.pdf">slides</a></p></li>
 </ul>
 
 </div>
@@ -901,18 +890,21 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 </section>
 <section data-transition="fade" data-transition-speed="default">
 <h3>Tentative Agenda - Day 3 (optional)</h3>
-<div class="slideContent" >
-<p>(note: Day 3 is optional - it overlaps with TA training, and the latter takes precedence)</p>
+<div class="column column1 slideContent" >
+<ul>
+<li>9:00-11:00 How to use ECCO2 (Economics) (Jarek Pillardy)</li>
+<li>11:00-12:00  Try it out</li>
+</ul>
+
+
+</div>
+
+<div class="column column2 slideContent" >
+
 
 <ul>
-<li>9:00-11:00 Introduction to Julia - parallel processing in Julia - GMM in Julia (Jin + JF)</li>
-<li>11:00-12:00  CHOICES (tentative)
-
-<ul>
-<li> <a href="../web/coming-soon.html">Considerations for data management</a> (Lars)</li>
-<li> Setting up a cluster (experimental)</li>
-</ul></li>
-<li>12:00 Workshop ends</li>
+<li>13:00 - 14:00 Setting up a compute cluster on Amazon cloud</li>
+<li>14:00 Workshop ends</li>
 </ul>
 
 </div>
@@ -934,10 +926,24 @@ specific programming languages, we point to offerings elsewhere on campus, for i
 
 </section>
 <section data-transition="fade" data-transition-speed="default">
+<h3>Additional resources</h3>
+<div class="slideContent" >
+<ul>
+<li><a href="../documents/Matlab%20Big%20Data%20Techniques.pdf">A practical example: Big Data Matlab programming</a></li>
+<li><a href="../Matlab/peng-matlabparallel.pdf">Leveraging parallel programming techniques in Matlab</a></li>
+<li>Explicit parallel programming in SAS (Lars) <a href="https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect">Example </a></li>
+<li>Parallel programming in Python </li>
+<li>Introduction to Julia - parallel processing in Julia </li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="fade" data-transition-speed="default">
 <h3>Source</h3>
 <div class="slideContent" >
 <ul>
-<li>Git: <a href="https://bitbucket.org/computing4economists/computing-for-economists">on Bitbucket</a></li>
+<li>Git: <a href="https://github.com/labordynamicsinstitute/computing4economists">on Github</a></li>
 <li>Web: <a href="http://www.vrdc.cornell.edu/computing-for-economists/">http://www.vrdc.cornell.edu/computing-for-economists/</a></li>
 </ul>
 

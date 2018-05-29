@@ -1,12 +1,11 @@
-Computing for Economists Workshop
+Computational Tools for Social Scientists Workshop
 ========================================================
 transition: fade
-author: Lars Vilhuber, with  Flavio Stanchi, Sylverie Herbert, Jean-Francois Houde
-date: 2017/8/14-2017/8/15
+author: Lars Vilhuber, with  Vítor Costa and many others
+date: 2018/8/20-2018/8/22
 
-(the third day 2017/8/16 is **optional**, participate only if you are **NOT** doing TA training)
 
-**Location**: *Ives 111* _|_
+**Location**: *Ives TBD* _|_
 **Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
 
 
@@ -16,9 +15,9 @@ _|_
 
 Goal
 ========================================================
-The goal of this workshop is to showcase computer-oriented techniques and tools for economics students, from basic command line tools on Linux and Mac to version control to optimization and parallelization techniques for high-performance computing. The goal is NOT to teach a full
+The goal of this workshop is to showcase computer-oriented techniques and tools for social science students, from basic command line tools on Linux and Mac to version control to optimization and parallelization techniques for high-performance computing, with reproducible methods training thrown in for good measure. The goal is NOT to teach a full
 course on SAS, Stata, Matlab, R, Python, MPI, Fortran, etc. - there are other classes for that. We will teach just enough of each programming language to
-be able to highlight additional techniques (for SAS, Python, and Matlab, we will have specialized workshops on each in a bit more depth, if requested).
+be able to highlight additional techniques. There will be hands-on training on a few systems, such as CodeOcean and the new Econ cluster (for economics students). 
  This workshop is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
 specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu). [more](#/2)
@@ -29,7 +28,7 @@ We highlight that this is a workshop - we will work on problems as a group, draw
 
 Target group
 ------------
-Second year Ph.D. in Economics and higher, or other social sciences. If you haven't taken the course in the past, or want a refresher, you should participate
+Second year Ph.D. and higher, and faculty, in Economics or other social sciences. If you haven't taken the course in the past, or want a refresher, you should participate
 
 Requirements
 -------------
@@ -40,63 +39,57 @@ Setup
 ========================================================
 * [Register](https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl)
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
-* Fill out the online survey (sent out by email) ( results for [2013](SurveyResults2013.pdf),  [2014](Computing_in_Economics_2014_results.pdf) and [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf))
+* Fill out the online survey (SOON) ( results for [2013](SurveyResults2013.pdf),  [2014](Computing_in_Economics_2014_results.pdf)  [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf))
 
 
 Tentative Agenda - Day 1
 ========================================================
 * 9:00-9:30 Introduction (Lars) with reference to [earlier](Computing_in_Economics_Workshop_Knowledge_2015.pdf) survey results.
 
-* 9:30-10:15 Motivation: [HP resources at Cornell, elsewhere](../documents/hp-resources-at-cornell.pdf) (Lars)
+* 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, Reproducibility (Lars)
 
-* <>
+* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)), [Basics of version control](../documents/basics_of_version_control.pdf) (Lars), Git (Vítor) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
+A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
 
-* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)).
-A good overview over the basics is https://arxiv.org/pdf/1609.00037.pdf
-
-* 12:00-12:30 [Getting access to ECCO (SSH and NX)](../documents/access-to-ecco.pdf)
 
 ***
 
-* 13:30-15:00 Learning to qsub - Hello World example on ECCO (live in class)
+* 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
 
-* <>
-
-* 15:15-16:45 [Introduction to parallel processing](../web/day2-3.html) (Lars)
+* 13:00-16:00: [CodeOcean](https://codeocean.com) demonstration and hands-on (April Clyburne-Sherin, CodeOcean)
 
 
 Tentative Agenda - Day 2
 ========================================================
 
-* 9:00-10:30 Git   [Basics of version control](../documents/basics_of_version_control.pdf) (Lars), Subversion (Flavio):  [lecture notes](../SVN_Presentation/Subversion_slides.pdf) ( [Long tutorial referenced in class](COMPUTER_Subversion_LongTutorial.pdf) ) Git (Sylverie) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf), Setting up your repositories
+* 9:00 - 9:30 [Getting access to ECCO (SSH and NX)](../documents/access-to-ecco.pdf)
 
-* <>
+* 9:30 - 10:30 Learning to qsub - Hello World example on ECCO (live in class)
 
-
-* 11:00-12:00 Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf),
+* 10:45-12:00 [Introduction to parallel processing](../web/day2-3.html) (Lars)
 
 
 ***
 
+
 * 13:00-14:45 Putting it into practice: Trying out parallel processing
 
+* 15:00-16:00 Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
 
-* 15:00-16:30 CHOICES:
-  * [A practical example: Big Data Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf)
-  * [Leveraging parallel programming techniques in Matlab](../Matlab/peng-matlabparallel.pdf)
-  * Explicit parallel programming in SAS (Lars) [Example ](https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect)
-  * Parallel programming in Python (Jean-Francois)
+
+
 
 
 Tentative Agenda - Day 3 (optional)
 ========================================================
 
-(note: Day 3 is optional - it overlaps with TA training, and the latter takes precedence)
-* 9:00-11:00 Introduction to Julia - parallel processing in Julia - GMM in Julia (Jin + JF)
-* 11:00-12:00  CHOICES (tentative)
-  *  [Considerations for data management](../web/coming-soon.html) (Lars)
-  *  Setting up a cluster (experimental)
-* 12:00 Workshop ends
+* 9:00-11:00 How to use ECCO2 (Economics) (Jarek Pillardy)
+* 11:00-12:00  Try it out
+
+***
+
+* 13:00 - 14:00 Setting up a compute cluster on Amazon cloud
+* 14:00 Workshop ends
 
 Additional resources
 ===============================
@@ -107,7 +100,16 @@ Additional resources
  * Assessing time and memory usage in R: [a nice brief tutorial](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/) *(but with the conclusion to use Matlab...)*
  * Learning how to use doParallel in R: [doParallel vignette](http://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
 
+Additional resources
+===============================
+
+ * [A practical example: Big Data Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf)
+ * [Leveraging parallel programming techniques in Matlab](../Matlab/peng-matlabparallel.pdf)
+ * Explicit parallel programming in SAS (Lars) [Example ](https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect)
+ * Parallel programming in Python 
+ * Introduction to Julia - parallel processing in Julia 
+
 Source
 ==========
-* Git: [on Bitbucket](https://bitbucket.org/computing4economists/computing-for-economists)
+* Git: [on Github](https://github.com/labordynamicsinstitute/computing4economists)
 * Web: [http://www.vrdc.cornell.edu/computing-for-economists/](http://www.vrdc.cornell.edu/computing-for-economists/)
