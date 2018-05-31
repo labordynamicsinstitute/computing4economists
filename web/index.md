@@ -9,7 +9,7 @@ date: 2018/8/20-2018/8/22
 **Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
 
 
-**[Registration](https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl)**
+**[Registration coming]()**
 _|_
 [Goals](#/1)  _|_ **[Requirements](#/2)**
 
@@ -37,7 +37,7 @@ Requirements
 
 Setup
 ========================================================
-* [Register](https://cornell.qualtrics.com/jfe/form/SV_0rdXep3H7gbzzOl)
+* [Register]() (SOON)
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
 * Fill out the online survey (SOON) ( results for [2013](SurveyResults2013.pdf),  [2014](Computing_in_Economics_2014_results.pdf)  [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf))
 
