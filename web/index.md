@@ -88,8 +88,8 @@ Tentative Agenda - Day 3 (optional)
 
 ***
 
-* 13:00 - 14:00 Setting up a compute cluster on Amazon cloud
-* 14:00 Workshop ends
+* 13:00 - 16:00 Setting up a compute cluster on Amazon cloud (Paul Allen)
+* 16:00 Workshop ends
 
 Additional resources
 ===============================
