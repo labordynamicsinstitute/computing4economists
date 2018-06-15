@@ -5,7 +5,7 @@ author: Lars Vilhuber, with  Vítor Costa and many others
 date: 2018/8/20-2018/8/22
 
 
-**Location**: *Ives TBD* _|_
+**Location**: *Ives 111* (*Ives 115* on 2018-08-22) _|_
 **Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
 
 
