@@ -112,4 +112,4 @@ Additional resources
 Source
 ==========
 * Git: [on Github](https://github.com/labordynamicsinstitute/computing4economists)
-* Web: [http://www.vrdc.cornell.edu/computing-for-economists/](http://www.vrdc.cornell.edu/computing-for-economists/)
+* Web: [https://labordynamicsinstitute.github.io/computing4economists/](https://labordynamicsinstitute.github.io/computing4economists/)
