@@ -56,7 +56,7 @@ A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609
 
 * 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
 
-* 13:00-16:00: [CodeOcean](https://codeocean.com) demonstration and hands-on (April Clyburne-Sherin, CodeOcean)
+* 13:00-16:00: [CodeOcean](https://codeocean.com/workshop/cornell-university) Workshop-within-Workshop (April Clyburne-Sherin, CodeOcean), see [flyer](../external/Cornell Workshop QR Bitly.pdf)
 
 
 Tentative Agenda - Day 2
