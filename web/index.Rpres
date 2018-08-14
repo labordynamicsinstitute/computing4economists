@@ -48,7 +48,7 @@ Tentative Agenda - Day 1
 
 * 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, Reproducibility (Lars)
 
-* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)), [Basics of version control](../documents/basics_of_version_control.pdf) (Lars), Git (Vítor) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
+* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)), [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
 A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
 
 
@@ -63,17 +63,17 @@ Tentative Agenda - Day 2
 ========================================================
 
 * 9:00 - 9:30 [Getting access to ECCO (SSH and NX)](../documents/access-to-ecco.pdf)
+* 9:30 - 10:30 Git (Daniel) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
 
-* 9:30 - 10:30 Learning to qsub - Hello World example on ECCO (live in class)
+* 11:00 - 12:00 Learning to qsub - Hello World example on ECCO (live in class)
 
-* 10:45-12:00 [Introduction to parallel processing](../web/day2-3.html) (Lars)
-
+* 10:45-12:00 
 
 ***
 
 
-* 13:00-14:45 Putting it into practice: Trying out parallel processing
-
+* 13:00 - 13:45 [Introduction to parallel processing](../web/day2-3.html) (Lars) 
+* 14:00 - 14:45 Putting it into practice: Trying out parallel processing
 * 15:00-16:00 Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
 
 
