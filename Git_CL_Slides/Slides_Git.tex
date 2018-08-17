@@ -1,8 +1,14 @@
-\documentclass[10pt]{beamer}
+\documentclass[11pt]{beamer}
 \usepackage{amsmath,amsfonts}	% use math symbols
 \usepackage{graphicx} % insert images
 \usepackage{url} % insert urls
 \usepackage{hyperref}
+\hypersetup{
+	linkcolor  = blue,
+	citecolor  = blue,
+	urlcolor   = blue,
+	colorlinks = true,
+}
 \usepackage{amsthm}
 %\usepackage{auto-pst-pdf}
 \setbeamertemplate{navigation symbols}{}
@@ -12,7 +18,7 @@
 
 \definecolor{cream}{rgb}{1.0, 0.99, 0.82}
 
-\lstset{frame=single, basicstyle=\color{black}\ttfamily\ssmall, backgroundcolor=\color{cream}}
+\lstset{frame=single, basicstyle=\color{black}\ttfamily\tiny, backgroundcolor=\color{cream}}
 
 
 
@@ -22,71 +28,263 @@
 
 \begin{document}
 
-\title{A Brief Introduction to Git}
-\author{Sylverie Herbert \\ (based on slides by Hautahi Kingi)}
+\title{Introduction to Git}
+\author{Daniel Lin}
 \date{}
 
 
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Introduction}
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
 
-
-Version control is better than mailing files back and forth because:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\begin{frame}{What is version control?}
 \begin{itemize}
 \item
-Nothing that is committed to version control is ever lost. It's always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.
+A system that keeps records of your changes (commit)
+	\begin{itemize}
+		\item Who
+		\item When
+		\item What
+		\item Why
+	\end{itemize}
 \item
-It keeps a record of who made what changes when, so that if people have questions later on, they know who to ask.
+Allows for collaborative development
 \item
-It's hard (but not impossible) to accidentally overlook or overwrite someone's changes: the version control system automatically notifies users whenever there's a conflict between one person's work and another's.
+Allows you to revert any changes and go back to a previous state.
+\item
+Notifies conflict between different versions and allows the possibility of merging
 \end{itemize}
-Git is one of many version control systems. It is more complex than some alternatives, but it is widely used, both because it's easy to set up and because of a hosting site called GitHub, which we will get to later.
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{What is Git?}
+Git is one of many version control systems.
+\begin{itemize}
+	\item
+	Users can keep entire code and history on their location machines
+	\begin{itemize}
+		\item Can make any changes without internet access
+		\item Except pushing and pulling changes from a remote server
+	\end{itemize}
+	\item
+	It is widely used, both because it's easy to set up and the hosting site, GitHub
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Key Concepts}
+\begin{frame}{Key Concepts}
+\begin{itemize}
+	\item
+	\hyperlink{snap}{Snapshots}
+	\item
+	\hyperlink{commit}{Commit}
+	\item
+	\hyperlink{repo}{Repositories}
+	\item
+	\hyperlink{push}{Push/Pull}
+	\item
+	\hyperlink{branch}{Branches}	
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Snapshots}\label{snap}
+\begin{itemize}
+	\item
+	The way git keeps track of your code history
+	\item
+	Record of what all your files look like at a given point in time
+	\item
+	\textbf{You} decide when to take a snapshot and of what files
+	\item
+	Have the ability to go back to visit any snapshot
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Commit}\label{commit}
+\begin{itemize}
+	\item
+	The act of creating a snapshot
+	\item
+	Essentially, a project is made up of a bunch of commits
+	\item
+	\textcolor{blue}{\textbf{Commits}} contain these information
+	\begin{itemize}
+		\item How the files changed from previous state
+		\item A reference to the commit that came before it
+		\item Comment from the person who made the commit
+		\item A hash code name
+		\begin{itemize}
+			\item e.g. b05d7611c608d160619ddaae23a5d8b02ee9d1d6
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Repositories}\label{repo}
+\begin{itemize}
+	\item
+	A collection of all the files and the history of those files
+	\begin{itemize}
+		\item Consists of all your commits
+		\item Place where all your work is stored		
+	\end{itemize}
+	\item	
+	Can live on a local machine or on a remote server (GitHub, ECCO, CISER)
+	\item	
+	The act of copying a repository from a remote server is called \textcolor{blue}{\textbf{cloning}}
+	\item	
+	Cloning from a remote server allows teams to work together
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Push/Pull}\label{push}
+\begin{itemize}
+	\item 
+	\textcolor{blue}{\textbf{Push}}
+	\begin{itemize}
+		\item
+		The process of \textcolor{blue}{\textbf{adding}} your local changes to the remote repository
+	\end{itemize}
+	\item 
+	\textcolor{blue}{\textbf{Pull}}
+	\begin{itemize}
+		\item
+		The process of downloading commits that don't exist on your machines from a remote repository
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Branches}\label{branch}
+\begin{itemize}
+	\item
+	All commits in git live on some branch
+	\item
+	The main branch in a project is called the \textcolor{blue}{\textbf{master}} branch
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{What does a typical project look like?}
+\begin{itemize}
+	\item
+	A bunch of commits linked together that live on some branch, contained in a repository
+	\item
+	You can make change to the master branch directly
+	\item
+	Or you can make a new branch pointing to a specific commit in the master branch
+	\item
+	Once you're done with your changes, you can merge the new branch back into master
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tutorial}
+\begin{frame}[fragile]{Tutorial}
+
+\begin{itemize}
+	\item \textcolor{blue}{\emph{git init}}
+	\item \textcolor{blue}{\emph{git status}}
+	\item \textcolor{blue}{\emph{git add}}
+	\item \textcolor{blue}{\emph{git diff}}
+	\item \textcolor{blue}{\emph{git commit}}
+	\item \textcolor{blue}{\emph{gitignore}}
+	\item \textcolor{blue}{\emph{git push}}
+	\item \textcolor{blue}{\emph{git pull}}
+	\item \textcolor{blue}{\emph{git clone}}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Install git and Create GitHub account}
+Install git
+\begin{itemize}
+	\item Windows
+	\begin{itemize}
+		\item \href{https://git-scm.com/download/win}{https://git-scm.com/download/win}
+	\end{itemize}
+	\item Mac
+	\begin{itemize}
+		\item \href{https://git-scm.com/download/mac}{https://git-scm.com/download/mac}
+	\end{itemize}
+	
+	\item Linux
+	\begin{itemize}
+		\item Command: sudo apt-get install git
+	\end{itemize}	
+\end{itemize}
+Create GitHub account
+\begin{itemize}
+	\item Go to \href{https://github.com/}{GitHub}
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Set Up}
 
-After downloading Git, an easy way to check if it is installed and working properly is
+For your first time with Git on a new machine
 \begin{lstlisting}
-$ git help
-\end{lstlisting}
-On our first time with Git on a new machine, we need to do a few things.
-\begin{lstlisting}
-$ git config --global user.name "Sylverie Herbert"
-$ git config --global user.email "sh2258@cornell.edu"
+$ git config --global user.name "Daniel Lin"
+$ git config --global user.email "cdl77@cornell.edu"
 $ git config --global color.ui "auto"
 $ git config --global core.editor "nano"
 \end{lstlisting}
-Navigate to the my\_thesis folder that we created earlier (see command line slides).
+
+You can check common git commands by typing
 \begin{lstlisting}
-$ cd Desktop/my_thesis
+$ git help
 \end{lstlisting}
-and tell git to make it a \emph{repository}. A repository is a storage area where a version control system stores old revisions of files and information about who changed what, when.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Create an Online Repository}
+\begin{center}
+	\includegraphics[width=1.0\textwidth]{./auxfiles/github_repo.png}
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Create a Local Repository}
+Let's create a "myrepo" folder on your desktop and navigate to it
+\begin{lstlisting}
+$ cd ~/Desktop
+$ mkdir myrepo
+$ cd myrepo/
+\end{lstlisting}
+Use \textcolor{blue}{\emph{git init}} to make it into a \textbf{repository}
 \begin{lstlisting}
 $ git init
-Initialized empty Git repository in /Users/sylverieherbert/desktop/my_thesis/.git/
+Initialized empty Git repository in
+ C:/Users/Daniel/Desktop/myrepo/.git/
 \end{lstlisting}
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{The .git subdirectory}
-
-Let's take a look at our new directory
+\begin{frame}[fragile]{Add New File to Local Repo}
+You can use any text editor or run the \textcolor{blue}{\emph{touch}} command
 \begin{lstlisting}
+$ touch README.md
 $ ls
-code.m	introduction.txt
+README.md
 \end{lstlisting}
-It looks like nothing has changed. But \emph{ls} only lists files which are not hidden. The \emph{init} command created a hidden directory, which we can see by using the -a flag
+You can edit it using the \textcolor{blue}{\emph{nano}} command
 \begin{lstlisting}
-$ ls -a
-code.m	 .git	introduction.txt
+$ nano README.md
 \end{lstlisting}
-Git stores information about the project in this special .git sub-directory. If deleted, we lose the project's entire history.\\
-
+Type a random sentence
+\begin{lstlisting}
+This is a test.
+\end{lstlisting}
+Press CTRL+X to exit, press Y to save the change, press ENTER to confirm the file that is being overwritten
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,58 +294,65 @@ Git stores information about the project in this special .git sub-directory. If 
 $ git status
 On branch master
 
-Initial commit
+No commits yet
 
 Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+	(use "git add <file>..." to include in what will be committed)
 
-	code.m
-	introduction.txt
+		README.md
 
 nothing added to commit but untracked files present (use "git add" to track)
 \end{lstlisting}
-The output states that we are located on the master branch (more on this later). The \emph{Initial commit} message states that we are yet to make a commit. The \emph{Untracked files} message means that there are files in the directory that Git is not keeping track of.
+The output states that we are located on the master branch. The \emph{Untracked files} message means that there are files in the directory that Git is not keeping track of.
 \end{frame}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Staging Environment}
+\begin{itemize}
+	\item  A commit is a record of what files you have changed since the last time you made a commit.
+ 	\item How do you tell git which files to put into a commit?
+	\begin{itemize}
+		\item Add the files to the Staging Environment using \textcolor{blue}{\emph{git add}}
+		\item You can then tell git to package all the files in the staging environment into a commit using the \textcolor{blue}{\emph{git commit}} command
+	\end{itemize}
+	
+\end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Git Add}
-We tell Git to stage untracked/modified files using \emph{git add}:
-
+We tell Git to stage untracked/modified files using \textcolor{blue}{\emph{git add}}
 \begin{lstlisting}
-$ git add code.m introduction.txt
+$ git add README.md
 \end{lstlisting}
-and checking the status again...
+and check the status again
 \begin{lstlisting}
 $ git status
 On branch master
 
-Initial commit
+No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   code.m
-	new file:   introduction.txt
+	new file:   README.md
 \end{lstlisting}
-... tells us that Git knows that it needs to keep track of the files \emph{code.m} and \emph{introduction.txt}. But it has not yet recorded the changes. 
 
+So git knows that it needs to keep track of the file \emph{README.md} but has not yet recorded the changes. 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Git Commit}
-Let's \emph{commit} the added changes.
+Let's \textcolor{blue}{\emph{git commit}} the added changes. 
 \begin{lstlisting}
-$ git commit -m "First draft introduction and code"
-[master (root-commit) 1ec0eef] First draft introduction and code
- 2 files changed, 8 insertions(+)
- create mode 100755 code.m
- create mode 100644 introduction.txt
+$ git commit -m "First draft README"
+[master (root-commit) 887d395] First draft README
+1 file changed, 1 insertion(+)
+create mode 100644 README.md
 \end{lstlisting}
 \begin{itemize}
 \item
-Git takes everything we have told it to save by using \emph{git add} and stores a copy permanently inside the special .git directory.
+Git takes everything we have told it to save and stores a copy permanently inside the special .git directory.
 \item
-Version has a short identifier 1ec0eef.
+This commit has a short identifier 887d395.
 \item
  -m flag to record a comment that will help us remember later on what we did and why.
 \end{itemize}
@@ -157,54 +362,37 @@ $ git status
 On branch master
 nothing to commit, working directory clean
 \end{lstlisting}
-This is the nice clean message that tells us everything is up to date and committed.
-
+Everything is up to date and committed.
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Adding new Files}
-
-Let's create a latex file called template.tex.
-\begin{lstlisting}
-$ ls
-code.m              template.aux        template.pdf        template.tex
-draft.txt           template.log        template.synctex.gz
-\end{lstlisting}
-My particular latex compiler created a number of auxiliary files. Checking the status of the repository gives
-\begin{lstlisting}
-$ git status
-On branch master
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	template.aux
-	template.log
-	template.pdf
-	template.synctex.gz
-	template.tex
-
-nothing added to commit but untracked files present (use "git add" to track)
-\end{lstlisting}
-The \emph{template} files are untracked because I have not added them.
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Git ignore}
+\begin{frame}[fragile]{gitignore}
+Sometimes you don't want git to track certain files (large datasets, logs, auxiliary files)
+Let's create some files
+\begin{lstlisting}
+$ touch 2yr_paper.tex
+$ touch 2yr_paper.aux
+\end{lstlisting}
 
-I don't particularly care about the auxiliary latex files. They are a waste of disk space and distract us from changes that actually matter. We can tell Git to ignore them by creating a file in the root directory of our project called .gitignore.
+Git will ignore any changes to anything listed in \textcolor{blue}{\emph{.gitignore}}.
 \begin{lstlisting}
 $ nano .gitignore
 \end{lstlisting}
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/gitignore.jpg}
-\end{center}
-We've told Git to ignore any file whose name ends in .aux, .log and .gz. 
+\begin{lstlisting}
+*.aux
+*.log
+*.gz
+\end{lstlisting}
+\tiny Press CTRL+X to exit, Y to save, ENTER to confirm
+
+\normalsize 
+We have told Git to ignore any file whose name ends in .aux, .log and .gz. 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Git ignore}
-Once we have created the .gitignore file, the output of git status is much cleaner:
+\begin{frame}[fragile]{gitignore}
+After we have created the .gitignore file, let's check \textcolor{blue}{\emph{git status}} again
 \begin{lstlisting}
 $ git status
 On branch master
@@ -212,66 +400,67 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
 	.gitignore
-	template.pdf
-	template.tex
+	2yr_paper.tex
 
 nothing added to commit but untracked files present (use "git add" to track)
 \end{lstlisting}
-Git no longer notices those pesky auxiliary latex files and we can focus on the changes that matter.
+Git no longer notices the auxiliary latex files.
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Modifying files}
 
-Now let's edit our introduction.txt file and check the status again.
+Now let's edit our \emph{README.md} file and check the status again.
 \begin{lstlisting}
 $ nano introduction.txt
-$ cat intoduction.txt
-Once upon a time, in a galaxy far far away...
-EPISODE IV
+\end{lstlisting}
+\begin{lstlisting}
+This is a test.
+Let's add a second line.
+\end{lstlisting}
+\begin{lstlisting}
 $ git status
 On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   introduction.txt
+    modified:   README.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	.gitignore
-	template.pdf
-	template.tex
+    .gitignore
+    2yr_paper.tex
 
 no changes added to commit (use "git add" and/or "git commit -a")
 \end{lstlisting}
-
-As well as the untracked files in the previous status check, Git also tells us that the introduction.txt file has been modified.
-
+As well as the untracked files in the previous status check, Git also tells us that \emph{README.md} has been modified.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Completing the Git Cycle}
+
+\begin{frame}[fragile]{Git diff}
+Use \textcolor{blue}{\emph{git diff}} to check the change from the previous commit before we add the files
+\begin{lstlisting}
+$ git diff
+diff --git a/README.md b/README.md
+index 484ba93..067f664 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,2 @@
+This is a test.
++Let's add a second line.
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Complete the Commit}
  Let's now add and commit these changes.
 \begin{lstlisting}
-$ git add introduction.txt template.tex template.pdf .gitignore
+$ git add README.md
 $ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	new file:   .gitignore
-	modified:   introduction.txt
-	new file:   template.pdf
-	new file:   template.tex
-$ git commit -m "New latex file and added line to introduction.txt"
-[master d796846] New latex file and added line to introduction.txt
- 4 files changed, 49 insertions(+)
- create mode 100644 .gitignore
- create mode 100644 template.pdf
- create mode 100644 template.tex
+$ git commit -m "New tex file and added line to README"
 \end{lstlisting}
 and checking the status....
 \begin{lstlisting}
@@ -280,50 +469,98 @@ On branch master
 nothing to commit, working directory clean
 \end{lstlisting}
 ... we're back to a clean sheet.
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Connecting Local and Online Repositories}
+\begin{center}
+\includegraphics[width=1.0\textwidth]{./auxfiles/github_command.png}
+\end{center}
+\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Connecting Local and Online Repositories}
+Let's link our local repository with the GitHub repository we created earlier.
+
+Check we're still in the same directory with \emph{pwd}
+\begin{lstlisting}
+$ pwd 
+/c/Users/Daniel/Desktop/myproject
+$ git remote add origin https://github.com/cdlin/test_repo.git
+\end{lstlisting}
+This command tells git to add a remote named \emph{origin} for the repository at \emph{https://github.com/cdlin/test\_repo.git}.\\~\\
+We can check that the command worked by typing
+\begin{lstlisting}[frame=single]
+$ git remote -v
+origin  https://github.com/cdlin/test\_repo.git (fetch)
+origin  https://github.com/cdlin/test\_repo.git (push)
+\end{lstlisting}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Pushing}
+We have linked our remote repository (GitHub) with our local repository. Let's push the commit from our local repository to the GitHub repository with \textcolor{blue}{\emph{git push}}
+\begin{lstlisting}
+$ git push -u origin master
+\end{lstlisting}
+It may ask for your GitHub username and password
+\begin{lstlisting}[frame=single]
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 234 bytes | 234.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/cdlin/test_repo.git
+* [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+\end{lstlisting}
+Check your GitHub repository, everything we have done in your local repository should be there.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{An overview of the Git Cycle}
-
-
-We should now be able to see the basic structure of how Git works. Once a directory is set up as a Git repository using \emph{git init}, any change that we make to that directory is noted by Git. The workflow is then as follows:
+We should now be able to see the basic structure of how git works. Once a directory is set up as a Git repository using \textcolor{blue}{\emph{git init}}, any change that we make to that directory is noted by git. The workflow is then as follows:
 \begin{enumerate}
-\item
-Modify/create new folders and files.
-\item
-Stage these changes ready to commit by using \emph{git add}.
-\item
-Commit the changes using \emph{git commit} which permanently saves the current version of that repository.
+	\item
+	Modify/create new folders and files.
+	\item
+	Stage these changes ready to commit by using \textcolor{blue}{\emph{git add}}.
+	\item
+	Commit the changes using \textcolor{blue}{\emph{git commit}} which permanently saves the current version of that repository.
+	\item
+	Push the commit with \textcolor{blue}{\emph{git push}} to any remote repository
 \end{enumerate}
-
 \end{frame}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Undoing a ``bad'' commit}
 
-Suppose we have made some unwanted changes to a file, and we have committed that file. For example, we want to retrieve the file introduction.txt from the ``First draft introduction and code'' commit.
+Suppose we have made some unwanted changes to a file and committed it. For example, we didn't want the change we made to the \emph{README}.
 
 \begin{lstlisting}
 $ git log --oneline
-d796846	New latex file and added line to introduction.txt
-1ec0eef	First draft introduction and code
-
-$ git checkout 1ec0eef introduction.txt
-$ cat introduction.txt
-Once upon a time, in a galaxy far far away...
+57e91e5 (HEAD -> master, origin/master) New tex file and added line to README
+887d395 First draft README
 \end{lstlisting}
 
-Note that this will produce changes in our working directory. Then, we can commit these changes to our repository.
+We want the version with the id 887d395. Use \textcolor{blue}{\emph{git checkout}}
+\begin{lstlisting}
+$ git checkout 887d395 README.md
+$ cat README.md
+This is a test.
+\end{lstlisting}
+
+
+Note that we are not reversing the commit, but making a new one by replacing the README with a previous version.
 
 \begin{lstlisting}
-$ git commit -m "Retrieved file introduction.txt from previous commit"
-[master 8b8c6a3] Retrieved file introduction.txt from previous commit
- 1 file changed, 1 insertion(+)
-\end{lstlisting}
+$ git commit -m "Retrieved README from previous commit"
+[master 9a664b0] Retrieved README from previous commit
+1 file changed, 1 deletion(-)
 
+$ git status
+$ git push -u origin master
+\end{lstlisting}
+You can check your GitHub repository as well.
 \end{frame}
 
 
@@ -332,448 +569,100 @@ $ git commit -m "Retrieved file introduction.txt from previous commit"
 \begin{frame}[fragile]{Hard delete unpublished commits}
 
 Now suppose that we really want to eliminate all traces of a series of particularly bad commits. For example, suppose we have committed the following:
-
 \begin{lstlisting}
-$ nano introduction.txt
-$ cat introduction.txt
-Once upon a time, in a galaxy far far away...
-Star Trek is better than Star Wars
-$ git add introduction.txt
-$ git commit -m "Added a stupid line to introduction.txt"
-[master 337d55e] Added a stupid line to introduction.txt
- 1 file changed, 1 insertion(+)
+$ nano README.md
+\end{lstlisting}
+Type a random sentence
+\begin{lstlisting}
+This is a test.
+This line will literally erase all my work.
+\end{lstlisting}
+\begin{lstlisting}
+$ git add README.md
+$ git commit -m "Updated code"
+[master 612ff94] Updated code
+1 file changed, 1 insertion(+)
 \end{lstlisting}
 
-We want to go back to our previous commit, changing the history of the commits.
+We can go back to our previous commit with \textcolor{blue}{\emph{git reset}}
 
 \begin{lstlisting}
 $ git log --oneline
-337d55e	Added a stupid line to introduction.txt
-8b8c6a3	Retrieved file introduction.txt from previous commit
-d796846	New latex file and added line to introduction.txt
-1ec0eef	First draft introduction and code
-$ git reset --hard 8b8c6a3
-HEAD is now at 8b8c6a3 Retrieved file introduction.txt from previous commit
+612ff94 (HEAD -> master) Updated code
+9a664b0 (origin/master) Retrieved README from previous commit
+57e91e5 New tex file and added line to README
+887d395 First draft README
+
+$ git reset --hard 9a664b0
+HEAD is now at 9a664b0 Retrieved README from previous commit
 \end{lstlisting}
-
-
 \end{frame}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{GitHub: Taking Version Control Online}
-
-
-Version control really comes into its own when we begin to collaborate with other people. In practice, a remote repository stored on a central hub is preferable to one stored on someone's laptop. For this reason, websites like Github and BitBucket are becoming increasingly popular.\\~\\
-
-Login to your profile page on GitHub. Click on the icon in the top right corner to create a new repository called my\_thesis.
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/Ghub.jpg}
-\end{center}
-Public repositories allow any Github user to access your files. A student account receives 5 free private repositories.
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Creating an Online Repository}
-
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/Ghub1.jpg}
-\end{center}
-Clicking the green button creates a repository on the Github website. Once created, GitHub displays a page with a URL and some information on how to configure your local repository. 
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/Ghub2.jpg}
-\end{center}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Connecting Local and Online Repositories}
-
-The home page of the GitHub repository includes instructions on how to link our newly created repository with our local repository.  We are interested in the instructions in the second box.\\~\\
-
-Making sure we are in the my\_thesis directory locally...
-\begin{lstlisting}
-$ git remote add origin https://github.com/sh2258/my_thesis.git
-\end{lstlisting}
-This command tells git to add a remote named \emph{origin} at the url \emph{https://github.com/sh2258/my\_thesis.git}.\\~\\
-
-We can check that the command worked by typing
-\begin{lstlisting}[frame=single]
-$ git remote -v
-origin	https://github.com/sh2258/my_thesis.git (fetch)
-origin	https://github.com/sh2258/my_thesis.git (push)
-\end{lstlisting}
-which lists all remote repositories. The -v flag is short for verbose which tells git to show the remote url as well as the nickname.\\
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Pushing}
-
-So far all we have done is set up a remote repository and linked it to our local repository. But if we take a look at our remote repository, it is still empty. We fix this by pushing the changes from our local repository to the GitHub repository
-\begin{lstlisting}
-$ git push -u origin master
-\end{lstlisting}
-It will sometimes ask for your username and password
-\begin{lstlisting}[frame=single]
-Username for 'https://github.com': sh2258
-Password for 'https://sh2258@github.com':
-\end{lstlisting}
-When you are typing in your password the cursor won't move. Don't panic just type it out and press enter.
-\begin{lstlisting}[frame=single]
-Counting objects: 10, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100\% (8/8), done.
-Writing objects: 100\% (10/10), 42.65 KiB | 0 bytes/s, done.
-Total 10 (delta 1), reused 0 (delta 0)
-To https://github.com/fs379/my_thesis.git
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
-\end{lstlisting}
-
-\end{frame}
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{GitHub - a visual repository}
-The homepage for our remote repository confirms that it is now linked to our local repository.
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/Ghub3.jpg}
-\end{center}
-Selecting \emph{Networks} from the \emph{Graphs} tab on the right...
-
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/Network.jpg}
-\end{center}
-... gives a visual representation of the evolution of the repository. Each commit is represented by a node in the graph. There are two nodes because we have performed two commits.
-
-
-
-
-\end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Undo published commits with new commits}
 
-Note: you should never use \textit{git reset} after the commits you want to undo have been pushed to a public repository. Instead, it is possible to use \textit{git revert} to undo one or more target commits.
+Note: you should never use \textcolor{blue}{\emph{git reset}} after the commits you want to undo have been pushed to a public repository. Instead, it is possible to use \textcolor{blue}{\emph{git revert}} to undo one or more target commits.
 
 \begin{lstlisting}
 $ git log --oneline
-8b8c6a3	Retrieved file introduction.txt from previous commit
-d796846	New latex file and added line to introduction.txt
-1ec0eef	First draft introduction and code
-$ git revert 8b8c6a3
-[master f05a49c] Revert "Retrieved file introduction.txt from previous commit"
- 1 file changed, 1 deletion(-)
+9a664b0 (HEAD -> master, origin/master) Retrieved README from previous commit
+57e91e5 New tex file and added line to README
+887d395 First draft README
+
+$ git revert 9a664b0
+[master deba8ff] Revert "Retrieved README from previous commit"
+1 file changed, 1 insertion(+)
 \end{lstlisting}
 
 This doesn't change the history of the commits and is therefore preferable.\\
 \medskip
 Note: you can revert multiple commits at the same time; this will in turn create multiple new commits.
 See \href{https://github.com/blog/2019-how-to-undo-almost-anything-with-git}{this blog post} about all the differences between undoing commits.
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Centralized vs Distributed Version Control Systems}
-
-Version control systems are often divided into two groups: centralized and distributed.\\~\\
-
-Centralized version control systems, such as subversion, are based on the idea that there is a single central copy of your project on a server, and programmers \emph{commit} their changes to this central copy.\\~\\
-
-The basic workflow is to pull down any changes other people have made from the central server. Then make your changes and commit these to the central server.\\~\\
-
-Git is a Distributed VCS. These do not necessarily rely on a central server to store all versions of a project's files. Instead, every developer \textbf{clones} a copy of a repository and has the full history of the project on their own hard drive. This copy has all of the metadata of the original.\\~\\
-
-So instead of a central repository being required, it is now optional and purely a matter of preference.\\~\\
-
-
-
-
-
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Centralized vs Distributed Version Control Systems}
-
-We have already made use of some of the features of a DVCS.\\~\\
-
-We were able to commit changes locally even before we created the central remote repository.\\~\\
-
-Once we pushed our local copy to the remote repository, GitHub still registered each separate commit (two in our case). This is one of the main advantages of distributed systems. Centralized systems only record commits that are made directly to the remote repository. For example, in subversion, there would only be one node in our network tree.\\~\\
-
-Being able to commit locally is advantageous for a number of reasons. First, performing actions is extremely fast because Git only needs to access the hard drive, not a remote server (except for pushing and pulling of course).\\~\\
-
-Everything but pushing and pulling can be done without an internet connection. So you can work on a plane, and you won't be forced to commit several bugfixes as one big changeset.\\~\\
-
-
+\begin{frame}{Git Visualization}
+\begin{center}
+	\includegraphics[width=1.0\textwidth]{./auxfiles/basic-usage.png}
+\end{center}
 \end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Pulling}
-
-
-We can pull changes from the remote repository to the local one as well:
+We can pull changes from the remote repository (GitHub) to the local one as well:
 
 \begin{lstlisting}
 $ git pull origin master
-From https://github.com/sh2258/my_thesis
- * branch            master     -> FETCH_HEAD
-Already up-to-date.
+From https://github.com/cdlin/test_repo
+* branch            master     -> FETCH_HEAD
+Already up to date.
 \end{lstlisting}
+
 Pulling has no effect in this case because the two repositories are already synchronized. If someone else had pushed some changes to the repository on GitHub, though, this command would download them to our local repository.\\
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Cloning}
-We can simulate working with a collaborator using another copy of the repository on our local machine. To do this, \emph{cd} to another directory on your computer. Instead of creating a new repository here with \emph{git init}, we will \textbf{clone} the existing repository from GitHub.
+Suppose you start working on a project with an existing GitHub repository. Instead of creating a new repository here with \emph{git init}, we will \textcolor{blue}{\textbf{clone}} the existing repository from GitHub.
 \begin{lstlisting}
-$ cd /Users/sylverieherbert/Dropbox/temporary
-$ git clone https://github.com/sh2258/my_thesis.git
-Cloning into 'my_thesis'...
-remote: Counting objects: 10, done.
-remote: Compressing objects: 100\% (7/7), done.
-remote: Total 10 (delta 1), reused 10 (delta 1)
-Unpacking objects: 100\% (10/10), done.
-Checking connectivity... done.
+$cd ../myproject2
+$ git clone https://github.com/cdlin/test_repo.git
+Cloning into 'test_repo'...
+remote: Counting objects: 9, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), done.
 \end{lstlisting}
-I navigated to a new folder called \emph{temporary} and then created a fresh local copy of a remote repository. Our computer now has two copies of the repository.
-
+We now has two copies of the repository.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Working with a collaborator}
-Let's make a change to the copy in \emph{/temporary/my\_thesis}:
-\begin{lstlisting}
-$ cd my_thesis
-$ nano introduction.txt
-$ cat introduction.txt
-Once upon a time, in a galaxy far far away...
-EPISODE IV
-A new hope
-\end{lstlisting}
-and now let's add and commit
-\begin{lstlisting}
-$ git add introduction.txt
-$ git commit -m "Added a third line to introduction.txt"
-[master 2b1b130] Added a third line to introduction.txt
- 1 file changed, 1 insertion(+)
-\end{lstlisting}
-and checking the status...
-\begin{lstlisting}
-$ git status
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
+\begin{frame}[fragile]{Acknowledgment}
 
-nothing to commit, working directory clean
-\end{lstlisting}
-This message tells us that we have committed all changes, but that we have not yet pushed these changes to the remote repository on Github. Again, this is a feature of \textbf{distributed} version control systems.\\
-
-
+This presentation follows the introduction to git by Meghan Nelson on Hubspot. The tutorial can be found at: \href{https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners}{\color{blue}{https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners}}
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Working with a collaborator}
-
-Let's now push the change to Github
-\begin{lstlisting}
-$ git push origin master
-Counting objects: 5, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100\% (3/3), done.
-Writing objects: 100\% (3/3), 345 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-To https://github.com/sh2258/my_thesis.git
-   170ae6f..3cafe3a  master -> master
-\end{lstlisting}
-Checking the status...
-\begin{lstlisting}
-$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-
-nothing to commit, working directory clean
-\end{lstlisting}
-This tells us that we have committed all changes, and that this is also reflected in the remote repository.
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Working with a collaborator}
-The network map also confirms this...
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/Network_update.jpg}
-\end{center}
-We can now download changes into the original repository on our machine:
-\begin{lstlisting}
-$ cd /Users/sylverieherbert/Desktop/my_thesis
-$ git pull origin master
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100\% (1/1), done.
-remote: Total 3 (delta 2), reused 3 (delta 2)
-Unpacking objects: 100\% (3/3), done.
-From https://github.com/sh2258/my_thesis
- * branch            master     -> FETCH_HEAD
-   d796846..2b1b130  master     -> origin/master
-Updating d796846..2b1b130
-Fast-forward
- introduction.txt | 1 +
- 1 file changed, 1 insertion(+)
-\end{lstlisting}
-Both our local repositories are now in sync with the remote repository. In practice, we would never have two copies of the same remote repository on our laptop at once.
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamercolor{background canvas}{bg=black}
-\begin{frame}[plain]{}
-
-
-
-\end{frame}
-\setbeamercolor{background canvas}{bg=white}
-
-%%%%%%%%%%%%%%%%%%
-
-\appendix
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{An ECCO Example}
-Pushing and pulling changes gives us a reliable way to share work between different people and machines.\\~\\
-
-Login to ECCO and clone the remote repository from the terminal.
-
-\begin{center}
-\includegraphics[width=10cm]{./auxfiles/ECCO.jpg}
-\end{center}
-
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{An ECCO Example}
-
-Now create some changes, add and commit.
-\begin{lstlisting}
-$ cd my_thesis
-$ nano conclusion.txt
-$ cat conclusion.txt
-The franchise began in 1977 with the release of the film Star Wars
-$ git add conclusion.txt
-$ git commit -m "Began conclusion.txt"
-[master ac717a9] Began conclusion.txt
- Committer: sh2258 <sh2258@ecco.vrdc.cornell.edu>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 1 file changed, 1 insertion(+)
- create mode 100644 conclusion.txt
-\end{lstlisting}
-Because I have not configured my Git settings on the ECCO server, Git has assigned me a different username.
-
-
-
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{An ECCO Example}
-Let's now push the changes to our remote repository.
-
-\begin{center}
-\includegraphics[width=5cm]{./auxfiles/ECCO2.jpg}
-\end{center}
-
-Switching back to your local copy we can then pull these changes.
-\begin{lstlisting}
-$ git pull origin master
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100\% (2/2), done.
-remote: Total 3 (delta 1), reused 3 (delta 1)
-Unpacking objects: 100\% (3/3), done.
-From https://github.com/sh2258/my_thesis
- * branch            master     -> FETCH_HEAD
-   2b1b130..ac717a9  master     -> origin/master
-Updating 2b1b130..ac717a9
-Fast-forward
- conclusion.txt | 3 +++
- 1 file changed, 3 insertions(+)
- create mode 100644 conclusion.txt
-\end{lstlisting}
-
-
-Used in this way, Git acts like a more robust Dropbox. \\
-
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{The GitHub GUI}
-There are now a number of fantastic GitHub GUIs. Let's take a quick look at the GUI created by Github itself.
-
-
-\begin{center}
-\includegraphics[width=10cm]{./auxfiles/GUI_add.jpg}
-\end{center}
-
-When we first launch the GUI we want to tell it to add our local repository from the menu.
-
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{The GitHub GUI}
-Select the repository in the left-hand menu. 
-\begin{center}
-\includegraphics[width=10cm]{./auxfiles/GUI_changes.jpg}
-\end{center}
-The right hand pane shows a range of information about that repository contained in four separate panels. The \emph{changes} panel shows the changes made within the repository which are yet to be committed. It effectively shows the same information as typing \emph{git status} in the command line. As you can see, we have nothing untracked or changed since the last commit.
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{The GitHub GUI}
-
-The history panel allows us to select each commit, and investigate what changes were made since the last commit.
-\begin{center}
-\includegraphics[width=10cm]{./auxfiles/GUI_history.jpg}
-\end{center}
-It provides the same information as the \emph{git log} and \emph{git diff} commands which we have not covered.
-
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{}
-
-Most of this material was taken from the Software Carpentry website and their excellent bootcamp. More detailed explanations of what I discuss in these notes can be found at: http://software-carpentry.org/lessons.html
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamercolor{background canvas}{bg=black}
-\begin{frame}[plain]{}
-
-
-
-\end{frame}
-\setbeamercolor{background canvas}{bg=white}
 
 %%%%%%%%%%%%%%%%%%
 
