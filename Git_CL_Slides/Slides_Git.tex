@@ -141,7 +141,7 @@ Git is one of many version control systems.
 	\item	
 	Can live on a local machine or on a remote server (GitHub, ECCO, CISER)
 	\item	
-	The act of copying a repository from a remote server is called \textcolor{blue}{\textbf{cloning}}
+	The act of copying a repository from a remote server is called cloning
 	\item	
 	Cloning from a remote server allows teams to work together
 \end{itemize}
@@ -154,7 +154,7 @@ Git is one of many version control systems.
 	\textcolor{blue}{\textbf{Push}}
 	\begin{itemize}
 		\item
-		The process of \textcolor{blue}{\textbf{adding}} your local changes to the remote repository
+		The process of uploading your local changes to the remote repository
 	\end{itemize}
 	\item 
 	\textcolor{blue}{\textbf{Pull}}
@@ -254,7 +254,7 @@ $ git help
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Create a Local Repository}
-Let's create a "myrepo" folder on your desktop and navigate to it
+Let's create a "myrepo" folder on your desktop and change your directory to it
 \begin{lstlisting}
 $ cd ~/Desktop
 $ mkdir myrepo
@@ -272,13 +272,13 @@ Initialized empty Git repository in
 \begin{frame}[fragile]{Add New File to Local Repo}
 You can use any text editor or run the \textcolor{blue}{\emph{touch}} command
 \begin{lstlisting}
-$ touch README.md
+$ touch code.do
 $ ls
-README.md
+code.do
 \end{lstlisting}
 You can edit it using the \textcolor{blue}{\emph{nano}} command
 \begin{lstlisting}
-$ nano README.md
+$ nano code.do
 \end{lstlisting}
 Type a random sentence
 \begin{lstlisting}
@@ -290,6 +290,7 @@ Press CTRL+X to exit, press Y to save the change, press ENTER to confirm the fil
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Git Status}
 
+Enter \textcolor{blue}{\emph{git status}}
 \begin{lstlisting}
 $ git status
 On branch master
@@ -299,7 +300,7 @@ No commits yet
 Untracked files:
 	(use "git add <file>..." to include in what will be committed)
 
-		README.md
+		code.do
 
 nothing added to commit but untracked files present (use "git add" to track)
 \end{lstlisting}
@@ -321,7 +322,7 @@ The output states that we are located on the master branch. The \emph{Untracked 
 \begin{frame}[fragile]{Git Add}
 We tell Git to stage untracked/modified files using \textcolor{blue}{\emph{git add}}
 \begin{lstlisting}
-$ git add README.md
+$ git add code.do
 \end{lstlisting}
 and check the status again
 \begin{lstlisting}
@@ -333,20 +334,20 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   README.md
+	new file:   code.do
 \end{lstlisting}
 
-So git knows that it needs to keep track of the file \emph{README.md} but has not yet recorded the changes. 
+So git knows that it needs to keep track of the file \emph{code.do} but has not yet recorded the changes. 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Git Commit}
 Let's \textcolor{blue}{\emph{git commit}} the added changes. 
 \begin{lstlisting}
-$ git commit -m "First draft README"
-[master (root-commit) 887d395] First draft README
+$ git commit -m "First draft code.do"
+[master (root-commit) 887d395] First draft code.do
 1 file changed, 1 insertion(+)
-create mode 100644 README.md
+create mode 100644 code.do
 \end{lstlisting}
 \begin{itemize}
 \item
@@ -411,9 +412,9 @@ Git no longer notices the auxiliary latex files.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Modifying files}
 
-Now let's edit our \emph{README.md} file and check the status again.
+Now let's edit our \emph{code.do} file and check the status again.
 \begin{lstlisting}
-$ nano introduction.txt
+$ nano code.do
 \end{lstlisting}
 \begin{lstlisting}
 This is a test.
@@ -426,7 +427,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-    modified:   README.md
+    modified:   code.do
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -436,7 +437,7 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 \end{lstlisting}
-As well as the untracked files in the previous status check, Git also tells us that \emph{README.md} has been modified.
+As well as the untracked files in the previous status check, Git also tells us that \emph{code.do} has been modified.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -445,10 +446,10 @@ As well as the untracked files in the previous status check, Git also tells us t
 Use \textcolor{blue}{\emph{git diff}} to check the change from the previous commit before we add the files
 \begin{lstlisting}
 $ git diff
-diff --git a/README.md b/README.md
+diff --git a/code.do b/code.do
 index 484ba93..067f664 100644
---- a/README.md
-+++ b/README.md
+--- a/code.do
++++ b/code.do
 @@ -1 +1,2 @@
 This is a test.
 +Let's add a second line.
@@ -458,9 +459,9 @@ This is a test.
 \begin{frame}[fragile]{Complete the Commit}
  Let's now add and commit these changes.
 \begin{lstlisting}
-$ git add README.md
+$ git add code.do
 $ git status
-$ git commit -m "New tex file and added line to README"
+$ git commit -m "New tex file and added line to code.do"
 \end{lstlisting}
 and checking the status....
 \begin{lstlisting}
@@ -492,13 +493,13 @@ This command tells git to add a remote named \emph{origin} for the repository at
 We can check that the command worked by typing
 \begin{lstlisting}[frame=single]
 $ git remote -v
-origin  https://github.com/cdlin/test\_repo.git (fetch)
-origin  https://github.com/cdlin/test\_repo.git (push)
+origin  https://github.com/cdlin/test_repo.git (fetch)
+origin  https://github.com/cdlin/test_repo.git (push)
 \end{lstlisting}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Pushing}
+\begin{frame}[fragile]{Git Push}
 We have linked our remote repository (GitHub) with our local repository. Let's push the commit from our local repository to the GitHub repository with \textcolor{blue}{\emph{git push}}
 \begin{lstlisting}
 $ git push -u origin master
@@ -534,27 +535,27 @@ We should now be able to see the basic structure of how git works. Once a direct
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Undoing a ``bad'' commit}
 
-Suppose we have made some unwanted changes to a file and committed it. For example, we didn't want the change we made to the \emph{README}.
+Suppose we have made some unwanted changes to a file and committed it. For example, we didn't want the change we made to the \emph{code.do}.
 
 \begin{lstlisting}
 $ git log --oneline
-57e91e5 (HEAD -> master, origin/master) New tex file and added line to README
-887d395 First draft README
+57e91e5 (HEAD -> master, origin/master) New tex file and added line to code.do
+887d395 First draft code.do
 \end{lstlisting}
 
 We want the version with the id 887d395. Use \textcolor{blue}{\emph{git checkout}}
 \begin{lstlisting}
-$ git checkout 887d395 README.md
-$ cat README.md
+$ git checkout 887d395 code.do
+$ cat code.do
 This is a test.
 \end{lstlisting}
 
 
-Note that we are not reversing the commit, but making a new one by replacing the README with a previous version.
+Note that we are not reversing the commit, but making a new one by replacing the code.do with a previous version.
 
 \begin{lstlisting}
-$ git commit -m "Retrieved README from previous commit"
-[master 9a664b0] Retrieved README from previous commit
+$ git commit -m "Retrieved code.do from previous commit"
+[master 9a664b0] Retrieved code.do from previous commit
 1 file changed, 1 deletion(-)
 
 $ git status
@@ -570,7 +571,7 @@ You can check your GitHub repository as well.
 
 Now suppose that we really want to eliminate all traces of a series of particularly bad commits. For example, suppose we have committed the following:
 \begin{lstlisting}
-$ nano README.md
+$ nano code.do
 \end{lstlisting}
 Type a random sentence
 \begin{lstlisting}
@@ -578,7 +579,7 @@ This is a test.
 This line will literally erase all my work.
 \end{lstlisting}
 \begin{lstlisting}
-$ git add README.md
+$ git add code.do
 $ git commit -m "Updated code"
 [master 612ff94] Updated code
 1 file changed, 1 insertion(+)
@@ -589,12 +590,12 @@ We can go back to our previous commit with \textcolor{blue}{\emph{git reset}}
 \begin{lstlisting}
 $ git log --oneline
 612ff94 (HEAD -> master) Updated code
-9a664b0 (origin/master) Retrieved README from previous commit
-57e91e5 New tex file and added line to README
-887d395 First draft README
+9a664b0 (origin/master) Retrieved code.do from previous commit
+57e91e5 New tex file and added line to code.do
+887d395 First draft code.do
 
 $ git reset --hard 9a664b0
-HEAD is now at 9a664b0 Retrieved README from previous commit
+HEAD is now at 9a664b0 Retrieved code.do from previous commit
 \end{lstlisting}
 \end{frame}
 
@@ -605,12 +606,12 @@ Note: you should never use \textcolor{blue}{\emph{git reset}} after the commits 
 
 \begin{lstlisting}
 $ git log --oneline
-9a664b0 (HEAD -> master, origin/master) Retrieved README from previous commit
-57e91e5 New tex file and added line to README
-887d395 First draft README
+9a664b0 (HEAD -> master, origin/master) Retrieved code.do from previous commit
+57e91e5 New tex file and added line to code.do
+887d395 First draft code.do
 
 $ git revert 9a664b0
-[master deba8ff] Revert "Retrieved README from previous commit"
+[master deba8ff] Revert "Retrieved code.do from previous commit"
 1 file changed, 1 insertion(+)
 \end{lstlisting}
 
@@ -629,8 +630,8 @@ See \href{https://github.com/blog/2019-how-to-undo-almost-anything-with-git}{thi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Pulling}
-We can pull changes from the remote repository (GitHub) to the local one as well:
+\begin{frame}[fragile]{Git Pull}
+We can download changes from the remote repository (GitHub) to the local one with \textcolor{blue}{\emph{git pull}}:
 
 \begin{lstlisting}
 $ git pull origin master
@@ -644,8 +645,8 @@ Pulling has no effect in this case because the two repositories are already sync
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Cloning}
-Suppose you start working on a project with an existing GitHub repository. Instead of creating a new repository here with \emph{git init}, we will \textcolor{blue}{\textbf{clone}} the existing repository from GitHub.
+\begin{frame}[fragile]{Git Clone}
+Suppose you start working on a project with an existing GitHub repository. Instead of creating a new repository here with \emph{git init}, we will \textcolor{blue}{\emph{git clone}} the existing repository from GitHub.
 \begin{lstlisting}
 $cd ../myproject2
 $ git clone https://github.com/cdlin/test_repo.git
@@ -655,13 +656,13 @@ remote: Compressing objects: 100% (5/5), done.
 remote: Total 9 (delta 0), reused 9 (delta 0), pack-reused 0
 Unpacking objects: 100% (9/9), done.
 \end{lstlisting}
-We now has two copies of the repository.
+We now has two copies of the repository on our Desktop.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Acknowledgment}
 
-This presentation follows the introduction to git by Meghan Nelson on Hubspot. The tutorial can be found at: \href{https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners}{\color{blue}{https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners}}
+This presentation follows the introduction to git by Meghan Nelson on Hubspot. Her tutorial can be found at: \href{https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners}{\color{blue}{https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%
