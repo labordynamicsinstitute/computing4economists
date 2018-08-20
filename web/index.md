@@ -112,7 +112,7 @@ Additional resources
 Past contributors
 =================
 John Abowd, Rick Mansfield, 
-    Hautahi Kingi, Flavio Stanchi, Jean-François Houde, 
+    Hautahi Kingi, Flavio Stanchi, Jean-Francois Houde, 
     Sylverie Herbert, Sida Peng,	 Kevin L. McKinney
 
 Source
