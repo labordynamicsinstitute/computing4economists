@@ -1,7 +1,7 @@
 Computational Tools for Social Scientists Workshop
 ========================================================
 transition: fade
-author: Lars Vilhuber, with  VÃ­tor Costa and many others
+author: Lars Vilhuber, with  Daniel Lin and many others
 date: 2018/8/20-2018/8/22
 
 
@@ -39,17 +39,16 @@ Setup
 ========================================================
 * [Register](https://cornell.qualtrics.com/jfe/form/SV_bvnKc03yvC4hSpn) 
 * Request an account on Econ Cluster on the [account request page](https://www.cac.cornell.edu/services/external/RequestCACid.aspx?ProjectID=lv39_0004)
-* Fill out the online survey (SOON) ( results for [2013](SurveyResults2013.pdf),  [2014](Computing_in_Economics_2014_results.pdf)  [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf))
+* Fill out the online survey (SOON) ( results for [2013](SurveyResults2013.pdf),  [2014](Computing_in_Economics_2014_results.pdf)  [2015](Computing_in_Economics_Workshop_Knowledge_2015.pdf), [2017](Computing_in_Economics_2017_results.pdf))
 
 
 Tentative Agenda - Day 1
 ========================================================
-* 9:00-9:30 Introduction (Lars) with reference to [earlier](Computing_in_Economics_Workshop_Knowledge_2015.pdf) survey results.
+* 9:00-9:30 [Introduction](intro.html) (Lars) with reference to [earlier](Computing_in_Economics_Workshop_Knowledge_2017.pdf) survey results.
 
-* 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, Reproducibility (Lars)
+* 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, [Reproducibility](https://ecommons.cornell.edu/bitstream/handle/1813/57256/Vilhuber-BuBa-Mai2018-2154-with-references.pdf?sequence=2&isAllowed=y) (Lars) ([source](http://hdl.handle.net/1813/57256))
 
-* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)), [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
-A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
+* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)). A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
 
 
 ***
@@ -63,7 +62,8 @@ Tentative Agenda - Day 2
 ========================================================
 
 * 9:00 - 9:30 [Getting access to ECCO (SSH and NX)](../documents/access-to-ecco.pdf)
-* 9:30 - 10:30 Git (Daniel) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
+* 9:30 - 11:00 [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
+ Git (Daniel) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
 
 * 11:00 - 12:00 Learning to qsub - Hello World example on ECCO (live in class)
 
@@ -108,6 +108,12 @@ Additional resources
  * Explicit parallel programming in SAS (Lars) [Example ](https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect)
  * Parallel programming in Python 
  * Introduction to Julia - parallel processing in Julia 
+
+Past contributors
+=================
+John Abowd, Rick Mansfield, 
+    Hautahi Kingi, Flavio Stanchi, Jean-François Houde, 
+    Sylverie Herbert, Sida Peng,	 Kevin L. McKinney
 
 Source
 ==========
