@@ -77,16 +77,9 @@
 % Title
 %============================================================
 
-\title[Computing for Economists]{Workshop: High-performance computing for economists}
-\author[Many authors]{%
-  Lars~Vilhuber\inst{1} \and
-  John M. Abowd\inst{1} \and
-  Richard~Mansfield\inst{1} \and
-    Hautahi~Kingi\inst{1} \and
-    Flavio~Stanchi\inst{1} \and
-    Sylverie~Herbert\inst{1} \and
-    Sida~Peng\inst{1} \and
-  Kevin~L.~McKinney %\inst{2}%
+\title[Basics of VCS]{Basics of Version Control Systems}
+\author[Vilhuber]{%
+  Lars~Vilhuber\inst{1}
 }
 
 \institute[Cornell]{
@@ -94,7 +87,7 @@
    Cornell University, Economics Department,
 %\and \inst{2} U.S. Census Bureau
 }%
-\date[August 18-21, 2014]{August 18-21, 2014: Day 2}
+\date[August 20-22, 2018]{August 20-22, 2018: Day 2}
 \subject{HPC}
 
 
@@ -228,153 +221,36 @@ There is no central server (prescribed by software). Every editor has a full cop
 
 
 \begin{frame}{Focus in this class}
-We will focus on two modern systems:
+We will focus on Git:
 \begin{itemize}
-\item Subversion (centralized) - Flavio 
-\begin{itemize}
-\item[Windows] \href{http://tortoisesvn.tigris.org/}{TortoiseSVN} (free)
-\item[OSX] \href{http://versionsapp.com/}{Versions} (\$), \href{http://developer.apple.com/xcode/}{Xcode} (free)
-\end{itemize}
+\item Subversion (centralized) - still broadly in use, but no longer supported at Cornell 
 \item Git (decentralized) - Hautahi
-\end{itemize}
-\end{frame}
-
-
-
-\subsubsection{Quickstart on subversion}
-\begin{frame}[fragile]{Quickstart on SSG/ECCO}
-The following really quick tutorial can be run on SSG or on your own computer, if you already have the software installed.\color{blue}
-\begin{lstlisting}[language=bash,numbers=none]
-ssh NETID@ssg.vrdc.cornell.edu
-Last login: Mon Aug 19 15:43:33 2013 from lv39-ws.ilr.cornell.edu
-----------------------------------------------------------------------
-Welcome to the Social Science Gateway (SSG),
-for help, send email to ssg-help@cac.cornell.edu
-----------------------------------------------------------------------
-ssg:~> svn help
-usage: svn <subcommand> [options] [args]
-Subversion command-line client, version 1.6.6.
-Type 'svn help <subcommand>' for help on a specific subcommand.
-Type 'svn --version' to see the program version and RA modules
-  or 'svn --version --quiet' to see just the version number.
-
-Most subcommands take file and/or directory arguments, recursing
-on the directories.  If no arguments are supplied to such a
-command, it recurses on the current directory (inclusive) by default.
-
-Available subcommands:
-   add
-   blame (praise, annotate, ann)
-   cat
-[snip]
-\end{lstlisting}
-\end{frame}
-
-\lstset{language=bash,numbers=none}
-\begin{frame}[fragile]{Quickstart Step 1}
-Let's create a place to work\color{blue}
-\begin{lstlisting}
-mkdir Workspace
-cd Workspace
-\end{lstlisting}
-\pause\color{black}
-Check out a version of the code:\color{blue}
-\begin{lstlisting}
-> svn co http://repository.vrdc.cornell.edu/public/test
-A    test/test.3
-A    test/test.4
-A    test/releases
-A    test/trunk
-A    test/trunk/bls
-[snip]
-A    test/test.1
-Checked out revision 23.
-> 
-\end{lstlisting}
-\small\color{black}
-\begin{description}
-\item[Checkout] 
-To \textit{check out} (or \textit{co}) is to create a local working copy from the repository. A user may specify a specific revision or obtain the latest. The term 'checkout' can also be used as a noun to describe the working copy. 
-\end{description}
-\end{frame}
-
-
-\begin{frame}[fragile]{Quickstart 2}
-Using your favorite editor, modify a file:
-\color{blue}\begin{lstlisting}
-> cd test
-> vi test.1
-\end{lstlisting}
-\pause
-\color{black}Verify the state of the repsository\color{blue}
-\begin{lstlisting}
-> svn status
-M       test.1
-\end{lstlisting}
-\pause\color{black} Let's also add a file:
-\color{blue}\begin{lstlisting}
-> vi test.today
-> svn status
-?       test.today
-M       test.1
-\end{lstlisting}
-\color{black}The question mark indicates that the file is not (yet) versioned.
-\end{frame}
-
-
-
-\begin{frame}[fragile]{Quickstart 3}
-Add the unversioned file to Subversion tracking
-\begin{lstlisting}
-> svn add  test.today
-A         test.today
-> svn status
-M       test.1
-A       test.today
-\end{lstlisting}
-\pause
-Now we can commit our changes
-\begin{lstlisting}
-> svn commit
-[editor pops up]
-Sending        test.1
-Adding         test.today
-Transmitting file data ..
-Committed revision 24.
-\end{lstlisting}
-\small
-\begin{description}
-\item[Commit] 
-To \textit{commit} (\textit{check in}, \textit{ci}) is to write or merge the changes made in the working copy back to the repository. The terms 'commit' and 'checkin' can also be used as nouns to describe the new revision that is created as a result of committing.
-\end{description}
-\end{frame}
-
-
-
-\begin{frame}{Additional things you will want to learn}
-\begin{block}{Manipulating files}
 \begin{itemize}
-\item \texttt{svn mv} (vs regular Linux mv or cut-and-paste)
-\item Reverting changes (\texttt{svn revert} before a commit, more complicated after a commit)
-\item Merging changes (\texttt{svn merge})
-\item Inspecting logs (\texttt{svn log})
-\item Identifying changes relative to previous revisions (\texttt{svn diff})
+	\item[Windows] \href{http://tortoisegit.org/}{TortoiseGit} (free)
+	\item[OSX] installed (Xcode) upon first use
+	\item[Linux] typically integrated
 \end{itemize}
-\end{block}
+with various semi-specialized graphical versions (Github client, etc.)
+\end{itemize}
 \end{frame}
 
 
-\begin{frame}{THE reference for Subversion}
+
+
+\begin{frame}{THE reference for Git}
 \begin{center}
-\includegraphics[height=0.7\textheight]{./svn-book}\newline\Large
-\href{http://svnbook.red-bean.com/}{svnbook.red-bean.com}
+\includegraphics[height=0.7\textheight]{./progit2}\newline\Large
+\href{https://git-scm.com/book/en/v2}{git-scm.com/book/en/v2}
 \end{center}
 \end{frame}
 
 
 \begin{frame}{Learning more}
-\begin{block}{A longer tutorial}
-A longer tutorial (focussing on a complex project setup) is available at \href{http://www.vrdc.cornell.edu/computing-for-economists/web/COMPUTER_Subversion_LongTutorial.pdf}{the course website}.
+\begin{block}{Numerous resources on the web}
+\begin{itemize}
+	\item \url{https://try.github.io/}
+	\item \url{https://www.atlassian.com/git/tutorials}
+\end{itemize}
 \end{block}
 \end{frame}
 
@@ -413,12 +289,6 @@ One of the key advantages of using version control systems is ... to control ver
 \includegraphics[width=.9\textwidth]{trac-svn-view4.png}
 \end{frame}
 
-\begin{frame}{Tracking using web interfaces: SVN}
-\begin{block}{Including our demo change}
-\href{http://repository.vrdc.cornell.edu/websvn/}{VRDC repository viewer}
-\end{block}
-\end{frame}
-
 
 \begin{frame}{Tracking using web interfaces: git}
 \includegraphics[width=.9\textwidth]{git-view1.png}
@@ -433,61 +303,60 @@ One of the key advantages of using version control systems is ... to control ver
 \end{frame}
 
 
-\subsection{Comparing systems}
-\begin{frame}[fragile]{Subversion vs. Git}
-\small
-incomplete
-\begin{block}{Checking out a subdirectory}
-\begin{columns}
-\begin{column}{.48\textwidth}
-\color{red}\rule{\linewidth}{4pt}
-
-SVN
-\end{column}%
-\hfill%
-\begin{column}{.48\textwidth}
-\color{blue}\rule{\linewidth}{4pt}
-
-GIT
-\end{column}%
-\end{columns}
-\begin{columns}
-\begin{column}{.48\textwidth}
-\color{red}
-\begin{lstlisting}
-svn co ${URL}/sub/directory (name)
-\end{lstlisting}
-\end{column}%
-\hfill%
-\begin{column}{.48\textwidth}
-\color{blue}\tiny
-\begin{lstlisting}
-mkdir <repo> && cd <repo>
-git init
-git remote add -f <name> <url>
-git config core.sparsecheckout  true
-echo some/dir/ >> .git/info/sparse-checkout
-echo another/sub/tree >>  .git/info/sparse-checkout
-git pull <remote> <branch>
-\end{lstlisting}
-{\tiny Source: \href{http://jasonkarns.com/blog/subdirectory-checkouts-with-git-sparse-checkout/}{here}}
-\end{column}%
-
-\end{columns}
-\end{block}
-\end{frame}
+%\subsection{Comparing systems}
+%\begin{frame}[fragile]{Subversion vs. Git}
+%\small
+%incomplete
+%\begin{block}{Checking out a subdirectory}
+%\begin{columns}
+%\begin{column}{.48\textwidth}
+%\color{red}\rule{\linewidth}{4pt}
+%
+%SVN
+%\end{column}%
+%\hfill%
+%\begin{column}{.48\textwidth}
+%\color{blue}\rule{\linewidth}{4pt}
+%
+%GIT
+%\end{column}%
+%\end{columns}
+%\begin{columns}
+%\begin{column}{.48\textwidth}
+%\color{red}
+%\begin{lstlisting}
+%svn co ${URL}/sub/directory (name)
+%\end{lstlisting}
+%\end{column}%
+%\hfill%
+%\begin{column}{.48\textwidth}
+%\color{blue}\tiny
+%\begin{lstlisting}
+%mkdir <repo> && cd <repo>
+%git init
+%git remote add -f <name> <url>
+%git config core.sparsecheckout  true
+%echo some/dir/ >> .git/info/sparse-checkout
+%echo another/sub/tree >>  .git/info/sparse-checkout
+%git pull <remote> <branch>
+%\end{lstlisting}
+%{\tiny Source: \href{http://jasonkarns.com/blog/subdirectory-checkouts-with-git-sparse-checkout/}{here}}
+%\end{column}%
+%
+%\end{columns}
+%\end{block}
+%\end{frame}
 
 
 \begin{frame}{VCS infrastructure}
 \begin{block}{At Cornell}
-\href{https://forge.cornell.edu/sf/sfmain/do/home}{Cornell Sourceforge} (see \href{http://www.it.cornell.edu/services/subversion/howto/create.cfm}{instructions on how to create})
+\href{https://forge.cornell.edu/sf/sfmain/do/home}{Cornell Sourceforge} (obsolete as of Sept 30, 2018)
 \end{block}
 \begin{block}{Elsewhere}
 \begin{itemize}
-\item \href{http://app.cloudforge.com}{CloudForge} (free for personal use)
-\item \href{https://github.com/plans}{GitHub} (Git, subversion, free for open-source)
+\item \href{https://github.com/plans}{GitHub} (Git, subversion, free for open-source and academic users)
 \item \href{http://bitbucket.org/}{BitBucket} (Git, no subversion, free for academic users)
-\item Roll your own: very simple webserver setup for Subversion, no server required for Git on your PC
+\item Roll your own: no server required for Git on your PC
 \end{itemize}
 \end{block}
 \end{frame}
