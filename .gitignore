@@ -12,3 +12,4 @@ documents/*.vrb
 *bak
 .Rhistory
 .Rproj.user
+.DS_Store
