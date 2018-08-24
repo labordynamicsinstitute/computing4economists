@@ -55,7 +55,9 @@ Tentative Agenda - Day 1
 
 * 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
 
-* 13:00-16:00: [CodeOcean](https://codeocean.com/workshop/cornell-university) Workshop-within-Workshop (April Clyburne-Sherin, CodeOcean), see [flyer](../external/Cornell Workshop QR Bitly.pdf)
+* 13:00-16:00: [CodeOcean](https://codeocean.com/workshop/cornell-university) Workshop-within-Workshop (April Clyburne-Sherin, CodeOcean)
+  * [Flyer](../external/Cornell Workshop QR Bitly.pdf)
+  * [Slides](https://shorturl.at/axBN6)
 
 
 Tentative Agenda - Day 2
@@ -67,7 +69,6 @@ Tentative Agenda - Day 2
 
 * 11:00 - 12:00 Learning to qsub - Hello World example on ECCO (live in class)
 
-* 10:45-12:00 
 
 ***
 
@@ -83,12 +84,14 @@ Tentative Agenda - Day 2
 Tentative Agenda - Day 3 (optional)
 ========================================================
 
-* 9:00-11:00 How to use ECCO2 (Economics) (Jarek Pillardy)
+* 9:00-11:00 How to use ECCO2/BioHPC (Economics) (Jarek Pillardy)
+  * [Presentation](http://cbsu.tc.cornell.edu/lab/doc/Introduction_to_BioHPC_Lab_ECCO.pdf)
+  * [BioHPC User Guide](https://cbsu.tc.cornell.edu/lab/userguide.aspx)
 * 11:00-12:00  Try it out
 
 ***
 
-* 13:00 - 16:00 Setting up a compute cluster on Amazon cloud (Paul Allen)
+* 13:00 - 16:00 [Working with Amazon Cloud services at Cornell](http://bit.ly/cu-aws-2018-08-22) (Paul Allen)
 * 16:00 Workshop ends
 
 Additional resources
@@ -100,9 +103,9 @@ Additional resources
  * Assessing time and memory usage in R: [a nice brief tutorial](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/) *(but with the conclusion to use Matlab...)*
  * Learning how to use doParallel in R: [doParallel vignette](http://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
 
-Additional resources
+Additional older resources
 ===============================
-
+These may be out-of-date:
  * [A practical example: Big Data Matlab programming](../documents/Matlab%20Big%20Data%20Techniques.pdf)
  * [Leveraging parallel programming techniques in Matlab](../Matlab/peng-matlabparallel.pdf)
  * Explicit parallel programming in SAS (Lars) [Example ](https://github.com/labordynamicsinstitute/code-fragments/tree/master/sas/mpconnect)
