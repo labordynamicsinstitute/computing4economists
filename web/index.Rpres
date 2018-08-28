@@ -107,6 +107,7 @@ Additional resources
  * [Code and Data](http://faculty.chicagobooth.edu/jesse.shapiro/research/CodeAndData.pdf)
  * Assessing time and memory usage in R: [a nice brief tutorial](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/) *(but with the conclusion to use Matlab...)*
  * Learning how to use doParallel in R: [doParallel vignette](http://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
+ * [A critique of Jupyter notebooks](https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/)
 
 Additional older resources
 ===============================
