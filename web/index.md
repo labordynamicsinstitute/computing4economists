@@ -9,7 +9,8 @@ date: 2019/8/26-2019/8/28
 **Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
 
 
-**[Registration] coming**
+
+**[Registration](https://cornell.qualtrics.com/jfe/form/SV_8jkv41h8aPaWSJn)**
 _|_
 [Goals](#/1)  _|_ **[Requirements](#/2)**
 
@@ -34,6 +35,57 @@ Requirements
 -------------
 * Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss) - the specific languange is not important.
 * Bring your laptop to class!
+
+Setup
+========================================================
+* [Register](https://cornell.qualtrics.com/jfe/form/SV_8jkv41h8aPaWSJn) 
+* Request an account on Econ Cluster on the [BioHPC account request page](https://biohpc.cornell.edu/NewUserRequest.aspx) (add to Comment "Econ Grad Student")
+
+
+Tentative Agenda - Day 1
+========================================================
+* 9:00-9:30 Introduction (Lars)
+
+* 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, [Reproducibility](https://ecommons.cornell.edu/bitstream/handle/1813/57256/Vilhuber-BuBa-Mai2018-2154-with-references.pdf?sequence=2&isAllowed=y) (Lars) ([source](http://hdl.handle.net/1813/57256))
+
+* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)). A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
+
+
+***
+
+* 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
+
+* 13:00-16:00 CISER/ [R-Squared](https://ciser.cornell.edu/research/results-reproduction-r-squared-service/) replication training
+
+Tentative Agenda - Day 2
+========================================================
+
+* 9:00-11:00 How to use ECCO2/BioHPC (Economics) (Jarek Pillardy)
+  * [Presentation](http://cbsu.tc.cornell.edu/lab/doc/Introduction_to_BioHPC_Lab_ECCO.pdf)
+  * [BioHPC User Guide](https://cbsu.tc.cornell.edu/lab/userguide.aspx)
+  
+* 11:00 - 12:00 [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
+ Git (David) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
+
+* 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
+
+
+***
+
+* 13:00 - 14:00 Follow-up on Version Control
+* 14:00 - 16:00 [Introduction to parallel processing](../web/day2-3.html) (Lars) 
+  * Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
+  * Putting it into practice: Trying out parallel processing
+
+
+Tentative Agenda - Day 3 (optional)
+========================================================
+
+* 9:00-12:00 Optional themes:
+  * New programming languages: Julia and parallel processing
+  * Automating processing in the cloud (Docker, etc.)
+  * Setting up an Amazon cluster (basics of cluster computing)
+  * Others.
 
 
 Past contributors
