@@ -38,7 +38,7 @@ Defining high-performance computing
   - CPUs (4 cores -> 1000s? millions?)
   - storage (200kB -> 200TB?)
   
-Solutions for high-performance conputing
+Solutions for high-performance computing
 ========================================
 - have a LAN Party
 - buy a bigger laptop
@@ -67,29 +67,16 @@ Scalability
 ========================================================
 Processing times for perfectly (or "embarassingly") parallelizable problems scale linearly: 
 ***
-![plot of chunk unnamed-chunk-1](intro-figure/unnamed-chunk-1-1.png)
-Scalability
-========================================================
-However, some problems scale quadratically:
-***
-![plot of chunk unnamed-chunk-2](intro-figure/unnamed-chunk-2-1.png)
-Scalability
-========================================================
-So the trick is to find solutions that scale with less than quadratic increases, such as $X\sqrt(X)$:
-***
-
-![plot of chunk unnamed-chunk-3](intro-figure/unnamed-chunk-3-1.png)
-Scalability
-========================================================
-The reason is obvious when you let this run for large numbers (precisely where this becomes salient):
-***
-![plot of chunk unnamed-chunk-4](intro-figure/unnamed-chunk-4-1.png)
 
 
-Summary
-=======
-- Reproducibility and High-performance computing have a lot of overlap
-- we will discuss elements of both over the next three days
 
-***
-![plot of chunk unnamed-chunk-5](intro-figure/unnamed-chunk-5-1.png)
+
+
+
+
+
+
+
+```
+Error in library(latex2exp) : there is no package called 'latex2exp'
+```
