@@ -48,9 +48,12 @@ Tentative Agenda - Day 1
 ========================================================
 * 9:00-9:30 Introduction (Lars)
 
-* 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, [Reproducibility](https://ecommons.cornell.edu/bitstream/handle/1813/57256/Vilhuber-BuBa-Mai2018-2154-with-references.pdf?sequence=2&isAllowed=y) (Lars) ([source](http://hdl.handle.net/1813/57256))
+* 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, [Reproducibility](http://doi.org/10.5281/zenodo.2621959) (Lars) ([source](https://github.com/labordynamicsinstitute/replicability-presentation2019/tree/v20190328b))
 
-* 10:30-12:00 [Basics](../documents/hp-basics.pdf) (Lars),   The command line ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)). A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
+* 10:30 - 12:00  [Basics](../documents/hp-basics.pdf) (Lars),   The [command line](https://github.com/labordynamicsinstitute/computing4economists/blob/master/Git_CL_Slides/intro_command_line.md) ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)). [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
+ Git  [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
+ 
+ A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
 
 
 ***
@@ -66,15 +69,14 @@ Tentative Agenda - Day 2
   * [Presentation](http://cbsu.tc.cornell.edu/lab/doc/Introduction_to_BioHPC_Lab_ECCO.pdf)
   * [BioHPC User Guide](https://cbsu.tc.cornell.edu/lab/userguide.aspx)
   
-* 11:00 - 12:00 [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
- Git (David) [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
+* 11:00- 12:00 Data: the iceberg in science. Citing data, managing data, curating data.
 
-* 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
+* 12:00-13:00 Lunchtime chat on **Reproducibility in Economics** with the AEA Data Editor (=Lars)
 
 
 ***
 
-* 13:00 - 14:00 Follow-up on Version Control
+* 13:00 - 14:00 Continuation of data curation
 * 14:00 - 16:00 [Introduction to parallel processing](../web/day2-3.html) (Lars) 
   * Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
   * Putting it into practice: Trying out parallel processing
