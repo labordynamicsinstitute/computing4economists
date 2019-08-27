@@ -48,17 +48,25 @@ Tentative Agenda - Day 1
 
 * 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, [Reproducibility](http://doi.org/10.5281/zenodo.2621959) (Lars) ([source](https://github.com/labordynamicsinstitute/replicability-presentation2019/tree/v20190328b))
 
-* 10:30 - 12:00  [Basics](../documents/hp-basics.pdf) (Lars),   The [command line](https://github.com/labordynamicsinstitute/computing4economists/blob/master/Git_CL_Slides/intro_command_line.md) ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)). [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
- [Getting started with Git](https://github.com/labordynamicsinstitute/replicability-training/blob/master/Fall%202019/Basics_of_Git.md), [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf).
+* 10:30 - 11:00  [Basics](../documents/hp-basics.pdf) (Lars),   The [command line](https://github.com/labordynamicsinstitute/computing4economists/blob/master/Git_CL_Slides/intro_command_line.md) ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)). 
+
+*** 
+
+* 11:00 - 12:00 [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
+ [Getting started with Git](https://github.com/labordynamicsinstitute/replicability-training/blob/master/Fall%202019/Basics_of_Git.md), [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf), [tutorial](https://git-scm.com/docs/gittutorial).
  
  A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
 
 
 ***
 
+Tentative Agenda - Day 1
+========================================================
 * 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
 
-* 13:00-16:00 CISER/ [R-Squared](https://ciser.cornell.edu/research/results-reproduction-r-squared-service/) replication training
+* 13:00-16:00 CISER/ [R-Squared](https://ciser.cornell.edu/research/results-reproduction-r-squared-service/) replication training ([slides and materials](https://github.com/danrkalexander/ReproductionWorkshop))
+
+***
 
 Tentative Agenda - Day 2
 ========================================================
