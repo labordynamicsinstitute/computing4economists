@@ -6,7 +6,14 @@ println(" Hello I am here" )
 #  - 1 for each of the child processes already started by julia
 #       on each  node specified in the machinefile
 using Distributed
-addprocs(70)
+addprocs(20)
 println(workers())
+
+@everywhere include_string(Main, $(read("count_heads.jl", String)), "count_heads.jl")
+a = @spawnat :any count_heads(100000000)
+b = @spawnat :any count_heads(100000000)
+fetch(a)+fetch(b)
+
+
 println(" Hello I am done" )
 
