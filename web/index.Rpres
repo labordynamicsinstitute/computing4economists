@@ -2,11 +2,11 @@ Computational Tools for Social Scientists Workshop
 ========================================================
 transition: fade
 author: Lars Vilhuber and some others
-date: 2019/8/26-2019/8/28
+date: 2020/8/24-2019/8/27
 
 
-**Location**: *Ives 111*  _|_
-**Time**: *9:00 - 4:00 p.m.* (we will typically end earlier)
+**Location**: *Online*  _|_
+**Time**: *2:00 - 6:00 p.m.* (some days will end earlier)
 ```{r setup,echo=FALSE,include=FALSE}
 regURL <- "https://cornell.qualtrics.com/jfe/form/SV_8jkv41h8aPaWSJn"
 ```
@@ -20,14 +20,16 @@ Goal
 ========================================================
 The goal of this workshop is to showcase computer-oriented techniques and tools for social science students, from basic command line tools on Linux and Mac to version control to optimization and parallelization techniques for high-performance computing, with reproducible methods training thrown in for good measure. The goal is NOT to teach a full
 course on SAS, Stata, Matlab, R, Python, MPI, Fortran, etc. - there are other classes for that. We will teach just enough of each programming language to
-be able to highlight additional techniques. There will be hands-on training on a few systems, such as CodeOcean and the new Econ cluster (for economics students). 
+be able to highlight additional techniques. There will be hands-on training on a few systems (TBD). 
  This workshop is designed to open your eyes to the possibilities, scratching
 the surface, but mostly not diving into any particular depths. Follow-on short courses may solve those needs. For
 specific programming languages, we point to offerings elsewhere on campus, for instance at [CISER](http://www.ciser.cornell.edu). [more](#/2)
 
 ===
 
-We highlight that this is a workshop - we will work on problems as a group, drawing on expertise in the room as needed. If you have a specific question, and want to work on it, we may do so. If you want to primarily listen, that's fine too.
+We highlight that this is a workshop - we will work on problems as a group, drawing on expertise in the "room" as needed. If you have a specific question, and want to work on it, we may do so. If you want to primarily listen, that's fine too.
+
+Some parts of the workshop will be asynchronous (pre-recorded), but a significant portion will be live. You should expect to do some exercises each day, but none are required.
 
 Target group
 ------------
@@ -36,69 +38,71 @@ Second year Ph.D. and higher, and faculty, in Economics or other social sciences
 Requirements
 -------------
 * Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Gauss) - the specific languange is not important.
-* Bring your laptop to class!
+* An interest in computational social science
 
 Setup
 ========================================================
 * [Register](`r regURL`) 
-* Request an account on Econ Cluster on the [BioHPC account request page](https://biohpc.cornell.edu/NewUserRequest.aspx) (add to Comment "Econ Grad Student")
+* (optional) Request an account on Econ Cluster on the [BioHPC account request page](https://biohpc.cornell.edu/NewUserRequest.aspx) (add to Comment "Econ Grad Student")
+* Various software will be installed as part of the class, as part of a standard toolkit.
 
 
-Tentative Agenda - Day 1
-========================================================
-* 9:00-9:30 [Introduction](intro.html) (Lars)
-
-* 9:30-10:15 Motivation: Thinking beyond the laptop in front of you, [Reproducibility](http://doi.org/10.5281/zenodo.2621959) (Lars) ([source](https://github.com/labordynamicsinstitute/replicability-presentation2019/tree/v20190328b))
-
-* 10:30 - 11:00  [Basics](../documents/hp-basics.pdf) (Lars),   The [command line](https://github.com/labordynamicsinstitute/computing4economists/blob/master/Git_CL_Slides/intro_command_line.md) ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)). 
-
-*** 
-
-* 11:00 - 12:00 [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
- [Getting started with Git](https://github.com/labordynamicsinstitute/replicability-training/blob/master/Fall%202019/Basics_of_Git.md), [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf), [tutorial](https://git-scm.com/docs/gittutorial).
- 
- A good overview over the basics is [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
-
-
-***
+Tentative Agenda - Prior to Day 1
+=================================
+* [Installation checklist](coming-soon.html) - useful software to have
+* Watch Lars' [talk on replicability and reproducibility](https://www.youtube.com/watch?v=rLoeNzOApFk)
+* Learn about the [command line](https://github.com/labordynamicsinstitute/computing4economists/blob/master/Git_CL_Slides/intro_command_line.md) ([lecture notes](../Git_CL_Slides/Slides_CommandLine.pdf)), version control (links coming)
 
 Tentative Agenda - Day 1
 ========================================================
-* 12:00-13:00 Lunch break. Take the opportunity to set yourself on Github.
+* 2:00 - 2:20 PM [Introduction](intro.html) (Lars)
+* 2:20 - 3:30 PM Motivation
+  - Thinking beyond the laptop in front of you, 
+  - [Reproducibility](http://doi.org/10.5281/zenodo.2621959) (Lars) ([source](https://github.com/labordynamicsinstitute/replicability-presentation2019/tree/v20190328b)), also read [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
+  - Academic principles of attribution, proper [data citation](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html), data management and hygiene
+* 3:40 - 4:50 PM A reproducible report with Markdown, Stata, and R (using Rstudio)
+* 5:00 - 5:50 PM A reproducible report with Jupyter and Julia
 
-* 13:00-16:00 CISER/ [R-Squared](https://ciser.cornell.edu/research/results-reproduction-r-squared-service/) replication training ([slides and materials](https://github.com/danrkalexander/ReproductionWorkshop))
-
-***
+Homework - Day 1
+================
+- Read an economics article (> 1 year old) and attempt to fill in the missing data citations
+- try out the Markdown report yourself 
+- try out the Jupyter report yourself
+- try out the Stata reproducible report (not covered in class)
 
 Tentative Agenda - Day 2
+========================
+* 2:00 - 2:30 PM Follow-up from previous day
+* 3:00 - 3:50 PM A prototypical replication report
+  - what happens when somebody wants to check reproducibility - the [example of the LDI Replication Lab](https://labordynamicsinstitute.github.io/replicability-training/TrainingCurriculum/Details_Replication_Report.html) (AEA Data Editor)
+* 4:00 - 5:00 PM (free time - you could pop in to our undergraduate training)
+* 5:00 - 6:00 PM [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
+ [Getting started with Git](https://github.com/labordynamicsinstitute/replicability-training/blob/master/Fall%202019/Basics_of_Git.md), [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf), [tutorial](https://git-scm.com/docs/gittutorial). 
+
+Homework - Day 2
+================
+- Get comfortable with version control
+  - create a file, version a file, delete a file, recover a previous file, branch, merge a branch
+ 
+
+Tentative Agenda - Day 3
 ========================================================
 
-* 9:00-11:00 How to use ECCO2/BioHPC (Economics) (Jarek Pillardy)
-  * [Presentation](http://cbsu.tc.cornell.edu/lab/doc/Introduction_to_BioHPC_Lab_ECCO.pdf)
-  * [BioHPC User Guide](https://cbsu.tc.cornell.edu/lab/userguide.aspx)
-  
-* 11:00- 12:00 Data: the iceberg in science. Citing data, managing data, curating data.
-
-* 12:00-13:00 Lunchtime chat on **Reproducibility in Economics** with the AEA Data Editor (=Lars)
-
-
-***
-
-* 13:00 - 14:00 Continuation of data curation
-* 14:00 - 16:00 [Introduction to parallel processing](../web/day2-3.html) (Lars) 
+* 12:00 - 1:00 PM Lunchtime chat on **Reproducibility in Economics** with the AEA Data Editor (=Lars)
+* 2:00 - 2:50 [Introduction to parallel processing](../web/day2-3.html) (Lars) 
   * Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
-  * Putting it into practice: Trying out parallel processing
+* 3:00 - 3:50 Hands-on (R, Julia, Stata)
+* 4:00 - 4:50  [High performance computing basics](../documents/hp-basics.pdf), parallel processing
 
 
-Tentative Agenda - Day 3 (optional)
+Tentative Agenda - Day 4 (optional)
 ========================================================
 
-* 9:00-12:00 Optional themes:
-  * New programming languages: Julia and parallel processing
+* 2:00-4:50 Optional themes:
+  * VM machines, containers: why?
   * Automating processing in the cloud (Docker, etc.)
   * Setting up an Amazon cluster (basics of cluster computing)
-  * Others.
-
+  
 
 Past contributors
 =================
