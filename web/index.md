@@ -2,7 +2,7 @@ Computational Tools for Social Scientists Workshop
 ========================================================
 transition: fade
 author: Lars Vilhuber and some others
-date: 2020/8/24-2019/8/27
+date: 2020/8/24-2020/8/27
 
 
 **Location**: *Online*  _|_
@@ -10,7 +10,7 @@ date: 2020/8/24-2019/8/27
 
 
 
-**[Registration](https://cornell.qualtrics.com/jfe/form/SV_8jkv41h8aPaWSJn)**
+**[Registration](https://cornell.qualtrics.com/jfe/form/SV_3qKmBhfeWXAuT2J)**
 _|_
 [Goals](#/1)  _|_ **[Requirements](#/2)**
 
@@ -40,7 +40,7 @@ Requirements
 
 Setup
 ========================================================
-* [Register](https://cornell.qualtrics.com/jfe/form/SV_8jkv41h8aPaWSJn) 
+* [Register](https://cornell.qualtrics.com/jfe/form/SV_3qKmBhfeWXAuT2J) 
 * (optional) Request an account on Econ Cluster on the [BioHPC account request page](https://biohpc.cornell.edu/NewUserRequest.aspx) (add to Comment "Econ Grad Student")
 * Various software will be installed as part of the class, as part of a standard toolkit.
 
