@@ -59,7 +59,7 @@ Tentative Agenda - Day 1
   - [Reproducibility](http://doi.org/10.5281/zenodo.2621959) (Lars) ([source](https://github.com/labordynamicsinstitute/replicability-presentation2019/tree/v20190328b)), also read [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
   - Academic principles of attribution, proper [data citation](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html), data management and hygiene
 * 3:40 - 4:50 PM A reproducible report with Markdown, Stata, and R (using Rstudio)
-* 5:00 - 5:50 PM A reproducible report with Jupyter and Julia
+* 5:00 - 5:50 PM A reproducible report with Jupyter and Julia (*Ivan Rudik*)
 
 Homework - Day 1
 ================
@@ -89,7 +89,7 @@ Tentative Agenda - Day 3
 * 12:00 - 1:00 PM Lunchtime chat on **Reproducibility in Economics** with the AEA Data Editor (=Lars)
 * 2:00 - 2:50 [Introduction to parallel processing](../web/day2-3.html) (Lars) 
   * Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
-* 3:00 - 3:50 Hands-on (R, Julia, Stata)
+* 3:00 - 3:50 Hands-on (R, Julia, Stata) (with *Ivan Rudik*)
 * 4:00 - 4:50  [High performance computing basics](../documents/hp-basics.pdf), parallel processing
 
 
