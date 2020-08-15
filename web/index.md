@@ -87,11 +87,10 @@ Tentative Agenda - Day 3
 ========================================================
 
 * 12:00 - 1:00 PM Lunchtime chat on **Reproducibility in Economics** with the AEA Data Editor (=Lars)
-* 2:00 - 2:50 [Introduction to parallel processing](../web/day2-3.html) (Lars) 
-  * Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
-* 3:00 - 3:50 Hands-on (R, Julia, Stata) (with *Ivan Rudik*)
-* 4:00 - 4:50  [High performance computing basics](../documents/hp-basics.pdf), parallel processing
-
+* 2:00 - 4:50 [Introduction to parallel processing](../web/day2-3.html) (Lars, *Ivan Rudik*) (with breaks)
+  - Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
+  -  [High performance computing basics](../documents/hp-basics.pdf), parallel processing
+  -  Hands-on (R, Julia, Stata) (with *Ivan Rudik*)
 
 Tentative Agenda - Day 4 (optional)
 ========================================================
