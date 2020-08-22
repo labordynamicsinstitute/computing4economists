@@ -5,7 +5,8 @@ author: Lars Vilhuber and some others
 date: 2020/8/24-2020/8/27
 
 
-**Location**: *Online*  _|_
+**Location**: *[Online](https://cornell.zoom.us/join)* Meeting ID: ![Zoom meeting](zoom-number.png) 
+
 **Time**: *2:00 - 6:00 p.m.* (some days will end earlier)
 
 
