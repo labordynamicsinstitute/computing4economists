@@ -59,6 +59,7 @@ Tentative Agenda - Day 1
   - Thinking beyond the laptop in front of you, 
   - [Reproducibility](http://doi.org/10.5281/zenodo.2621959) (Lars) ([source](https://github.com/labordynamicsinstitute/replicability-presentation2019/tree/v20190328b)), also read [arxiv:1609.00037](https://arxiv.org/pdf/1609.00037.pdf)
   - Academic principles of attribution, proper [data citation](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html), data management and hygiene
+  - Computing tools at Cornell
 * 3:40 - 4:50 PM A reproducible report with Markdown, Stata, and R (using Rstudio)
 * 5:00 - 5:50 PM A reproducible report with Jupyter and Julia (*Ivan Rudik*)
 
@@ -89,8 +90,10 @@ Tentative Agenda - Day 3
 
 * 12:00 - 1:00 PM Lunchtime chat on **Reproducibility in Economics** with the AEA Data Editor (=Lars)
 * 2:00 - 4:50 [Introduction to parallel processing](../web/day2-3.html) (Lars, *Ivan Rudik*) (with breaks)
+  - Computing resources at Cornell and elsewhere ([BioHPC for economists](https://biohpc.cornell.edu/lab/ecco.htm), CISER, RedCloud, Amazon)
   - Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
   -  [High performance computing basics](../documents/hp-basics.pdf), parallel processing
+  - [Specific tools on BioHPC](https://biohpc.cornell.edu/lab/doc/using_BioHPC_CPUs.pdf)
   -  Hands-on (R, Julia, Stata) (with *Ivan Rudik*)
 
 Tentative Agenda - Day 4 (optional)
