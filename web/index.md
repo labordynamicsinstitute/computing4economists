@@ -94,7 +94,7 @@ Tentative Agenda - Day 3
   - Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines.pdf)
   -  [High performance computing basics](../documents/hp-basics.pdf), parallel processing
   - [Specific tools on BioHPC](https://biohpc.cornell.edu/lab/doc/using_BioHPC_CPUs.pdf)
-  -  Hands-on (R, Julia, Stata) (with *Ivan Rudik*)
+  -  Hands-on (R, Julia, Stata) (with *Ivan Rudik*) ([Ivan's Github](https://github.com/irudik/computational-tools-workshop))
 
 Tentative Agenda - Day 4 (optional)
 ========================================================
