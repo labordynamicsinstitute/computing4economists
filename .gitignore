@@ -13,3 +13,4 @@ documents/*.vrb
 .Rhistory
 .Rproj.user
 .DS_Store
+.libs
