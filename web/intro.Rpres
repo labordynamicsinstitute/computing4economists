@@ -2,12 +2,22 @@ Intro
 ========================================================
 transition: fade
 author: Lars Vilhuber
-date: 2018-08-20
+date: `r format(Sys.Date(), '%Y-%m-%d')`
 autosize: true
+width: 1440
 
-Reproducible [high-performance] computing in social science research
+Computing in social science research
 ========================================================
 
+```{r setup,include=FALSE}
+# this works best if this chunk is run manually first, but should work generally as well.
+source(file.path(rprojroot::find_root(rprojroot::has_file("pathconfig.R")),"pathconfig.R"),echo=TRUE)
+source(file.path(programs,"config.R"), echo=FALSE)
+local.libraries <- c("latex2exp","venneuler")
+
+results <- sapply(as.list(local.libraries), pkgTest)
+
+```
 
 High performance
 ----
@@ -23,13 +33,18 @@ Defining reproducibility
 ========================
 = replicable/ robust/ transparent/ generalizable
 
+![Replicability](replicability.png)
+
+Defining reproducibility
+========================
+= replicable/ robust/ transparent/ generalizable
+
 - A formal definition 
 - For now: __Robustness__
   - can run anywhere
   - can run without manual intervention
   - can run without deep knowledge of what is happening
   - has everything that is needed to run
-
 
 Defining high-performance computing
 ===================================

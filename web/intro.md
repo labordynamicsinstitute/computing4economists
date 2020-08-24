@@ -2,11 +2,13 @@ Intro
 ========================================================
 transition: fade
 author: Lars Vilhuber
-date: 2018-08-20
+date: 2020-08-24
 autosize: true
+width: 1440
 
-Reproducible [high-performance] computing in social science research
+Computing in social science research
 ========================================================
+
 
 
 High performance
@@ -23,13 +25,18 @@ Defining reproducibility
 ========================
 = replicable/ robust/ transparent/ generalizable
 
+![Replicability](replicability.png)
+
+Defining reproducibility
+========================
+= replicable/ robust/ transparent/ generalizable
+
 - A formal definition 
 - For now: __Robustness__
   - can run anywhere
   - can run without manual intervention
   - can run without deep knowledge of what is happening
   - has everything that is needed to run
-
 
 Defining high-performance computing
 ===================================
@@ -67,16 +74,29 @@ Scalability
 ========================================================
 Processing times for perfectly (or "embarassingly") parallelizable problems scale linearly: 
 ***
+![plot of chunk unnamed-chunk-1](intro-figure/unnamed-chunk-1-1.png)
+Scalability
+========================================================
+However, some problems scale quadratically:
+***
+![plot of chunk unnamed-chunk-2](intro-figure/unnamed-chunk-2-1.png)
+Scalability
+========================================================
+So the trick is to find solutions that scale with less than quadratic increases, such as $X\sqrt(X)$:
+***
+
+![plot of chunk unnamed-chunk-3](intro-figure/unnamed-chunk-3-1.png)
+Scalability
+========================================================
+The reason is obvious when you let this run for large numbers (precisely where this becomes salient):
+***
+![plot of chunk unnamed-chunk-4](intro-figure/unnamed-chunk-4-1.png)
 
 
+Summary
+=======
+- Reproducibility and High-performance computing have a lot of overlap
+- we will discuss elements of both over the next three days
 
-
-
-
-
-
-
-
-```
-Error in library(latex2exp) : there is no package called 'latex2exp'
-```
+***
+![plot of chunk unnamed-chunk-5](intro-figure/unnamed-chunk-5-1.png)
