@@ -15,6 +15,8 @@ results <- sapply(as.list(local.libraries), pkgTest)
 
 ```
 
+> The source document can be found [here](https://github.com/labordynamicsinstitute/computing4economists/blob/master/web/rmarkdown-tutorial.Rmd).
+
 ## Introduction
 
 This is meant as a really quick overview of RMarkdown, and "dynamic documents" in general.
