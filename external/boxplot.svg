@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 16.1 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="5.50in" height="4.00in" viewBox="0 0 3960 2880" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - Graph</desc>
+	<rect x="0" y="0" width="3960" height="2880" style="fill:#EAF2F3;stroke:none"/>
+	<rect x="0.00" y="0.00" width="3959.88" height="2880.00" style="fill:#EAF2F3"/>
+	<rect x="2.88" y="2.88" width="3954.12" height="2874.24" style="fill:none;stroke:#EAF2F3;stroke-width:5.76"/>
+	<rect x="390.80" y="100.86" width="3468.22" height="2518.39" style="fill:#FFFFFF"/>
+	<rect x="393.68" y="103.74" width="3462.46" height="2512.63" style="fill:none;stroke:#FFFFFF;stroke-width:5.76"/>
+	<line x1="390.80" y1="2518.39" x2="3859.02" y2="2518.39" style="stroke:#EAF2F3;stroke-width:8.64"/>
+	<line x1="390.80" y1="1771.04" x2="3859.02" y2="1771.04" style="stroke:#EAF2F3;stroke-width:8.64"/>
+	<line x1="390.80" y1="1023.69" x2="3859.02" y2="1023.69" style="stroke:#EAF2F3;stroke-width:8.64"/>
+	<line x1="390.80" y1="276.34" x2="3859.02" y2="276.34" style="stroke:#EAF2F3;stroke-width:8.64"/>
+	<rect x="683.72" y="1621.55" width="960.80" height="411.11" style="fill:#8DA3B7"/>
+	<rect x="688.04" y="1625.87" width="952.16" height="402.47" style="fill:none;stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="683.72" y1="1845.79" x2="1644.51" y2="1845.79" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="1164.12" y1="2032.66" x2="1164.12" y2="2368.90" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="1164.12" y1="1621.55" x2="1164.12" y2="1023.69" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="842.24" y1="2368.90" x2="1485.99" y2="2368.90" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="842.24" y1="1023.69" x2="1485.99" y2="1023.69" style="stroke:#1A476F;stroke-width:8.64"/>
+	<rect x="2605.31" y="1173.19" width="960.80" height="523.11" style="fill:#8DA3B7"/>
+	<rect x="2609.63" y="1177.51" width="952.16" height="514.47" style="fill:none;stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="2605.31" y1="1434.68" x2="3566.10" y2="1434.68" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="3085.71" y1="1696.29" x2="3085.71" y2="2219.40" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="3085.71" y1="1173.19" x2="3085.71" y2="649.96" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="2763.83" y1="2219.40" x2="3407.58" y2="2219.40" style="stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="2763.83" y1="649.96" x2="3407.58" y2="649.96" style="stroke:#1A476F;stroke-width:8.64"/>
+	<circle cx="1164.12" cy="724.70" r="26.35" style="fill:#1A476F"/>
+	<circle cx="1164.12" cy="724.70" r="22.03" style="fill:none;stroke:#1A476F;stroke-width:8.64"/>
+	<circle cx="3085.71" cy="201.60" r="26.35" style="fill:#1A476F"/>
+	<circle cx="3085.71" cy="201.60" r="22.03" style="fill:none;stroke:#1A476F;stroke-width:8.64"/>
+	<line x1="390.80" y1="2619.25" x2="390.80" y2="100.86" style="stroke:#000000;stroke-width:5.76"/>
+	<line x1="390.80" y1="2518.39" x2="350.83" y2="2518.39" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="2518.39" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,2518.39)" text-anchor="middle">10</text>
+	<line x1="390.80" y1="1771.04" x2="350.83" y2="1771.04" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="1771.04" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,1771.04)" text-anchor="middle">20</text>
+	<line x1="390.80" y1="1023.69" x2="350.83" y2="1023.69" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="1023.69" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,1023.69)" text-anchor="middle">30</text>
+	<line x1="390.80" y1="276.34" x2="350.83" y2="276.34" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="300.72" y="276.34" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 300.72,276.34)" text-anchor="middle">40</text>
+	<text x="190.71" y="1360.06" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" transform="rotate(-90 190.71,1360.06)" text-anchor="middle">Mileage (mpg)</text>
+	<line x1="390.80" y1="2619.25" x2="3859.02" y2="2619.25" style="stroke:#000000;stroke-width:5.76"/>
+	<text x="1164.12" y="2729.16" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">Domestic</text>
+	<text x="3085.71" y="2729.16" style="font-family:'Helvetica';font-size:99.99px;fill:#000000" text-anchor="middle">Foreign</text>
+</svg>

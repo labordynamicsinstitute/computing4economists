@@ -4,17 +4,23 @@ author: "Doug Hemken"
 date: "`r format(Sys.Date(), '%B %Y')`"
 ---
 
-[Stata notes](../stata.html) |
-[Stata and R Markdown](../stata.html#stata-and-r-markdown)
 
-> Source: [https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.rmd](https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.rmd)
+> Source: [https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.rmd](https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.rmd) - see [https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.html](https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.html)
+
+```{r config,include=FALSE}
+prefix <- "https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/"
+```
+
 
 ## Introduction
+
 This is an introduction to writing dynamic documents
 using R Markdown to produce
 documents based on Stata.  This process uses 
 Rstudio (or just R) to create documents that depend upon Stata code.
-The source for **this** document is [StataMarkdown.rmd](StataMarkdown.rmd)
+The source for **this** document is [StataMarkdown.rmd](https://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.rmd)
+
+
 
 ## Background
 *Markdown* is a language for formatting not-too-complicated documents using 
@@ -59,6 +65,11 @@ library(devtools) # before this you may need to install devtools
 install_github("hemken/Statamarkdown")
 ```
 
+```{r install}
+library(devtools) # before this you may need to install devtools
+install_github("hemken/Statamarkdown")
+```
+
 > Note, RStudio is a great environment for writing Markdown with
 executable R code chunks, but it is 
 not a friendly environment for extensively
@@ -85,7 +96,7 @@ by loading the Statamarkdown package:
 
 If the package fails to find your copy of Stata (you will see a message),
 you may have to
-specify this yourself (see [Stata Engine Path](StataEnginePath.html)).
+specify this yourself (see [Stata Engine Path](`r prefix`StataEnginePath.html)).
 
 After this setup chunk, subsequent code to be processed by Stata 
 can be specified as:
@@ -105,7 +116,7 @@ of) your code and processing it silently at the beginning of each
 subsequent chunk.  
 
 You can have knitr collect code for you, as outlined in 
-[*Linking Stata Code Blocks*](StataProfile.html) and as
+[*Linking Stata Code Blocks*](`r prefix`StataProfile.html) and as
 illustrated below.
 
 ## Hints and Examples
@@ -114,7 +125,7 @@ Stata does not give you fine control over what ends
 up in the .log file.  You can decide whether to present code
 and output separately (R style), or include the code in the
 output (Stata style).  
-See [*Stata Output Hooks*](StataOutputHooks.html)).
+See [*Stata Output Hooks*](`r prefix`StataOutputHooks.html)).
 
 ### Including Graphs
 Including graphics requires `graph export` in Stata, and an
