@@ -79,7 +79,7 @@ Tentative Agenda - Day 2
 ========================
 * 2:00 - 2:30 PM Follow-up from previous day
 * 3:00 - 3:50 PM A prototypical replication report
-  - what happens when somebody wants to check reproducibility - the [example of the LDI Replication Lab](https://labordynamicsinstitute.github.io/replicability-training/TrainingCurriculum/Details_Replication_Report.html) (AEA Data Editor)
+  - what happens when somebody wants to check reproducibility - the [example of the LDI Replication Lab](https://labordynamicsinstitute.github.io/replicability-training-curriculum/a-guided-walk-through-the-replication-report.html) (AEA Data Editor)
 * 4:00 - 5:00 PM (free time - you could pop in to our undergraduate training)
 * 5:00 - 6:00 PM [Basics of version control](../documents/basics_of_version_control.pdf) (Lars).
  [Getting started with Git](https://github.com/labordynamicsinstitute/replicability-training/blob/master/Fall%202019/Basics_of_Git.md), [slides](../Git_CL_Slides/Slides_Git.pdf),  [notes](../Git_CL_Slides/Git_Notes.pdf), [tutorial](https://git-scm.com/docs/gittutorial). 
