@@ -778,7 +778,7 @@ hljs.initHighlightingOnLoad();
   });
 </script>
 
-<script type="text/javascript" src="day2-3_files/mathjax-23/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="day2-3_files/mathjax-26/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
   
@@ -1049,7 +1049,8 @@ data one;
 <h3>Explicit processes: PBS-like, Stata</h3>
 <div class="slideContent" >
 <pre><code>local arrayid : env PBS_ARRAYID
-use if sample == `arrayid&#39; using ${LIBRARY}/bigdata
+use if sample == `arrayid&#39; \\
+   using ${LIBRARY}/bigdata
 </code></pre>
 
 <p>would read in only the records for which the (previously created) variable <code>sample</code> is equal to the PBS_ARRAYID.</p>
@@ -1085,18 +1086,11 @@ JOB_ID_3=$(qsub -W depend=afterok:$JOB_ID_2 03_script.sh)
 <section data-transition="fade" data-transition-speed="default">
 <h3>Parallel processing</h3>
 <div class="slideContent" >
-<p>Computing with four cores on laptop (and R 3.2)</p>
+<p>Computing with 12 cores (and R version 4.0.2 (2020-06-22) )</p>
 
 <pre><code class="r">library(doParallel)
 registerDoParallel(cores=4)
-source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R&quot;, echo=TRUE)
-</code></pre>
-
-<p>For version 3.0 or earlier you need to modify something:</p>
-
-<pre><code class="r">library(doMC)
-registerDoMC(cores=4)
-source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R&quot;, echo=TRUE)
+source(&quot;https://labordynamicsinstitute.github.io/computing4economists/programs/day2/2-dopar.R&quot;, echo=TRUE)
 </code></pre>
 
 </div>
@@ -1106,6 +1100,21 @@ source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2
 <h3>Parallel processing: results</h3>
 <div class="slideContent" >
 <pre><code>
+&gt; ncpus &lt;- Sys.getenv(&quot;PBS_NUM_PPN&quot;)
+
+&gt; ncpus &lt;- as.numeric(ncpus) - 1
+
+&gt; ncpus
+[1] NA
+
+&gt; ncpus &lt;- 64
+
+&gt; library(doParallel)
+
+&gt; cl &lt;- makeCluster(ncpus)
+
+&gt; registerDoParallel(cl)
+
 &gt; x &lt;- iris[which(iris[, 5] != &quot;setosa&quot;), c(1, 5)]
 
 &gt; trials &lt;- 10000
@@ -1117,12 +1126,20 @@ source(&quot;https://www.vrdc.cornell.edu/computing-for-economists/programs/day2
 
 &gt; ptime
 elapsed 
-  9.477 
+  8.795 
 </code></pre>
 
+</div>
+
+</section>
+<section data-transition="fade" data-transition-speed="default">
+<h3>Parallel processing: results</h3>
+<div class="slideContent" >
 <ul>
-<li>Computing with four cores on laptop (and R 3.3): 9.477 seconds</li>
+<li>Computing with four cores (and R version 4.0.2 (2020-06-22)): </li>
 </ul>
+
+<p>8.795 seconds</p>
 
 </div>
 

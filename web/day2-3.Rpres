@@ -123,7 +123,8 @@ Explicit processes: PBS-like, Stata
 ==================
 ```
 local arrayid : env PBS_ARRAYID
-use if sample == `arrayid' using ${LIBRARY}/bigdata
+use if sample == `arrayid' \\
+   using ${LIBRARY}/bigdata
 ```
 would read in only the records for which the (previously created) variable `sample` is equal to the PBS_ARRAYID.
 
@@ -140,26 +141,31 @@ Live demo
 =========
 For instance, try
 * [2-dopar.R](../programs/day2/2-dopar.R)
+
+```{r, include=FALSE}
+library(doParallel)
+```
+
 Parallel processing
 ===================
-Computing with four cores on laptop (and R 3.2)
+Computing with `r detectCores()` cores (and `r R.version$version.string` )
 ```{r dopar32,eval=FALSE}
 library(doParallel)
 registerDoParallel(cores=4)
-source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
+source("https://labordynamicsinstitute.github.io/computing4economists/programs/day2/2-dopar.R", echo=TRUE)
 ```
-For version 3.0 or earlier you need to modify something:
-```{r dopar30,eval=FALSE}
-library(doMC)
-registerDoMC(cores=4)
-source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
+
+
+Parallel processing: results
+===================
+```{r dopar32,eval=TRUE,echo=FALSE,cache=FALSE}
 ```
 
 Parallel processing: results
 ===================
-```{r dopar32,eval=TRUE,echo=FALSE}
-```
-* Computing with four cores on laptop (and R 3.3): `r ptime` seconds
+* Computing with four cores (and `r R.version$version.string`): 
+
+`r ptime` seconds
 
 Parallel processing on ECCO: results
 ===================

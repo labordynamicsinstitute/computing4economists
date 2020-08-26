@@ -123,7 +123,8 @@ Explicit processes: PBS-like, Stata
 ==================
 ```
 local arrayid : env PBS_ARRAYID
-use if sample == `arrayid' using ${LIBRARY}/bigdata
+use if sample == `arrayid' \\
+   using ${LIBRARY}/bigdata
 ```
 would read in only the records for which the (previously created) variable `sample` is equal to the PBS_ARRAYID.
 
@@ -140,27 +141,39 @@ Live demo
 =========
 For instance, try
 * [2-dopar.R](../programs/day2/2-dopar.R)
+
+
+
 Parallel processing
 ===================
-Computing with four cores on laptop (and R 3.2)
+Computing with 12 cores (and R version 4.0.2 (2020-06-22) )
 
 ```r
 library(doParallel)
 registerDoParallel(cores=4)
-source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
+source("https://labordynamicsinstitute.github.io/computing4economists/programs/day2/2-dopar.R", echo=TRUE)
 ```
-For version 3.0 or earlier you need to modify something:
 
-```r
-library(doMC)
-registerDoMC(cores=4)
-source("https://www.vrdc.cornell.edu/computing-for-economists/programs/day2/2-dopar.R", echo=TRUE)
-```
 
 Parallel processing: results
 ===================
 
 ```
+
+> ncpus <- Sys.getenv("PBS_NUM_PPN")
+
+> ncpus <- as.numeric(ncpus) - 1
+
+> ncpus
+[1] NA
+
+> ncpus <- 64
+
+> library(doParallel)
+
+> cl <- makeCluster(ncpus)
+
+> registerDoParallel(cl)
 
 > x <- iris[which(iris[, 5] != "setosa"), c(1, 5)]
 
@@ -173,9 +186,14 @@ Parallel processing: results
 
 > ptime
 elapsed 
-  9.477 
+  8.864 
 ```
-* Computing with four cores on laptop (and R 3.3): 9.477 seconds
+
+Parallel processing: results
+===================
+* Computing with four cores (and R version 4.0.2 (2020-06-22)): 
+
+8.864 seconds
 
 Parallel processing on ECCO: results
 ===================
