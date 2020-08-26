@@ -146,11 +146,10 @@ For instance, try
 
 Parallel processing
 ===================
-Computing with 12 cores (and R version 4.0.2 (2020-06-22) )
+Computing with 11 cores (and R version 4.0.2 (2020-06-22) )
 
 ```r
 library(doParallel)
-registerDoParallel(cores=4)
 source("https://labordynamicsinstitute.github.io/computing4economists/programs/day2/2-dopar.R", echo=TRUE)
 ```
 
@@ -160,16 +159,14 @@ Parallel processing: results
 
 ```
 
-> ncpus <- Sys.getenv("PBS_NUM_PPN")
+> library(doParallel)
+
+> ncpus <- detectCores()
 
 > ncpus <- as.numeric(ncpus) - 1
 
 > ncpus
-[1] NA
-
-> ncpus <- 64
-
-> library(doParallel)
+[1] 11
 
 > cl <- makeCluster(ncpus)
 
@@ -186,14 +183,14 @@ Parallel processing: results
 
 > ptime
 elapsed 
-  8.864 
+   7.25 
 ```
 
 Parallel processing: results
 ===================
-* Computing with four cores (and R version 4.0.2 (2020-06-22)): 
+* Computing with 11 cores (and R version 4.0.2 (2020-06-22)): 
 
-8.864 seconds
+7.25 seconds
 
 Parallel processing on ECCO: results
 ===================

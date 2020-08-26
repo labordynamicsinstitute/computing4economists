@@ -1086,10 +1086,9 @@ JOB_ID_3=$(qsub -W depend=afterok:$JOB_ID_2 03_script.sh)
 <section data-transition="fade" data-transition-speed="default">
 <h3>Parallel processing</h3>
 <div class="slideContent" >
-<p>Computing with 12 cores (and R version 4.0.2 (2020-06-22) )</p>
+<p>Computing with 11 cores (and R version 4.0.2 (2020-06-22) )</p>
 
 <pre><code class="r">library(doParallel)
-registerDoParallel(cores=4)
 source(&quot;https://labordynamicsinstitute.github.io/computing4economists/programs/day2/2-dopar.R&quot;, echo=TRUE)
 </code></pre>
 
@@ -1100,16 +1099,14 @@ source(&quot;https://labordynamicsinstitute.github.io/computing4economists/progr
 <h3>Parallel processing: results</h3>
 <div class="slideContent" >
 <pre><code>
-&gt; ncpus &lt;- Sys.getenv(&quot;PBS_NUM_PPN&quot;)
+&gt; library(doParallel)
+
+&gt; ncpus &lt;- detectCores()
 
 &gt; ncpus &lt;- as.numeric(ncpus) - 1
 
 &gt; ncpus
-[1] NA
-
-&gt; ncpus &lt;- 64
-
-&gt; library(doParallel)
+[1] 11
 
 &gt; cl &lt;- makeCluster(ncpus)
 
@@ -1126,7 +1123,7 @@ source(&quot;https://labordynamicsinstitute.github.io/computing4economists/progr
 
 &gt; ptime
 elapsed 
-  8.795 
+   7.25 
 </code></pre>
 
 </div>
@@ -1136,10 +1133,10 @@ elapsed
 <h3>Parallel processing: results</h3>
 <div class="slideContent" >
 <ul>
-<li>Computing with four cores (and R version 4.0.2 (2020-06-22)): </li>
+<li>Computing with 11 cores (and R version 4.0.2 (2020-06-22)): </li>
 </ul>
 
-<p>8.795 seconds</p>
+<p>7.25 seconds</p>
 
 </div>
 

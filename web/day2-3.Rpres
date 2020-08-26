@@ -148,22 +148,21 @@ library(doParallel)
 
 Parallel processing
 ===================
-Computing with `r detectCores()` cores (and `r R.version$version.string` )
+Computing with `r detectCores()-1` cores (and `r R.version$version.string` )
 ```{r dopar32,eval=FALSE}
 library(doParallel)
-registerDoParallel(cores=4)
 source("https://labordynamicsinstitute.github.io/computing4economists/programs/day2/2-dopar.R", echo=TRUE)
 ```
 
 
 Parallel processing: results
 ===================
-```{r dopar32,eval=TRUE,echo=FALSE,cache=FALSE}
+```{r dopar32,eval=TRUE,echo=FALSE,cache=TRUE}
 ```
 
 Parallel processing: results
 ===================
-* Computing with four cores (and `r R.version$version.string`): 
+* Computing with `r detectCores()-1` cores (and `r R.version$version.string`): 
 
 `r ptime` seconds
 
