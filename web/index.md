@@ -99,7 +99,7 @@ Agenda - Day 3
     - [Specific tools on BioHPC](https://biohpc.cornell.edu/lab/doc/using_BioHPC_CPUs.pdf)
     - [Parallel computing on Stata report](https://www.stata.com/statamp/report.pdf#page=196)
   - Computing resources at Cornell and elsewhere ([BioHPC for economists](https://biohpc.cornell.edu/lab/ecco.htm), [CISER](https://ciser.cornell.edu/computing/), [CAC RedCloud](https://www.cac.cornell.edu/services/cloudservices.aspx), Amazon)
-  - Hands-on (R, Julia, Stata) (with *Ivan Rudik*) ([Ivan's Github](https://github.com/irudik/computational-tools-workshop))
+  - Hands-on (R, Julia, Stata) (with *Ivan Rudik*) ([Ivan's Github](https://github.com/irudik/computational-tools-workshop)) ([recording](https://vod.video.cornell.edu/media/Computing+For+Economists+/1_i17n6p79))
 
 Tentative Agenda - Day 4 (optional)
 ========================================================
