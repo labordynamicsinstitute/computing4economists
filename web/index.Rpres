@@ -103,14 +103,18 @@ Agenda - Day 3
   - Computing resources at Cornell and elsewhere ([BioHPC for economists](https://biohpc.cornell.edu/lab/ecco.htm), [CISER](https://ciser.cornell.edu/computing/), [CAC RedCloud](https://www.cac.cornell.edu/services/cloudservices.aspx), Amazon)
   - Hands-on (R, Julia, Stata) (with *Ivan Rudik*) ([Ivan's Github](https://github.com/irudik/computational-tools-workshop)) ([recording](https://vod.video.cornell.edu/media/Computing+For+Economists+/1_i17n6p79))
 
-Tentative Agenda - Day 4 (optional)
+Agenda - Day 4 (optional)
 ========================================================
 
 * 1:00 - 2:00 PM Coffee hour: What does the AEA Data and Code Availability policy imply for an economist's research? (Lars) ([different video link](https://cornell.zoom.us/j/91522388296))
 * 2:00-4:50 Optional themes:
   * VM machines, containers: why?
+    - Virtual machine software for your own computer: [VirtualBox](https://www.virtualbox.org/)
+    - Virtual machines at Cornell: [RedCloud](https://www.cac.cornell.edu/services/cloudservices.aspx) but may also be available through CISER.
+    - Container software: [Docker](https://www.docker.com/products/docker-desktop)
   * Automating processing in the cloud (Docker, etc.)
-  * Setting up an Amazon cluster (basics of cluster computing)
+    - Example of an automated data cleaning step using Docker and Github actions: [Covid-19 expectations data](https://github.com/labordynamicsinstitute/covid19-expectations-data/blob/master/.github/workflows/main.yml)
+  * Setting up an Amazon cluster (basics of cluster computing) (skipped)
   
 
 Past contributors
