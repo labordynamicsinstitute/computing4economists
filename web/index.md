@@ -5,7 +5,7 @@ author: Lars Vilhuber, Ivan Rudik, and some others
 date: 2021/8/18-2021/8/20
 
 
-**Location**: In-person, TBD
+**Location**: In-person, Ives 109 (Aug 18, 19) and Ives 115 (Aug 20)
 
 **Time**: 9:00 a.m. - 4:00 p.m. (some days will end earlier)
 
