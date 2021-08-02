@@ -2,12 +2,12 @@ Computational Tools for Social Scientists Workshop
 ========================================================
 transition: fade
 author: Lars Vilhuber, Ivan Rudik, and some others
-date: 2021/8/18-2020/8/20
+date: 2021/8/18-2021/8/20
 
 
-**Location**: *[Online](https://cornell.zoom.us/join)* Meeting ID: ![Zoom meeting](zoom-number.png) 
+**Location**: In-person, TBD
 
-**Time**: *2:00 - 6:00 p.m.* (some days will end earlier)
+**Time**: 9:00 a.m. - 4:00 p.m. (some days will end earlier)
 ```{r setup,echo=FALSE,include=FALSE}
 regURL <- "https://cornell.ca1.qualtrics.com/jfe/form/SV_8dc16keYOMEc3Xw"
 ```
