@@ -201,7 +201,7 @@ body {
   <style type="text/css">
 
 .reveal h1 { 
-  font-size: 2.5em; 
+  font-size: 2.5em;
 }
 
 .reveal h1,
@@ -210,12 +210,12 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 { 
-   margin-bottom: .6em;    
+   margin-bottom: .6em;
 }
 
 .reveal p,
 .reveal table {
-   margin-bottom: 1em; 
+   margin-bottom: 1em;
 }
 
 .reveal li {
@@ -242,7 +242,7 @@ body {
   max-width: 95%;
   border: 1px solid #ccc;
   white-space: pre-wrap;
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 
 .reveal pre code {
@@ -315,7 +315,7 @@ body {
 }
 
 .quiz-multichoice .reveal .quizFeedback span {
-  font-size: 1.4em; 
+  font-size: 1.4em;
   margin-left: 12px;
 }
 
@@ -863,7 +863,7 @@ be able to highlight additional techniques. There will be hands-on training on a
 <div class="slideContent" >
 <ul>
 <li><a href="setup-checklist.md">Installation checklist</a> - useful software to have</li>
-<li>Watch Lars&#39; <a href="https://www.youtube.com/watch?v=rLoeNzOApFk">talk on replicability and reproducibility</a></li>
+<li>Watch Lars&#39; <a href="https://www.youtube.com/watch?v=pj-y3dLDOEA">talk on replicability and reproducibility</a></li>
 <li>Learn about the <a href="https://github.com/labordynamicsinstitute/computing4economists/blob/master/Git_CL_Slides/intro_command_line.md">command line</a> (<a href="../Git_CL_Slides/Slides_CommandLine.pdf">lecture notes</a>), version control (we will go over a lot of this on Day 1)</li>
 </ul>
 
@@ -1075,7 +1075,7 @@ var Reveal=function(){"use strict";function e(e){return Mt||kt?(window.addEventL
 
 // dynamically built function to get slide specific commands
 function commandsForSlide(indexh) {
-  var cmds = []; 
+  var cmds = [];
   switch(indexh) {
 
     default:
@@ -1118,7 +1118,7 @@ function commandsForSlide(indexh) {
      
       // allow mathjax to re-render
       if (window.MathJax)
-        window.MathJax.Hub.Rerender(event.currentSlide);  
+        window.MathJax.Hub.Rerender(event.currentSlide);
     });
     
     // forward command key events to the rstudio frame
@@ -1126,11 +1126,11 @@ function commandsForSlide(indexh) {
 
       // allow 'o' to toggle overview mode
       switch( e.keyCode ) {
-         case 79: case 42: window.Reveal.toggleOverview(); break;  
+         case 79: case 42: window.Reveal.toggleOverview(); break;
       }
    
       if (window.parent.presentationKeydown)
-         window.parent.presentationKeydown(e);   
+         window.parent.presentationKeydown(e);
    }
    
    window.onresize = function() { 
@@ -1143,7 +1143,7 @@ function commandsForSlide(indexh) {
        clearTimeout(window.activeTimer);
        
      window.activeTimer = setTimeout(function() { 
-       window.location.reload(true); 
+       window.location.reload(true);
      }, 300);
    }
 
