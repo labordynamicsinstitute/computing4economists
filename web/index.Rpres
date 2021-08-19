@@ -105,11 +105,25 @@ Homework - Day 1
 - Get comfortable with version control
   - create a file, version a file, delete a file, recover a previous file, branch, merge a branch
 - try out the Jupyter report yourself
+- More info on dynamic documents:
+  - RMarkdown
+  - Jupyter Notebook (or Python) [with Stata](https://www.stata.com/new-in-stata/jupyter-notebooks/)  
 
 Tentative Agenda - Day 2 (morning)
 ================
 
-- 9:00 - 11:50 [Introduction to parallel processing](../web/day2-3.html) (Lars, *Ivan Rudik*) (with breaks)
+- 9:00 - 9:30 Automation and reproducibility go hand-in-hand 
+  - Setup: A simple reproducible report in R
+  - Scripting the reproducible report
+- 9:30 - 12:00  Docker/ containers (with breaks)
+  - What is Docker
+  - How do you create and use containers?
+  - Full automation
+
+Tentative Agenda - Day 2 (afternoon)
+================
+
+- 13:00 - 16:00 [Introduction to parallel processing](../web/day2-3.html) (Lars, *Ivan Rudik*) (with breaks)
   - Subroutines and scalable programming (Lars) [slides](../documents/HPC_Class_SubRoutines-edited.pdf)
   - [High performance computing basics](../documents/hp-basics.pdf), parallel processing
   - Computing resources at Cornell and elsewhere ([BioHPC for economists](https://biohpc.cornell.edu/lab/ecco.htm), CISER, RedCloud, Amazon)
@@ -117,24 +131,13 @@ Tentative Agenda - Day 2 (morning)
   - Hands-on (R, Julia, Stata) (with *Ivan Rudik*) ([Ivan's Github](https://github.com/irudik/computational-tools-workshop))
 
 
-Tentative Agenda - Day 2 (afternoon)
-================
-
-- 13:00 - 14:00 Automation and reproducibility go hand-in-hand 
-  - Setup: A simple reproducible report in R
-  - Scripting the reproducible report
-- 14:00 - 16:00  Docker/ containers (with breaks)
-  - What is Docker
-  - How do you create and use containers?
-  - Full automation
-
 Tentative Agenda - Day 3
 ================
 
 (partially joint with LDI Replicator training)
 
-- A [template README](https://social-science-data-editors.github.io/template_README/) for better reproducible packages
-- Data provenance and citations: what is it, why, how
+- 9:00 - 10:00 A [template README](https://social-science-data-editors.github.io/template_README/) for better reproducible packages
+- 10:00 - 11:00 Data provenance and citations: what is it, why, how
     - Academic principles of attribution, proper data citation
     - [Extract from longer presentation](../documents/Vilhuber-Presentation2020-2020-06-27-extract.pdf) (original source: [10.5281/zenodo.3911311](http://doi.org/10.5281/zenodo.3911311))
     - [Training manual on data citations](https://labordynamicsinstitute.github.io/replicability-training-curriculum/datacitations.html), an expanded version of [guidance](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
