@@ -1,7 +1,7 @@
 Computational Tools for Social Scientists Workshop
 ========================================================
 
-date: 2022/8/15, 2022/8/16, 2022/8/19
+**Dates**: 2022/8/15, 2022/8/16, 2022/8/19
 
 
 **Location**: In-person, rooms TBD.
@@ -10,7 +10,7 @@ date: 2022/8/15, 2022/8/16, 2022/8/19
 
 
 
-**[Registration](https://cornell.ca1.qualtrics.com/jfe/form/SV_6ig9HMolZrfRkOi)**
+**[Registration has closed.]** Please contact Lars to check if there's still availability.
 _|_
 [Goals](#/1)  _|_ **[Requirements](#/2)**
 
@@ -84,7 +84,7 @@ Additional workshop presenters will be announced at a later stage.
 Setup
 ========================================================
 
-* [Register](https://cornell.ca1.qualtrics.com/jfe/form/SV_6ig9HMolZrfRkOi) 
+* [Register] (**closed**) 
 * (optional) Request an account on Econ Cluster on the [BioHPC account request page](https://biohpc.cornell.edu/NewUserRequest.aspx) (add to Comment "Econ Grad Student")
 * (optional) Create a Github user profile
 * Various software will be installed as part of the class, as part of a standard toolkit.
