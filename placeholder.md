@@ -4,11 +4,11 @@ Computational Tools for Social Scientists Workshop
 **Dates**: 2022/8/15, 2022/8/16, 2022/8/19
 
 
-**Location**: In-person, rooms TBD.
+**Location**: In-person, 2022/8/15, 2022/8/16: **Ives 219**,  2022/8/19: **Ives 115**
 
 **Time**: 9:00 a.m. - 4:00 p.m. (some days will end earlier)
 
-
+> NOTE: Breakfast is offered on 2022/8/15, 2022/8/16 starting at 8:00AM.
 
 **[Registration has closed.]** Please contact Lars to check if there's still availability.
 _|_
