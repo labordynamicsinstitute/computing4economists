@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>placeholder.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #50a14f;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="computational-tools-for-social-scientists-workshop">Computational Tools for Social Scientists Workshop</h1>
+<p><strong>Dates</strong>: 2022/8/15, 2022/8/16, 2022/8/19</p>
+<p><strong>Location</strong>: In-person, 2022/8/15, 2022/8/16: <strong>Ives 219</strong>,  2022/8/19: <strong>Ives 115</strong></p>
+<p><strong>Time</strong>: 9:00 a.m. - 4:00 p.m. (some days will end earlier)</p>
+<blockquote>
+<p>NOTE: Breakfast is offered on 2022/8/15, 2022/8/16 starting at 8:00AM.</p>
+</blockquote>
+<p><strong>[Registration has closed.]</strong> Please contact Lars to check if there's still availability.
+<em>|</em>
+<a href="#/1">Goals</a>  <em>|</em> <strong><a href="#/2">Requirements</a></strong></p>
+<h1 id="goal">Goal</h1>
+<p>The goal of this workshop is to make early-career researchers in the social sciences (e.g. Ph.D. students and early faculty) aware of computational tools and toolkits that will allow them to more efficiently and reproducibly conduct their research. We will showcase computer-oriented techniques and tools, from basic command line tools on Windows, Linux, and Mac, to version control, to optimization and parallelization techniques. These methods are useful not just for high-performance computing, but by necessity make research reproducible. If you touch a computer as part of your research, you should come!</p>
+<h1 id="more-goals-and-non-goals">More goals and non-goals</h1>
+<p>This workshop is designed to open your eyes to the possibilities, scratching
+the surface, but mostly not diving into any particular depths. The goal is NOT to teach a full
+course on SAS, Stata, Matlab, R, Python, MPI, Fortran, etc. - there are other classes for that. We will teach just enough of each programming language to
+be able to highlight additional techniques. There will be hands-on training on a few systems (TBD).</p>
+<p>We will discuss ways to structure your computional projects with an eye on efficiency during development and reproducibility after publication (by AEA standards). Additional topics include reproducibility when data may be private, computation when compute resources are scarce (parallel computing, cloud computing), automation in the service of reliability and reproducibility, and other topics. We will provide hands-on training in at least one advanced computing technique.</p>
+<h1 id="you-and-the-workshop">You and the workshop</h1>
+<p>We highlight that this is a <strong>workshop</strong> - we will work on problems as a group, drawing on expertise in the &quot;room&quot; as needed. If you have a specific question, and want to work on it, we may do so. If you want to primarily listen, that's fine too. You should expect to do some exercises each day. We have a two-day break (to not step on the Economics Department's TA training), and reconvene on the Friday (Aug 19) to discuss outcomes, questions, and next steps for some.</p>
+<h2 id="target-group">Target group</h2>
+<p>Second year Ph.D. and higher, and faculty, in Economics or other social sciences. If you haven't participated in the workshop in the past, or want a refresher, you should participate! If you want to chat about the computational aspects of social sciences, or reproducibility, come and join the workshop!</p>
+<h2 id="tentative-schedule">Tentative schedule</h2>
+<blockquote>
+<p>Subject to change based on participant input!</p>
+</blockquote>
+<h3 id="day-1">Day 1</h3>
+<ul>
+<li>Git, Version control</li>
+<li>Data management</li>
+<li>Why you should learn (and love) the command line</li>
+<li>Computing environments</li>
+<li>Readme</li>
+<li>An example of reproducible document (hands-on)</li>
+</ul>
+<h3 id="day-2">Day 2</h3>
+<ul>
+<li>Computational empathy in practice: reviewing other's code and how you should think about your own code</li>
+<li>An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond</li>
+<li>Docker for Stata</li>
+</ul>
+<h3 id="day-3">Day 3</h3>
+<ul>
+<li>Discussion/ follow-up to days 1, 2</li>
+<li>Parallel computing: scaling up your analysis, freeing up your time</li>
+<li>Handling of large / confidential data</li>
+<li>Other stuff (to be determined by participants on days 1 and 2)</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Working knowledge of at least one statistical programming language (R, SAS, Stata, Matlab, Julia) - the specific languange is not important.</li>
+<li>An interest in computational social science</li>
+</ul>
+<h1 id="people">People</h1>
+<p>Workshop organizer and lead discussant: Lars Vilhuber (Economist, Data Editor for the American Economic Association). Lars leads a Cornell-based lab that has reviewed and assessed reproducibility of over 1,000 article in the AEA's eight journals.</p>
+<p>Additional workshop presenters will be announced at a later stage.</p>
+<h1 id="setup">Setup</h1>
+<ul>
+<li>[Register] (<strong>closed</strong>)</li>
+<li>(optional) Request an account on Econ Cluster on the <a href="https://biohpc.cornell.edu/NewUserRequest.aspx">BioHPC account request page</a> (add to Comment &quot;Econ Grad Student&quot;)</li>
+<li>(optional) Create a Github user profile</li>
+<li>Various software will be installed as part of the class, as part of a standard toolkit.</li>
+</ul>
+
+</body>
+</html>
