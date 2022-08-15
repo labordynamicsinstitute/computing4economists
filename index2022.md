@@ -47,14 +47,16 @@ Tentative schedule
 
 ### Day 1
 
-- Git, Version control
+- Why you should learn (and love) the command line
     - Framework: [Carpentries' "The Unix Shell"](https://swcarpentry.github.io/shell-novice/)
+- Git, Version control
 - Data management
     - Example: API use and local temporary storage, see [labordynamicsinstitute/alfred_example](https://github.com/labordynamicsinstitute/alfred_example)
     - Notes from live presentation: [scratchpad.txt](day1/scratchpad.txt)
-- Why you should learn (and love) the command line
-- Computing environments
 - Readme 
+    - [Template README by social science data editors](https://social-science-data-editors.github.io/template_README/template-README.html)
+    - [Tricky data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
+- Computing environments
 - An example of reproducible document (hands-on)
 
 ### Day 2
