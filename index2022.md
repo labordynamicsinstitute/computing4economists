@@ -50,6 +50,7 @@ Tentative schedule
 - Git, Version control
     - Framework: [Carpentries' "The Unix Shell"](https://swcarpentry.github.io/shell-novice/)
 - Data management
+    - Example: API use and local temporary storage, see [labordynamicsinstitute/alfred_example](https://github.com/labordynamicsinstitute/alfred_example)
     - Notes from live presentation: [scratchpad.txt](day1/scratchpad.txt)
 - Why you should learn (and love) the command line
 - Computing environments
