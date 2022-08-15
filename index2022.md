@@ -43,7 +43,7 @@ Second year Ph.D. and higher, and faculty, in Economics or other social sciences
 Tentative schedule
 ------------------
 
-> Subject to change based on participant input!
+> Subject to change based on participant input! See [here](web/index.html) for the [2021 agenda and links](web/index.html).
 
 ### Day 1
 
