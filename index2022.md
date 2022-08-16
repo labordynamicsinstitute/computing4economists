@@ -57,13 +57,13 @@ Tentative schedule
     - [Template README by social science data editors](https://social-science-data-editors.github.io/template_README/template-README.html)
     - [Tricky data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
 - Computing environments
-- An example of reproducible document (hands-on)
 
 ### Day 2
 
+- An example of reproducible document (hands-on)
 - Computational empathy in practice: reviewing other's code and how you should think about your own code
-- An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond
 - Docker for Stata 
+- An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond
 
 ### Day 3
 
