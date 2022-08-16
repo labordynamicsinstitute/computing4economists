@@ -61,8 +61,15 @@ Tentative schedule
 ### Day 2
 
 - An example of reproducible document (hands-on)
+  - The repository we created: [larsvilhuber/test2022b](https://github.com/larsvilhuber/test2022b). In particular, see the `.github/workflows/main.yml` file.
+  - The docker image we used: [https://hub.docker.com/r/rocker/verse](https://hub.docker.com/r/rocker/verse)
 - Computational empathy in practice: reviewing other's code and how you should think about your own code
 - Docker for Stata 
+  - Docker image: [https://hub.docker.com/r/dataeditors/stata17/](https://hub.docker.com/r/dataeditors/stata17/)
+  - How Stata in the cloud works: [template with instructions](https://github.com/AEADataEditor/stata-project-with-docker/)
+  - Using [Github Codespaces](https://github.com/features/codespaces)
+  - Using [Stata on Github Codespaces](https://github.com/labordynamicsinstitute/codespaces-stata-skeleton)
+  - (note: to make it work, you need to be a member of a Github "organization")
 - An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond
 
 ### Day 3
