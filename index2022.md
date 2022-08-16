@@ -71,6 +71,9 @@ Tentative schedule
   - Using [Stata on Github Codespaces](https://github.com/labordynamicsinstitute/codespaces-stata-skeleton)
   - (note: to make it work, you need to be a member of a Github "organization")
 - An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond
+  - The [overall tutorial](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/), and the [key slides](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/index2.html#/9)
+  - [Zenodo upload script](https://github.com/AEADataEditor/Upload-to-Zenodo)
+  - [Dataverse upload Github Action](https://github.com/marketplace/actions/dataverse-uploader-action)
 
 ### Day 3
 
