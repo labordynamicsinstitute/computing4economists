@@ -1,3 +1,0 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {english}
-\beamer@sectionintoc {1}{Replicability}{2}{1}{1}
