@@ -1,7 +1,7 @@
 Computational Tools for Social Scientists Workshop
 ========================================================
 
-**Dates**: 2023-8-14, 2023-8-15, 2022-8-18
+**Dates**: 2023-8-14, 2023-8-15, 2023-8-18
 
 
 **Location**: TBD
