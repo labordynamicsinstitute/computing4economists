@@ -4,7 +4,7 @@ Computational Tools for Social Scientists Workshop
 **Dates**: 2023-8-14, 2023-8-15, 2022-8-18
 
 
-**Location**: TBD
+**Location**: Ives 108
 
 **Times**: 
 
@@ -45,9 +45,27 @@ Details coming soon:
 
 Hands-on creation of a reproducible project, ready to be uploaded to a journal replication archive.
 
+- Why you should learn (and love) the command line
+    - Framework: [Carpentries' "The Unix Shell"](https://swcarpentry.github.io/shell-novice/)
+- Computational empathy: why you should care
+- Git, Version control
+- How to structure a project
+- Data management
+    - Example: API use and local temporary storage, see [labordynamicsinstitute/alfred_example](https://github.com/labordynamicsinstitute/alfred_example)
+    - Notes from live presentation: [scratchpad.txt](day1/scratchpad.txt)
+- Documenting it all: Readme 
+    - [Template README by social science data editors](https://social-science-data-editors.github.io/template_README/template-README.html)
+    - [Tricky data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
+- Computing environments
+    - Yours, mine, theirs: why how you run Stata, or R, or Python matters
+    - Some solutions (habits, instructions, Docker)
+    - Installing packages, and how not to install them
+
 ### Tuesday
 
 Follow-up to Monday, plus some high-performance computing tricks, and how to deposit your own data at a trusted repository (and what all of that means)
+
+
 
 ### Friday
 
