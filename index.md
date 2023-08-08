@@ -52,10 +52,10 @@ Hands-on creation of a reproducible project, ready to be uploaded to a journal r
 - How to structure a project
 - Data management
     - Example: API use and local temporary storage, see [labordynamicsinstitute/alfred_example](https://github.com/labordynamicsinstitute/alfred_example)
-    - Notes from live presentation: [scratchpad.txt](day1/scratchpad.txt)
+    - Notes from live presentation: coming
 - Documenting it all: Readme 
     - [Template README by social science data editors](https://social-science-data-editors.github.io/template_README/template-README.html)
-    - [Tricky data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
+    - Data citations, and [Tricky data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
 - Computing environments
     - Yours, mine, theirs: why how you run Stata, or R, or Python matters
     - Some solutions (habits, instructions, Docker)
@@ -65,7 +65,19 @@ Hands-on creation of a reproducible project, ready to be uploaded to a journal r
 
 Follow-up to Monday, plus some high-performance computing tricks, and how to deposit your own data at a trusted repository (and what all of that means)
 
-
+- Docker for reproducible research, and why you should know about it, even if you don't use it
+- Running R in the cloud
+- Docker for Stata 
+  - Docker image: [https://hub.docker.com/r/dataeditors/stata17/](https://hub.docker.com/r/dataeditors/stata17/)
+  - How Stata in the cloud works: [template with instructions](https://github.com/AEADataEditor/stata-project-with-docker/)
+  - Using [Github Codespaces](https://github.com/features/codespaces)
+  - Using [Stata on Github Codespaces](https://github.com/labordynamicsinstitute/codespaces-stata-skeleton)
+  - (note: to make it work, you need to be a member of a Github "organization")
+- An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond
+  - The [overall tutorial](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/), and the [key slides](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/index2.html#/9)
+  - [Zenodo upload script](https://github.com/AEADataEditor/Upload-to-Zenodo)
+  - [Dataverse upload Github Action](https://github.com/marketplace/actions/dataverse-uploader-action)
+- Licensing
 
 ### Friday
 
