@@ -45,26 +45,33 @@ Details coming soon:
 
 Hands-on creation of a reproducible project, ready to be uploaded to a journal replication archive.
 
+- Computational empathy: why you should care
+- How to structure a project
+  - [Some basics (TIER Protocol, confidential data)](https://larsvilhuber.github.io/reproducibility-confidential-fsrdc/)
+- Git, Version control
+    - Naming of programs: [incomplete examples](documents/hp-basics-edited.pdf)
+    - Framework: [Carpentries' "Git basics"](https://swcarpentry.github.io/git-novice/)
 - Why you should learn (and love) the command line
     - Framework: [Carpentries' "The Unix Shell"](https://swcarpentry.github.io/shell-novice/)
-- Computational empathy: why you should care
-- Git, Version control
-- How to structure a project
+    - [Some brief examples](documents/hp-basics-edited.pdf)
+- Documenting it all: Readme 
+    - [Template README by social science data editors](https://social-science-data-editors.github.io/template_README/template-README.html) ([Walkthrough](https://labordynamicsinstitute.github.io/replicability-training-presentation/part1b.html))
+    - Data citations, and [Tricky data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
 - Data management
     - Example: API use and local temporary storage, see [labordynamicsinstitute/alfred_example](https://github.com/labordynamicsinstitute/alfred_example)
-    - Notes from live presentation: coming
-- Documenting it all: Readme 
-    - [Template README by social science data editors](https://social-science-data-editors.github.io/template_README/template-README.html)
-    - Data citations, and [Tricky data citations](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html)
-- Computing environments
-    - Yours, mine, theirs: why how you run Stata, or R, or Python matters
-    - Some solutions (habits, instructions, Docker)
-    - Installing packages, and how not to install them
+    - Notes from live presentation: not this year...
+- Sundry
+    - [Reproducibility and Ethics/ sharing data](https://labordynamicsinstitute.github.io/crress/#session-2)
+    - [Computing at Cornell: BioHPC](https://labordynamicsinstitute.github.io/ecco-notes.html) but more on Friday.
 
 ### Tuesday
 
 Follow-up to Monday, plus some high-performance computing tricks, and how to deposit your own data at a trusted repository (and what all of that means)
 
+- Computing environments
+    - Yours, mine, theirs: why how you run Stata, or R, or Python matters
+    - Some solutions (habits, instructions, Docker)
+    - Installing packages, and how not to install them
 - Docker for reproducible research, and why you should know about it, even if you don't use it
 - Running R in the cloud
 - Docker for Stata 
