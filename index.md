@@ -73,18 +73,35 @@ Follow-up to Monday, plus some high-performance computing tricks, and how to dep
     - Some solutions (habits, instructions, Docker)
     - Installing packages, and how not to install them
 - Docker for reproducible research, and why you should know about it, even if you don't use it
-- Running R in the cloud
-- Docker for Stata 
-  - Docker image: [https://hub.docker.com/r/dataeditors/stata17/](https://hub.docker.com/r/dataeditors/stata17/)
-  - How Stata in the cloud works: [template with instructions](https://github.com/AEADataEditor/stata-project-with-docker/)
+    - Running R in the cloud
+    - Docker for Stata 
+      - Docker image: [https://hub.docker.com/r/dataeditors/stata17/](https://hub.docker.com/r/dataeditors/stata17/)
+      - How Stata in the cloud works: [template with instructions](https://github.com/AEADataEditor/stata-project-with-docker/)
   - Using [Github Codespaces](https://github.com/features/codespaces)
   - Using [Stata on Github Codespaces](https://github.com/labordynamicsinstitute/codespaces-stata-skeleton)
   - (note: to make it work, you need to be a member of a Github "organization")
-- An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond
-  - The [overall tutorial](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/), and the [key slides](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/index2.html#/9)
+- Parallel computing
+  - Basics in R (see [tutorial](https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html))
+    - `mclapply` (done)
+    - Creating a cluster (not done)
+  - [Package in Stata](https://github.com/gvegayon/parallel#minimal-examples) (not done in the workshop)
+  - OS job schedulers (e.g., [SLURM at BioHPC](https://biohpc.cornell.edu/lab/userguide.aspx?a=software&i=689#c) and on [ECCO](https://labordynamicsinstitute.github.io/ecco-notes.html))
+- Data management in a parallel computing world
+  - Time cost
+  - File systems
+  - Database systems (MariaDB, Neo4j, etc.)
+- Creating an archive of data/code/replication packages
+  - Archives/repositories:
+    - [openICPSR for AEA](https://www.openicpsr.org/openicpsr/search/aea/studies)
+    - [Harvard Dataverse](https://dataverse.harvard.edu/)
+    - [Zenodo for AEA](https://zenodo.org/communities/aeajournals/?page=1&size=20)
+    - [Zenodo Sandbox](https://sandbox.zenodo.org)
+    - [OSF](https://osf.io/) (not a full archive)
+  - An example of an archive ready workflow, from A (acquisition) to Z (Zenodo) and beyond ([overall tutorial](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/), and the [key slides](https://labordynamicsinstitute.github.io/tutorial-data-sharing-archiving-2021/index2.html#/9)) (not done)
   - [Zenodo upload script](https://github.com/AEADataEditor/Upload-to-Zenodo)
-  - [Dataverse upload Github Action](https://github.com/marketplace/actions/dataverse-uploader-action)
-- Licensing
+    - [Resulting "archive" on Sandbox](https://sandbox.zenodo.org/record/1232088)
+  - [Dataverse upload Github Action](https://github.com/marketplace/actions/dataverse-uploader-action) (not done)
+
 
 ### Friday
 
