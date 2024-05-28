@@ -12,6 +12,10 @@
 - Git versioning (or any versioning)
 - Then go off and do Carpentries training on either on your own
 
+## Intermezzo: Present 15 minutes of own research
+
+- Students present 15 minutes of their research (2nd or 3rd year paper, depending on context)
+
 ## Module 3: Writing articles that combine text and code
 
 - 1.5 hours
@@ -31,7 +35,7 @@
   - Easy parallel Julia code
   - High-performance MPI code
 
-## Module 5: Reproducibility, transparency, and data ethics: How to share data, and when not to
+## Module 5: Reproducibility, transparency, and data ethics: How and when to share data, and when not to
 
 - 45 minutes
 - On your own: [Reproducibility and Ethics/ sharing data](https://labordynamicsinstitute.github.io/crress/#session-2)
@@ -55,4 +59,19 @@
     - create an archive on Zenodo
     - use an archive on Zenodo in your own workflow
     - how to tie it correctly together
+ 
+## Intermezzo: Presenting progress on research
+
+- Students present progress on their research
+- Students comment in particular on which parts of the various modules they have used and found useful
+
+## Module 8: Writing a grant proposal
+
+- 45 minutes
+- Grant proposal as
+  - a 15-page paper
+  - with a single accept-reject (or substantial rewrites before every resubmission)
+  - with a target audience of initially 1 (the program manager)
+- Grant management, and what you need to know
+- Connection with RDC applications (around the world)
 
