@@ -11,7 +11,7 @@ Computational Tools for Social Scientists Workshop
 - 2023-8-14 and 8-15: 9:00 a.m. - 4:00 p.m. 
 - 2023-8-18: TBD
 
-**[Registration](https://cornell.ca1.qualtrics.com/jfe/form/SV_d57io0y4Ublu1WS)** 
+**[Registration closed]** 
 
 
 # Goal

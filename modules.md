@@ -1,4 +1,7 @@
-# Modules
+---
+title: Modules
+---
+
 
 ## Module 1: Day 1 reproducibility
 
