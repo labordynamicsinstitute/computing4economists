@@ -15,7 +15,7 @@ title: Modules
 - Git versioning (or any versioning)
 - Then go off and do Carpentries training on either on your own
 
-> [Notes](modules2)
+> [Notes](module2.html)
 
 ## Intermezzo: Present 15 minutes of own research
 
