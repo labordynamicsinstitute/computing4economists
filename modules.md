@@ -15,6 +15,8 @@ title: Modules
 - Git versioning (or any versioning)
 - Then go off and do Carpentries training on either on your own
 
+> [Notes](modules2)
+
 ## Intermezzo: Present 15 minutes of own research
 
 - Students present 15 minutes of their research (2nd or 3rd year paper, depending on context)
