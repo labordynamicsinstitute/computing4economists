@@ -78,5 +78,27 @@ title: Modules
   - with a single accept-reject (or substantial rewrites before every resubmission)
   - with a target audience of initially 1 (the program manager)
 - Grant management, and what you need to know
-- Connection with RDC applications (around the world)
+- (maybe) Connection with RDC applications (around the world)
 
+## Module 9: Writing peer reviews
+
+- 1.5 hrs
+- Peer review, what to write, how to write it, style, content
+- Graduate topic: peer reviewing papers
+- Undergraduate topic: peer reviewing (constructive criticism) of code
+- Both: Latent hierarchies in readers of peer reviews (or: how to manage up, or: how to write a criticism when the recipient has 20 years more experience and a Nobel prize)
+- Some reading:
+  - https://marcfbellemare.com/wordpress/5542
+  - https://deryugina.com/how-to-be-a-constructive-referee/
+  - https://aeturrell.github.io/coding-for-economists/craft-referee.html (peripheral to coding)
+  - https://doi.org/10.1257/jep.31.1.231
+
+## Module 10: Presenting
+
+- 45 min
+- Primarily review of elements
+- There is a fine line between a great introduction/motivation and a long one that risks losing audience’s interest. Remember,
+  - you want the audience to remember what you have done,
+  - then why it is important and
+  - only then how in detail you have done it.
+- To get you started: <https://scholar.harvard.edu/files/shapiro/files/applied_micro_slides.pdf>
